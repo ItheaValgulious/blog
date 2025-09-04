@@ -1,0 +1,18 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".deploy_git": true,
+        ".github": true,
+        "public": true,
+        "themes": true,
+        "_config.landscape.yml": true,
+        ".gitignore": true,
+        "package-lock.json": true,
+        "db.json": true
+    },
+    "hide-files.files": []
+}
