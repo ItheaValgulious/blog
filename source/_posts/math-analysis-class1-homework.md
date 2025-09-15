@@ -1,7 +1,10 @@
 ---
-title: Math Class-1 Homework
-tags: [homework math-analysis]
+title: Math Analysis Class-1 Homework
+tags:
+  - homework math-analysis
+date: 2025-09-15 19:05:08
 ---
+
 
 # Class 1 Homework
 
@@ -13,7 +16,7 @@ $a_n\le b_n\le c_n, \lim_{n \to \infty} (c_n-a_n)=0  \Rightarrow a_n \text{æ”¶æ•
 
 </div>
 
-<div class='cbox'>
+<div class='pbox'>
 
 Obviously wrong.
 
