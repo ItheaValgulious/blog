@@ -180,3 +180,76 @@ $$
 
 Wow!
 
+#### Cardinality is comparable
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\forall A,B, {\ } \exists f(x):A\to B \\ s.t.\\ 
+\text{f is injective or surjective}
+\end{array}
+$$
+
+(承认选择公理)
+
+</div>
+
+<div class='pbox'>
+
+首先选择公理出良序定理,找到$A,B$的良序$(A,<),(B,<)$.
+
+然后进行超限归纳,把$A$,$B$按照良序(保证了每个元素存在序里的后继),最小元素匹配,然后剩下的次小元素匹配,这么做下去.
+
+然后这个看起来进行的是普通的自然数归纳显然是错的. 你需要用超限归纳也就是在序上做归纳.
+
+然后问题来到序是什么.
+
+序的结构是这样的 首先是自然数 自然数定义是$0$定义为空集开始 然后定义$\mathrm{succ}(S)=S \cup \{S\}$
+
+然后定义完所有自然数后 定义$\omega=\bigcup_i i$,就是把所有的自然数的集合并起来(显然它包含所有的自然数). 然后我们可以接下来用后继的定于去定义$\omega+1,\omega+2\ldots$,并且你又可以把它们并起来得到$\omega\times 2$,不断走后继,$\omega,2\omega,3\omega\ldots$可以变成$\omega^2$,又有$\omega^3\ldots \omega^\omega$等等
+
+基本上是每个层次的运算完了之后进下一个层次的序数构造 总之它看起来包含了各种各样的无穷,可以应付所有大小的集合.
+
+然后我们要在序数的结构上做归纳法,就要证明:$x\to \mathrm{succ}(x)$,还要证明极限这一把也对,就是$a_1\ldots a_n \to \cup_i a_i$这个操作(也就是对某个极限序数,如果所有它以前的序数推到它自己)合法,就满足了你可以不断到下一极限.这样推出对全体元素合法. 这就是超限归纳法.
+
+那你对照一下我们的归纳就是一一对应啊,所以是合法的. 就结束了.
+
+然后我们刚才是说明了可以借良序去给两个集合配对,那么你就一定能找到一个对另一个的单射,所以一定可比.
+
+</div>
+
+#### Cantor-Bernstein-Schröder Theorem
+
+<div class='cbox'>
+
+$\mathrm{Card}(A)\le \mathrm{Card}(B),\mathrm{Card}(B)\le \mathrm{Card}(A) \Rightarrow \mathrm{Card}(A)=\mathrm{Card}(B)$
+
+或者表达为
+
+$$
+\begin{array}{c}
+\left. \begin{array}{ll}
+\forall A,B,g:A\to B,f:B\to A\\
+f,g \text{ is injective} 
+\end{array} \right\}
+ \Rightarrow \exists h:A \leftrightarrow B \text{ is bijective} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑从任意元素$u\in A$可以引出一条链:$u\to f(u)\to g(f(u)\to f(g(f(u)))\to \ldots$.
+同理$v \in B$开始的链$v\to g(v)\to f(g(v))\to g(f(g(v)))\to \ldots$.
+
+注意到所有元素一定都在某条链上(映射).每个点度数一定至多一进一出(单射).
+
+于是每条链上构造一个双射(显然的)拼起来即可.
+
+$\text{Q.E.D}$ 
+
+</div>
+
+
