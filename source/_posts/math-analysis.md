@@ -8,7 +8,7 @@ date: 2025-09-15 07:55:19
 
 # Math analysis
 
-## Class 1
+## Class 1 Some Inequality and Def of limit
 
 ### Triangle Inequality
 
@@ -102,9 +102,81 @@ $$
 \end{array}
 $$
 
+Or try this:
+
+$$
+\begin{array}{c}
+{\left \vert n^{\frac{1}{n} }-1 \right \vert} =n^{\frac{1}{n} }-1<\epsilon \\
+\Leftarrow  n^{\frac{1}{n}}<(\epsilon+1) \\
+\Leftarrow  n<(1+\epsilon)^n \\
+\Leftarrow n<1+\epsilon n+\frac{\epsilon^2n(n-1)}{2} 
+\end{array}
+$$
+
+Solve the equation, it's a parabola with upward opening so the solution exists.
+
 </div>
 
+[think] At this stage, we cannot say $\lim g(f(n))=g(\lim f(n))$ which depends on continuity of function. But you sometimes can rewrite the proof with inequality.
+
+## Class 2
+
+### About $Q$
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\sqrt n \in Z \cup Q^C
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$p^2=q^2n$ Integer factorization
+
+More natural than textbook but it doesn't depend on Integer factorization.
+
+</div>
+
+<div class='cbox'>
+
+$\dfrac{p}{q}$ is finite decimal or repeating decimal
+
+</div>
+
+<div class='pbox'>
+
+Simulate how the division is done and consider the remainder will be repeated.
+
+</div>
+
+### About Cardinality
+
+<div class='cbox'>
+
+#### Find a bijection of $[0,1]$ and $(0,1)$
+
+</div>
+
+<div class='pbox'>
 
 
+$$
+\begin{array}{c}
+f(x):(0,1) \to [0,1]=\begin{cases}
+0,x=\dfrac{1}{2} \\
+1,x=\dfrac{1}{3} \\
+\dfrac{1}{n-2} , x=\dfrac{1}{n} \\
+x, \text{otherwise}
+\end{cases}
 
+\end{array}
+$$
+
+</div>
+
+Wow!
 

@@ -12,7 +12,7 @@ date: 2025-09-15 19:05:08
 
 <div class='cbox'>
 
-$a_n\le b_n\le c_n, \lim_{n \to \infty} (c_n-a_n)=0  \Rightarrow a_n \text{收敛} $ 
+$a_n\le b_n\le c_n, \lim_{n \to \infty} (c_n-a_n)=0  \Rightarrow a_n \text{收敛}$ 
 
 </div>
 
@@ -54,7 +54,7 @@ n>N_2  \Rightarrow b_n-B<\epsilon_2 \\
 \therefore \epsilon_1,\epsilon_2:=\frac{\epsilon}{2} 
 \text{有} \\
 \forall \epsilon,N:=\max(N_1,N_2), n>N  \Rightarrow  \vert a_n-B\vert < \epsilon \\
-Q.E.D
+\text{Q.E.D}
 \end{array}
 $$
 
@@ -146,7 +146,7 @@ b_n= \frac{a_n}{\frac{a_n}{b_n}} \in (\dfrac{A-\epsilon_2}{1+\epsilon_1},\dfrac{
 
 \therefore N=\max(N_1,N_2) \Rightarrow n>A \Rightarrow \vert b_n-A \vert < \epsilon \\
 
-Q.E.D
+\text{Q.E.D}
 
 \end{array}
 $$
@@ -174,7 +174,7 @@ $$
 \dfrac{3n^2+n}{2n^2-1}-\dfrac{3}{2}=\dfrac{3n^2+n-\frac{3}{2}(2n^2-1)}{2n^2-1} = \dfrac{n+\dfrac{3}{2} }{2n^2-1}\stackrel{n>1}{<} \dfrac{2n}{n^2} =\dfrac{2}{n} <\epsilon \\
 \therefore
 N:=\dfrac{2}{\epsilon} +114514 \\
-Q.E.D
+\text{Q.E.D}
 \end{array}
 $$
 
@@ -211,7 +211,7 @@ $$
 
 \therefore N:=\frac{1}{2\epsilon}+100 \\
 
-Q.E.D
+\text{Q.E.D}
 \end{array}
 $$
 
@@ -253,8 +253,8 @@ $$
 $$
 \begin{array}{c}
 \lim {\left \vert \dfrac{n^2}{1+n^2}-1 \right \vert} =\dfrac{1}{1+n^2}<\dfrac{1}{n} \\
-N:=\dfrac{1}{\epsilon}+100
-Q.E.D
+N:=\dfrac{1}{\epsilon}+100 \\
+\text{Q.E.D}
 \end{array}
 $$
 
@@ -278,7 +278,7 @@ N:=\tan(\dfrac{\pi}{2}-\dfrac{\epsilon}{2})
  \Rightarrow  \\
 \forall \epsilon, \vert \arctan(n)-\dfrac{\pi}{2}\vert =\dfrac{\pi}{2}-\arctan(n)=\dfrac{\epsilon}{2}<\epsilon \\
 
-Q.E.D
+\text{Q.E.D}
 \end{array}
 $$
 
@@ -313,7 +313,7 @@ a_nb_n \in ((A-\epsilon_1)(B-\epsilon_2),(A+\epsilon_1)(B+\epsilon_2)) \\
 \forall \epsilon, \epsilon_2:=\dfrac{\epsilon}{4A},\epsilon_1:=\dfrac{\epsilon}{4B} \\
 \therefore \vert a_nb_n-AB\vert=\dfrac{\epsilon}{2}+\dfrac{\epsilon^2}{16AB}\stackrel{\epsilon<AB}{<}\epsilon \\
 
-Q.E.D
+\text{Q.E.D}
 \end{array}
 $$
 
@@ -323,7 +323,7 @@ $$
 \begin{array}{c}
 \lim_n \dfrac{n^2\arctan(n)}{1+n^2}=\lim_n \dfrac{n^2}{1+n^2} \lim_n \arctan(n)=1\times \dfrac{\pi}{2} = \dfrac{\pi}{2} \\
 
-Q.E.D
+\text{Q.E.D}
 \end{array}
 $$
 
