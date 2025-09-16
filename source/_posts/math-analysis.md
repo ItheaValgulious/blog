@@ -155,9 +155,11 @@ Simulate how the division is done and consider the remainder will be repeated.
 
 ### About Cardinality
 
+#### A Example
+
 <div class='cbox'>
 
-#### Find a bijection of $[0,1]$ and $(0,1)$
+Find a bijection of $[0,1]$ and $(0,1)$
 
 </div>
 
