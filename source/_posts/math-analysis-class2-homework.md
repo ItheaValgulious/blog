@@ -1,7 +1,11 @@
 ---
 title: Math Analysis Homework - Class2
-tags: [math-analysis,homework]
+tags:
+  - math-analysis
+  - homework
+date: 2025-09-17 16:10:45
 ---
+
 
 
 ### T1
