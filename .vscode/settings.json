@@ -12,7 +12,8 @@
         "_config.landscape.yml": true,
         ".gitignore": true,
         "package-lock.json": true,
-        "db.json": true
+        "db.json": true,
+        "node_modules": true
     },
     "hide-files.files": []
 }

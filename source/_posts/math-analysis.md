@@ -85,7 +85,7 @@ $$
 
 <div class='cbox'>
 
-$\lim_n n^{\frac{1}{n} }=1$
+$\lim_{n \to \infty} n^{\frac{1}{n} }=1$
 
 
 </div>
@@ -254,4 +254,160 @@ $\text{Q.E.D}$
 
 </div>
 
+其实这些应该算集合论还是什么?
+
+## Class 3 Properties of Limit
+
+- Uniqueness:Obviously
+- Local boundedness: 取$\epsilon=1$得$N$,$N$后面显然,前面有限项也显然.
+- About subsequence:
+  - about any subsequence
+  - about some subsequence whose union is the sequence
+
+### Limitaion's Calculation
+
+$$
+\lim_{n \to \infty} a_n=A,\lim_{n \to \infty} b_n=B
+$$
+
+<div class='cbox'>
+
+$$
+\lim_{n \to \infty} a_nb_n=AB
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{c}
+{\left \vert a_nb_n-AB \right \vert} = \\
+{\left \vert a_nb_n-a_nB+a_nB-AB \right \vert} \\ \\
+\le {\left \vert a_N \right \vert} {\left \vert b_n-B \right \vert} +{\left \vert B \right \vert} {\left \vert a_n-A \right \vert} \\
+\end{array}
+$$
+
+显然$a_n,b_n$有界,令$M$是他俩共同的界,取$\epsilon'=\dfrac{1}{114514M+114514}$用到$a_n,b_n$上即证.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\lim_{n \to \infty} \frac{a_n}{b_n} =\frac{A}{B} 
+$$
+
+</div>
+
+<div class='pbox'>
+
+先上一个保号性干掉分母上出现$0$的事.
+
+证取倒数:
+$$
+\begin{array}{c}
+{\left \vert \frac{1}{b_n}-\frac{1}{B}  \right \vert}<\epsilon \\
+\Leftarrow {\left \vert B-b_n \right \vert} <\epsilon b_nB \\
+\Leftarrow \epsilon'=\frac{\epsilon}{BM+114514} (\vert M\vert>b_n)
+\end{array}
+\\
+\text{Q.E.D}
+$$
+
+那转化到乘法是显然的.
+
+</div>
+
+### 无穷小
+
+基本就是收敛到$0$的数列啊.
+
+### Eg
+
+<div class='cbox'>
+
+$$
+\begin{cases}
+\lim_{n \to \infty} a_n=a \\
+\lim_{n \to \infty} b_n=b
+\end{cases} \\
+\Rightarrow \lim_{n \to \infty} \frac{\sum_i a_ib_{n-i}}{n}=ab
+ 
+$$
+
+</div>
+
+<div class='pbox'>
+
+#### Solution 1
+
+#### Solution 2
+
+</div>
+
+
+
+
+
+## Class Unknown
+
+### Continuous function's maximum/minimum
+
+<div class='cbox'>
+
+$$
+\begin{cases}
+x\in [a,b],f(x)<M \\
+\forall M'<M,\exists x \ s.t.\  f(x)>M'\\ 
+\text{f is continuous}
+\end{cases}
+\Rightarrow \exists x, f(x)=M
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑取任意$M_1<M$,可以得到一个$f(x_1)\in (M_1,M)$,取$M_n>f(x_{n-1})$可得$x_n \in (M_n,M)$,显然$x_n$有界可以取收敛子列$y_n$,则$\lim_{n \to \infty} f(y_n)=f(\lim_{n \to \infty} y_n)$,则于是得证 
+
+</div>
+
+### Intermediate value theorem
+
+<div class='cbox'>
+
+$$
+\begin{cases}
+x\in [a,b], f\text{ is continuous} \\
+y\in [f(a),f(b)]
+\end{cases} \Rightarrow \exists x_0, f(x_0)=y
+$$
+
+</div>
+
+<div class='pbox'>
+
+不妨设$f(a)\le y \le f(b)$,$=$情况显然,只考虑$f(a)<y<f(b)$.
+
+取 $A=\{ x\vert f(x)<y \}$ 则它有上确界$x_1$.
+
+那么一定存在一个收敛到$x_1$的数列 $\{ z_n \}$ 你就直接发现 $\lim_{n \to \infty}  f(z_n) = f(\lim_{n \to \infty} z_n)$
+
+$\text{Q.E.D}$ 
+
+</div>
+
+### About Periodicty
+
+<div class='cbox'>
+
+$$
+\begin{cases}
+f(x)\text{ is } 
+\end{cases}
+
+$$
+
+</div>
 

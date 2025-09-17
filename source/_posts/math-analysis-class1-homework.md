@@ -1,7 +1,8 @@
 ---
 title: Math Analysis Class-1 Homework
 tags:
-  - homework math-analysis
+  - homework
+  - math-analysis
 date: 2025-09-15 19:05:08
 ---
 
@@ -86,7 +87,7 @@ $a_n=2^{-n}$
 
 $$
 \begin{array}{c}
-\lim_n a_nb_n = 0 \Rightarrow (\lim_n a_n)(\lim_n b_n) =0
+\lim_{n \to \infty} a_nb_n = 0 \Rightarrow (\lim_{n \to \infty} a_n)(\lim_{n \to \infty} b_n) =0
 \end{array}
 $$
 
@@ -111,7 +112,7 @@ $$
 
 $$
 \begin{array}{c}
-\lim_n \dfrac{b_n}{a_n} =1, \lim_n a_n=A  \Rightarrow \lim_n b_n = A
+\lim_{n \to \infty} \dfrac{b_n}{a_n} =1, \lim_{n \to \infty} a_n=A  \Rightarrow \lim_{n \to \infty} b_n = A
 \end{array}
 $$
 
@@ -160,7 +161,7 @@ $$
 
 $$
 \begin{array}{c}
-\lim_n \dfrac{3n^2+n}{2n^2-1} = \dfrac{3}{2} 
+\lim_{n \to \infty} \dfrac{3n^2+n}{2n^2-1} = \dfrac{3}{2} 
 \end{array}
 $$
 
@@ -187,7 +188,7 @@ $$
 
 $$
 \begin{array}{c}
-\lim_n \sqrt{n^2+n}-n=\dfrac{1}{2}
+\lim_{n \to \infty} \sqrt{n^2+n}-n=\dfrac{1}{2}
 \end{array}
 $$
 
@@ -242,7 +243,7 @@ $$
 
 $$
 \begin{array}{c}
-\lim_n \dfrac{n^2}{1+n^2}=1
+\lim_{n \to \infty} \dfrac{n^2}{1+n^2}=1
 \end{array}
 $$
 
@@ -264,7 +265,7 @@ $$
 
 $$
 \begin{array}{c}
-\lim_n \arctan(n)=\dfrac{\pi}{2} 
+\lim_{n \to \infty} \arctan(n)=\dfrac{\pi}{2} 
 \end{array}
 $$
 
@@ -288,7 +289,7 @@ $$
 
 $$
 \begin{array}{c}
-(\lim a_n)(\lim_n b_n) = X,a_n>0,b_n>0  \Rightarrow  \lim_n a_nb_n=X
+(\lim a_n)(\lim_{n \to \infty} b_n) = X,a_n>0,b_n>0  \Rightarrow  \lim_{n \to \infty} a_nb_n=X
 \end{array}
 $$
 
@@ -321,7 +322,7 @@ $$
 
 $$
 \begin{array}{c}
-\lim_n \dfrac{n^2\arctan(n)}{1+n^2}=\lim_n \dfrac{n^2}{1+n^2} \lim_n \arctan(n)=1\times \dfrac{\pi}{2} = \dfrac{\pi}{2} \\
+\lim_{n \to \infty} \dfrac{n^2\arctan(n)}{1+n^2}=\lim_{n \to \infty} \dfrac{n^2}{1+n^2} \lim_{n \to \infty} \arctan(n)=1\times \dfrac{\pi}{2} = \dfrac{\pi}{2} \\
 
 \text{Q.E.D}
 \end{array}
