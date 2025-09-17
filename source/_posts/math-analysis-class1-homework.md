@@ -1,5 +1,5 @@
 ---
-title: Math Analysis Class-1 Homework
+title: Math Analysis Homework - Class 1
 tags:
   - homework
   - math-analysis

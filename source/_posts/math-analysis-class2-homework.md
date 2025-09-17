@@ -379,7 +379,17 @@ $$
 
 <div class='pbox'>
 
-若存在$x_i>a$,则$n>i$时$x_n>a$,$\lim_{n \to \infty} x_i>a$. 由课上Eg知 $\frac{\sum _{i = 1} ^{n}  x_i}{n}=\lim_{n \to \infty} x_i>a$,故$x_i<a$.
+若存在$x_N>a$,则$n>N$时$x_n>a$,$\lim_{n \to \infty} x_N>a$,则$\exists A\in (x_N,A)$. 并有$\forall i\ge N, x_i>A>a$,则
+
+$$
+\begin{array}{c}
+\lim_{n \to \infty} \frac{\sum _{i = 1} ^{n}  x_i}{n} \\
+>\lim_{n \to \infty} \frac{\sum _{i = 1} ^{N}  a_i}{n}+\frac{n-N}{n}(a+(A-a))
+=A>a
+\end{array}
+$$
+
+矛盾,故$\forall i,x_i<a$
 
 于是
 $$

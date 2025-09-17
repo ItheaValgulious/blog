@@ -1,5 +1,5 @@
 ---
-title: linear-algebra-class1-homework
+title: Linea Algebra Homework - Class 1
 tags:
   - linear-algebra
   - homework
