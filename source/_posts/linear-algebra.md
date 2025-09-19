@@ -5,14 +5,13 @@ tags:
   - note
 date: 2025-09-15 07:55:19
 ---
-
 # Linear algebra
 
 ## A fun question
 
 <div class='cbox'>
 
-In n-D space we can found at most $n+1$ vector $v_1\ldots v_{n+1}$ such that:  $\forall i\ne j,v_iv_j<0$ 
+In n-D space we can found at most $n+1$ vector $v_1\ldots v_{n+1}$ such that:  $\forall i\ne j,v_iv_j<0$
 
 </div>
 
@@ -59,10 +58,6 @@ so divide the vector by sign of $c_i$ we got:$v=\sum_{i\in A} c_i x_i = \sum_{j\
 We noticed $0<v^2=(\sum_{i\in A} c_i x_i) \cdot (\sum_{j\in B} c_jx_j)<0$, contradiction!
 
 </div>
-
-
-
-
 
 ## Done Right
 

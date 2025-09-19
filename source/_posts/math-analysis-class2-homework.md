@@ -271,6 +271,8 @@ $$
 
 #### (1)
 
+##### Solution 1
+
 $$
 \begin{array}{c}
 {\left \vert \sqrt[n]{ \prod_i a_i } -a \right \vert} <\epsilon \\
@@ -284,12 +286,18 @@ n>N_1 \Rightarrow a_n\in [a-\epsilon_1,a+\epsilon_1] \\
 \text{Since }\frac{a-\epsilon}{a-\epsilon_1}<1,\exists N_2 \ s.t.\ 
 n>N_2 \Rightarrow \text{不等式成立} \\
 \text{右侧同理有} N_3 \\
-\therefore N=N_1+N_2+N_3 \\ s.t.\\ 
+\therefore N:=N_1+N_2+N_3 \\ s.t.\\ 
 n>N  \\ 
 \Rightarrow  (a-\epsilon)^n<A(a-\epsilon_1)^{n-N_1}<\prod_i a_i<A(a+\epsilon_1)^{n-N_1}<(a+\epsilon)^n\\
 \Rightarrow {\left \vert \sqrt[n]{ \prod_i a_i } -a \right \vert} <\epsilon 
+\\
+\text{Q.E.D}
 \end{array}
 $$
+
+##### Solution 2
+
+唐. 可以用调和均值/算数均值夹两边.
 
 #### (2)
 

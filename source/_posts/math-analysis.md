@@ -340,9 +340,113 @@ $$
 
 <div class='pbox'>
 
+todo
+
 #### Solution 1
 
+$b=0$时,考虑$a有界M$.
+
+$$
+\begin{array}{c}
+\lim_{n \to \infty} \dfrac{\sum_i a_ib_{n-i}}{n} \\
+\le \lim_{n \to \infty} M\dfrac{b_{n-i}}{n} =0
+\end{array}
+$$
+
+$b\ne 0$,$b'_i=b_i-b$,有
+
+$$
+\begin{array}{c}
+\lim_{n \to \infty} \frac{\sum_i a_ib_{n-i}}{n} =\lim_{n \to \infty} \frac{\sum_i a_ib'_{n-i}}{n} +\frac{\sum_i a_i}{n} b=0+ab
+\end{array}
+$$
+
+$$
+\begin{array}{c}
+
+\end{array}
+$$
+
 #### Solution 2
+
+不妨设$a,b>0$,则有界性可以得到后面是$a_n,b_n>0$
+
+考虑影响值的肯定是中间的项,所以直接拆,取$\epsilon$,对$a,b$可以得到$N_1$
+
+$$
+\begin{array}{c}
+\lim_{n \to \infty} \dfrac{\sum_i a_ib_{n-i}}{n}= \\
+=\lim_{n \to \infty} \dfrac{\sum _{i = 1} ^{N_1} a_ib_{n-i}+\sum _{i = 1} ^{N_1} b_ia_{n-i}+\sum _{i = N_1+1} ^{n-N_1-1} a_ib_{n-i} }{n}  \\
+=\lim_{n \to \infty} \dfrac{\sum _{i = 1} ^{N_1} a_ib_{n-i}}{n} \\
++ \lim_{n \to \infty} \dfrac{\sum _{i = 1} ^{N_1} b_ia_{n-i}}{n} \\
++\lim_{n \to \infty} \dfrac{\sum _{i = N_1+1} ^{n-N_1-1} a_ib_{n-i}}{n} \\
+\in (\lim_{n \to \infty} \dfrac{n-2N_1-1}{n} (a-\epsilon)(b-\epsilon)
+,\lim_{n \to \infty} \dfrac{n-2N_1-1}{n} (a+\epsilon)(b+\epsilon))
+= ((a-\epsilon)(b-\epsilon),(a+\epsilon)(b+\epsilon))
+\end{array}
+$$
+
+后面显然.`
+
+</div>
+
+## Class 4
+
+### eg1
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+a>1,k\in N^*,\lim_{n \to \infty} \frac{n^k}{a^n} =0
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$a^n=(1+b)^n$展开会出现$n$的任意次方,然后显然.
+
+</div>
+
+### Stolz
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\left. \begin{array}{ll}
+y_n \uparrow,\lim_{n \to \infty} y_n=\infty \\
+\lim_{n \to \infty} \dfrac{x_n-x_{n-1}}{y_n-y_{n-1}} =a\in[-\infty,+\infty]
+\end{array} \right\}
+ \\
+\Rightarrow \lim_{n \to \infty} \dfrac{x_n}{y_n} =a
+\end{array}
+$$
+
+</div>
+
+
+
+<div class='pbox'>
+
+先简化,不妨设$a\ge 0,\frac{\Delta x_n}{\Delta y_n}>0$
+
+然后可以证$a=0$时,你取$\epsilon_1$得$N_1$,变成 $\dfrac{\Delta x_n}{\Delta y_n} <\epsilon$.于是
+
+$$
+\begin{array}{c}
+\dfrac{x_n}{y_n}  \\
+=\dfrac{x_{N_1}+\sum _{i = N_1+1} ^{n}  \Delta x_i}{y_{N_1}+\sum _{i = N_1+1} ^{n}  \Delta y_i}  \\
+\le \dfrac{x_{N_1}+\epsilon\sum _{i = N_1+1} ^{n}  \Delta y_i}{y_{N_1}+\sum _{i = N_1+1} ^{n}  \Delta y_i}  \\
+\le \dfrac{x_{N_1}+\epsilon\sum _{i = N_1+1} ^{n}  \Delta y_i}{\sum _{i = N_1+1} ^{n}  \Delta y_i}
+\end{array}
+$$
+
+因为你  $Y=\sum _{i = N_1+1} ^{n} \Delta y_i \to +\infty$,所以一定可以有$\epsilon Y>x_{N_1}$.就能证$<2\epsilon$,你再取一下$\epsilon$就得证了.
+
+然后我说$0<a\in R$时你直接$x'=x-ay$就用结论,$a=+\infty$的时候你取倒数用结论,就做完了. 
 
 </div>
 
@@ -404,10 +508,22 @@ $\text{Q.E.D}$
 
 $$
 \begin{cases}
-f(x)\text{ is } 
-\end{cases}
-
+f(x)\text{ is a periodic function that isn't constant} \\
+f(x)\text{ is continuous} 
+\end{cases} \\
+\Rightarrow f(x)\text{ has min positive period} 
 $$
 
 </div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{c}
+T:= \{ t \vert t>0,f(x+t)=f(x) \} 
+\end{array}
+$$
+
+</div>
+
 
