@@ -1,7 +1,11 @@
 ---
 title: Math Analysis Homework - Class 3
-tags: [math-analysis,homework]
+tags:
+  - math-analysis
+  - homework
+date: 2025-09-20 14:06:44
 ---
+
 
 # Math Analysis Homework - Class 3
 
