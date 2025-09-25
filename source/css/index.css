@@ -59,6 +59,15 @@ h1,h2,h3,h4,h5,h6,.post-title>a{
     border-radius: 0 0 1em 0;
     margin: 1em 0em 1em 0em;
 }
+.bbox {
+    background-color: var(--secondary-color);
+    padding: 1em;
+    border: solid;
+    border-color: var(--primary-color);
+    border-width: .5em .5em .5em .5em;
+    border-radius: 1em 1em 1em 1em;
+    margin: 1em 0em 1em 0em;
+}
 
 .nav-link,.sidebar-toc-active .sidebar-nav-toc, .sidebar-overview-active .sidebar-nav-overview{
     color:var(--secondary-color) !important;

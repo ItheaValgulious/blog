@@ -59,5 +59,3 @@ We noticed $0<v^2=(\sum_{i\in A} c_i x_i) \cdot (\sum_{j\in B} c_jx_j)<0$, contr
 
 </div>
 
-## Done Right
-

@@ -1,0 +1,568 @@
+---
+title: Linear Algebra Done Right
+tags: [linear-algebra,note,self-study]
+---
+
+# Linear Algebra Done Right
+
+记录大致讲了什么
+
+### 向量空间
+
+我们定义向量空间
+
+<div class='dbox'>
+
+向量空间
+
+向量空间定义在域$F$上,要求支持:
+- 加法
+- $F$中数的数乘
+- **加法单位元(0元)**
+- 加法逆元
+- 加法交换结合
+- 数乘结合
+- 加法对数乘分配
+- **对加法和数乘封闭**
+
+</div>
+
+加粗部分用于判断子空间,根据$F$区分是否是实向量空间/复向量空间
+
+<div class='dbox'>
+
+子空间
+
+就是子集且是向量空间的对吧
+
+</div>
+
+判定可以看上面
+
+
+
+### 维数
+
+向量空间还应该有维数.于是定义
+
+<div class='dbox'>
+
+线性无关组
+
+$$
+\text{Group}  v_1\ldots v_n \in V \text{is linear independet} \Leftrightarrow  \\
+\forall \{ c_n \} ,c_i \in F, \\
+\sum _{i = 1} ^{n}  c_iv_i = 0 \Leftrightarrow \forall i,c_i=0 
+$$
+
+</div>
+
+<div class='dbox'>
+
+张成,张成组
+
+$$
+\begin{array}{c}
+\mathrm{span}( v_1 \ldots v_n ) = \{ \sum _{i = 1} ^{n}  c_iv_i \} 
+\end{array}
+$$
+
+张成$V$的组简称张成组
+
+</div>
+
+<div class='dbox'>
+
+基
+
+基=张成组+线性无关组
+
+</div>
+
+
+
+则按照直觉的,维数应该是张成组长度的最小值,线性无关组长度的最大值,基的长度等等,**下面讨论的是有限维线性空间**.
+
+<div class='cbox'>
+
+- $\mathrm{dim} V$是张成组最小长度
+- $\mathrm{dim} V$是线性无关组组最大长度
+- $\mathrm{dim} V$是任意一组基的长度
+
+</div>
+
+<div class='pbox'>
+
+首先说明,对一个线性相关的组,我们一定可以去掉一个线性相关项保持张成空间不变(显然).
+
+首先说明 
+
+<div class='cbox'>
+
+任意一组线性无关组长度小于等于任意一组张成组长度:
+
+</div>
+
+<div class='pbox'>
+
+考虑一个线性无关组和一个张成组,将一个线性无关组的元素加入张成组,则形成的一定是线性相关组,删去一个**张成组中的**元素则保持张成,不断重复这个操作,注意因为被加入的线性无关,所以你想相关一定得带张成组中的,于是可以一直操作.
+
+直到线性无关组全部被加入,则因为每次删掉一个张成组元素,你一定有线性无关组长度不大于它.
+
+</div>
+
+<div class='cbox'>
+
+线性无关组可通过加元素扩展到基,张成组可通过删除元素到基
+
+</div>
+
+<div class='pbox'>
+
+对线性无关组,每次加入一个不属于张成空间的,由于组的长度大小不断增加,而存在一个长度的基,所以你的过程会停止.
+
+同理对张成组每次删掉一个线性相关项不影响张成空间.
+
+</div>
+
+<div class='cbox'>
+
+每组基的长度都相当,具有恰当长度的线性无关组/张成组是基.
+
+</div>
+
+<div class='pbox'>
+
+第一句用小于等于关系,后面两个通过基的长度相等+上一条可以变成基说明.
+
+</div>
+
+<div class='dbox'>
+
+维数就是这个长度为 $\mathrm{dim} V$
+
+</div>
+
+</div>
+
+### 空间的运算
+
+<div class='dbox'>
+
+空间的和
+
+$$
+\begin{array}{c}
+U+V = \{ u+v \vert u\in U,v\in V \} 
+\end{array}
+$$
+
+</div>
+
+加法实际上是并(包含子空间所有向量的最小空间).
+
+并定义直和.
+
+<div class='dbox'>
+
+空间直和
+
+$$
+\begin{array}{c}
+W = U\oplus V = U + V \\ s.t.\\ 
+\forall w \in W, \exist! u\in U,v\in V, u+v=w
+\end{array}
+$$
+
+</div>
+
+直和相当于不交并,是对空间进行一种分解.
+
+然后直和的判定容易证明只要$0$的表示满足唯一性,并推出当且仅当它们的交只有$0$
+
+<div class='dbox'>
+
+空间的积
+
+就是笛卡尔积.
+
+$$
+\begin{array}{c}
+U\times V=\{ (u,v) \vert u\in U,v\in V \} 
+\end{array}
+$$
+
+</div>
+
+其实也可以先扩展一下直和 是等价的.
+
+<div class='dbox'>
+
+仿射空间
+
+$$
+\begin{array}{c}
+u+V=\{ u+v \vert u+V \}  \\
+(u+V)+(w+V)=(u+w) + V \\
+\lambda (u+V) = \lambda u + V
+\end{array}
+$$
+
+</div>
+
+注意如果$u\in V$则不变,$u\not\in V$则是一个没有$0$的空间,在此空间的线性组合变成了$\sum _{i = 0} ^{n}  c_iv_i\ s.t.\ \sum_{i=0}^n c_i=1$.
+
+然后仿射空间关于以上运算是线性空间,其中$0=V$
+
+<div class='dbox'>
+
+空间的商
+
+$$
+\begin{array}{c}
+U/V={\left\{ u+V \vert u\in U \right\}} 
+\end{array}
+$$
+
+</div>
+
+可以理解成等价类分类.如果两个向量的差在$V$中则认为他们等价.新的空间中每个元素都是一个等价类.而你仿射空间的变换也可以看成是对代表元做变换.
+
+最后考虑它们的维数,有:
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\mathrm{dim\ } U\times V=\mathrm{dim\ } U\oplus V=\mathrm{dim\ } U+\mathrm{dim\ } V \\
+\mathrm{dim\ } U+V = \mathrm{dim\ } U+\mathrm{dim\ } V-\mathrm{dim\ } U\cap V \\
+\mathrm{dim\ } U/V=\mathrm{dim\ } U-\mathrm{dim\ } V
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+第一行是显然的.
+
+第二行考虑取$U\cup V$的一组基,再其中添加上$U-V$的基和$V-U$的基.
+
+第三行需要线性映射.
+
+</div>
+
+### 线性映射
+
+#### 基本性质
+
+<div class='dbox'>
+
+线性映射
+
+线性映射是映射满足:
+- 齐性: $T\lambda v=\lambda Tv$
+- 加性: $T(u+v)=Tu+Tv$
+
+</div>
+
+<div class='dbox'>
+
+线性变换的运算
+
+$$
+\begin{array}{c}
+(S+T)u=Su+Tu \\
+(\lambda T)u=\lambda (Tu) \\
+(ST)u=S(T(u))
+\end{array}
+$$
+
+</div>
+
+符合直觉的.于是你可以说明$\mathcal{L}(U,V)$(由$T:U\to V$组成的集合)是 $\mathrm{dim\ } U\times \mathrm{dim\ } V$维的线性空间,他的标准基可以是所有把$U$的一个基映到$V$的一个基的映射.
+
+
+<div class='dbox'>
+
+值域,零空间
+
+$$
+\begin{array}{c}
+\text{for linear map } T:U\to V \\
+\mathrm{range\ } T = \{ v \vert v=Tu,u\in U \}  \\
+\mathrm{null\ } T = \{ u \vert Tu=0,u \in U \} 
+\end{array}
+$$
+
+</div>
+
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\mathrm{dim\ } U=\mathrm{dim\ } \mathrm{null\ } T+\mathrm{dim\ } \mathrm{range\ } T
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑  $\mathrm{null\ } T$  的基$u_1\ldots u_n$,并添加$v_1\ldots v_m$扩充到$U$的基.
+
+对任意$x=\sum_i c_iu_i+\sum_i c_iv_i$,我们有$Tx=\sum_i Tc_iv_i=\sum_i c_iTv_i$,故任意 $w\in \mathrm{range\ } T$可以表示成$Tv_i$的线性组合,且显然$Tv_i$之间线性无关,于是就得证.
+
+</div>
+
+
+<div class='dbox'>
+
+单射,满射,双射,可逆
+
+- 单射:$Tx\ne Ty \Rightarrow x\ne y$
+- 满射: $\forall v\in V,\exists u\in U, Tu=v$ 
+- 双射就是同时有两条
+- 对于双射$T$的定义$T^{-1}$满足$TT^{-1}=T^{-1}T=I$
+
+</div>
+
+<div class='cbox'>
+
+基本性质
+
+1. 单射等价于只把$0$映射到$0$.
+2. 存在$U\to V$单射说明 $\mathrm{dim\ } U\le \mathrm{dim\ } V$.
+3. $U\to V$有单射说明$V\to U$有满射.
+4. $U \to V$存在双射称为$U,V$同构,可以证明任意向量空间同构于某个$F^n$.
+
+</div>
+
+<div class='pbox'>
+
+都挺显然的.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\mathrm{dim\ }  U/V=\mathrm{dim\ } U-\mathrm{dim\ } V
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+定义 $T\in \mathcal{L}( U , U/V )$ 为商变换,把$u$映射到$u+V$.
+
+则
+
+$$
+\begin{array}{c}
+\mathrm{null\ } T=V \\
+\mathrm{range\ } T=U/V 
+\end{array}
+$$
+
+套用上面值域和零空间的维数公式即可.
+
+</div>
+
+#### 矩阵
+
+<div class='dbox'>
+
+矩阵
+
+选取$U,V$分别一组基$u_1\ldots u_m$,$v_1\ldots v_n$,可以把线性变换$T$写成$n\times m$的矩阵$\mathcal{M}(T,u_1\ldots u_m,v_1\ldots v_n)=A_{n\times m}$满足
+
+$$
+\begin{array}{c}
+Tu_i=\sum_{j=1}^n A_{j,i}v_j
+\end{array}
+$$
+
+</div>
+
+即每一列是一个基向量在像空间中的基的表示.然后有的时候也直接简写$\mathcal M(T)$.
+
+矩阵可以这么定义因为线性变换的线性保证了你可以只用基的变换去描述它,同时基的这种变换也能唯一确定线性变换.
+
+于是可以定义矩阵运算:
+
+$$
+\begin{array}{c}
+\mathcal M( S ) \mathcal M( T ) = \mathcal M( ST ) \\
+\mathcal M( S ) + \mathcal M( T ) = \mathcal M( ST ) \\
+\mathcal \lambda\mathcal M( T ) = \mathcal M( \lambda T )
+\end{array}
+$$
+
+其中第一行矩阵乘法用坐标写一下可以推出经典的矩阵乘法方式.
+
+#### 对偶
+
+<div class='dbox'>
+
+线性泛函,对偶空间
+
+线性泛函就是$f \in \mathcal L( V , F )$,所有这样的$f$组成线线性空间$V'$是$V$的对偶空间.
+
+</div>
+
+线性泛函可以看成是向量/点的对偶.线性泛函 $\{ \varphi \vert \varphi_i e_i=1 \}$构成对偶空间的基.
+
+<div class='dbox'>
+
+对偶映射
+
+若 $T\in\mathcal L( U , V )$ ,定义 $T'\in \mathcal L( V' , U' )$ 满足
+
+$$
+\begin{array}{c}
+\forall f \in V',T'f=fT
+\end{array}
+$$
+
+</div>
+
+$T'$是反的可以理解因为$V'$的泛函的输入才是$T$的输出.导致没法根据这几个东西定义一个正的出来.
+
+然后对偶主要解释了:$\mathcal M( T' ) =\mathcal M( T )^{T}$(右上角的$T$是转置的意思).
+
+<div class='cbox'>
+
+对偶映射的运算
+$$
+\begin{array}{c}
+(ST)'=T'S' \\
+(S+T)'=S'+T' \\
+(\lambda S)'=\lambda S'
+\end{array}
+$$
+</div>
+
+<div class='pbox'>
+
+套定义即可.
+
+</div>
+
+<div class='dbox'>
+
+零化子
+
+对线性空间$V$来说,子空间$U$的零化子 $U^0=\{ f \vert f\in V',\forall u\in U,fu=0 \}$.
+
+</div>
+
+注意$U^0$同时依赖$U$和$V$.
+
+
+<div class='cbox'>
+
+todo here
+$$
+\begin{array}{c}
+\mathrm{range\ } 
+\end{array}
+$$
+
+</div>
+
+### 本征值
+
+<div class='dbox'>
+
+本征值,本征向量
+
+若对算子$T$,$\exists v\ne 0\in V,\lambda\in F\ s.t.\ Tv=\lambda v$,则$\lambda,v$分别为本征值,本征向量.
+
+</div>
+
+就是说算子在这个方向上对变换只有伸缩.
+
+一个本征值可能对应多个线性不相关的本征向量,它们构成本征空间$E(T,\lambda)$
+
+<div class='cbox'>
+
+$\lambda$ 是 $T$的本征值等价于 $T-\lambda I$不是双射,或不是单射/满射
+
+</div>
+
+<div class='pbox'>
+
+首先注意到对算子来说 单射,满射双射等价
+
+todo: check 单射0映0
+
+又因为单射等价于 $\mathrm{null\ } T=0$ 所以 $(T-\lambda I)v=0$ 和它不是单射等价.
+
+</div>
+
+<div class='cbox'>
+
+不同本征值对应对本征向量线性不相关.
+
+</div>
+
+<div class='pbox'>
+
+反证,你要利用不同本征值这个性质,于是你设 $v_n \in \mathrm{span}( v_1\ldots v_{n-1} )$ 且$n$为满足条件对最小的.
+
+$$
+\begin{array}{c}
+v_n=\sum _{i = 1} ^{n-1} c_iv_i \\
+Tv_n=\sum _{i = 1} ^{n-1}  Tc_iv_i \\
+\lambda_n (\sum _{i = 1} ^{n-1}  c_iv_i)=\sum _{i = 1} ^{n-1}  \lambda_i c_iv_i \\
+0=\sum _{i = 1} ^{n-1} (\lambda_i-\lambda_n) c_iv_i
+\end{array}
+$$
+
+因为$n$是最小的,所以$v_1\ldots v_{n-1}$线性无关,然后你就推出矛盾.
+
+</div>
+
+有此容易说明本征值个数不大于线性空间维数.
+
+### 不变子空间,商算子和限制算子
+
+
+<div class='dbox'>
+
+不变子空间
+
+即对算子$T$,有$\forall u\in U, Tu\in U$,则$U$为不变子空间.
+
+</div>
+
+<div class='dbox'>
+
+商算子,限制算子
+
+$$
+\begin{array}{c}
+T/U\in \mathcal L( V/U , V/U ),(T/U)(v+U)=(Tv+U) \\
+T\vert_U \in \mathcal L( U , U ), T\vert_U v=Tv
+\end{array}
+$$
+
+</div>
+
+显然$T\vert_U$要求了$U$是不变子空间.
+
+把算子放到更小的空间去研究的方式.
+
+### 上三角矩阵
+
+
+
+### 对角矩阵
+
+
+
+

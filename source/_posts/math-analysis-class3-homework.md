@@ -138,7 +138,7 @@ $$
 
 </div>
 
-<div class='cbox'>
+<div class='pbox'>
 
 $$
 \begin{array}{c}

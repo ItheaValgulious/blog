@@ -340,8 +340,6 @@ $$
 
 <div class='pbox'>
 
-todo
-
 #### Solution 1
 
 $b=0$时,考虑$a有界M$.
@@ -380,8 +378,8 @@ $$
 =\lim_{n \to \infty} \dfrac{\sum _{i = 1} ^{N_1} a_ib_{n-i}}{n} \\
 + \lim_{n \to \infty} \dfrac{\sum _{i = 1} ^{N_1} b_ia_{n-i}}{n} \\
 +\lim_{n \to \infty} \dfrac{\sum _{i = N_1+1} ^{n-N_1-1} a_ib_{n-i}}{n} \\
-\in (\lim_{n \to \infty} \dfrac{n-2N_1-1}{n} (a-\epsilon)(b-\epsilon)
-,\lim_{n \to \infty} \dfrac{n-2N_1-1}{n} (a+\epsilon)(b+\epsilon))
+\in (\lim_{n \to \infty} \dfrac{n-2N_1-1}{n} (a-\epsilon)(b-\epsilon) \\
+,\lim_{n \to \infty} \dfrac{n-2N_1-1}{n} (a+\epsilon)(b+\epsilon)) \\
 = ((a-\epsilon)(b-\epsilon),(a+\epsilon)(b+\epsilon))
 \end{array}
 $$
@@ -447,6 +445,196 @@ $$
 因为你  $Y=\sum _{i = N_1+1} ^{n} \Delta y_i \to +\infty$,所以一定可以有$\epsilon Y>x_{N_1}$.就能证$<2\epsilon$,你再取一下$\epsilon$就得证了.
 
 然后我说$0<a\in R$时你直接$x'=x-ay$就用结论,$a=+\infty$的时候你取倒数用结论,就做完了. 
+
+</div>
+
+## Class 5
+
+### 单调有界数列有极限
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\left. \begin{array}{ll}
+a_i>a_{i-1} \\
+a_i<M
+\end{array} \right\}
+\Rightarrow 
+\lim_{n \to \infty} a_i \text{ exists} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+取 $\{a_i\}$上确界$M_0$,则任意$\epsilon$,取$M'=M_0-\epsilon$,由确界知$\exists i \ s.t.\ 
+a_i\in (M',M_0]$,则$\forall n>i,\vert a_n-M\vert<\epsilon$.
+
+然后书上因为没教你上确界,试图用无限小数说明.那其实就是你一位一位考虑,就先这一位增加到最大,然后进入下一位,容易发现最后区间长度趋近于$0$
+
+其实无限小数就是区间套啊.
+
+</div>
+
+### e
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+a_n:=\lim_{n \to \infty} (1+\dfrac{1}{n} )^n = b_n:=\lim_{n \to \infty} \sum _{i = 0} ^{n}  \dfrac{1}{i!}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+右边那个单调有界都是好证的.证相等:
+
+$$
+\begin{array}{c}
+a_n=(1+\dfrac{1}{n} )^n=\sum _{i = 0} ^{n}  \dfrac{1}{n^i} \binom{n}{i} \\
+=\sum _{i = 0} ^{n}  \dfrac{1}{i!} \prod_{j=0}^{i-1} (1-\dfrac{j}{n} )
+<b_n \\
+\end{array}
+$$
+
+又有
+
+$$
+\begin{array}{c}
+k<n \Rightarrow 
+a_n=\sum _{i = 0} ^{n}  \dfrac{1}{i!} \prod_{j=0}^{i-1} (1-\dfrac{j}{n} )
+>\sum _{i = 0} ^{k}  \dfrac{1}{i!} \prod_{j=0}^{i-1} (1-\dfrac{j}{n} )
+\end{array}
+$$
+于是先令$k\to \infty$得到$a_n>b_k$,则$a$逐项大于$b$的一个子列,最后得证.
+
+</div>
+
+重点是把一次到极限拆成两个取极限.但这个为什么对呢.
+
+是好证的,其实就是
+
+<div class='bbox'>
+
+[think] 
+
+$$
+\begin{array}{c}
+\lim_{a \to \infty} \lim_{b \to \infty} f(a,b) = X
+\Rightarrow \lim_{n \to \infty} f(n,n) = X
+\end{array}
+$$
+
+用定义是显然的.且如果极限都存在(要$f(a,n)$和$f(n,b)$极限存在)的话你还可以看出左式两取极限交换(都是右式)
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+0<e-\sum _{i = 0} ^{n}  \dfrac{1}{i!} < \dfrac{1}{n\cdot n!} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{c}
+b_n:=\sum _{i = 0} ^{n}  \dfrac{1}{i!} \\
+X=b_{n+m}-b_n=\sum _{i = n+1} ^{n+m}  \dfrac{1}{i!}  \\
+<\dfrac{1}{(n+1)!} \sum _{i = 0} ^{m-1}  \dfrac{1}{(n+1)^i}<\dfrac{1}{n!\cdot n}   \\ \Rightarrow e-b_n= \lim_{m \to \infty} X<\dfrac{1}{n!\cdot n} 
+\end{array}
+$$
+
+然后说为什么取极限小于号还是小于号呢?
+
+$$
+\begin{array}{c}
+X=b_{n+m}-b_n<b_{n+m+k}-b_n<\dfrac{1}{n!\cdot n} 
+\\
+\stackrel{\lim_{k \to \infty} }{\Longrightarrow}
+e-b_n<\dfrac{1}{n!\cdot n} 
+\end{array}
+$$
+
+[think] 对单调数列让一个独立变量趋近无穷说明严格不等号.
+
+有个魔怔法,你先去下一条证明$e$是无理数再回来说取不了等.
+
+
+
+</div>
+
+<div class='cbox'>
+
+$e\not \in Q$
+
+</div>
+
+<div class='pbox'>
+
+假设$e=\dfrac{p}{q}$
+
+$$
+\begin{array}{c}
+\dfrac{p}{q} -b_n<\dfrac{1}{n\cdot n!} 
+\stackrel{n=q}{\Longrightarrow}
+p(q-1)!-b_q q!<\dfrac{1}{q} 
+\end{array}
+$$
+
+左边是不为$0$的整数(为$0$与$b$增矛盾),右边是分数
+
+</div>
+
+[think] 一个无理数等价于存在一列分母到无穷的有理数始终有更高阶(相比序列中分母)的余项.
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+(1+\dfrac{1}{n} )^n \uparrow \\
+(1+\dfrac{1}{n} )^{n+1} \downarrow
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{c}
+(1+\dfrac{1}{n} )^n\cdot 1< (\dfrac{n\cdot (1+\dfrac{1}{n}+1 )}{n+1} )^{n+1}=(1+\dfrac{1}{n+1} )^{n+1}
+\end{array}
+$$
+
+第二个取倒数同理.
+
+</div>
+
+从这个出发可以说明$\ln$的切线放缩系列不等式.
+
+### 柯西列,有界数列必有单调子列
+
+<div class='cbox'>
+
+有界数列有收敛子列
+
+</div>
+
+<div class='pbox'>
+
+可以考虑后缀max,取出一个单调子列.
+
+也可以区间套,每次进有无穷多项的区间.
 
 </div>
 
@@ -520,10 +708,15 @@ $$
 
 $$
 \begin{array}{c}
-T:= \{ t \vert t>0,f(x+t)=f(x) \} 
+T:= \{ t \vert t>0,f(x+t)=f(x) \}  \\
+t_0:= \min T \\
 \end{array}
 $$
 
+若$t_0\ne 0$,取 $\{ t_n \},t_i\in T,\lim_{n \to \infty} t_n=t_0$,则 $f(x)=f(x+t_n)=\lim_{n \to \infty} f(x+t_n)=f(x+\lim_{n \to \infty} t_n)=f(x+t_0)$
+
+若$t_0=0$,因为不是常函数, 则$\exists x_0 {\ } s.t. {\ }  f(x_0)\ne f(0)$,因为连续,和极限有保号性你可以说$\forall x\in O(x_0,\delta),f(x)\ne f(0)$,但由$t_0=0$,你可以找到$t<\delta$,那就可以再找到$N$使得$Nt\in (x_0-\delta,x_0+\delta)$,$Nt$一定是周期,但$f(0+Nt)\ne f(0)$,矛盾.
+
+于是得证.
+
 </div>
-
-
