@@ -622,7 +622,7 @@ $$
 
 从这个出发可以说明$\ln$的切线放缩系列不等式.
 
-### 柯西列,有界数列必有单调子列
+### 有界数列必有单调子列
 
 <div class='cbox'>
 
@@ -638,8 +638,80 @@ $$
 
 </div>
 
+## Class 6
 
+### Cauchy Convergance Theorem
 
+<div class='cbox'>
+
+Cauchy Convergance Theorem
+
+$$
+\begin{array}{c}
+\forall \epsilon, \exists N \\ s.t.\\ 
+\forall n,m>N, \vert a_n-a_m\vert<\epsilon
+\Leftrightarrow \lim_{n \to \infty} a_n \text{ exists} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+右推左是显然的.
+
+首先容易得到有界.于是它有收敛子列.
+
+然后你其他的项到你的收敛子列的距离拿柯西的条件放缩一下就证完了.
+
+或者也可以闭区间套.
+
+</div>
+
+### 确界原理
+
+<div class='cbox'>
+
+有上界的数集一定有上确界.
+
+</div>
+
+<div class='pbox'>
+
+来闭区间套,二等分,如果上面的(包含边界)有就取上面,否则取下面,框出一个数.
+
+然后来看,比他小的不是上界是好说的(取个区间即可).怎么说明它是上界呢?
+
+考虑任何一个数,递归后一定有某一次它在下半区间(包含中点),那就证完了.
+
+可能甚至不如无穷小数简洁 反正本质相同.
+
+</div>
+
+### 有限覆盖定理
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+S=\{ (x,y) \vert x<y \},T\subset S , \cup_{I\in T} I \supset [a,b] \\
+\Rightarrow \exists A \in T,\cup_{I\in A} I \supset [a,b],\vert A\vert\in N(\text{not infinity} ) 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+反证,设$[A,B]$不能被有限覆盖.
+
+闭区间套 二等分 则一定有一半区间也是不能被有限覆盖的.递归到不能被有限覆盖的区间,最后弄出一个数.
+
+但包含这个数的极小区间显然可以被有限覆盖.矛盾,得证.
+
+</div>
+
+很棒的啊,它完全不关心你无穷覆盖的结构而是到数的结构去了.
 
 
 ## Class Unknown

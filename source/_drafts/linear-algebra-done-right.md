@@ -414,7 +414,7 @@ $$
 
 </div>
 
-线性泛函可以看成是向量/点的对偶.线性泛函 $\{ \varphi \vert \varphi_i e_i=1 \}$构成对偶空间的基.
+线性泛函可以看成是向量/点的对偶.线性泛函 $\{ \varphi \vert \varphi_i e_j=[i=j] \}$构成对偶空间的基.
 
 <div class='dbox'>
 
@@ -448,7 +448,13 @@ $$
 
 <div class='pbox'>
 
-套定义即可.
+$$
+\begin{array}{c}
+(ST)'f=fST=T'(fS)=T'(S'f) \\
+(S+T)'f=f(S+T)=fS+fT=S'f+T'f \\
+(\lambda S)'f=f\lambda S=\lambda fS=S'f \\
+\end{array}
+$$
 
 </div>
 
@@ -462,17 +468,45 @@ $$
 
 注意$U^0$同时依赖$U$和$V$.
 
-
 <div class='cbox'>
 
-todo here
 $$
 \begin{array}{c}
-\mathrm{range\ } 
+\mathrm{dim\ } U+\mathrm{dim\ } U^0=\mathrm{dim\ } V
 \end{array}
 $$
 
 </div>
+
+<div class='pbox'>
+
+取$U$的基$u_1\ldots u_n$扩充到$V$的基$u_1\ldots u_n,u_{n+1}\ldots u_{n+m}$.并取$V'$的标准基$\varphi_i u_j =[i=j]$,则显然$f\in U^0$要求$f$不能有$\varphi_i,i<n$的分量,而任意$i>n$的分量都可以有.于是得证.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+
+\mathrm{null\ } T'=(\mathrm{range\ } T)^0 \\
+
+\mathrm{range\ } T'=(\mathrm{null\ } T)^0
+
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑$T'fu=fTu=0$关于所有$u$成立,则$f$的范围是什么.看右侧显然是 $(\mathrm{range\ } T)^0$ 看左侧则是 $(\mathrm{null\ } T')^0$.于是得证.
+
+对第二行,左边是任意$T'g=gT$,右边说你这个线性泛函把所有$Tu=0$的映到$0$,恰好是左边的$gT$满足条件.于是得证.
+
+</div>
+
+然后还有一个问题是我们以为$T''=T$,但实际上你甚至不能保证$V$和$V''$是相同的.然后有个典范同构的概念形容他俩的关系就是存在一种不依赖于基的选取的同构(只要定义$T(u)f=fu$,则$u$到$T(u)$是双射.)
 
 ### 本征值
 
@@ -497,8 +531,6 @@ $\lambda$ 是 $T$的本征值等价于 $T-\lambda I$不是双射,或不是单射
 <div class='pbox'>
 
 首先注意到对算子来说 单射,满射双射等价
-
-todo: check 单射0映0
 
 又因为单射等价于 $\mathrm{null\ } T=0$ 所以 $(T-\lambda I)v=0$ 和它不是单射等价.
 
@@ -529,8 +561,29 @@ $$
 
 有此容易说明本征值个数不大于线性空间维数.
 
-### 不变子空间,商算子和限制算子
+<div class='cbox'>
 
+复向量空间中的线性映射一定有本征值
+
+</div>
+
+考虑
+
+$$
+\begin{array}{c}
+v\in V,\mathrm{dim\ } V=n \\
+v,Tv,T^2v\ldots T^{n}V \text{ is dependent} \\
+\sum _{i = 0} ^{n} c_iT^iv  =0 \\
+\stackrel{\text{代数基本定理}}{\Longrightarrow}
+(\prod _{i = 1} ^{n} (T-\lambda_i I))v=0
+\Rightarrow \exists i,T-\lambda_i I=0 \\
+\Rightarrow \lambda_i \text{is a eigenvalue of } T \\
+\end{array}
+$$
+
+
+
+### 不变子空间,商算子和限制算子
 
 <div class='dbox'>
 
@@ -558,6 +611,53 @@ $$
 把算子放到更小的空间去研究的方式.
 
 ### 上三角矩阵
+
+按照上面基的理解,有
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\mathcal M( T,u_1\ldots u_n ) \text{is upper triangular matrix} \\
+\Leftrightarrow \forall i, Tu_i\in \mathrm{span}( u_1\ldots u_i )  \\
+\Leftrightarrow \forall i, \mathrm{span}( u_1\ldots u_i ) \text{is invariant space} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+感觉是显然的.
+
+</div>
+
+那么考虑什么样的线性映射$T$有一组基$u_1\ldots u_n$有上三角矩阵$A_{n\times n}$.
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\forall T\in \mathcal L( V , V ), V \text{ is complex vector space} \\
+\Rightarrow \exists u_1\ldots u_n,\mathcal M( T,u_1\ldots u_n ) \text{ is upper triangular matrix}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑 $Tu_i\in \mathrm{span}( u_1\ldots u_i )$,取$i=1$,易知$u_1,A_{1,1}$为一组本征向量,本征值.
+
+考虑 $U=\mathrm{null\ } T-\lambda_1 I$,则容易发现$U$也是$T$的不变子空间:$Tu=(T-\lambda_1I)u+\lambda_1 u$. 其实就是本征空间$E(T,\lambda_1)$啊.
+
+
+
+</div>
+
+
+
+
 
 
 

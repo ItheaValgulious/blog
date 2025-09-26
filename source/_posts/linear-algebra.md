@@ -59,3 +59,29 @@ We noticed $0<v^2=(\sum_{i\in A} c_i x_i) \cdot (\sum_{j\in B} c_jx_j)<0$, contr
 
 </div>
 
+## Operator's Left Inverse and Right Inverse
+
+### Existance
+
+<div class='cbox'>
+
+对算子$T$来说,左逆存在等价于右逆存在.
+
+</div>
+
+<div class='pbox'>
+
+#### Proof 1
+
+注意到左逆存在等价于$T$是单射,右逆存在等价于$T$是满射.
+
+又因为$T$单射等价于$T$满射等价于$T$双射,所以左逆存在等价于右逆存在且两个逆一定相同.
+
+#### Proof 2
+
+左逆推出$T$分解成初等行变换矩阵,然后一个一个取逆推右逆.
+
+</div>
+
+
+
