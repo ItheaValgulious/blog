@@ -234,9 +234,9 @@ $$
 
 $$
 \begin{array}{c}
-\mathrm{dim\ } U\times V=\mathrm{dim\ } U\oplus V=\mathrm{dim\ } U+\mathrm{dim\ } V \\
-\mathrm{dim\ } U+V = \mathrm{dim\ } U+\mathrm{dim\ } V-\mathrm{dim\ } U\cap V \\
-\mathrm{dim\ } U/V=\mathrm{dim\ } U-\mathrm{dim\ } V
+\dim U\times V=\dim U\oplus V=\dim U+\dim V \\
+\dim U+V = \dim U+\dim V-\dim U\cap V \\
+\dim U/V=\dim U-\dim V
 \end{array}
 $$
 
@@ -261,7 +261,7 @@ $$
 线性映射
 
 线性映射是映射满足:
-- 齐性: $T\lambda v=\lambda Tv$
+- 齐性: $\lambda v=\lambda Tv$
 - 加性: $T(u+v)=Tu+Tv$
 
 </div>
@@ -280,7 +280,7 @@ $$
 
 </div>
 
-符合直觉的.于是你可以说明$\mathcal{L}(U,V)$(由$T:U\to V$组成的集合)是 $\mathrm{dim\ } U\times \mathrm{dim\ } V$维的线性空间,他的标准基可以是所有把$U$的一个基映到$V$的一个基的映射.
+符合直觉的.于是你可以说明$\mathcal{L}(U,V)$(由$T:U\to V$组成的集合)是 $\dim U\times \dim V$维的线性空间,他的标准基可以是所有把$U$的一个基映到$V$的一个基的映射.
 
 
 <div class='dbox'>
@@ -302,7 +302,7 @@ $$
 
 $$
 \begin{array}{c}
-\mathrm{dim\ } U=\mathrm{dim\ } \mathrm{null\ } T+\mathrm{dim\ } \mathrm{range\ } T
+\dim U=\dim \mathrm{null\ } T+\dim \mathrm{range\ } T
 \end{array}
 $$
 
@@ -312,7 +312,9 @@ $$
 
 考虑  $\mathrm{null\ } T$  的基$u_1\ldots u_n$,并添加$v_1\ldots v_m$扩充到$U$的基.
 
-对任意$x=\sum_i c_iu_i+\sum_i c_iv_i$,我们有$Tx=\sum_i Tc_iv_i=\sum_i c_iTv_i$,故任意 $w\in \mathrm{range\ } T$可以表示成$Tv_i$的线性组合,且显然$Tv_i$之间线性无关,于是就得证.
+考虑$Tv_1\ldots Tv_m$若线性相关,$\sum _{i = 1} ^{m}  c_iTv_i=0 \Rightarrow T\sum _{i = 1} ^{m}  c_iv_i=0$,则 $w=\sum _{i = 1} ^{m}  c_iv_i\in \mathrm{null\ } T,w=\sum _{i = 1} ^{m}  c_iv_i=\sum _{i = 1} ^{n}  d_iu_i$,与$u_i,v_i$构成一组基矛盾.
+
+于是$Tv_i$线性无关,且容易注意到任意$w\in U,Tw=\sum_{i=1}^n c_iTu_i+\sum_{i=1}^m d_iTv_i=\sum_{i=1}^md_iTv_i\in \mathrm{span\ } (Tv_1\ldots TV_m)$故得证.
 
 </div>
 
@@ -333,7 +335,7 @@ $$
 基本性质
 
 1. 单射等价于只把$0$映射到$0$.
-2. 存在$U\to V$单射说明 $\mathrm{dim\ } U\le \mathrm{dim\ } V$.
+2. 存在$U\to V$单射说明 $\dim U\le \dim V$.
 3. $U\to V$有单射说明$V\to U$有满射.
 4. $U \to V$存在双射称为$U,V$同构,可以证明任意向量空间同构于某个$F^n$.
 
@@ -349,7 +351,7 @@ $$
 
 $$
 \begin{array}{c}
-\mathrm{dim\ }  U/V=\mathrm{dim\ } U-\mathrm{dim\ } V
+\dim  U/V=\dim U-\dim V
 \end{array}
 $$
 
@@ -472,7 +474,7 @@ $$
 
 $$
 \begin{array}{c}
-\mathrm{dim\ } U+\mathrm{dim\ } U^0=\mathrm{dim\ } V
+\dim U+\dim U^0=\dim V
 \end{array}
 $$
 
@@ -571,7 +573,7 @@ $$
 
 $$
 \begin{array}{c}
-v\in V,\mathrm{dim\ } V=n \\
+v\in V,\dim V=n \\
 v,Tv,T^2v\ldots T^{n}V \text{ is dependent} \\
 \sum _{i = 0} ^{n} c_iT^iv  =0 \\
 \stackrel{\text{代数基本定理}}{\Longrightarrow}
@@ -599,7 +601,7 @@ $$
 
 $$
 \begin{array}{c}
-T/U\in \mathcal L( V/U , V/U ),(T/U)(v+U)=(Tv+U) \\
+T_{/U}\in \mathcal L( V/U , V/U ),(T_{/U})(v+U)=(Tv+U) \\
 T\vert_U \in \mathcal L( U , U ), T\vert_U v=Tv
 \end{array}
 $$
@@ -647,9 +649,55 @@ $$
 
 <div class='pbox'>
 
-考虑 $Tu_i\in \mathrm{span}( u_1\ldots u_i )$,取$i=1$,易知$u_1,A_{1,1}$为一组本征向量,本征值.
+#### Proof 1
 
-考虑 $U=\mathrm{null\ } T-\lambda_1 I$,则容易发现$U$也是$T$的不变子空间:$Tu=(T-\lambda_1I)u+\lambda_1 u$. 其实就是本征空间$E(T,\lambda_1)$啊.
+归纳,假设对任意维数小于$\dim V$的空间成立,考虑取$T$的任意本征值$\lambda$,则 $U:=\mathrm{range\ } T-\lambda I$,则因为$T$不是单的所以 $\dim U<\dim V$.且 $\forall u \in U,Tu=(T-\lambda I)u+\lambda u\in U$,所以$T$在$U$不变.
+
+于是可以应用归纳结假设,$T\vert_U$在$U$上有一组基$u_1\ldots u_n$使得 $\mathcal M( T\vert_U,u_1\ldots u_n )$ 是上三角矩阵.
+
+将这组基扩展到$V$上成为$u_1\ldots u_n,v_1\ldots v_m$,则对$\forall i$,$Tv_i=(T-\lambda I)v_i+\lambda v_i\in \mathrm{span}( u_1\ldots u_n ) +\mathrm{span}( v_i )\subset \mathrm{span}( u_1\ldots u_n,v_1\ldots v_i )$,于是是上三角矩阵.
+
+#### Proof 2
+
+同样归纳,取任意本征向量 $u,U:=\mathrm{span}( u )$,考虑$T_{/U}$是维数为  $\dim V-1$ 的空间$V/U$上算子.则它有上三角矩阵.于是存在$v_1+U\ldots v_n+U$,使得 $\forall v+U\in V/U,T_{/U}(v+U)\in \mathrm{span}( v_1+U,\ldots,v_n+U )$,也就有$Tv\in \mathrm{span}( v_1,\ldots,v_n )$.
+
+然后现在把$v_1\ldots v_n,u$作为新的基,容易发现 $Tu=\lambda u\in \mathrm{span}( v_1,\ldots,v_n,u )$满足条件.于是存在上三角矩阵.
+
+</div>
+
+都要从维度归纳,第二个较易接受:商空间就是抹去若干维度.
+
+[think] 但是第一个从$T-\lambda I$的值域出发是什么个意思?主要利用两个性质:是不变子空间,以及$Tv=(T-\lambda I)v+\lambda v$.是不是相当于把其他向量也拆的"像"本征向量了.
+
+<div class='cbox'>
+
+$T$有逆等价于$T$的上三角矩阵对角线全部非$0$
+
+</div>
+
+<div class='pbox'>
+
+先假设矩阵有逆,设空间$V$基为$v_1\ldots v_n$.
+
+$$
+\begin{array}{c}
+Tv_1=A_{1,1}v_1 \Rightarrow A_{1,1}\ne 0 \\
+Tv_k=u+A_{k,k}v_k,u\in \mathrm{span}( v_1\ldots v_{k-1} ) \\
+\text{if } A_{k,k}= 0 \\
+Tv_k\in \mathrm{span}( v_1\ldots v_{k-1} ) \\
+\because v_1\ldots v_{k-1} \text{ is independent
+}  \\
+\therefore Tv_1\ldots Tv_{k-1} \text{ is independent, so it is a base}  \\
+\therefore Tv_k \in \mathrm{span}( Tv_1\ldots Tv_{k-1} ) \\
+\exists c \ s.t.\ 
+\sum _{i = 1} ^{k}  c_iTv_i=0 \\
+\stackrel{T^{-1}}{\Longrightarrow}\sum _{i = 1} ^{k}  c_iv_i=0 \\
+\text{contradiction!} 
+\end{array}
+$$
+
+再假设$T$关于$V$的基$v_1\ldots v_n$的矩阵为上三角矩阵且对角线元素非$0$.
+
 
 
 
@@ -659,10 +707,4 @@ $$
 
 
 
-
-
 ### 对角矩阵
-
-
-
-

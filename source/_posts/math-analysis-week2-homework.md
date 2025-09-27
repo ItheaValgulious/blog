@@ -126,6 +126,9 @@ $$
 
 </div>
 
+<div class='pbox'>
+
+
 $$
 \begin{array}{c}
 \lim_{n \to \infty} \dfrac{\dfrac{1}{x_n} }{n} \\
@@ -156,6 +159,10 @@ x_{n+1}<\dfrac{1}{n}(1-\dfrac{1}{n} )=\dfrac{n-1}{n^2} <\dfrac{1}{n+1}
 \Rightarrow \lim_{n \to \infty} nx_n=1
 \end{array}
 $$
+
+</div>
+
+
 
 ### T5
 
@@ -217,6 +224,8 @@ $$
 
 </div>
 
+<div class='pbox'>
+
 $$
 \begin{array}{c}
 x_n \text{ is obviously incresing}  \\
@@ -228,6 +237,10 @@ x_n \text{ is obviously incresing}  \\
 
 \end{array}
 $$
+
+</div>
+
+
 
 ## Class 5
 
@@ -337,7 +350,11 @@ a_1:=x_N-\epsilon_1,b_1:=x_N+\epsilon_1 \\
 \end{array}
 $$
 
-对$[a_i,b_i]$,考虑取 $\epsilon_i=\dfrac{\epsilon_{i-1}}{2}$,有$N_i=\max(N_{i-1},N(\epsilon_i)) \ s.t.\ \forall j>N_i,x_j\in [x_{N_i}-\epsilon_i,x_{N_i}+\epsilon_i]$.
+对 $[a_i,b_i]$ ,考虑取 $\epsilon_i=\dfrac{\epsilon_{i-1}}{2}$ ,有 
+
+$$
+N_i=\max(N_{i-1},N(\epsilon_i)) \ s.t.\ \forall j>N_i,x_j\in [x_{N_i}-\epsilon_i,x_{N_i}+\epsilon_i]
+$$
 
 于是令$a_i=\max(a_{i-1},x_{N_i}-\epsilon),b_i=\min(b_{i-1},x_{N_i}+\epsilon_i)$. 显然$\vert b_i-a_i \vert < \dfrac{1}{2^{i-1}}$,于是
 
@@ -496,6 +513,7 @@ $$
 <div class='pbox'>
 
 $$
+\begin{array}{c}
 \text{if }\sup A>\sup B \\
 \text{let }M=\sup B
 \stackrel{\text{Def of supremum}}{\Longrightarrow} \exists a\in A,a>M=\sup B \\
@@ -503,8 +521,9 @@ $$
 a\in A \stackrel{A\subset B}{\Longrightarrow} a\in B \\
 a>\sup B
 \end{array} \right\}
-\Rightarrow \text{False} 
+\Rightarrow \text{False}  \\
 \therefore \sup A\le \sup B
+\end{array}
 $$
 
 取 $C=-A,D=-B,C\subset D,\sup C\le \sup D \Rightarrow \inf A\ge \inf B$,
