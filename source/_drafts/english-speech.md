@@ -17,3 +17,32 @@ Lastly, if we omit the content I had explained and stubbornly insist AI hinder t
 
 As a summry, AI has enhanced and will constantly enhance human's creativity by realizing the whims that we could already quit and popularizing the knowledge be the basical root of creativity.
 
+## Class 2
+
+
+### Something about Chinese Culture
+
+Unity of Human and Nature
+
+Heaven has its seasons,erath has its engery,material has its quality, and craftmans have their skills.
+
+drain the pounds to catch the fish
+
+Creative Spirit of Craftsmanship
+We polish the lacquer and the lacquer also polishes us.
+
+People-oriented thinking
+
+Filial Piety(孝顺)
+
+the benevolent love the people.
+
+treat the elders of others as your own, treat the kids of others as your own
+
+harmony without uniformity
+
+all things carreid Yin and embrace Yang,through the collection(?) of Qi to achieve harmony
+
+gentele man seeks harmony but not uniformity
+
+

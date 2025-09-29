@@ -742,9 +742,6 @@ $$
 
 ## Class 3
 
-
-# Math Analysis Homework - Class 3
-
 ### T1
 
 <div class='cbox'>

@@ -551,3 +551,83 @@ $$
 
 </div>
 
+# Class 7
+
+### T1
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\lim_{x \to x_0} \sqrt{ x } =\sqrt x_0
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+if $x_0\ne 0$
+$$
+\begin{array}{c}
+\vert \sqrt x-\sqrt {x_0} \vert  \\
+={\left \vert \dfrac{x-x_0}{\sqrt x+\sqrt {x_0}} \right \vert}   \\
+\le \dfrac{\delta}{\sqrt{x_0} }  \\
+\therefore \delta:=\dfrac{\sqrt{x_0}\epsilon}{2} \Rightarrow  \\
+\forall \epsilon,x\in N(x_0,\delta),\vert \sqrt x-\sqrt {x_0} \vert <\epsilon
+\end{array}
+$$
+
+if $x_0=0,\sqrt x_0=0$
+
+$$
+\begin{array}{c}
+\delta:=\dfrac{\epsilon^2}{4} \Rightarrow \forall \epsilon,x\in N(x_0,\delta), \\
+\vert \sqrt x-\sqrt {x_0} \vert =\dfrac{\epsilon}{4} <\epsilon
+\end{array}
+$$
+
+$$
+\begin{array}{c}
+
+\text{Q.E.D}
+\end{array}
+$$
+
+</div>
+
+
+
+
+
+### T2
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\lim_{x \to +\infty} (\sqrt{ x+1 } -\sqrt{ x-1 } ) =0
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{c}
+\sqrt{ x+1 } -\sqrt{ x-1 }   \\
+=\dfrac{2}{\sqrt{x+1}+\sqrt{x-1}}  \\
+<\dfrac{1}{\sqrt{x}} \\
+
+\therefore \forall \epsilon \in (0,1),
+\delta:=\dfrac{4}{\epsilon^2}, \\
+x>\delta \Rightarrow \sqrt{x+1}-\sqrt{ x-1 } <\dfrac{1}{\sqrt{ x } } =\dfrac{\epsilon}{2} < \epsilon
+\\
+\text{Q.E.D}
+\end{array}
+$$
+
+</div>
+
+

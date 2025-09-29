@@ -713,6 +713,120 @@ $$
 
 很棒的啊,它完全不关心你无穷覆盖的结构而是到数的结构去了.
 
+## Class 7
+
+### Funciton's Limits
+
+<div class='dbox'>
+
+$$
+\begin{array}{c}
+\lim_{x \to x_0} f(x) = A  \\
+\Leftrightarrow \forall \epsilon, \exists \delta,\\ s.t.\\ 
+\forall x, \vert x-x_0 \vert \in (0,\delta), \vert f(x)-A \vert <\epsilon
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+Heine Theorem
+
+$$
+\begin{array}{c}
+\lim_{x \to x_0} f(x)=A \\
+\Leftrightarrow \forall \{ x_n \} ,\lim_{n \to \infty} x_n  = x_0 \\
+\lim_{n \to \infty} f(x_n) = A
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+正向是显然的.
+
+反向你就反证,然后极限不存在就翻译成 
+
+$$
+\exists \epsilon, \forall \delta, \exists x,\vert x-x_0 \vert  \\
+\vert f(x)-A \vert \ge \epsilon
+$$
+
+于是你取一个极限是$0$的$\delta$,得到一列收敛到$x_0$的$x$,然后用这个数列就矛盾了.
+
+</div>
+
+然后你可以用这种方法,把函数极限的各种性质转化到数列极限,四则运算,夹逼等.
+
+<div class='cbox'>
+
+柯西收敛
+
+$$
+\begin{array}{c}
+\lim_{x \to x_0} \text{ exists} \Leftrightarrow \forall \epsilon, \exists \delta,\forall x_1,x_2 \in N^*(x_0,\delta),\vert f(x_1)-f(x_2) \vert < \epsilon
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+正向是显然的.
+
+反向的话你可以用上面Heine转化成数列,则你只需要证所有这样的数列极限相等.
+
+然后你发现你直接取任意两个数列,然后插(奇数偶数项分别放两个数列的元素)就可以直接证明这两个数列极限相等.于是结束.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\left. \begin{array}{ll}
+\lim_{x \to x_0} f(x) = A \\
+\lim_{t \to t_0} g(t) = x_0 \\
+\exists \eta>0, t\in N(t_0,\eta) \Rightarrow g(t)\ne 0
+\end{array} \right\} \\
+\Rightarrow \lim_{t \to t_0} f(g(t)) = A
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+直接翻译成$\epsilon-\delta$是显然的.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\lim_{ \to _0} \dfrac{\sin(x)}{x} = 1
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
 
 ## Class Unknown
 

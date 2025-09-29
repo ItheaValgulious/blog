@@ -59,7 +59,7 @@ h1,h2,h3,h4,h5,h6,.post-title>a{
     border-radius: 0 0 1em 0;
     margin: 1em 0em 1em 0em;
 }
-.bbox {
+.bbox,.dbox {
     background-color: var(--secondary-color);
     padding: 1em;
     border: solid;

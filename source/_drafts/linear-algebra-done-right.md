@@ -39,9 +39,7 @@ tags: [linear-algebra,note,self-study]
 
 判定可以看上面
 
-
-
-### 维数
+#### 维数
 
 向量空间还应该有维数.于是定义
 
@@ -139,13 +137,15 @@ $$
 
 <div class='dbox'>
 
+维数
+
 维数就是这个长度为 $\mathrm{dim} V$
 
 </div>
 
 </div>
 
-### 空间的运算
+#### 空间的运算
 
 <div class='dbox'>
 
@@ -254,7 +254,7 @@ $$
 
 ### 线性映射
 
-#### 基本性质
+#### 线性映射基本性质
 
 <div class='dbox'>
 
@@ -374,7 +374,7 @@ $$
 
 </div>
 
-#### 矩阵
+#### 线性映射的矩阵
 
 <div class='dbox'>
 
@@ -396,6 +396,9 @@ $$
 
 于是可以定义矩阵运算:
 
+<div class='dbox'>
+
+
 $$
 \begin{array}{c}
 \mathcal M( S ) \mathcal M( T ) = \mathcal M( ST ) \\
@@ -404,9 +407,60 @@ $$
 \end{array}
 $$
 
+</div>
+
+
+
 其中第一行矩阵乘法用坐标写一下可以推出经典的矩阵乘法方式.
 
-#### 对偶
+
+#### 算子,不变子空间,商算子和限制算子
+
+这些概念会在本征值那里用到 但从属性上讲和这里线性映射关系更大.
+
+<div class='dbox'>
+
+算子
+
+$$
+\begin{array}{c}
+T\in \mathcal L( V , V ) 
+\end{array}
+$$
+
+即映射到自身空间的线性变换.
+
+</div>
+
+
+
+<div class='dbox'>
+
+不变子空间
+
+即对算子$T$,有$\forall u\in U, Tu\in U$,则$U$为不变子空间.
+
+</div>
+
+<div class='dbox'>
+
+商算子,限制算子
+
+$$
+\begin{array}{c}
+T_{/U}\in \mathcal L( V/U , V/U ),(T_{/U})(v+U)=(Tv+U) \\
+T\vert_U \in \mathcal L( U , U ), T\vert_U v=Tv
+\end{array}
+$$
+
+</div>
+
+显然$T\vert_U$要求了$U$是不变子空间.
+
+把算子放到更小的空间去研究的方式.
+
+
+### 对偶
 
 <div class='dbox'>
 
@@ -510,7 +564,9 @@ $$
 
 然后还有一个问题是我们以为$T''=T$,但实际上你甚至不能保证$V$和$V''$是相同的.然后有个典范同构的概念形容他俩的关系就是存在一种不依赖于基的选取的同构(只要定义$T(u)f=fu$,则$u$到$T(u)$是双射.)
 
-### 本征值
+### 本征值基础
+
+#### 本征值
 
 <div class='dbox'>
 
@@ -522,7 +578,7 @@ $$
 
 就是说算子在这个方向上对变换只有伸缩.
 
-一个本征值可能对应多个线性不相关的本征向量,它们构成本征空间$E(T,\lambda)$
+一个本征值可能对应多个线性不相关的本征向量,它们构成本征空间$E(\lambda,T)$
 
 <div class='cbox'>
 
@@ -569,6 +625,9 @@ $$
 
 </div>
 
+<div class='dbox'>
+
+
 考虑
 
 $$
@@ -583,36 +642,11 @@ v,Tv,T^2v\ldots T^{n}V \text{ is dependent} \\
 \end{array}
 $$
 
-
-
-### 不变子空间,商算子和限制算子
-
-<div class='dbox'>
-
-不变子空间
-
-即对算子$T$,有$\forall u\in U, Tu\in U$,则$U$为不变子空间.
-
 </div>
 
-<div class='dbox'>
 
-商算子,限制算子
 
-$$
-\begin{array}{c}
-T_{/U}\in \mathcal L( V/U , V/U ),(T_{/U})(v+U)=(Tv+U) \\
-T\vert_U \in \mathcal L( U , U ), T\vert_U v=Tv
-\end{array}
-$$
-
-</div>
-
-显然$T\vert_U$要求了$U$是不变子空间.
-
-把算子放到更小的空间去研究的方式.
-
-### 上三角矩阵
+#### 上三角矩阵
 
 按照上面基的理解,有
 
@@ -649,7 +683,7 @@ $$
 
 <div class='pbox'>
 
-#### Proof 1
+Proof 1
 
 归纳,假设对任意维数小于$\dim V$的空间成立,考虑取$T$的任意本征值$\lambda$,则 $U:=\mathrm{range\ } T-\lambda I$,则因为$T$不是单的所以 $\dim U<\dim V$.且 $\forall u \in U,Tu=(T-\lambda I)u+\lambda u\in U$,所以$T$在$U$不变.
 
@@ -657,7 +691,11 @@ $$
 
 将这组基扩展到$V$上成为$u_1\ldots u_n,v_1\ldots v_m$,则对$\forall i$,$Tv_i=(T-\lambda I)v_i+\lambda v_i\in \mathrm{span}( u_1\ldots u_n ) +\mathrm{span}( v_i )\subset \mathrm{span}( u_1\ldots u_n,v_1\ldots v_i )$,于是是上三角矩阵.
 
-#### Proof 2
+</div>
+
+<div class='pbox'>
+
+Proof 2
 
 同样归纳,取任意本征向量 $u,U:=\mathrm{span}( u )$,考虑$T_{/U}$是维数为  $\dim V-1$ 的空间$V/U$上算子.则它有上三角矩阵.于是存在$v_1+U\ldots v_n+U$,使得 $\forall v+U\in V/U,T_{/U}(v+U)\in \mathrm{span}( v_1+U,\ldots,v_n+U )$,也就有$Tv\in \mathrm{span}( v_1,\ldots,v_n )$.
 
@@ -665,9 +703,10 @@ $$
 
 </div>
 
-都要从维度归纳,第二个较易接受:商空间就是抹去若干维度.
+都要从维度归纳,第二个自然一点吧:商空间就是抹去若干维度.
 
 [think] 但是第一个从$T-\lambda I$的值域出发是什么个意思?主要利用两个性质:是不变子空间,以及$Tv=(T-\lambda I)v+\lambda v$.是不是相当于把其他向量也拆的"像"本征向量了.
+
 
 <div class='cbox'>
 
@@ -698,8 +737,204 @@ $$
 
 再假设$T$关于$V$的基$v_1\ldots v_n$的矩阵为上三角矩阵且对角线元素非$0$.
 
+那么我们知道$Tv_i=A_{i,i}v_i+\sum_{j=1}^{i-1}c_jTv_{j-1}$,其中后一项属于 $\mathrm{span}( v_1\ldots v_{i-1} )$,于是容易发现$Tv_1\ldots Tv_n$线性独立,是一组基,于是$T$是满的,于是$T$可逆.
 
 
+</div>
+
+
+<div class='cbox'>
+
+$T$的某个基下的上三角矩阵对角线元素是$T$的本征值.
+
+</div>
+
+<div class='pbox'>
+
+考虑$(T-\lambda I)v=0$,则$\lambda$是本征值等价于$T-\lambda I$不是单的,也就不是可逆的,即用上面条件对角线存在$0$,即$\lambda$等于对角线上的某个元素.
+
+</div>
+
+#### 对角矩阵
+
+<div class='dbox'>
+
+本征空间
+
+$$
+\begin{array}{c}
+E(\lambda,T)=\mathrm{null\ } T-\lambda I
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$T$在基$v_1\ldots v_n$下为对角矩阵等价于
+- $v_1\ldots v_n$是$T$的$n$个本征向量.
+- $\oplus_i E(\lambda_i,T)=V$
+- 存在$n$个一维不变子空间直和为$V$
+
+</div>
+
+<div class='pbox'>
+
+这个感觉也是显然的.
+
+</div>
+
+### 内积空间
+
+#### 内积
+
+<div class='dbox'>
+
+内积
+
+二元函数<x,y>:($V,V\to F$)满足:
+- 正性: $<v,v>\ge 0$
+- 定性: $<v,v>=0 \Leftrightarrow v=0$
+- 第二个位置的线性:$<u,v>$关于$v$是线性的
+- 共轭对称性:$<u,v>=\overline{<v,u>}$ 
+
+</div>
+
+todo [think] 定性
+
+<div class='cbox'>
+
+- 内积$<u,v>$关于$u$也是线性的.
+- $<u,0>=<0,u>=0$
+
+</div>
+
+<div class='pbox'>
+
+第一条用共轭对称性换到后面再换回来:
+$$
+\begin{array}{c}
+a<u_1,v>+b<u_2,v>=a \overline{ <v,u_1> } +b \overline{ <v,u_2> }  \\
+=\overline{ <v,au_1+bu_2> }  \\
+=<au_1+bu_2,v>
+\end{array}
+$$
+
+第二条考虑线性映射$0$映到$0$.
+
+</div>
+
+<div class='dbox'>
+
+范数
+
+$\vert\vert v \vert\vert = <v,v>$定义为向量的范数.
+
+</div>
+
+<div class='dbox'>
+
+正交
+
+$u\perp v \Leftrightarrow <u,v>=0$
+
+</div>
+
+<div class='dbox'>
+
+正交分解
+
+$\forall u,v,v=\dfrac{u}{\vert\vert u \vert\vert^2 } <u,v>+(v-\dfrac{u}{\vert\vert u \vert\vert^2 } <u,v>)$
+
+</div>
+
+<div class='cbox'>
+
+$<u,v><\vert\vert u \vert\vert \vert\vert v \vert\vert$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{c}
+\text{let} w=\dfrac{u}{\vert\vert u \vert\vert^2 }<u,v>\\
+
+v=w+(v-w),w\perp v-w \\
+\Rightarrow v^2=w^2+(v-w)^2\le w^2=\dfrac{<u,v>^2}{\vert\vert u \vert\vert ^2} 
+\end{array}
+$$
+
+</div>
+
+#### 正交基
+
+<div class='dbox'>
+
+正交基,规范正交基.
+
+正交基是两两正交的基.规范正交基就是两两正交且范数均为$1$的基.
+
+</div>
+
+<div class='cbox'>
+格拉姆施密特过程
+
+任意给定一组基$u_1\ldots u_n$,可以构造规范正交基$e_1\ldots e_n$.
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{c}
+v_i=u_i-\sum_{j=1}^{i-1}<u_i,e_j>e_j \\
+e_i=\dfrac{v_i}{\vert\vert v_i \vert\vert } 
+\end{array}
+$$
+
+</div>
+
+其实构造是很好想的,就是对于前$i-1$个正交基的空间,把第$i$个去掉所有和某个基方向相同的分量,剩下的就是新的正交方向.
+
+<div class='cbox'>
+
+若$T$关于$V$上一组基$v_1\ldots v_n$由上三角矩阵,则$T$关于$V$上一组规范正交基有上三角矩阵.
+
+任意复向量空间上算子关于某个规范正交基有上三角矩阵.
+
+</div>
+
+<div class='pbox'>
+
+考虑刚才的构建过程里,每个 $\mathrm{span}( u_1\ldots u_i )$都没有改变,所以是显然的.
+
+而第二条可以由 复向量空间上算子关于某基有上三角矩阵 和 第一条显然推出.
+
+</div>
+
+单列第二条是因为它叫 舒尔定理.
+
+<div class='cbox'>
+
+里斯表示定理
+
+对任意线性泛函$f$存在$u$使得$fv=<u,v>$
+
+</div>
+
+<div class='pbox'>
+
+设$e_1\ldots e_n$是一组规范正交基,则
+
+$$
+\begin{array}{c}
+fv=f\sum _{i = 1} ^{n}  <v,e_i> e_i \\
+=\sum _{i = 1} ^{n}  <v,e_i> fe_i \\
+=\sum _{i = 1} ^{n}  <v,fe_i\cdot e_i> \\
+=<v,\sum _{i = 1} ^{n}  e_ife_i>
+\end{array}
+$$
 
 </div>
 
@@ -707,4 +942,151 @@ $$
 
 
 
-### 对角矩阵
+#### 正交补
+
+<div class='dbox'>
+
+正交补
+
+$U^{\perp}=\{ v \vert <u,v>=0,u\in U,v\in V \}$
+
+</div>
+
+和$U$中向量正交的向量们.
+
+<div class='cbox'>
+
+- $U\oplus U^{\perp}=V$
+- $(U^{\perp})^{\perp}=U$
+
+</div>
+
+<div class='pbox'>
+
+取$U$的一组规范正交基$u_1\ldots u_n$,扩充到$V$的一组规范正交基$u_1\ldots u_n,v_1\ldots v_m$.
+
+则容易发现 $U^{\perp}=\mathrm{span}( v_1\ldots v_m )$.
+
+然后第一条是显然的.第二条的话你把$U^{\perp}$的基扩充到$V$的时候扩充$u_1\ldots u_n$就也是显然的.
+
+</div>
+
+
+<div class='dbox'>
+
+正交投影
+
+$$
+\begin{array}{c}
+\text{let } u=w_1+w_2,w_1\in U,w_2\in U^{\perp} \\
+\Rightarrow P_U=w_1
+\end{array}
+$$
+
+</div>
+
+即干掉垂直分量,投影到$U$所在超平面上.
+
+<div class='cbox'>
+
+- $P_U$ 是线性变换.
+- 对$U$的一组规范正交基$e_1\ldots e_m$,有$P_Uv=\sum_{i=1}^m <v,e_i> e_i$
+
+以及一些很显然的性质.
+
+</div>
+
+<div class='pbox'>
+
+第二条看起来很显然.那么有了第二条第一条也很显然.
+
+</div>
+
+### 自伴算子,正规算子
+
+<div class='dbox'>
+
+伴随
+
+对于算子$T$,若$\forall u,v$,$<Tu,v>=<u,T^*v>$,则$T^*$是$T$的伴随.
+
+</div>
+
+<div class='cbox'>
+
+- $(S+T)^*=S^*+T^*$
+- $(\lambda T)^*=\lambda T^*$
+- $(ST)^*=T^*S^*$
+- $T^*^*=T$
+- $\mathrm{null\ } T*=\mathrm{range\ } T)^{\perp}$
+
+</div>
+
+<div class='pbox'>
+
+前三个用定义带进去即可.
+
+第四个,$<u,T*v>=<Tu,v>=\overline{ <T*v,u> } = \overline{ <v,Tu> } =<Tu,v>$
+
+第五个,考虑是右边对任意$u$,$<Tu,w>=0$的所有$w$,$<Tu,w>=<u,T*w>$,故 $w\in \mathrm{null\ } T*$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\mathcal M( T^*, v_1\ldots v_m, u_1\ldots u_n) = \overline{ \mathcal M( T ,u_1\ldots u_n,v_1\ldots v_m)^T  }  \\
+(v_1\ldots v_m),(u_1\ldots u_n) \text{ are regular orthogonal bases} 
+\end{array}
+$$
+
+右边说的是转置再把每一项共轭.
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{c}
+<Tu,v>=<u,T^*v> \\
+Tu=\sum _{i = 1} ^{m} \sum_{j=1}^n A_{j,i}<u,u_i>v_j \\
+<Tu,v> \\
+= <\sum _{i = 1} ^{m}\sum_{j=1}^n A_{j,i}<u,u_i>v_j,v>  \\
+=\sum _{i = 1} ^{m} \sum_{j=1}^n A_{j,i}<u,u_i><v_j,v> \\
+=<u,\sum _{i = 1} ^{m} \sum_{j=1}^n A_{j,i}<v_j,v>u_i> \\
+=<u,Tv>
+\end{array}
+$$
+
+其实就是直接用规范正交基写开直接做.
+
+</div>
+
+<div class='dbox'>
+
+自伴算子
+
+$T=T^*$
+
+</div>
+
+所以这个也是我们实对称矩阵啊.
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+T=T^* \Rightarrow \begin{cases}
+T\text{'s eigenvalues}\in R  \\
+\forall v,<v,Tv> \in R \\
+<>
+\end{cases}
+
+\end{array}
+$$
+
+</div>
+
+所以说书说伴随类比共轭,自伴算子类比实数啊.
+
