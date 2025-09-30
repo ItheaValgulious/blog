@@ -1080,7 +1080,7 @@ $$
 T=T^* \Rightarrow \begin{cases}
 T\text{'s eigenvalues}\in R  \\
 \forall v,<v,Tv> \in R \\
-<>
+<v,Tv>=0 \Rightarrow T=0
 \end{cases}
 
 \end{array}
@@ -1089,4 +1089,72 @@ $$
 </div>
 
 所以说书说伴随类比共轭,自伴算子类比实数啊.
+
+<div class='pbox'>
+
+todo
+
+</div>
+
+<div class='dbox'>
+
+正规算子
+
+$$
+\begin{array}{c}
+T \text{ is normal} \Leftrightarrow  TT^*=T^*T
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+T \text{ is normal} \Leftrightarrow \forall v,\vert\vert Tv \vert\vert = \vert\vert T^*v \vert\vert 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+todo
+
+</div>
+
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+T \text{ is normal}, \lambda \text{is eigen value of } T  \\
+\Rightarrow \lambda \text{is eigen value of } T^* 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+todo
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+T \text{ is normal} \Rightarrow \text{eigen value of } T \text{is orthogonal} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+todo
+
+</div>
 
