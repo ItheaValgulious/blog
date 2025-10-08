@@ -815,6 +815,111 @@ $$
 
 <div class='pbox'>
 
+todo
+
+</div>
+
+## Ex Class 1
+
+### 定义指数函数
+
+<div class='cbox'>
+
+承认确界原理,实数的四则运算,$<$关系,等式性质等.
+
+定义指数函数$下a^x(a>0),x\in R$
+
+</div>
+
+<div class='pbox'>
+
+首先良好的定义$x\in N$的情况.
+
+然后尝试定义 $x=\dfrac{1}{k},k\in N$的情况,那么要证明
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+\forall x>0,n\in N^*,\exists! y {\ } s.t. {\ } y^n=x
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+那么构造 $E=\{ t \vert t^n<x \}$,容易证明:
+- 非空:$\dfrac{x}{1+x}\in E$
+- 有上界:$(x+1)^n>x$
+
+于是确界存在,设上确界为$y$,尝试证明$y^n=x$.
+
+假设$y^n<x$,设$h\in (0,\min(1,\dfrac{x-y^n}{n(y+1)^{n-1}}))$.
+
+于是发现$(y+h)^n-y^n<hn(y+h)^{n-1}<x-y^n$
+
+于是$(y+h)^n<x,y+h\in E$,与$y$是上确界矛盾.
+
+再假设$y^n>x$,设$h=\dfrac{y^n-x}{ny^{n-1}}$.
+
+则$y^n-(y-h)^n<hny^{n-1}=y^n-x$,即$(y-h)^n>x$,故$y-h$也是$E$的上界,与上确界矛盾.
+
+于是就证明出$y^n=x$.
+
+</div>
+
+
+那么现在我们能定义 $a^x,x\in Q$. 了吗?
+
+不行.接下来你要证明有理数约不约分结果是一样的.即:
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+r=\dfrac{m}{n} =\dfrac{p}{q} \Rightarrow a=(x^m)^{\frac1n}=(x^p)^{\frac1q}=b
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{c}
+a^{nq}=x^{nrq},b^{nq}=x^{nrq} \\
+\Rightarrow  a^{nq}=b^{nq} \\
+\Rightarrow a=b
+\end{array}
+$$
+
+</div>
+
+下一个目标是实数!
+
+定义$a^x,x\in R$是所有$a^q,q\in Q,q\le x$的上确界就行了吧!
+
+那么你是不是得说说实数这个满足和刚才一样的运算律,也就是:
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+a^xa^y=a^{x+y} \\
+(a^x)^y=a^{xy}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+然后他下课不讲了
+
+todo
+
+</div> 
 
 
 </div>

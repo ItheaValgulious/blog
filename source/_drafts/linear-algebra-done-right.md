@@ -828,9 +828,41 @@ $$
 
 范数
 
-$\vert\vert v \vert\vert = <v,v>$定义为向量的范数.
+$\vert\vert v \vert\vert = \sqrt{<v,v>}$定义为向量的范数.
 
 </div>
+
+<div class='cbox'>
+
+也可以用范数定义内积.
+
+</div>
+
+<div class='pbox'>
+
+对实向量空间:
+
+$$
+\begin{array}{c}
+<u,v>=\dfrac{\vert\vert u+v \vert\vert ^2-\vert\vert u-v \vert\vert ^2}{4} 
+\end{array}
+$$
+
+对复向量空间:
+
+$$
+\begin{array}{c}
+<u,v>=\dfrac{\vert\vert u+v \vert\vert ^2-\vert\vert u-v \vert\vert ^2}{4} + \dfrac{\vert\vert u+iv \vert\vert ^2-\vert\vert u-iv \vert\vert ^2}{4}i
+\end{array}
+$$
+
+拆开演算显然是对的.
+
+</div>
+
+
+
+
 
 <div class='dbox'>
 
@@ -850,7 +882,7 @@ $\forall u,v,v=\dfrac{u}{\vert\vert u \vert\vert^2 } <u,v>+(v-\dfrac{u}{\vert\ve
 
 <div class='cbox'>
 
-$<u,v><\vert\vert u \vert\vert \vert\vert v \vert\vert$
+$<u,v> {\ } \le {\ } \vert\vert u \vert\vert \vert\vert v \vert\vert$
 
 </div>
 
@@ -1017,7 +1049,7 @@ $$
 - $(S+T)^*=S^*+T^*$
 - $(\lambda T)^*=\lambda T^*$
 - $(ST)^*=T^*S^*$
-- $T^*^*=T$
+- $(T^*)^*=T$
 - $\mathrm{null\ } T*=\mathrm{range\ } T)^{\perp}$
 
 </div>
@@ -1077,14 +1109,13 @@ $T=T^*$
 
 $$
 \begin{array}{c}
-T=T^* \Rightarrow \begin{cases}
-T\text{'s eigenvalues}\in R  \\
-\forall v,<v,Tv> \in R \\
-<v,Tv>=0 \Rightarrow T=0
-\end{cases}
-
-\end{array}
+T=T^* \Rightarrow T\text{'s eigenvalues}\in R  \\
+T=T^* \Leftrightarrow \forall v,<v,Tv> \in R \\
+T=T^* \Leftrightarrow (<v,Tv>=0 \Rightarrow T=0)
+\end{array} 
 $$
+
+注意,前两条对复向量空间成立,最后一条是对实向量空间成立.
 
 </div>
 
@@ -1092,7 +1123,53 @@ $$
 
 <div class='pbox'>
 
-todo
+第一行,根据舒尔定理,$T$有关于规范正交基的上三角矩阵,然后因为矩阵等于共轭转置,于是对角线上对应相等,于是都是实数.
+
+第二行,$<v,Tv>=\overline{ <Tv,v> } = \overline{ <v,T^*v> } =\overline{ <v,Tv> }$可以正推.
+
+反推的话
+
+$$
+\begin{array}{c}
+\forall v,0 \\
+=<v,Tv>-\overline{ v,Tv } \\
+=<v,Tv>-<v,T^*v> \\
+=<v,(T-T^*)v>=0
+\end{array}
+$$
+
+这里我们似乎需要点引理:
+
+<div class='cbox'>
+
+复向量空间下,只有$T=0$可以保证$\forall v,<v,Tv>=0$.
+
+</div>
+
+也就是复向量空间下的性质3.
+
+<div class='pbox'>
+
+考虑$T$变成规范正交基下的上三角矩阵,基是$e_1\ldots e_n$,则$Te_1=\lambda_1e_1,<e_1,Te_1>=<e_1,\lambda_1 e_1>=0$得$\lambda_1=0$,$Te_1=0$.
+
+然后你带入$e_1+e_2$,则$T(e_1+e_2)=Te_2=ae_1+be_2,<e_1+e_2,T(e_1+e_2)>=0$得$a=b=0$,$Te_2=0$.
+
+反复重复就得到$\forall i,Te_i=0$,于是$T=0$.
+
+</div>
+
+这样我们就可以从$<v,(T-T^*)v>=0$得到$T=T^*$了.
+
+第三行,考虑
+$$
+\begin{array}{c}
+\forall u,v, \\
+<u,Tv>=\dfrac{<u+v,Tu+Tv>-<u-v,Tu-Tv>}{4} 
+\end{array}
+$$
+
+于是任意$<u,Tv>=0$,$T=0$.
+
 
 </div>
 
@@ -1120,17 +1197,19 @@ $$
 
 <div class='pbox'>
 
-todo
+$$
+\begin{array}{c}
+<Tv,Tv>=<T^*Tv,v>=<TT^*v,v>=<T^*v,T^*v>
+\end{array}
+$$
 
 </div>
-
 
 <div class='cbox'>
 
 $$
 \begin{array}{c}
-T \text{ is normal}, \lambda \text{is eigen value of } T  \\
-\Rightarrow \lambda \text{is eigen value of } T^* 
+T \text{ is normal} ,\lambda \text{ is eigen value of } T \Rightarrow T-\lambda I \text{ is normal}  
 \end{array}
 $$
 
@@ -1138,7 +1217,25 @@ $$
 
 <div class='pbox'>
 
-todo
+
+
+</div>
+
+
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+T \text{ is normal}, Tv=\lambda v \Rightarrow T^*v=\overline{ \lambda } v 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+
 
 </div>
 
