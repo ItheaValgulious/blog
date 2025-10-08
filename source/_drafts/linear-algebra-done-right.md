@@ -1243,7 +1243,7 @@ $$
 
 $$
 \begin{array}{c}
-T \text{ is normal} \Rightarrow \text{eigen value of } T \text{is orthogonal} 
+T \text{ is normal} \Rightarrow \text{eigen vectors of } T \text{ are orthogonal} 
 \end{array}
 $$
 
@@ -1251,7 +1251,135 @@ $$
 
 <div class='pbox'>
 
-todo
+$$
+\begin{array}{c}
+\text{let } Tu=\lambda_1 u,Tv=\lambda_2 v \\
+(\lambda_2-\lambda_1)<u,v> \\
+=<u,\lambda_2 v>-<\overline{ \lambda_1 } u,v> \\
+=<u,Tv>-<T^*u,v>  \\
+=0
+\end{array}
+$$
 
 </div>
 
+### 谱定理
+
+<div class='cbox'>
+
+复谱定理
+
+复向量空间上,算子正规等价于存在一组由本征向量组成的规范正交基
+
+</div>
+
+<div class='pbox'>
+
+反向推是显然的:对角矩阵之间乘法是交换的.
+
+正向推:
+
+首先舒尔定理得到一个规范正交基使得矩阵 $\mathcal M( T ) =M$ 是上三角的.
+
+现在利用$A=MM^*=M^*M$.
+
+考虑 $\sum_{i=1}^n \vert M_{i,i} \vert ^2=<M_{1,.},\overline{M_{1,.}}>=<M_{.,1},\overline{M_{.,1}}>=\vert M_{1,1} \vert ^2$
+
+于是直接说明了$M_{1,i}=0,i>1$.
+
+然后再考虑$A_{2,2}$是第二行第二列,可以同理得到$<M_{2,i}=0,i>2$
+
+于是重复上述过程可以证明$M$是对角矩阵,得证.
+
+</div>
+
+<div class='cbox'>
+
+实谱定理
+
+实向量空间上,算子自伴等价于存在一组本征向量组成的规范正交基
+
+</div>
+
+<div class='pbox'>
+
+反向推依然是显然的,考虑正向.
+
+考虑归纳,先假设对所有小于$n$维命题成立.$1$维显然成立.
+
+取一个规范的本征向量,把它作为基的第一个向量$n_1$,设  $U=\mathrm{span}( n_1 )$,则$T$在$U$上不变.
+
+注意到
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+u\in U \Rightarrow Tu\in U \\
+\Leftrightarrow v\in U^{\perp},Tv\in U^\perp
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{c}
+u\in U,v\in U^{\perp} \\
+\Rightarrow <Tu,v>=0 \\
+\Rightarrow <u,Tv>=0 \\
+\Rightarrow Tv\in U^{\perp}
+\end{array}
+$$
+
+</div>
+
+于是$T$在$U^{\perp}$上不变,那么对$T\vert_{U^{\perp}}$应用归纳假设,它存在一个由本征向量构成的规范正交基.
+
+现在直接把$n_1$加入进去,显然这是一组本征向量构成的规范正交基.
+
+**然后我们发现自己忽略了一件事:我们没有证明这个本征向量是能取出来的.**
+
+<div class='cbox'>
+
+实向量空间上的自伴算子存在本征值.
+
+</div>
+
+<div class='pbox'>
+
+考虑经典技巧,对任意$v\in V$,$v,Tv,T^2v\ldots T^nv$线性相关,存在$f(x)\in \mathcal{P}_n \ s.t.\ f(T)v=0$
+
+将$f$质因式分解,
+
+$$
+\begin{array}{c}
+f(x)=a\prod_i (x-\lambda_i)\prod_i (x^2+b_ix+c_i) \\
+f(T)v=a\prod_i (T-\lambda_i I)\prod_i (T^2+b_iT+c_iI)v=0
+\end{array}
+$$
+
+由于$T^2+b_iT+c_i$不可分解,有$b_i^2-4c<0$
+
+我们假设$T$没有本征值,则$T-\lambda_i I$是单的.
+
+而 
+
+$$
+\begin{array}{c}
+<(T^2+b_iT+c_i)v,v> \\
+=<((T+\dfrac{b_i}{2}I )^2+(c-\dfrac{b^2}{4}))v,v> \\
+=<(T+\dfrac{b_i}{2} I)^2v,v>+(c-\dfrac{b^2}{4})v^2 \\
+=(Tv+\dfrac{b_iv}{2} )^2+(c-\dfrac{b^2}{4}  )v^2 \\
+>0
+\end{array}
+$$
+
+于是它也是单的,则$f(T)$是单的,和$f(T)v=0$矛盾
+
+所以其实$T$有本征值是某个$\lambda_i$
+
+</div>
+
+</div>
