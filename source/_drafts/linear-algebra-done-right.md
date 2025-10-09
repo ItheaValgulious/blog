@@ -1442,19 +1442,64 @@ $$
 
 $$
 \begin{array}{c}
-T \text{is positive} \\ 
-T \text{is self-adjoint and each T's eigenvalues is not negative} \\
-T \text{has positive squre root}  \\
-T \text{has adjoint squre root}  \\
+T \text{ is positive} \\ 
+T \text{ is self-adjoint and each T's eigenvalues is not negative} \\
+T \text{ has positive squre root}  \\
+T \text{ has adjoint squre root}  \\
 \exists R,T=R^*R
 \end{array}
 $$
 
 </div>
 
+<div class='pbox'>
+
+由第一行推第二行:显然自伴,只要说明本征值非负.
+
+由刚才谱定理,作为自伴矩阵它有规范正交基下的对角形式.而对角形式下,取一个本征向量$v$乘它,如果对应本征值$\lambda<0$则$<v,Tv>=\lambda v^2<0$,矛盾.于是得证.
+
+第二行推第三行:仍然在对角形式下操作,把对角线每个元素算术平方根,容易发现你得到一个正平方根.
+
+第三行推四行是显然.
+
+第四行推第五行显然,因为对自伴算子$R$满足$T=R^2$且$R=R^*$
+
+第五行推第一行,首先容易验证$(R^*R)^*=R^*(R^*)^*=R^*R$,$T$是自伴.再考虑$<v,R^*Rv>=<Rv,Rv>\ge 0$于是得证.
+
+</div>
+
+
 <div class='cbox'>
 
 正算子有唯一的正平方根.
+
+</div>
+
+于是可以记$T$的唯一正平方根为$\sqrt T$
+
+<div class='pbox'>
+
+首先由之前从 $T \text{ is positive} \Rightarrow T=S^2,S \text{ is positive}$中我们会证存在性(对角矩阵然后给每个本征值开根).
+
+现在考虑已经有一个正平方根$S$,取$S$的本征向量构成的规范正交基$e_1\ldots e_n$,再取$T$的本征向量$v$,有
+
+$$
+\begin{array}{c}
+\left. \begin{array}{ll}
+Tv=\lambda v \\
+v=\sum _{i = 1} ^{n}  <v,e_i>e_i
+\end{array} \right\} \\
+\Rightarrow 
+Tv=\sum _{i = 1} ^{n}  \lambda <v,e_i> \\
+R^2v=\sum _{i = 1} ^{n} \lambda_i^2 <v,e_i>e_i=Tv=\sum _{i = 1} ^{n}  \lambda <v,e_i> \\
+\Rightarrow \sum _{i = 1} ^{n}  (\lambda_i^2-\lambda)<v,e_i>e_i=0 \\
+\Rightarrow \forall i,<v,e_i>\ne 0:\lambda_i^2=\lambda \\
+\Rightarrow Rv=\lambda_i v=\sqrt{\lambda} v
+\end{array}
+$$
+
+于是可以证明$R$对$T$的每个本征向量的作用都与前面通过对角线直接取平方根构造出的$R_0$相同,故$R=R_0$
+
 
 </div>
 
@@ -1476,17 +1521,34 @@ $$
 
 $$
 \begin{array}{c}
-T \text{is an isometry}  \\
+T \text{ is an isometry}  \\
 \forall u,v,<Tu,Tv>=<u,v> \\
-\forall \text{orthonormal base } e, Te_1\ldots Te_n \text{is orthogonal}  \\
-\exists \text{orthonormal base } e, Te_1\ldots Te_n \text{is orthogonal} \\
-SS^*=I \\
-S^*S=I \\
-S^*=S^{-1}
+\forall \text{orthonormal base } e, Te_1\ldots Te_n \text{ is orthonormal}  \\
+\exists \text{orthonormal base } e, Te_1\ldots Te_n \text{ is orthonormal} \\
+TT^*=I \\
+T^*T=I \\
+T^*=T^{-1}
 \end{array}
 $$
 
 </div>
+
+<div class='pbox'>
+
+第一行等价第二行:我们之前证过可以由范数计算内积,于是保范数和保内积等价.
+
+前两行推第三行是显然的:$<Te_i,Te_j>=<e_i,e_j>=0$,同时长度显然也不变.
+
+第三行推第四行是显然的.
+
+第四行推第五行:考虑$\forall u,v:<u,Tv>=<T^*u,v>=<TT^*u,Tv>$,于是$<(TT^*-I)u,v>=0$,可以说明$TT^*=I$
+
+于是$T^*=T^{-1}$,而证明群里的逆元是交换的是经典的,于是后三条是一起的.
+
+最后,如果$T^*=T^{-1}$,$\vert\vert Tv \vert\vert^2=\sqrt{<Tv,Tv>}=\sqrt{<T^*Tv,v>}=\vert \vert v\vert \vert$,得证.
+
+</div>
+
 
 <div class='cbox'>
 
@@ -1494,11 +1556,19 @@ $$
 
 $$
 \begin{array}{c}
-T \text{is an isometry}  \\
+T \text{ is an isometry}  \\
 \Leftrightarrow \exists \text{orthonormal base }e, \\
 \forall i, Te_i=\lambda_i e_i,\vert \lambda_i \vert =1 
 \end{array}
 $$
+
+</div>
+
+<div class='pbox'>
+
+首先证明逆向,则在基$e$下$T$是对角矩阵且对角线元素模长为$1$,容易验证$TT^*=I$,说明$T$是等距同构.或者你慢慢写验证保持范数也是简单的.
+
+然后正向:取$T$的本征向量构成的规范正交基,于是$T$是对角矩阵且$TT^*=I$,也是显然的.
 
 </div>
 
@@ -1515,6 +1585,8 @@ T=S\sqrt{T^*T}
 $$
 
 </div>
+
+
 
 <div class='dbox'>
 

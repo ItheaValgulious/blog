@@ -46,3 +46,28 @@ all things carreid Yin and embrace Yang,through the collection(?) of Qi to achie
 gentele man seeks harmony but not uniformity
 
 
+## Presentation 1
+
+Strike the Waves
+
+Everything begins with a wave.
+
+Not with an unbroken rigid body, not with an over-simplified particle, but a wave of possibilities. Quantum mechanics taught us this truth: every particle, every fragment of our world, is a wave, where all possible ways of existence reside. Until our observation forces it to collapse, from unknown and uncertainty into certainty.
+
+Isn’t that what life is? We enter the world with a superposition of possibilities, an infinite wave—limitless, undefined. And with every choice we make, we strike the wave of our own existence, collapsing only one possibility into reality, while countless others fade into silence. Growing up is nothing less than the gradual collapse of a wave. Many spend their youth studying, working, conforming—until they become another cog in the machinery of society. Their wave narrows, withers, and vanishes when their time runs out.
+
+But must it always be this way?
+
+We can choose not to go gentle into that good night. If you’re weary of repetition, if your days blur, if you yearn for the road not taken, If you refuse to let the fire in your heart smolder into embers— Then strike the wave. Strike it with intension. We still have time.
+
+We can explore the unexplored, reach beyond the horizon, Start anew, or simply notice the flower blooming around the corner. The wave will collapse, yes—but we can choose where it falls.
+
+Once, people believed our paths were carved by fate— That bloodlines, castes, or race defined our limits. But today, we know better. It’s all probability. There are no boundaries — only unstruck waves.
+
+Every quantum has a chance to tunnel through its barriers. So do you.
+
+Strike the waves, and you’ll find your own way to live.
+
+We exist in a billowing ocean of possibilities. Each decision is a strike—each strike, a collapse. So when you face the tides of uncertainty, Do not hesitate.
+
+Strike your wave.And choose your future.
