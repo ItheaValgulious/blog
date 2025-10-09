@@ -856,7 +856,7 @@ $$
 \end{array}
 $$
 
-拆开演算显然是对的.
+拆开验算显然是对的.
 
 </div>
 
@@ -1034,7 +1034,9 @@ $$
 
 </div>
 
-### 自伴算子,正规算子
+### 伴随,自伴算子,正规算子.
+
+#### 伴随
 
 <div class='dbox'>
 
@@ -1094,6 +1096,8 @@ $$
 其实就是直接用规范正交基写开直接做.
 
 </div>
+
+#### 自伴算子
 
 <div class='dbox'>
 
@@ -1173,6 +1177,8 @@ $$
 
 </div>
 
+#### 正规算子
+
 <div class='dbox'>
 
 正规算子
@@ -1217,7 +1223,14 @@ $$
 
 <div class='pbox'>
 
-
+$$
+\begin{array}{c}
+(T-\lambda I)^*=T^*-\overline{ \lambda } I \\
+\Rightarrow (T-\lambda I)(T-\lambda I)^* \\
+=TT^*-(\lambda+\overline{ \lambda } )T+\lambda \overline{ \lambda } \\
+=(T-\lambda I)^*(T-\lambda I) 
+\end{array}
+$$
 
 </div>
 
@@ -1235,7 +1248,14 @@ $$
 
 <div class='pbox'>
 
-
+$$
+\begin{array}{c}
+(T-\lambda I)v=0 \\
+\Rightarrow \vert\vert (T-\lambda I)v \vert\vert =0 \\
+\Rightarrow \vert\vert (T-\lambda I)^*v \vert\vert =0 \\
+T^*v=\overline{\lambda}v
+\end{array}
+$$
 
 </div>
 
@@ -1383,3 +1403,137 @@ $$
 </div>
 
 </div>
+
+### 正算子,平方根,等距同构
+
+<div class='dbox'>
+
+正算子
+
+$$
+\begin{array}{c}
+T \text{ is positive} \Leftrightarrow 
+\begin{cases}
+\forall v,<v,Tv>\ge 0 \\
+T \text{ is self-adjoint} 
+\end{cases}
+\end{array}
+$$
+
+</div>
+
+你会发现正算子其实对应了矩阵中的半正定矩阵.
+
+<div class='dbox'>
+
+平方根
+
+$$
+\begin{array}{c}
+T=R^2 \Leftrightarrow R \text{ is squre root of T} 
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+下列条件等价:
+
+$$
+\begin{array}{c}
+T \text{is positive} \\ 
+T \text{is self-adjoint and each T's eigenvalues is not negative} \\
+T \text{has positive squre root}  \\
+T \text{has adjoint squre root}  \\
+\exists R,T=R^*R
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+正算子有唯一的正平方根.
+
+</div>
+
+<div class='dbox'>
+
+等距同构
+
+$$
+\begin{array}{c}
+T \text{ is an isometry} \Leftrightarrow \forall v,\vert\vert Tv \vert\vert =\vert\vert v \vert\vert  
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+下列条件等价:
+
+$$
+\begin{array}{c}
+T \text{is an isometry}  \\
+\forall u,v,<Tu,Tv>=<u,v> \\
+\forall \text{orthonormal base } e, Te_1\ldots Te_n \text{is orthogonal}  \\
+\exists \text{orthonormal base } e, Te_1\ldots Te_n \text{is orthogonal} \\
+SS^*=I \\
+S^*S=I \\
+S^*=S^{-1}
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+复向量空间下
+
+$$
+\begin{array}{c}
+T \text{is an isometry}  \\
+\Leftrightarrow \exists \text{orthonormal base }e, \\
+\forall i, Te_i=\lambda_i e_i,\vert \lambda_i \vert =1 
+\end{array}
+$$
+
+</div>
+
+### 极分解,奇异值分解
+
+<div class='dbox'>
+
+极分解
+
+$$
+\begin{array}{c}
+T=S\sqrt{T^*T}
+\end{array}
+$$
+
+</div>
+
+<div class='dbox'>
+
+奇异值
+
+</div>
+
+<div class='dbox'>
+
+奇异值分解
+
+</div>
+
+### 零空间
+
+### 广义本征空间
+
+### 幂零算子
+
+
+
+
