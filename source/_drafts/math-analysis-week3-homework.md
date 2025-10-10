@@ -212,13 +212,15 @@ $$
 
 $$
 \begin{array}{l}
-\text{let } m=\max \{ a,b,c \}  \\
+\lim_{x \to 0} (\dfrac{a^x+b^x+c^x}{3} )^\frac{1}{x} \\
+=\exp \lim_{x \to 0} \dfrac{\ln(a^x+b^x+c^x)-\ln(3)}{x}  \\
+a^x=e^{x\ln(a)}=1+x\ln(a)+o(x) \\
+\therefore
+\exp \lim_{x \to 0} \dfrac{\ln(a^x+b^x+c^x)-\ln(3)}{x} \\
+=\exp \lim_{x \to 0} \dfrac{\ln(1+\dfrac{\ln(abc)x}{3} )}{x}  \\
+=\exp \dfrac{\ln(abc)x}{3}
+=\sqrt[ 3 ]{ abc }  
 
-(\dfrac{a^x+b^x+c^x}{3} )^\frac{1}{x} \\
-\le (\dfrac{3m^x}{3} )^{\frac{1}{x}}=m \\
-\text{meanwhile}  \\
-(\dfrac{a^x+b^x+c^x}{3} )^\frac{1}{x}\ge (\dfrac{m^x}{3} )^\frac{1}{x}=m \\
-\therefore \lim_{x \to 0} (\dfrac{a^x+b^x+c^x}{3} )^\frac{1}{x}=m
 \end{array}
 $$
 
