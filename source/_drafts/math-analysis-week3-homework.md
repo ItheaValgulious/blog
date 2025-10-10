@@ -132,7 +132,7 @@ $$
 =\lim_{x \to \infty} e^{x\ln(\sin\frac{1}{x}+\cos\frac1x)} \\
 =e^{\lim_{x \to \infty} x\ln(\sin\frac{1}{x}+\cos\frac1x)} \\
 =e^{\lim_{x \to \infty} x(\sin\frac{1}{x}+(\cos\frac1x-1))} \\
-=e^{\lim_{x \to \infty} x(\frac{1}{x}+(1-\frac{x^2}{2} -1))} \\
+=e^{\lim_{x \to \infty} x(\frac{1}{x}+(1-\frac{1}{2x^2} -1))} \\
 =e
 \end{array}
 $$
