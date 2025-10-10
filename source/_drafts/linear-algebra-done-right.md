@@ -1574,37 +1574,134 @@ $$
 
 ### 极分解,奇异值分解
 
-<div class='dbox'>
+<div class='cbox'>
 
 极分解
 
 $$
 \begin{array}{c}
-T=S\sqrt{T^*T}
+T=S\sqrt{T^*T},S \text{ is isometry} 
 \end{array}
 $$
 
 </div>
 
+<div class='pbox'>
 
+首先我们之前说明过$T^*T$是正的,于是这个平凡根存在.且
+
+$$
+\begin{array}{c}
+\vert\vert Tv \vert\vert =\sqrt{<Tv,Tv>}=\sqrt{<T^*Tv,v>} \\
+=\sqrt{<\sqrt{T^*Tv},\sqrt{T^*T}v>}=\vert\vert \sqrt{T^*T}v \vert\vert
+\end{array}
+$$
+
+于是$S$可以是等距同构的,在 $\mathrm{range\ } \sqrt{T^*T} \to \mathrm{range\ } T$上我们定义:
+
+$$
+\begin{array}{c}
+S_1\sqrt{T^*T}v=Tv
+\end{array}
+$$
+
+$$
+\begin{array}{c}
+S_1\sqrt{T^*T}(v_1+v_2)=T(v_1+v_2) \\
+\Rightarrow S_1(\sqrt{T^*T}v_1)+S_1(\sqrt{T^*T}v_2)=Tv_1+Tv_2 \\
+S_1\sqrt{T^*T}kv_1=kTv_1
+\end{array}
+$$
+
+这样可以说明$S_1$是线性变换.
+
+并且
+$$
+\begin{array}{c}
+\sqrt{T^*T}v_1= \sqrt{T^*T}v_2 \\
+\Leftrightarrow  \vert\vert \sqrt{T^*T}(v_1-v_2) \vert\vert =0 \\
+\Leftrightarrow  \vert\vert T(v_1-v_2) \vert\vert =0 \\
+\Leftrightarrow  Tv_1=Tv_2
+\end{array}
+$$
+
+于是$S_1$是单射.显然也是满射.于是$S_1$是双射.
+
+于是
+
+$$
+\begin{array}{c}
+\dim \mathrm{range\ } \sqrt{T^*T}=\dim \mathrm{range\ } T \\
+\Rightarrow \dim (\mathrm{range\ } \sqrt{T^*T})^\perp=\dim (\mathrm{range\ } T)^\perp
+\end{array}
+$$
+
+于是可以从 $(\mathrm{range\ } \sqrt{T^*T})^\perp$和$(\mathrm{range\ } T)^\perp$中分别取一组规范正交基$e_1\ldots e_n$,$f_1\ldots f_n$,那么只要让
+
+$$
+\begin{array}{c}
+S_2\in \mathcal L( (\mathrm{range\ } \sqrt{T^*T})^\perp , (\mathrm{range\ } T)^\perp ) \\
+S_2(\sum_i c_ie_i)=\sum_i c_if_i
+\end{array}
+$$
+
+并最后让$S=S_1+S_2$即可.
+
+$$
+\begin{array}{c}
+\text{Q.E.D}
+\end{array}
+$$
+
+</div>
 
 <div class='dbox'>
 
 奇异值
 
+$T$的奇异值即$\sqrt{T^* T}$的本征值,且每个值$\lambda$重复$\dim E(\lambda,\sqrt{T^ *T})$次.
+
 </div>
 
-<div class='dbox'>
+<div class='cbox'>
 
 奇异值分解
 
+对算子$T$设$s_1\ldots s_n$是$T$的奇异值,则存在两组规范正交基$e_1\ldots e_n$,$f_1\ldots f_n$,使得$Tv=\sum_i s_i<v,e_i>f_i$.
+
 </div>
 
-### 零空间
+<div class='pbox'>
+
+哦$\sqrt{T^*T}$好在它是正的,于是谱定理可以找到一组基$e$使得$\sqrt{T^*T}e_i=s_ie_i,\sqrt{T^*T}v=\sum_i s_i<v,e_i>e_i$.
+
+那么极分解$T=S\sqrt{T^*T}$,于是
+
+$$
+\begin{array}{c}
+Tv=S\sqrt{T^*T}v \\
+=S\sum_i s_i<v,e_i>e_i \\
+=\sum_i s_i<v,e_i>Se_i \\
+=\sum_i s_i<v,e_i>f_i
+\end{array}
+$$
+
+因为$S$是等距同构所以把规范正交基变换成规范正交基.
+
+</div>
+
+
+### 零空间链
+
+
+
+
+### 幂零算子
+
+
 
 ### 广义本征空间
 
-### 幂零算子
 
 
 

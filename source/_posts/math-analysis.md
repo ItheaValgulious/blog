@@ -815,9 +815,47 @@ $$
 
 <div class='pbox'>
 
-todo
+通过$\sin(x)\le x \le \tan(x)$同时除以$x$得到:
+
+$$
+\begin{array}{c}
+\begin{cases}
+\dfrac{\sin(x)}{x} \le 1 \\
+\dfrac{\sin(x)}{x} \ge \cos(x)
+\end{cases} \\
+\stackrel{\text{Squeeze Theorem}}{\Longrightarrow} \\
+\lim_{x \to 0} \dfrac{\sin(x)}{x} =1
+\end{array}
+$$
 
 </div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+R(x)=\begin{cases}
+1,x=0 \\
+\dfrac{1}{q}, x=\dfrac{p}{q}  \\
+0,x\notin Q
+\end{cases}
+\Rightarrow \lim_{x \to x_0} R(x)=0
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+首先显然是周期函数可以只看$[0,1]$.
+
+其次对于任意$x_0$,对$\epsilon$,对所有 $n\le \dfrac{1}{\epsilon}$,令 $\delta=\dfrac{1}{2} \min_{j\le n,i\le j} \{ \vert \dfrac{i}{j} -x_0 \vert  \}$即可保证,该区间$[x-\delta,x+\delta]$内没有分母比$n$小的有理数,于是就证明了.
+
+</div>
+
+
+
+
 
 ## Ex Class 1
 
