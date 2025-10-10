@@ -128,11 +128,7 @@ $$
 
 $$
 \begin{array}{l}
-1>(\sin\dfrac{1}{x} +\cos\dfrac{1}{x} )^x  \\
->(\cos\dfrac{1}{x} )^x \\
->(1-\dfrac{2}{x^2} )^x \\
->1-\dfrac{2}{x} \\
-\Rightarrow \lim_{x \to \infty} (\sin\dfrac{1}{x} +\cos\dfrac{1}{x} )^x =1
+\lim_{x \to \infty} (\sin\dfrac{1}{x} +\cos\dfrac{1}{x} )^x =\lim_{x \to \infty} (1+\dfrac{1}{x} )^x=e
 \end{array}
 $$
 
