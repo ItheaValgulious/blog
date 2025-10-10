@@ -21,7 +21,7 @@ Going around a triangle from $(0,0)$ to $(5,0)$ to $(0,12)$ to $(0,0)$, what are
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \begin{cases}
 u=\begin{bmatrix}
 5\\
@@ -89,7 +89,7 @@ If $\boldsymbol{v}+\boldsymbol{w} = \begin{bmatrix} 5 \\ 1 \end{bmatrix}$ and $\
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 v=\begin{bmatrix} 3 \\ 3 \end{bmatrix}\\
 w=\begin{bmatrix} 2 \\ -2 \end{bmatrix}\\
 \end{array}
@@ -114,7 +114,7 @@ These lie in a plane because $\boldsymbol{w} = c\boldsymbol{u} + d\boldsymbol{v}
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 u+v+w=0\\
 2u+2v+w=\begin{bmatrix}
 -2\\-3\\-1

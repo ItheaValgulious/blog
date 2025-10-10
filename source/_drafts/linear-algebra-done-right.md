@@ -60,7 +60,7 @@ $$
 张成,张成组
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \mathrm{span}( v_1 \ldots v_n ) = \{ \sum _{i = 1} ^{n}  c_iv_i \} 
 \end{array}
 $$
@@ -152,7 +152,7 @@ $$
 空间的和
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 U+V = \{ u+v \vert u\in U,v\in V \} 
 \end{array}
 $$
@@ -168,9 +168,9 @@ $$
 空间直和
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 W = U\oplus V = U + V \\ s.t.\\ 
-\forall w \in W, \exist! u\in U,v\in V, u+v=w
+\forall w \in W, \exists! u\in U,v\in V, u+v=w
 \end{array}
 $$
 
@@ -187,7 +187,7 @@ $$
 就是笛卡尔积.
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 U\times V=\{ (u,v) \vert u\in U,v\in V \} 
 \end{array}
 $$
@@ -201,7 +201,7 @@ $$
 仿射空间
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 u+V=\{ u+v \vert u+V \}  \\
 (u+V)+(w+V)=(u+w) + V \\
 \lambda (u+V) = \lambda u + V
@@ -219,7 +219,7 @@ $$
 空间的商
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 U/V={\left\{ u+V \vert u\in U \right\}} 
 \end{array}
 $$
@@ -233,7 +233,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \dim U\times V=\dim U\oplus V=\dim U+\dim V \\
 \dim U+V = \dim U+\dim V-\dim U\cap V \\
 \dim U/V=\dim U-\dim V
@@ -271,7 +271,7 @@ $$
 线性变换的运算
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 (S+T)u=Su+Tu \\
 (\lambda T)u=\lambda (Tu) \\
 (ST)u=S(T(u))
@@ -288,7 +288,7 @@ $$
 值域,零空间
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \text{for linear map } T:U\to V \\
 \mathrm{range\ } T = \{ v \vert v=Tu,u\in U \}  \\
 \mathrm{null\ } T = \{ u \vert Tu=0,u \in U \} 
@@ -301,7 +301,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \dim U=\dim \mathrm{null\ } T+\dim \mathrm{range\ } T
 \end{array}
 $$
@@ -350,7 +350,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \dim  U/V=\dim U-\dim V
 \end{array}
 $$
@@ -364,7 +364,7 @@ $$
 则
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \mathrm{null\ } T=V \\
 \mathrm{range\ } T=U/V 
 \end{array}
@@ -383,7 +383,7 @@ $$
 选取$U,V$分别一组基$u_1\ldots u_m$,$v_1\ldots v_n$,可以把线性变换$T$写成$n\times m$的矩阵$\mathcal{M}(T,u_1\ldots u_m,v_1\ldots v_n)=A_{n\times m}$满足
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 Tu_i=\sum_{j=1}^n A_{j,i}v_j
 \end{array}
 $$
@@ -400,7 +400,7 @@ $$
 
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \mathcal M( S ) \mathcal M( T ) = \mathcal M( ST ) \\
 \mathcal M( S ) + \mathcal M( T ) = \mathcal M( ST ) \\
 \mathcal \lambda\mathcal M( T ) = \mathcal M( \lambda T )
@@ -423,7 +423,7 @@ $$
 算子
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T\in \mathcal L( V , V ) 
 \end{array}
 $$
@@ -447,7 +447,7 @@ $$
 商算子,限制算子
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T_{/U}\in \mathcal L( V/U , V/U ),(T_{/U})(v+U)=(Tv+U) \\
 T\vert_U \in \mathcal L( U , U ), T\vert_U v=Tv
 \end{array}
@@ -479,7 +479,7 @@ $$
 若 $T\in\mathcal L( U , V )$ ,定义 $T'\in \mathcal L( V' , U' )$ 满足
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall f \in V',T'f=fT
 \end{array}
 $$
@@ -494,7 +494,7 @@ $T'$是反的可以理解因为$V'$的泛函的输入才是$T$的输出.导致�
 
 对偶映射的运算
 $$
-\begin{array}{c}
+\begin{array}{l}
 (ST)'=T'S' \\
 (S+T)'=S'+T' \\
 (\lambda S)'=\lambda S'
@@ -505,7 +505,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 (ST)'f=fST=T'(fS)=T'(S'f) \\
 (S+T)'f=f(S+T)=fS+fT=S'f+T'f \\
 (\lambda S)'f=f\lambda S=\lambda fS=S'f \\
@@ -527,7 +527,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \dim U+\dim U^0=\dim V
 \end{array}
 $$
@@ -543,7 +543,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 
 \mathrm{null\ } T'=(\mathrm{range\ } T)^0 \\
 
@@ -605,7 +605,7 @@ $\lambda$ 是 $T$的本征值等价于 $T-\lambda I$不是双射,或不是单射
 反证,你要利用不同本征值这个性质,于是你设 $v_n \in \mathrm{span}( v_1\ldots v_{n-1} )$ 且$n$为满足条件对最小的.
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 v_n=\sum _{i = 1} ^{n-1} c_iv_i \\
 Tv_n=\sum _{i = 1} ^{n-1}  Tc_iv_i \\
 \lambda_n (\sum _{i = 1} ^{n-1}  c_iv_i)=\sum _{i = 1} ^{n-1}  \lambda_i c_iv_i \\
@@ -625,13 +625,13 @@ $$
 
 </div>
 
-<div class='dbox'>
+<div class='pbox'>
 
 
 考虑
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 v\in V,\dim V=n \\
 v,Tv,T^2v\ldots T^{n}V \text{ is dependent} \\
 \sum _{i = 0} ^{n} c_iT^iv  =0 \\
@@ -653,7 +653,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \mathcal M( T,u_1\ldots u_n ) \text{is upper triangular matrix} \\
 \Leftrightarrow \forall i, Tu_i\in \mathrm{span}( u_1\ldots u_i )  \\
 \Leftrightarrow \forall i, \mathrm{span}( u_1\ldots u_i ) \text{is invariant space} 
@@ -673,7 +673,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall T\in \mathcal L( V , V ), V \text{ is complex vector space} \\
 \Rightarrow \exists u_1\ldots u_n,\mathcal M( T,u_1\ldots u_n ) \text{ is upper triangular matrix}
 \end{array}
@@ -719,7 +719,7 @@ $T$有逆等价于$T$的上三角矩阵对角线全部非$0$
 先假设矩阵有逆,设空间$V$基为$v_1\ldots v_n$.
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 Tv_1=A_{1,1}v_1 \Rightarrow A_{1,1}\ne 0 \\
 Tv_k=u+A_{k,k}v_k,u\in \mathrm{span}( v_1\ldots v_{k-1} ) \\
 \text{if } A_{k,k}= 0 \\
@@ -762,7 +762,7 @@ $T$的某个基下的上三角矩阵对角线元素是$T$的本征值.
 本征空间
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 E(\lambda,T)=\mathrm{null\ } T-\lambda I
 \end{array}
 $$
@@ -813,7 +813,7 @@ todo [think] 定性
 
 第一条用共轭对称性换到后面再换回来:
 $$
-\begin{array}{c}
+\begin{array}{l}
 a<u_1,v>+b<u_2,v>=a \overline{ <v,u_1> } +b \overline{ <v,u_2> }  \\
 =\overline{ <v,au_1+bu_2> }  \\
 =<au_1+bu_2,v>
@@ -843,7 +843,7 @@ $\vert\vert v \vert\vert = \sqrt{<v,v>}$定义为向量的范数.
 对实向量空间:
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 <u,v>=\dfrac{\vert\vert u+v \vert\vert ^2-\vert\vert u-v \vert\vert ^2}{4} 
 \end{array}
 $$
@@ -851,7 +851,7 @@ $$
 对复向量空间:
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 <u,v>=\dfrac{\vert\vert u+v \vert\vert ^2-\vert\vert u-v \vert\vert ^2}{4} + \dfrac{\vert\vert u+iv \vert\vert ^2-\vert\vert u-iv \vert\vert ^2}{4}i
 \end{array}
 $$
@@ -889,7 +889,7 @@ $<u,v> {\ } \le {\ } \vert\vert u \vert\vert \vert\vert v \vert\vert$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \text{let} w=\dfrac{u}{\vert\vert u \vert\vert^2 }<u,v>\\
 
 v=w+(v-w),w\perp v-w \\
@@ -919,7 +919,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 v_i=u_i-\sum_{j=1}^{i-1}<u_i,e_j>e_j \\
 e_i=\dfrac{v_i}{\vert\vert v_i \vert\vert } 
 \end{array}
@@ -960,7 +960,7 @@ $$
 设$e_1\ldots e_n$是一组规范正交基,则
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 fv=f\sum _{i = 1} ^{n}  <v,e_i> e_i \\
 =\sum _{i = 1} ^{n}  <v,e_i> fe_i \\
 =\sum _{i = 1} ^{n}  <v,fe_i\cdot e_i> \\
@@ -1009,7 +1009,7 @@ $U^{\perp}=\{ v \vert <u,v>=0,u\in U,v\in V \}$
 正交投影
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \text{let } u=w_1+w_2,w_1\in U,w_2\in U^{\perp} \\
 \Rightarrow P_U=w_1
 \end{array}
@@ -1069,7 +1069,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \mathcal M( T^*, v_1\ldots v_m, u_1\ldots u_n) = \overline{ \mathcal M( T ,u_1\ldots u_n,v_1\ldots v_m)^T  }  \\
 (v_1\ldots v_m),(u_1\ldots u_n) \text{ are regular orthogonal bases} 
 \end{array}
@@ -1082,7 +1082,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 <Tu,v>=<u,T^*v> \\
 Tu=\sum _{i = 1} ^{m} \sum_{j=1}^n A_{j,i}<u,u_i>v_j \\
 <Tu,v> \\
@@ -1112,7 +1112,7 @@ $T=T^*$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T=T^* \Rightarrow T\text{'s eigenvalues}\in R  \\
 T=T^* \Leftrightarrow \forall v,<v,Tv> \in R \\
 T=T^* \Leftrightarrow (<v,Tv>=0 \Rightarrow T=0)
@@ -1134,7 +1134,7 @@ $$
 反推的话
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall v,0 \\
 =<v,Tv>-\overline{ v,Tv } \\
 =<v,Tv>-<v,T^*v> \\
@@ -1166,7 +1166,7 @@ $$
 
 第三行,考虑
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall u,v, \\
 <u,Tv>=\dfrac{<u+v,Tu+Tv>-<u-v,Tu-Tv>}{4} 
 \end{array}
@@ -1184,7 +1184,7 @@ $$
 正规算子
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T \text{ is normal} \Leftrightarrow  TT^*=T^*T
 \end{array}
 $$
@@ -1194,7 +1194,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T \text{ is normal} \Leftrightarrow \forall v,\vert\vert Tv \vert\vert = \vert\vert T^*v \vert\vert 
 \end{array}
 $$
@@ -1204,7 +1204,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 <Tv,Tv>=<T^*Tv,v>=<TT^*v,v>=<T^*v,T^*v>
 \end{array}
 $$
@@ -1214,7 +1214,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T \text{ is normal} ,\lambda \text{ is eigen value of } T \Rightarrow T-\lambda I \text{ is normal}  
 \end{array}
 $$
@@ -1224,7 +1224,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 (T-\lambda I)^*=T^*-\overline{ \lambda } I \\
 \Rightarrow (T-\lambda I)(T-\lambda I)^* \\
 =TT^*-(\lambda+\overline{ \lambda } )T+\lambda \overline{ \lambda } \\
@@ -1239,7 +1239,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T \text{ is normal}, Tv=\lambda v \Rightarrow T^*v=\overline{ \lambda } v 
 \end{array}
 $$
@@ -1249,7 +1249,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 (T-\lambda I)v=0 \\
 \Rightarrow \vert\vert (T-\lambda I)v \vert\vert =0 \\
 \Rightarrow \vert\vert (T-\lambda I)^*v \vert\vert =0 \\
@@ -1262,7 +1262,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T \text{ is normal} \Rightarrow \text{eigen vectors of } T \text{ are orthogonal} 
 \end{array}
 $$
@@ -1272,7 +1272,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \text{let } Tu=\lambda_1 u,Tv=\lambda_2 v \\
 (\lambda_2-\lambda_1)<u,v> \\
 =<u,\lambda_2 v>-<\overline{ \lambda_1 } u,v> \\
@@ -1334,7 +1334,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 u\in U \Rightarrow Tu\in U \\
 \Leftrightarrow v\in U^{\perp},Tv\in U^\perp
 \end{array}
@@ -1345,7 +1345,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 u\in U,v\in U^{\perp} \\
 \Rightarrow <Tu,v>=0 \\
 \Rightarrow <u,Tv>=0 \\
@@ -1374,7 +1374,7 @@ $$
 将$f$质因式分解,
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 f(x)=a\prod_i (x-\lambda_i)\prod_i (x^2+b_ix+c_i) \\
 f(T)v=a\prod_i (T-\lambda_i I)\prod_i (T^2+b_iT+c_iI)v=0
 \end{array}
@@ -1387,7 +1387,7 @@ $$
 而 
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 <(T^2+b_iT+c_i)v,v> \\
 =<((T+\dfrac{b_i}{2}I )^2+(c-\dfrac{b^2}{4}))v,v> \\
 =<(T+\dfrac{b_i}{2} I)^2v,v>+(c-\dfrac{b^2}{4})v^2 \\
@@ -1411,7 +1411,7 @@ $$
 正算子
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T \text{ is positive} \Leftrightarrow 
 \begin{cases}
 \forall v,<v,Tv>\ge 0 \\
@@ -1429,7 +1429,7 @@ $$
 平方根
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T=R^2 \Leftrightarrow R \text{ is squre root of T} 
 \end{array}
 $$
@@ -1441,7 +1441,7 @@ $$
 下列条件等价:
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T \text{ is positive} \\ 
 T \text{ is self-adjoint and each T's eigenvalues is not negative} \\
 T \text{ has positive squre root}  \\
@@ -1484,7 +1484,7 @@ $$
 现在考虑已经有一个正平方根$S$,取$S$的本征向量构成的规范正交基$e_1\ldots e_n$,再取$T$的本征向量$v$,有
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 Tv=\lambda v \\
 v=\sum _{i = 1} ^{n}  <v,e_i>e_i
@@ -1508,7 +1508,7 @@ $$
 等距同构
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T \text{ is an isometry} \Leftrightarrow \forall v,\vert\vert Tv \vert\vert =\vert\vert v \vert\vert  
 \end{array}
 $$
@@ -1520,7 +1520,7 @@ $$
 下列条件等价:
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T \text{ is an isometry}  \\
 \forall u,v,<Tu,Tv>=<u,v> \\
 \forall \text{orthonormal base } e, Te_1\ldots Te_n \text{ is orthonormal}  \\
@@ -1555,7 +1555,7 @@ $$
 复向量空间下
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T \text{ is an isometry}  \\
 \Leftrightarrow \exists \text{orthonormal base }e, \\
 \forall i, Te_i=\lambda_i e_i,\vert \lambda_i \vert =1 
@@ -1579,7 +1579,7 @@ $$
 极分解
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T=S\sqrt{T^*T},S \text{ is isometry} 
 \end{array}
 $$
@@ -1591,7 +1591,7 @@ $$
 首先我们之前说明过$T^*T$是正的,于是这个平凡根存在.且
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \vert\vert Tv \vert\vert =\sqrt{<Tv,Tv>}=\sqrt{<T^*Tv,v>} \\
 =\sqrt{<\sqrt{T^*Tv},\sqrt{T^*T}v>}=\vert\vert \sqrt{T^*T}v \vert\vert
 \end{array}
@@ -1600,13 +1600,13 @@ $$
 于是$S$可以是等距同构的,在 $\mathrm{range\ } \sqrt{T^*T} \to \mathrm{range\ } T$上我们定义:
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 S_1\sqrt{T^*T}v=Tv
 \end{array}
 $$
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 S_1\sqrt{T^*T}(v_1+v_2)=T(v_1+v_2) \\
 \Rightarrow S_1(\sqrt{T^*T}v_1)+S_1(\sqrt{T^*T}v_2)=Tv_1+Tv_2 \\
 S_1\sqrt{T^*T}kv_1=kTv_1
@@ -1617,7 +1617,7 @@ $$
 
 并且
 $$
-\begin{array}{c}
+\begin{array}{l}
 \sqrt{T^*T}v_1= \sqrt{T^*T}v_2 \\
 \Leftrightarrow  \vert\vert \sqrt{T^*T}(v_1-v_2) \vert\vert =0 \\
 \Leftrightarrow  \vert\vert T(v_1-v_2) \vert\vert =0 \\
@@ -1630,7 +1630,7 @@ $$
 于是
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \dim \mathrm{range\ } \sqrt{T^*T}=\dim \mathrm{range\ } T \\
 \Rightarrow \dim (\mathrm{range\ } \sqrt{T^*T})^\perp=\dim (\mathrm{range\ } T)^\perp
 \end{array}
@@ -1639,7 +1639,7 @@ $$
 于是可以从 $(\mathrm{range\ } \sqrt{T^*T})^\perp$和$(\mathrm{range\ } T)^\perp$中分别取一组规范正交基$e_1\ldots e_n$,$f_1\ldots f_n$,那么只要让
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 S_2\in \mathcal L( (\mathrm{range\ } \sqrt{T^*T})^\perp , (\mathrm{range\ } T)^\perp ) \\
 S_2(\sum_i c_ie_i)=\sum_i c_if_i
 \end{array}
@@ -1648,7 +1648,7 @@ $$
 并最后让$S=S_1+S_2$即可.
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \text{Q.E.D}
 \end{array}
 $$
@@ -1678,7 +1678,7 @@ $T$的奇异值即$\sqrt{T^* T}$的本征值,且每个值$\lambda$重复$\dim E(
 那么极分解$T=S\sqrt{T^*T}$,于是
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 Tv=S\sqrt{T^*T}v \\
 =S\sum_i s_i<v,e_i>e_i \\
 =\sum_i s_i<v,e_i>Se_i \\
@@ -1691,18 +1691,142 @@ $$
 </div>
 
 
-### 零空间链
+### 零空间链,幂零算子,广义本征空间
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+{0}=\mathrm{null\ } T^0,\mathrm{null\ } T^i \subset \mathrm{null\ } T^{i+1} \\
+\mathrm{null\ } T^i= \mathrm{null\ } T^{i+1} \Rightarrow \forall j>i,\mathrm{null\ } T^j=\mathrm{null\ } T^i \\
+\mathrm{null\ } T^{\dim V}=\mathrm{null\ } T^{\dim V+1} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+前两行是显然的
+
+第三行也是显然的:$U$的真子空间的维数必须小于$U$.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+V=\mathrm{null\ } T^{\dim V} \oplus \mathrm{range\ } T^{\dim V}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+首先维数满足条件,并且交是 $\{ 0 \}$,所以成立.
+
+</div>
 
 
+<div class='dbox'>
+
+幂零算子
+
+即$T$满足$\exists n,T^n=0$(显然可以让$n=\dim V$)
+
+</div>
+
+<div class='cbox'>
+
+存在一组基使得算子的矩阵为严格上三角矩阵.
+
+</div>
+
+<div class='pbox'>
+
+先取 $\mathrm{null\ } T$ 的基,不够就加入 $\mathrm{null\ } T^2$ 零空间的基扩充,然后加 $\mathrm{null\ } T^3$的,直到加到$n$个.
+
+注意到对来自 $\mathrm{null\ } T^k$ 的基$e$,$Te\in \mathrm{null\ } T^{k-1}$,于是是严格上三角矩阵.
+
+</div>
+
+<div class='dbox'>
+
+广义本征向量
+
+$$
+\begin{array}{l}
+\exists n,(T-\lambda I)^nv=0 \\
+\Leftrightarrow v \text{ is generalized eigen vector of } T.
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+(T-\lambda I)^n v=0 \Rightarrow \lambda \text{ is eigenvalue of } T
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+因为显然$T-\lambda I$不是单的.
+
+</div>
 
 
-### 幂零算子
+<div class='dbox'>
+
+广义本征空间
+
+$$
+\begin{array}{l}
+G(\lambda,T)=\mathrm{null\ } (T-\lambda I)^{\dim V}
+\end{array}
+$$
+
+</div>
+
+就是广义本征向量的张成空间.
 
 
+<div class='cbox'>
 
-### 广义本征空间
+不同广义本征空间中的向量线性无关.
 
+$$
+\begin{array}{l}
+v_i\in G(\lambda_i,T) \\
+\Rightarrow \{ v_n \} \text{ is linear independent} 
+\end{array}
+$$
 
+</div>
 
+<div class='pbox'>
 
+$$
+\begin{array}{l}
+\text{let } k=\max {i\vert (T-\lambda_1 I)^i v_1\ne 0} \\
+\text{let } w=(T-\lambda_1 I)^k v_1 \\
+\Rightarrow Tw=\lambda_1w \\
+\text{let } F=(T-\lambda_1I)^k\prod_i (T-\lambda_iI)^n \\
+\sum _{i = 1} ^{n}  c_iv_i=0 \\
+\Rightarrow F\sum _{i = 1} ^{n}  c_iv_i=0 \\
+\Rightarrow Fc_1v_1=0 \\
+\Rightarrow c_1w=0 \\
+\Rightarrow c_1=0
+\end{array}
+$$
+
+于是对所有$v_i$做一遍可以得到$c$全是$0$,得证.
+
+</div>
 

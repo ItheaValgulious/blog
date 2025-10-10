@@ -23,7 +23,7 @@ $a_n\le b_n\le c_n, \lim_{n \to \infty} (c_n-a_n)=0  \Rightarrow a_n \text{收�
 Obviously wrong.
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 a_n=b_n=c_n=n
 \end{array}
 $$
@@ -36,7 +36,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 a_n\le b_n\le c_n,b_n \text{收敛}  , \lim_{n \to \infty} (c_n-a_n)=0  \Rightarrow a_n \text{收敛} 
 \end{array}
 $$
@@ -46,7 +46,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall \epsilon_1 > 0, \exists N_1 \ s.t.\ 
 n>N_1  \Rightarrow c_n-a_n< \epsilon_1 \\
 \therefore b_n-a_n\le c_n-a_n<\epsilon_1 \\
@@ -67,7 +67,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim a_n = A, a_n\ne 0 \Rightarrow \lim \frac{a_{n+1}}{a_n} = 1 
 \end{array}
 $$
@@ -87,7 +87,7 @@ $a_n=2^{-n}$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} a_nb_n = 0 \Rightarrow (\lim_{n \to \infty} a_n)(\lim_{n \to \infty} b_n) =0
 \end{array}
 $$
@@ -99,7 +99,7 @@ $$
 Wrong
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 a_n=(n \bmod 2) \\
 b_n= ((n+1) \bmod 2)
 \end{array}
@@ -112,7 +112,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \dfrac{b_n}{a_n} =1, \lim_{n \to \infty} a_n=A  \Rightarrow \lim_{n \to \infty} b_n = A
 \end{array}
 $$
@@ -126,7 +126,7 @@ $$
 又$,\epsilon_1<1,\epsilon_2<A$
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall \epsilon_1 \exists N_1 \ s.t.\ 
 \vert \dfrac{a_n}{b_n} - 1 \vert < \epsilon_1 \\
 
@@ -161,7 +161,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \dfrac{3n^2+n}{2n^2-1} = \dfrac{3}{2} 
 \end{array}
 $$
@@ -171,7 +171,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \dfrac{3n^2+n}{2n^2-1}-\dfrac{3}{2}>\dfrac{3n^2}{2n^2}-\dfrac{3}{2}=0  \\
 \dfrac{3n^2+n}{2n^2-1}-\dfrac{3}{2}=\dfrac{3n^2+n-\frac{3}{2}(2n^2-1)}{2n^2-1} = \dfrac{n+\dfrac{3}{2} }{2n^2-1}\stackrel{n>1}{<} \dfrac{2n}{n^2} =\dfrac{2}{n} <\epsilon \\
 \therefore
@@ -188,7 +188,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \sqrt{n^2+n}-n=\dfrac{1}{2}
 \end{array}
 $$
@@ -200,7 +200,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \sqrt{n^2+n}-n=\dfrac{(\sqrt{n^2+n}-n)(\sqrt{n^2+n}+n)}{\sqrt{n^2+n}+n} \\
 =\dfrac{n}{\sqrt{n^2+n}+n} \\
 =\dfrac{1}{1+\sqrt{1+\frac{1}{n}}} \\
@@ -224,7 +224,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \dfrac{n^2\arctan(n)}{1+n^2}=\dfrac{\pi}{2}
 \end{array}
 $$
@@ -234,7 +234,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \dfrac{n^2\arctan(n)}{1+n^2} \\
 =\dfrac{n^2}{1+n^2}\arctan(n) \\
 \end{array}
@@ -243,7 +243,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \dfrac{n^2}{1+n^2}=1
 \end{array}
 $$
@@ -253,7 +253,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim {\left \vert \dfrac{n^2}{1+n^2}-1 \right \vert} =\dfrac{1}{1+n^2}<\dfrac{1}{n} \\
 N:=\dfrac{1}{\epsilon}+100 \\
 \text{Q.E.D}
@@ -265,7 +265,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \arctan(n)=\dfrac{\pi}{2} 
 \end{array}
 $$
@@ -275,7 +275,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 N:=\tan(\dfrac{\pi}{2}-\dfrac{\epsilon}{2})
  \Rightarrow  \\
 \forall \epsilon, \vert \arctan(n)-\dfrac{\pi}{2}\vert =\dfrac{\pi}{2}-\arctan(n)=\dfrac{\epsilon}{2}<\epsilon \\
@@ -289,7 +289,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 (\lim a_n)(\lim_{n \to \infty} b_n) = X,a_n>0,b_n>0  \Rightarrow  \lim_{n \to \infty} a_nb_n=X
 \end{array}
 $$
@@ -299,7 +299,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 A:=\lim a_n,B:=\lim b_n \\
 \forall \epsilon_1, \exists N_1 \ s.t.\ 
 n>N_1  \Rightarrow  {\left \vert a_n-A \right \vert} < \epsilon \\
@@ -322,7 +322,7 @@ $$
 </div>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \dfrac{n^2\arctan(n)}{1+n^2}=\lim_{n \to \infty} \dfrac{n^2}{1+n^2} \lim_{n \to \infty} \arctan(n)=1\times \dfrac{\pi}{2} = \dfrac{\pi}{2} \\
 
 \text{Q.E.D}
@@ -387,7 +387,7 @@ $\lim_{n\to\infty} \left[ \frac{1}{\sqrt{n^2+1}} + \frac{1}{\sqrt{n^2+2}} + \dot
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \sum _{i = 1} ^{n}  \frac{1}{\sqrt{n^2+1}} \le \sum _{i = 1} ^{n}  \frac{1}{\sqrt{n^2+i}} \le \sum _{i = 1} ^{n}  \frac{1}{\sqrt{n^2+n}}  \\
 \stackrel{\text{Squeeze Theorem}}{\Longrightarrow } \\
 
@@ -417,7 +417,7 @@ $\lim_{n\to\infty} \sqrt[n]{n^2-n+2}$
 Obviously: $n>2 \Rightarrow n^2-n+2>8>1$
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \vert (n^2-n+2)^{\frac{1}{n} }-1 \vert =(n^2-n+2)^{\frac{1}{n} }-1<\epsilon \\
 \Leftarrow n^2-n+2<(1+\epsilon)^n \\
 \Leftarrow F(x)=n^2-n+2<1+n\epsilon+\frac{(n^2-n)\epsilon^2}{2}+\frac{n(n-1)(n-2)}{6}\epsilon^3=G(x)   \\
@@ -445,7 +445,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 1<\arctan(n)<\frac{\pi}{2} \\
 \Rightarrow 1<\sqrt[n]{\arctan(n)}<\sqrt[n]{\frac{\pi}{2} } \\
 
@@ -515,7 +515,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 \lim_{n \to \infty} a_{2n} = \lim_{n \to \infty} \frac{6n}{6n+1} =1 \\
 \lim_{n \to \infty} a_{2n+1} = \lim_{n \to \infty} \frac{2n+1}{6n+4} =\frac{1}{3} \ne 1 
@@ -542,7 +542,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \text{use } \epsilon_1=1,\exists N_1 \\ s.t.\\ 
 \lim_{n \to \infty} \frac{a_{n+1}}{a_n} <1 \\
 \text{exact }  a_{n+1}<a_n
@@ -564,7 +564,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall \epsilon_1, \exists N_1 \ s.t.\ 
 n>N_1 \Rightarrow \vert x_n-x_{n-1}-d \vert <\epsilon_1 \\
 \Leftrightarrow x_n-x_{n-1} \in [d-\epsilon_1,d+\epsilon_1] \\
@@ -601,7 +601,7 @@ $$
 ##### Solution 1
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 {\left \vert \sqrt[n]{ \prod_i a_i } -a \right \vert} <\epsilon \\
 \Leftrightarrow a-\epsilon<\sqrt[n]{ \prod_i a_i }<a+\epsilon \\
 \Leftrightarrow (a-\epsilon)^n<\prod_i a_i<(a+\epsilon)^n \\
@@ -634,7 +634,7 @@ $$
 
 $$
 
-\begin{array}{c}
+\begin{array}{l}
 e=\lim_{n \to \infty} (1+\frac{1}{n})^n  \\
 \Rightarrow \frac{1}{e} =\lim_{n \to \infty} (\frac{n}{n+1} )^n \\
 a_n:=(\frac{n}{n+1})^n 
@@ -659,7 +659,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall X,X_1:=X+1  \\
 \lim_{n \to \infty} x_n=\infty \Rightarrow \exists N_1 \ s.t.\ 
 n>N_1 \Rightarrow x_n>X_1=X+1 \\
@@ -690,7 +690,7 @@ $$
 
 $$
 
-\begin{array}{c}
+\begin{array}{l}
 \epsilon=\frac{1}{5} ,\frac{a_n}{a_{n+1}+a_{n+2}} <\frac{1}{5} \Rightarrow a_{n+1}+a_{n+2}>5a_n \\
 \therefore \max(\{ a_{n+1},a_{n+2} \} )>2a_n \\
 \therefore b_1=N+1,b_i=a_{b_{i-1}+1},a_{b_{i-1}+2} \text{中较大的一个的下标} 
@@ -717,7 +717,7 @@ $$
 若存在$x_N>a$,则$n>N$时$x_n>a$,$\lim_{n \to \infty} x_N>a$,则$\exists A\in (x_N,A)$. 并有$\forall i\ge N, x_i>A>a$,则
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \frac{\sum _{i = 1} ^{n}  x_i}{n} \\
 >\lim_{n \to \infty} \frac{\sum _{i = 1} ^{N}  a_i}{n}+\frac{n-N}{n}(a+(A-a))
 =A>a
@@ -755,7 +755,7 @@ $\lim_{n \to \infty} \frac{1 + \frac{1}{\sqrt{2}} + \cdots + \frac{1}{\sqrt{n}}}
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \frac{1 + \frac{1}{\sqrt{2}} + \cdots + \frac{1}{\sqrt{n}}}{\ln \sqrt{n}} \\
 \stackrel{\text{Stolz Theorem}}{\Leftarrow  }\lim_{n \to \infty} \dfrac{\dfrac{2}{\sqrt n} }{\ln\dfrac{n}{n-1} }  \\
 \stackrel{x>1 \Rightarrow \ln(x)>2\frac{x-1}{x+1} }{>}\lim_{n \to \infty} \dfrac{\dfrac{2}{\sqrt{ n } } }{\dfrac{2}{2n-1}  }\\
@@ -779,7 +779,7 @@ $\lim_{n \to \infty} \frac{1 + \sqrt{2} + \sqrt[3]{3} + \cdots + \sqrt[n]{n}}{n}
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \frac{1 + \sqrt{2} + \sqrt[3]{3} + \cdots + \sqrt[n]{n}}{n} \\
 \stackrel{\text{Stolz Theorem}}{\Leftarrow }\lim_{n \to \infty} \dfrac{\sqrt[n]{n}}{1}  \\
 =1
@@ -799,7 +799,7 @@ $\lim_{n \to \infty} \frac{a_1 + 2a_2 + \cdots + na_n}{\sum_{i=1}^n i}$ (已知 
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \frac{a_1 + 2a_2 + \cdots + na_n}{\sum_{i=1}^n i} \\
 \stackrel{\text{Stolz Theorem}}{\Leftarrow }
 \lim_{n \to \infty} \dfrac{na_n}{n} \\
@@ -821,7 +821,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 1<(n!)^{\frac{1}{n^2} }<(n^n)^{\frac{1}{n^2} }=n^{\frac{1}{n} } \\
 \lim_{n \to \infty} 1=\lim_{n \to \infty} n^{\frac{1}{n} }=1
@@ -843,7 +843,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \frac{1}{n^2} \sum_{k=0}^n \ln \binom{n}{k} \\
 \stackrel{\text{Stolz Theorem}}{\Leftarrow }
 \dfrac{\sum _{i = 0} ^{n} \ln\binom{n}{i}-\sum _{i = 0} ^{n-1}  \ln \binom{n-1}{i}}{2n-1}  \\
@@ -874,7 +874,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 x_n:=\sum _{i = n} ^{n} \Delta A_i i \\
 =\sum _{i = 1} ^{n}  i(A_i-A_{i-1}) \\
 =nA_n-\sum_{i=1}^{n-1} A_i \\

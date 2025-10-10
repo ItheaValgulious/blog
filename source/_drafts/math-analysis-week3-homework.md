@@ -12,7 +12,7 @@ tags: [math-analysis,homework]
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \text{Calculate left/right limits of }f(x)=\dfrac{2^{\frac{1}{x} }-1}{2^{\frac{1}{x} } +1}  (x_0=0)
 \end{array}
 $$
@@ -22,7 +22,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 x\to 0^+,\dfrac{1}{x} \to +\infty,\lim_{x \to 0^+} = f(x)=\dfrac{1-2^{-\frac{1}{x}}}{1+2^{-\frac1x}}=1 \\
 x\to 0^-,\dfrac{1}{x} \to -\infty,2^{\frac{1}x}\to 0,\lim_{x \to 0^-} f(x)=1 
 \end{array}
@@ -35,7 +35,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to 0} \dfrac{\sqrt{ 1+x } -\sqrt{ 1-x } }{x}  
 \end{array}
 $$
@@ -45,7 +45,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \sqrt{1+x}-1\sim\dfrac{x}{2} \\
 \lim_{x \to 0} \dfrac{\sqrt{ 1+x } -\sqrt{ 1-x } }{x} \\
 =\lim_{x \to 0}\dfrac{(\sqrt{ 1+x }-1) -(\sqrt{ 1-x }-1) }{x} \\
@@ -62,7 +62,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to 1} \dfrac{\sum _{i = 1} ^{m}  x^i -m}{x-1} 
 \end{array}
 $$
@@ -72,7 +72,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \text{let } f_m(x)=\dfrac{\sum _{i = 1} ^{m}  x^i-m}{x-1}  \\
 \lim_{x \to 1} f_1(x)=1 \\
 f_n(x)-f_{n-1}(x)=\dfrac{x^m-1}{x-1}=\sum _{i = 0} ^{m-1}  x^i \\
@@ -89,7 +89,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \prod_{i=1}^n \cos\dfrac{x}{2^i} 
 \end{array}
 $$
@@ -99,7 +99,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \prod _{i = 1} ^{n}  \cos\dfrac{x}{2^i}  \\
 =\dfrac{\sin\dfrac{x}{2^n}\prod _{i = 1} ^{n}  \cos\dfrac{x}{2^i}}{\sin\dfrac{x}{2^n} } \\
 =\dfrac{sin(x)}{2^n\sin\dfrac{x}{2^n} } \\
@@ -117,7 +117,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to \infty} (\sin\dfrac{1}{x} +\cos\dfrac{1}{x} )^x 
 \end{array}
 $$
@@ -127,7 +127,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 1>(\sin\dfrac{1}{x} +\cos\dfrac{1}{x} )^x  \\
 >(\cos\dfrac{1}{x} )^x \\
 >(1-\dfrac{2}{x^2} )^x \\
@@ -144,7 +144,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to 0} x \lbrack \dfrac{1}{x}  \rbrack 
 \end{array}
 $$
@@ -154,7 +154,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 x\lbrack \dfrac{1}{x}  \rbrack \in (1-x,1] \\
 \lim_{x \to 0} 1-x=\lim_{x \to 1} 1=1
@@ -172,7 +172,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to \infty} (\dfrac{1+x}{3+x}  )^x
 \end{array}
 $$
@@ -182,7 +182,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 (\dfrac{1+x}{3+x}  )^x
 =(1-\dfrac{2}{x+3} )^x \\
 \text{let } t=-\dfrac{x+3}{2},x=-2t-3  \\
@@ -201,7 +201,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to 0} (\dfrac{a^x+b^x+c^x}{3} )^\frac{1}{x}
 \end{array}
 $$
@@ -211,7 +211,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \text{let } m=\max \{ a,b,c \}  \\
 
 (\dfrac{a^x+b^x+c^x}{3} )^\frac{1}{x} \\
@@ -230,7 +230,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to 0} \dfrac{x\tan^4x}{\sin^3x(1-\cos x)} 
 \end{array}
 $$
@@ -240,7 +240,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to 0} \dfrac{x\tan^4x}{\sin^3x(1-\cos x)}  \\
 =\lim_{x \to 0} \dfrac{x\sin x}{\cos^3x(1-\cos x)}  \\
 =\lim_{x \to 0} \dfrac{x^2}{\cos^3x\dfrac{x^2}{2} }  \\
@@ -256,7 +256,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to 0} \dfrac{\sqrt{ 1+x^4 } -1}{1-\cos^2x} 
 \end{array}
 $$
@@ -266,7 +266,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to 0} \dfrac{\sqrt{ 1+x^4 } -1}{1-\cos^2x}  \\
 =\lim_{x \to 0} \dfrac{x^4}{2x^2} \\
 =\lim_{x \to 0} \dfrac{x^2}{2}  \\
@@ -284,7 +284,7 @@ $$
 solve a,b:
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to +\infty} (\sqrt{ x^2-x+1 } -ax-b)=0
 \end{array}
 $$
@@ -294,7 +294,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \sqrt{ x^2-x+1 }=\sqrt{(x-\dfrac{1}{2} )^2+\dfrac{3}{4} } \\
 \text{let } t=x-\dfrac{1}{2}  \\
 \lim_{x \to \infty} \sqrt{ x^2-x+1 } -(x-\dfrac{1}{2} ) \\
@@ -311,7 +311,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 f(x_0^-)<f(x_0^+) \Rightarrow \exists \delta>0,\forall x\in (x_0-\delta,x_0),\forall y\in (x_0,x_0+\delta),f(x)<f(y)
 \end{array}
 $$
@@ -321,7 +321,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to x_0^-} f(x)<\lim_{x \to x_0^+} f(x) \\
 \text{let } \epsilon=\dfrac{f(x_0^+)-f(x_0^-)}{3} ,\exists \delta=\min(\delta_1,\delta_2) \\ s.t.\\ 
 \forall x\in (x_0-\delta,x_0), \vert f(x)-f(x_0^-) \vert <\epsilon, \\
@@ -337,7 +337,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 f \text{ is periodic function} ,\lim_{x \to \infty} f(x)=0 \\
 \Rightarrow f(x)=0
 \end{array}
@@ -348,7 +348,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \text{let } T \text{ is a period of } f \\
 \forall x_0,\epsilon,
 \exists X>x_0 \ s.t.\ 
@@ -367,7 +367,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 f(x),x\in(0,1) \\
 x\to 0^+ \Rightarrow f(x)=o(1) \\
@@ -382,7 +382,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall \epsilon, \\
 \text{let }\epsilon_1=\dfrac{\epsilon}{8}\\
 \exists \delta \ s.t.\ 
@@ -407,7 +407,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 a,b>1,f(x) \text{ is bounded in } N^*(0) \\
 f(ax)=bf(x)
@@ -421,7 +421,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 f(ax)=bf(x) \\
 \Leftrightarrow f(\dfrac{x}{a} )=\dfrac{f(x)}{b} \\
 a,b>1,f(x) \text{ is bounded in } N^*(0)  \\

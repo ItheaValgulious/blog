@@ -23,7 +23,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
     -{\left \vert a \right \vert} {\left \vert b \right \vert} \le ab\le {\left \vert a \right \vert} {\left \vert b \right \vert}
  \Rightarrow  \\
 {\left \vert a \right \vert} ^2-2 {\left \vert a \right \vert} {\left \vert b \right \vert}  + {\left \vert a+b \right \vert} ^2
@@ -43,7 +43,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 0<x_i \in R  \Rightarrow 
 \dfrac{\sum_i x_i}{n} \ge \sqrt[n]{\prod_i x_i} \ge \dfrac{n}{\sum_i \dfrac{1}{x_i} }  
 \end{array}
@@ -67,7 +67,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 lim_{n\to \infty} a_n = A  \Leftrightarrow  \\
 \forall \epsilon >0 \exists N \ s.t.\ 
 n\ge N  \Rightarrow \left \vert a_n-A \right \vert < \epsilon
@@ -93,7 +93,7 @@ $\lim_{n \to \infty} n^{\frac{1}{n} }=1$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \vert n^{\frac{1}{n} }-1 \vert  \\
 = \vert (\sqrt n \sqrt n)^{\frac{1}{n} } -1 \vert \\
 ={\left \vert (\prod_i 1 \cdot \sqrt n\sqrt n)^{\frac{1}{n} } -1 \right \vert}  \\
@@ -105,7 +105,7 @@ $$
 Or try this:
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 {\left \vert n^{\frac{1}{n} }-1 \right \vert} =n^{\frac{1}{n} }-1<\epsilon \\
 \Leftarrow  n^{\frac{1}{n}}<(\epsilon+1) \\
 \Leftarrow  n<(1+\epsilon)^n \\
@@ -126,7 +126,7 @@ Solve the equation, it's a parabola with upward opening so the solution exists.
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \sqrt n \in Z \cup Q^C
 \end{array}
 $$
@@ -167,7 +167,7 @@ Find a bijection of $[0,1]$ and $(0,1)$
 
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 f(x):(0,1) \to [0,1]=\begin{cases}
 0,x=\dfrac{1}{2} \\
 1,x=\dfrac{1}{3} \\
@@ -187,7 +187,7 @@ Wow!
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall A,B, {\ } \exists f(x):A\to B \\ s.t.\\ 
 \text{f is injective or surjective}
 \end{array}
@@ -230,7 +230,7 @@ $\mathrm{Card}(A)\le \mathrm{Card}(B),\mathrm{Card}(B)\le \mathrm{Card}(A) \Righ
 或者表达为
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 \forall A,B,g:A\to B,f:B\to A\\
 f,g \text{ is injective} 
@@ -281,7 +281,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 {\left \vert a_nb_n-AB \right \vert} = \\
 {\left \vert a_nb_n-a_nB+a_nB-AB \right \vert} \\ \\
 \le {\left \vert a_N \right \vert} {\left \vert b_n-B \right \vert} +{\left \vert B \right \vert} {\left \vert a_n-A \right \vert} \\
@@ -306,7 +306,7 @@ $$
 
 证取倒数:
 $$
-\begin{array}{c}
+\begin{array}{l}
 {\left \vert \frac{1}{b_n}-\frac{1}{B}  \right \vert}<\epsilon \\
 \Leftarrow {\left \vert B-b_n \right \vert} <\epsilon b_nB \\
 \Leftarrow \epsilon'=\frac{\epsilon}{BM+114514} (\vert M\vert>b_n)
@@ -345,7 +345,7 @@ $$
 $b=0$时,考虑$a有界M$.
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \dfrac{\sum_i a_ib_{n-i}}{n} \\
 \le \lim_{n \to \infty} M\dfrac{b_{n-i}}{n} =0
 \end{array}
@@ -354,13 +354,13 @@ $$
 $b\ne 0$,$b'_i=b_i-b$,有
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \frac{\sum_i a_ib_{n-i}}{n} =\lim_{n \to \infty} \frac{\sum_i a_ib'_{n-i}}{n} +\frac{\sum_i a_i}{n} b=0+ab
 \end{array}
 $$
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 
 \end{array}
 $$
@@ -372,7 +372,7 @@ $$
 考虑影响值的肯定是中间的项,所以直接拆,取$\epsilon$,对$a,b$可以得到$N_1$
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \dfrac{\sum_i a_ib_{n-i}}{n}= \\
 =\lim_{n \to \infty} \dfrac{\sum _{i = 1} ^{N_1} a_ib_{n-i}+\sum _{i = 1} ^{N_1} b_ia_{n-i}+\sum _{i = N_1+1} ^{n-N_1-1} a_ib_{n-i} }{n}  \\
 =\lim_{n \to \infty} \dfrac{\sum _{i = 1} ^{N_1} a_ib_{n-i}}{n} \\
@@ -395,7 +395,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 a>1,k\in N^*,\lim_{n \to \infty} \frac{n^k}{a^n} =0
 \end{array}
 $$
@@ -413,7 +413,7 @@ $a^n=(1+b)^n$展开会出现$n$的任意次方,然后显然.
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 y_n \uparrow,\lim_{n \to \infty} y_n=\infty \\
 \lim_{n \to \infty} \dfrac{x_n-x_{n-1}}{y_n-y_{n-1}} =a\in[-\infty,+\infty]
@@ -434,7 +434,7 @@ $$
 然后可以证$a=0$时,你取$\epsilon_1$得$N_1$,变成 $\dfrac{\Delta x_n}{\Delta y_n} <\epsilon$.于是
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \dfrac{x_n}{y_n}  \\
 =\dfrac{x_{N_1}+\sum _{i = N_1+1} ^{n}  \Delta x_i}{y_{N_1}+\sum _{i = N_1+1} ^{n}  \Delta y_i}  \\
 \le \dfrac{x_{N_1}+\epsilon\sum _{i = N_1+1} ^{n}  \Delta y_i}{y_{N_1}+\sum _{i = N_1+1} ^{n}  \Delta y_i}  \\
@@ -455,7 +455,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 a_i>a_{i-1} \\
 a_i<M
@@ -483,7 +483,7 @@ a_i\in (M',M_0]$,则$\forall n>i,\vert a_n-M\vert<\epsilon$.
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 a_n:=\lim_{n \to \infty} (1+\dfrac{1}{n} )^n = b_n:=\lim_{n \to \infty} \sum _{i = 0} ^{n}  \dfrac{1}{i!}
 \end{array}
 $$
@@ -495,7 +495,7 @@ $$
 右边那个单调有界都是好证的.证相等:
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 a_n=(1+\dfrac{1}{n} )^n=\sum _{i = 0} ^{n}  \dfrac{1}{n^i} \binom{n}{i} \\
 =\sum _{i = 0} ^{n}  \dfrac{1}{i!} \prod_{j=0}^{i-1} (1-\dfrac{j}{n} )
 <b_n \\
@@ -505,7 +505,7 @@ $$
 又有
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 k<n \Rightarrow 
 a_n=\sum _{i = 0} ^{n}  \dfrac{1}{i!} \prod_{j=0}^{i-1} (1-\dfrac{j}{n} )
 >\sum _{i = 0} ^{k}  \dfrac{1}{i!} \prod_{j=0}^{i-1} (1-\dfrac{j}{n} )
@@ -524,7 +524,7 @@ $$
 [think] 
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{a \to \infty} \lim_{b \to \infty} f(a,b) = X
 \Rightarrow \lim_{n \to \infty} f(n,n) = X
 \end{array}
@@ -537,7 +537,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 0<e-\sum _{i = 0} ^{n}  \dfrac{1}{i!} < \dfrac{1}{n\cdot n!} 
 \end{array}
 $$
@@ -547,7 +547,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 b_n:=\sum _{i = 0} ^{n}  \dfrac{1}{i!} \\
 X=b_{n+m}-b_n=\sum _{i = n+1} ^{n+m}  \dfrac{1}{i!}  \\
 <\dfrac{1}{(n+1)!} \sum _{i = 0} ^{m-1}  \dfrac{1}{(n+1)^i}<\dfrac{1}{n!\cdot n}   \\ \Rightarrow e-b_n= \lim_{m \to \infty} X<\dfrac{1}{n!\cdot n} 
@@ -557,7 +557,7 @@ $$
 然后说为什么取极限小于号还是小于号呢?
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 X=b_{n+m}-b_n<b_{n+m+k}-b_n<\dfrac{1}{n!\cdot n} 
 \\
 \stackrel{\lim_{k \to \infty} }{\Longrightarrow}
@@ -584,7 +584,7 @@ $e\not \in Q$
 假设$e=\dfrac{p}{q}$
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \dfrac{p}{q} -b_n<\dfrac{1}{n\cdot n!} 
 \stackrel{n=q}{\Longrightarrow}
 p(q-1)!-b_q q!<\dfrac{1}{q} 
@@ -600,7 +600,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 (1+\dfrac{1}{n} )^n \uparrow \\
 (1+\dfrac{1}{n} )^{n+1} \downarrow
 \end{array}
@@ -611,7 +611,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 (1+\dfrac{1}{n} )^n\cdot 1< (\dfrac{n\cdot (1+\dfrac{1}{n}+1 )}{n+1} )^{n+1}=(1+\dfrac{1}{n+1} )^{n+1}
 \end{array}
 $$
@@ -647,7 +647,7 @@ $$
 Cauchy Convergance Theorem
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall \epsilon, \exists N \\ s.t.\\ 
 \forall n,m>N, \vert a_n-a_m\vert<\epsilon
 \Leftrightarrow \lim_{n \to \infty} a_n \text{ exists} 
@@ -693,7 +693,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 S=\{ (x,y) \vert x<y \},T\subset S , \cup_{I\in T} I \supset [a,b] \\
 \Rightarrow \exists A \in T,\cup_{I\in A} I \supset [a,b],\vert A\vert\in N(\text{not infinity} ) 
 \end{array}
@@ -720,7 +720,7 @@ $$
 <div class='dbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to x_0} f(x) = A  \\
 \Leftrightarrow \forall \epsilon, \exists \delta,\\ s.t.\\ 
 \forall x, \vert x-x_0 \vert \in (0,\delta), \vert f(x)-A \vert <\epsilon
@@ -734,7 +734,7 @@ $$
 Heine Theorem
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to x_0} f(x)=A \\
 \Leftrightarrow \forall \{ x_n \} ,\lim_{n \to \infty} x_n  = x_0 \\
 \lim_{n \to \infty} f(x_n) = A
@@ -765,7 +765,7 @@ $$
 柯西收敛
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to x_0} \text{ exists} \Leftrightarrow \forall \epsilon, \exists \delta,\forall x_1,x_2 \in N^*(x_0,\delta),\vert f(x_1)-f(x_2) \vert < \epsilon
 \end{array}
 $$
@@ -785,7 +785,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 \lim_{x \to x_0} f(x) = A \\
 \lim_{t \to t_0} g(t) = x_0 \\
@@ -806,7 +806,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{ \to _0} \dfrac{\sin(x)}{x} = 1
 \end{array}
 $$
@@ -818,7 +818,7 @@ $$
 通过$\sin(x)\le x \le \tan(x)$同时除以$x$得到:
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \begin{cases}
 \dfrac{\sin(x)}{x} \le 1 \\
 \dfrac{\sin(x)}{x} \ge \cos(x)
@@ -833,7 +833,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 R(x)=\begin{cases}
 1,x=0 \\
 \dfrac{1}{q}, x=\dfrac{p}{q}  \\
@@ -878,7 +878,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall x>0,n\in N^*,\exists! y {\ } s.t. {\ } y^n=x
 \end{array}
 $$
@@ -915,7 +915,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 r=\dfrac{m}{n} =\dfrac{p}{q} \Rightarrow a=(x^m)^{\frac1n}=(x^p)^{\frac1q}=b
 \end{array}
 $$
@@ -925,7 +925,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 a^{nq}=x^{nrq},b^{nq}=x^{nrq} \\
 \Rightarrow  a^{nq}=b^{nq} \\
 \Rightarrow a=b
@@ -943,7 +943,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 a^xa^y=a^{x+y} \\
 (a^x)^y=a^{xy}
 \end{array}
@@ -1036,7 +1036,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 T:= \{ t \vert t>0,f(x+t)=f(x) \}  \\
 t_0:= \min T \\
 \end{array}

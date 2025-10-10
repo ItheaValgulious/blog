@@ -23,7 +23,7 @@ date: 2025-09-26 14:54:31
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 x_n>1 \Rightarrow  1<x_{n+1}=\dfrac{3x_n+1}{x_n+3}<3 \\
 \text{Inductively},x_n\in (1,3)
 x_{n+1}-x_n \\
@@ -53,7 +53,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall n,a_n<b_n \\
 \Rightarrow \begin{cases}
 b_n>a_{n+1}=\sqrt{a_n b_n}>a_n \\
@@ -97,7 +97,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \dfrac{1}{4(1-x_n)}<x_{n+1}<1  \\
 \Rightarrow x_n<\dfrac{3}{4}  \\
 \dfrac{1}{4(1-x_{n-1})}<x_n<\dfrac{3}{4}  \\
@@ -130,7 +130,7 @@ $$
 
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{n \to \infty} \dfrac{\dfrac{1}{x_n} }{n} \\
 \stackrel{\text{ Stolz Theorem }}{\Longleftarrow}
 \lim_{n \to \infty} \dfrac{1}{x_n} -\dfrac{1}{x_{n-1}}  \\
@@ -143,7 +143,7 @@ $$
 对于$x$,
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 x_1\le \dfrac{1}{1},x_2<\min(x_1,1-x_1)\le \dfrac{1}{2}   \\
 x_n\le \dfrac{1}{n},n\ge 2 
@@ -175,7 +175,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 a_n=n!e-[n!e] \\
 =\lim_{n \to \infty} \{ n!e \}  \\
 =\lim_{n \to \infty} {\left\{ \sum _{i = 0} ^{\infty}  \dfrac{n!}{i!}  \right\}}  \\
@@ -202,7 +202,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 x>\ln(x)+1 \\
 \Rightarrow \dfrac{1}{x}\in(\ln(\dfrac{x}{x-1}),\ln(\dfrac{x+1}{x} ) )  \\
 \Rightarrow a_n\in (\sum _{i = n+1} ^{2n} \ln(\dfrac{i}{i-1}),\sum _{i = n+1} ^{2n} \ln(\dfrac{i+1}{i} ) ) \\
@@ -227,7 +227,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 x_n \text{ is obviously incresing}  \\
 \ln(x_n)=\sum_{i=1}^n \ln(1+\dfrac{1}{2^i} ) \\
 <\sum _{i = 1} ^{n} \dfrac{1}{2^i}  \\
@@ -251,7 +251,7 @@ $$
 用柯西收敛准则证明数列收敛.
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 a_n=\sum _{i = 2} ^{n}  \dfrac{\sin(ix)}{i(i+\sin(ix))} ,x\in R
 \end{array}
 $$
@@ -261,7 +261,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \vert a_{n+m}-a_n \vert  \\
 ={\left \vert \sum _{i = n+1} ^{n+m}  \dfrac{\sin(ix)}{i(i+\sin(ix))} \right \vert}    \\
 < \sum _{i = n+1} ^{n+m}  {\left \vert \dfrac{\sin(ix)}{i(i+\sin(ix))}  \right \vert}  \\
@@ -289,7 +289,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 b_n=\sum _{i = 1} ^{n-1}  \vert a_{i+1}-a_i \vert \text{ is bounded} 
 \Rightarrow a_n \text{ is convergent} 
 \end{array}
@@ -300,7 +300,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 b_n \text{ is increasing}  \\
 b_n \text{ is bounded} 
@@ -329,7 +329,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall \epsilon , \exists N_1=N(\epsilon) \\ s.t.\\ 
 i,j>N_1 \Rightarrow \vert x_i-x_j \vert < \epsilon \\
 \Leftrightarrow  \\
@@ -344,7 +344,7 @@ $$
 逆向三角不等式显然.考虑正向
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \epsilon_1:=1 \therefore i>N \Rightarrow x_i \in [x_N-\epsilon_1,x_N+\epsilon_1] \\
 a_1:=x_N-\epsilon_1,b_1:=x_N+\epsilon_1 \\
 \end{array}
@@ -359,7 +359,7 @@ $$
 于是令$a_i=\max(a_{i-1},x_{N_i}-\epsilon),b_i=\min(b_{i-1},x_{N_i}+\epsilon_i)$. 显然$\vert b_i-a_i \vert < \dfrac{1}{2^{i-1}}$,于是
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 a_i\le a_{i+1} \\
 b_i\ge b_{i+1} \\
@@ -385,7 +385,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 a_0=3,a_n=a_{n-1}^2-2 \\
 \Rightarrow \begin{cases}
 \lim_{n \to \infty} a_n=+\infty \\
@@ -401,7 +401,7 @@ $$
 (1)
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 a_0=3,a_1=7,a_2=47 \\
 n>2,a_{n-1}>2^{n} \Rightarrow a_n = a_{n-1}^2-2>2^{2n}-2>2^{n+1}
@@ -415,7 +415,7 @@ $$
 (2)
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 a_n=a_{n-1}^2-2 \\
 \Rightarrow (a_n-2)=(a_{n-1}-2)(a_{n-1}+2) \\
 \Rightarrow \prod _{i = 1} ^{n}  (a_i+2 ) = \dfrac{a_{n+1}-2}{a_1-2} =\dfrac{a_{n+1}-2}{5}  \\
@@ -438,7 +438,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 A,B \text{is upper bounder},S\subset\{ x+y\vert x\in A,y\in B \}   \\
 \Rightarrow \sup S\le \sup A+\sup B
 \end{array}
@@ -467,7 +467,7 @@ eg. 当$A,B,S$均为有限集恰好为 $\{ x+y\vert x\in A,y\in B \} $ 时显然
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \left. \begin{array}{ll}
 A,B \text{ aren't empty},\alpha\ge 0, \\
 C=A+\alpha B =\{ x\vert x=a+\alpha b,a\in A,b\in B \}  
@@ -482,7 +482,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall c\in C=a+\alpha b, \\
 a\le \sup A,b\le \sup B \Rightarrow a+\alpha b\le \sup A+\alpha \sup B=M \\
 \forall M'<M,\epsilon=M-M' \\
@@ -502,7 +502,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 A\subset B \\
 \Rightarrow \sup A\le \sup B,\inf A \ge \inf B
 \end{array}
@@ -513,7 +513,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \text{if }\sup A>\sup B \\
 \text{let }M=\sup B
 \stackrel{\text{Def of supremum}}{\Longrightarrow} \exists a\in A,a>M=\sup B \\
@@ -535,7 +535,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \forall x\in A,y\in B,x\le y \\
 \Rightarrow \sup A\le \inf B
 \end{array}
@@ -558,7 +558,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to x_0} \sqrt{ x } =\sqrt x_0
 \end{array}
 $$
@@ -569,7 +569,7 @@ $$
 
 if $x_0\ne 0$
 $$
-\begin{array}{c}
+\begin{array}{l}
 \vert \sqrt x-\sqrt {x_0} \vert  \\
 ={\left \vert \dfrac{x-x_0}{\sqrt x+\sqrt {x_0}} \right \vert}   \\
 \le \dfrac{\delta}{\sqrt{x_0} }  \\
@@ -581,14 +581,14 @@ $$
 if $x_0=0,\sqrt x_0=0$
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \delta:=\dfrac{\epsilon^2}{4} \Rightarrow \forall \epsilon,x\in N(x_0,\delta), \\
 \vert \sqrt x-\sqrt {x_0} \vert =\dfrac{\epsilon}{4} <\epsilon
 \end{array}
 $$
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 
 \text{Q.E.D}
 \end{array}
@@ -605,7 +605,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \lim_{x \to +\infty} (\sqrt{ x+1 } -\sqrt{ x-1 } ) =0
 \end{array}
 $$
@@ -615,7 +615,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 \sqrt{ x+1 } -\sqrt{ x-1 }   \\
 =\dfrac{2}{\sqrt{x+1}+\sqrt{x-1}}  \\
 <\dfrac{1}{\sqrt{x}} \\

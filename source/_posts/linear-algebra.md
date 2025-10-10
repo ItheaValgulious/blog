@@ -89,7 +89,7 @@ We noticed $0<v^2=(\sum_{i\in A} c_i x_i) \cdot (\sum_{j\in B} c_jx_j)<0$, contr
 <div class='cbox'>
 
 $$
-\begin{array}{c}
+\begin{array}{l}
 F \text{ is inifinite Field} \\ 
 \forall U_1\ldots U_k,U_i \text{ is subspace of } V(F) \\
 V\ne \bigcup_{i=1}^k U_i
