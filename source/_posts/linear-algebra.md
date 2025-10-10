@@ -84,4 +84,26 @@ We noticed $0<v^2=(\sum_{i\in A} c_i x_i) \cdot (\sum_{j\in B} c_jx_j)<0$, contr
 </div>
 
 
+## Union of finite count of proper sub-space isn't V 
 
+<div class='cbox'>
+
+$$
+\begin{array}{c}
+F \text{ is inifinite Field} \\ 
+\forall U_1\ldots U_k,U_i \text{ is subspace of } V(F) \\
+V\ne \bigcup_{i=1}^k U_i
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑归纳,$k=1$成立,设$k-1$个不行,反证,那么可以取$v\notin \bigcup_{i=1}^{k-1} U_i$,必有$v\in U_k$.
+
+再取$u\notin U_k$,令 $S=\{ u+iv \vert i \in R\}$,则对$j<k$,每个$U_j$至多包含一个$S$中的向量(否则$v\in U_j$),而$U_k$必然没有$S$中向量(否则$u\in U_k$),而$S$中有无限个向量,于是$S$不可能被他们包含,得证.
+
+</div>
+
+[think] 而这个定理甚至在有限域下有反例.
