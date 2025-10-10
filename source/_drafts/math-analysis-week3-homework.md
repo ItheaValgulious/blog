@@ -24,7 +24,7 @@ $$
 $$
 \begin{array}{l}
 x\to 0^+,\dfrac{1}{x} \to +\infty,\lim_{x \to 0^+} = f(x)=\dfrac{1-2^{-\frac{1}{x}}}{1+2^{-\frac1x}}=1 \\
-x\to 0^-,\dfrac{1}{x} \to -\infty,2^{\frac{1}x}\to 0,\lim_{x \to 0^-} f(x)=1 
+x\to 0^-,\dfrac{1}{x} \to -\infty,2^{\frac{1}x}\to 0,\lim_{x \to 0^-} f(x)=-1 
 \end{array}
 $$
 
@@ -128,7 +128,12 @@ $$
 
 $$
 \begin{array}{l}
-\lim_{x \to \infty} (\sin\dfrac{1}{x} +\cos\dfrac{1}{x} )^x =\lim_{x \to \infty} (1+\dfrac{1}{x} )^x=e
+\lim_{x \to \infty} (\sin\dfrac{1}{x} +\cos\dfrac{1}{x} )^x  \\
+=\lim_{x \to \infty} e^{x\ln(\sin\frac{1}{x}+\cos\frac1x)} \\
+=e^{\lim_{x \to \infty} x\ln(\sin\frac{1}{x}+\cos\frac1x)} \\
+=e^{\lim_{x \to \infty} x(\sin\frac{1}{x}+(\cos\frac1x-1))} \\
+=e^{\lim_{x \to \infty} x(\frac{1}{x}+(1-\frac{x^2}{2} -1))} \\
+=e
 \end{array}
 $$
 
@@ -209,12 +214,12 @@ $$
 $$
 \begin{array}{l}
 \lim_{x \to 0} (\dfrac{a^x+b^x+c^x}{3} )^\frac{1}{x} \\
-=\exp \lim_{x \to 0} \dfrac{\ln(a^x+b^x+c^x)-\ln(3)}{x}  \\
+=\exp \lim_{x \to 0} \dfrac{\ln(\dfrac{a^x+b^x+c^x}{3} )}{x}  \\
+=\exp \lim_{x\to 0}\dfrac{(\dfrac{a^x+b^x+c^x}{3} )-1}{x} \\
 a^x=e^{x\ln(a)}=1+x\ln(a)+o(x) \\
 \therefore
-\exp \lim_{x \to 0} \dfrac{\ln(a^x+b^x+c^x)-\ln(3)}{x} \\
-=\exp \lim_{x \to 0} \dfrac{\ln(1+\dfrac{\ln(abc)x}{3} )}{x}  \\
-=\exp \dfrac{\ln(abc)x}{3}
+=\exp \lim_{x \to 0} \dfrac{x\ln a+x\ln b+x\ln c}{x} \\
+=\exp \dfrac{\ln(abc)}{3} \\
 =\sqrt[ 3 ]{ abc }  
 
 \end{array}
