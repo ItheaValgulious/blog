@@ -509,7 +509,7 @@ f(0)=b+1 \\
 \text{if } a\le 0,\lim_{x \to 0^+} f(x)=\lim_{x \to 0^+} x^a\sin\dfrac{1}{x} \text{ not exists} 
 \\
 \therefore a>0,b=-1: f(x) \text{ is continuous at } x=0 \\
-\text{else } f(x) \text{ is continuous at } x=0
+\text{else } f(x) \text{ is discontinuous at } x=0
 \end{array}
 $$
 
@@ -582,7 +582,7 @@ $$
 
 $$
 \begin{array}{l}
-1-\sqrt[k]{ x }=1-\sqrt[k]{ 1+(x-1) }=-\dfrac{x-1}{n}+o(x-1)  
+1-\sqrt[k]{ x }=1-\sqrt[k]{ 1+(x-1) }=-\dfrac{x-1}{k}+o(x-1)  
 \end{array}
 $$
 
@@ -731,6 +731,7 @@ $$
 
 $$
 \begin{array}{l}
+f(0+0)=f(0)+f(0)\Rightarrow f(0)=0 \\
 f(x) \text{ is continuous at } x=0 \\
 \Rightarrow \forall \epsilon_0,\exists \delta_0,\vert x \vert<\delta_0 \Rightarrow \vert f(x)-f(0) \vert <\epsilon_0 \\
 \therefore \forall x_0, \\
@@ -780,19 +781,3 @@ f(x_0)=(\lim_{n \to \infty} f(a_n))\dfrac{\sin(x_0)}{\lim_{n \to \infty} 2^{n-1}
 $$
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
