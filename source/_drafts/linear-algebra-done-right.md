@@ -432,8 +432,6 @@ $$
 
 </div>
 
-
-
 <div class='dbox'>
 
 不变子空间
@@ -458,6 +456,29 @@ $$
 显然$T\vert_U$要求了$U$是不变子空间.
 
 把算子放到更小的空间去研究的方式.
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+p(x)\in \mathcal{P}  \\
+\Rightarrow 
+\mathrm{range\ } p(T),\mathrm{null\ } p(T)\text{ is invariant for } T
+\end{array}
+$$
+
+</div>
+
+$$
+\begin{array}{l}
+u\in \mathrm{range\ } p(T) \\
+\Rightarrow \exists v,p(T)v=u \\
+Tu=Tp(T)v=p(T)Tv\in \mathrm{range\ } p(T) \\
+u\in \mathrm{null\ } p(T) \\
+\Rightarrow p(T)u=0 \\
+p(T)Tu=Tp(T)u=T0=0
+\end{array}
+$$
 
 
 ### 对偶
@@ -1699,7 +1720,7 @@ $$
 \begin{array}{l}
 {0}=\mathrm{null\ } T^0,\mathrm{null\ } T^i \subset \mathrm{null\ } T^{i+1} \\
 \mathrm{null\ } T^i= \mathrm{null\ } T^{i+1} \Rightarrow \forall j>i,\mathrm{null\ } T^j=\mathrm{null\ } T^i \\
-\mathrm{null\ } T^{\dim V}=\mathrm{null\ } T^{\dim V+1} 
+\mathrm{null\ } T^{\dim V}=\mathrm{null\ } T^{\dim V+1}  \\
 \end{array}
 $$
 
@@ -1829,4 +1850,141 @@ $$
 于是对所有$v_i$做一遍可以得到$c$全是$0$,得证.
 
 </div>
+
+<div class='cbox'>
+
+任意复向量空间上的算子$T$的所有本征值$\lambda_1\ldots \lambda_k$满足
+
+$$
+\begin{array}{l}
+\bigoplus_i G(\lambda_i,T)=V \\
+\sum_i \dim G(\lambda_i,T)=\dim V \\
+\exists e_1\ldots e_n,e_i \text{ is generalized eigenvector} ,\{ e_n \} \text{ is basis of } V \\
+(T-\lambda_iI)\vert_{G(\lambda_i,T)} \text{is nilpotent} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+先证第一行.
+
+归纳,因为$T$有本征值,取一本征值$\lambda$,则 $V=G+\mathrm{range\ } (T-\lambda I)$, $U=\mathrm{range\ } T-\lambda I$ 在$T$下不变,于是对$T\vert_U$给出$U$的分解再加上$G(\lambda,T)$即可.
+
+显然$T\vert_U$不会有$\lambda$作为本征值.证明是成立的.
+
+第一行成立后第二行第三行是显然的.第四行不需要第一行就是显然的.
+
+</div>
+
+为什么你不能对普通本征空间这么干而必须广义呢?因为普通本征空间没有 $\mathrm{null\ } T-\lambda I\oplus \mathrm{range\ } T-\lambda I=V$的性质,你分解的时候递归不下去(去掉$E(\lambda,I)$剩下的不是不变子空间)
+
+<div class='dbox'>
+
+代数重数,几何重数
+
+$$
+\begin{array}{l}
+\text{代数重数} =\dim G(\lambda,T) \\
+\text{几何重数} =\dim E(\lambda,T)
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+若$T$有本征值$\lambda_1\ldots \lambda_m$,则存在一组基使得 $\mathcal M( T ) =\mathrm{Diag}(A_1,\ldots,A_m)$其中每个$A$为对角线上全为$\lambda$的上三角矩阵.
+
+</div>
+
+<div class='pbox'>
+
+我们已经说明了$V=\bigoplus_i G(\lambda_i,T)$,则取所有广义本征向量做基就有 $A_i=\mathcal M( T\vert_{G(\lambda_i,T)} )$,又因为
+
+我们知道$T\vert_{G(\lambda_i,T)}-\lambda_i I$是幂零的,于是它有一个严格上三角,那么你再加回去$\lambda_i I$就满足条件了.
+
+</div>
+
+我们希望进一步改进这个结果,就要改进幂零算子的结构:
+
+<div class='cbox'>
+
+幂零算子$N$满足,存在$v_1\ldots v_k\in V,m_1\ldots m_k\in N$使得:
+- $v_1,Nv_1,\ldots, N^{m_1}v_1,v_2,Nv_2,\ldots, N^{m_2}v_2,\ldots,Nv_n,\ldots N^{m_k}v_n$是$V$的基.
+- $\forall i,N^{m_i+1}v_i=0$
+
+</div>
+
+你可以发现,在这组基下,幂零算子被干成了分块对角矩阵,且每个块内只有对角线上面一条对角线是$1$,其余位置是$0$.
+
+<div class='pbox'>
+
+todo
+
+</div>
+
+
+### 平方根
+
+$I+N$有平方根
+
+$C$上可你算子有平方根.
+
+### 特征多项式和极小多项式
+
+<div class='dbox'>
+
+特征多项式
+
+</div>
+
+<div class='cbox'>
+
+特征多项式的次数和零点
+
+</div>
+
+<div class='cbox'>
+
+Caylay-Hamilton Theorem
+
+</div>
+
+<div class='dbox'>
+
+极小多项式
+
+</div>
+
+<div class='cbox'>
+
+极小多项式唯一
+
+</div>
+
+<div class='cbox'>
+
+任意满足$q(T)=0$的多项式是极小多项式的倍式.
+
+</div>
+
+<div class='cbox'>
+
+本征值是极小多项式的零点
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
