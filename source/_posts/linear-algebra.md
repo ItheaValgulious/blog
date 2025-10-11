@@ -107,3 +107,16 @@ $$
 </div>
 
 [think] 而这个定理甚至在有限域下有反例.
+
+## Others
+
+<div class='dbox'>
+
+Echelon form, Reduced echelon form
+
+阶梯矩阵,约化阶梯矩阵
+
+约化是要求阶梯转角处的元素都是$1$.
+
+</div>
+

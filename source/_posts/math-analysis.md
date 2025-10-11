@@ -962,8 +962,211 @@ todo
 
 </div>
 
+## Class 8
+
+### 等价无穷小替换
+
+重点就是你只能替换形如$F(x)P(x)\to F(x)Q(x)(P(x)\sim Q(x))$.
+
+你不能替换$F(x,P(x))\to F(x,Q(x))$这种.
+
+这样正确性就保证了.
 
 
+### 反函数连续性
+
+
+<div class='cbox'>
+
+连续函数的反函数是连续的.
+
+$$
+\begin{array}{l}
+f(x) \text{ is continuous} ,f\circ f^{-1}=x \\
+\Rightarrow f^{-1} \text{is continuous} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+
+$$
+\begin{array}{l}
+\lim_{y \to y_0} f^{-1}(y)=f^{-1}(y_0)=x_0 \\
+\Leftrightarrow \forall \{ y_n \} ,\lim_{n \to \infty} y_n=y_0 \ s.t.\ 
+\lim_{n \to \infty} f^{-1}(y)=x_0 \\
+\text{Contrapose! Assume} \exists \epsilon,\forall \delta,\exists y_1\in N^*(y_0,\delta),\vert f^{-1}(y_1)-x_0 \vert > \epsilon. \\
+\exists \{ x_n \} ,x_n=y_1(\delta). \\
+x_n \text{is bounded} \Rightarrow \exists \{ i_n \} , \\
+x_{i_n} \text{is convergent} ,\lim_{n \to \infty} x_{i_n}=X\ne x_0 \\
+\lim_{n \to \infty} f(x_{i_n})=f(X) \\
+\because \lim_{n \to \infty} f(x_n) =\lim_{n \to \infty} y_n=y_0 \\
+\therefore f(X)=y_0=f(x_0),X\ne x_0  \\
+\text{Contradiction to injection} 
+\end{array}
+$$
+ 
+
+</div>
+
+所以证连续其实是用不着单调的. 不过我们知道连续函数单射一定是单调的.
+
+[think] todo
+
+### 初等函数都是连续函数
+
+
+<div class='cbox'>
+
+初等函数都是连续函数
+
+</div>
+
+<div class='pbox'>
+
+$x^a=e^{a\ln x}$,于是只要证:
+- 指数函数和三角函数是连续的
+- 连续函数的反函数是连续的
+
+指数:
+
+$$
+\begin{array}{l}
+\lim_{x \to x_0} e^x = e^{x_0} \lim_{x \to x_0}  e^{x-x_0} = e^{x_0} \lim{x\to 0} e^x \\
+\Rightarrow e^x \text{ is continuous} \Leftrightarrow e^x \text{ is continuous at } 0 \\
+\lim_{x \to 0} e^x=0  \\
+\Leftrightarrow \forall x_n,\lim_{n \to \infty} e^{x_n} = 0,\lim_{n \to \infty} x_n=0 \\
+\lim_{n \to \infty} n^{\frac{1}{n}}=1 \Rightarrow  \lim_{n \to \infty} e^{x_n}=0
+\end{array}
+$$
+
+三角:
+
+$$
+\begin{array}{l}
+\lim_{\Delta x \to 0} \sin(x+\Delta x)=\sin x\cos \Delta x+\cos x\sin \Delta x \\
+=\sin x
+\end{array}
+$$
+
+反函数用前面的方法.
+
+</div>
+
+## Class 9
+
+
+### Intermediate value theorem
+
+<div class='cbox'>
+
+$$
+\begin{cases}
+x\in [a,b], f\text{ is continuous} \\
+y\in [f(a),f(b)]
+\end{cases} \Rightarrow \exists x_0, f(x_0)=y
+$$
+
+</div>
+
+<div class='pbox'>
+
+不妨设$f(a)\le y \le f(b)$,$=$情况显然,只考虑$f(a)<y<f(b)$.
+
+取 $A=\{ x\vert f(x)<y \}$ 则它有上确界$x_1$.
+
+那么要证明$f(x_1)=y$,考虑:
+
+若$f(x_1)<y$,则 $\lim_{x \to x_1} f(x)=y \Rightarrow \epsilon=y-f(x_1),\forall x\in (x_1-\delta,x_1+\delta)\Rightarrow f(x)\in (f(x_1)-\epsilon,f(x_1)+\epsilon)<y$,于是$\exists x_2>x_1,f(x_2)<y$,与$x_1$上确界矛盾.故$f(x_1)\le y$.
+
+同理$f(x_1)\ge y$,于是$f(x_1)=y$.
+
+那么一定存在一个收敛到$x_1$的数列 $\{ z_n \}$ 你就直接发现 $\lim_{n \to \infty}  f(z_n) = f(\lim_{n \to \infty} z_n)$
+
+$\text{Q.E.D}$ 
+
+</div>
+
+[think] 核心在 $x_0=\sup \{ x \vert f(x)<y \}$,即先看到构造$x_0$的方式.
+
+### 间断点分类.
+
+<div class='dbox'>
+
+$$
+\begin{array}{l}
+\text{when } 
+\lim_{x \to x_0} f(x)=f(x_0) \text{ not satisfied} 
+\end{array}
+$$
+
+分类:
+
+- $f(x_0^+)\ne f(x_0^-)$:跳跃间断点
+- $f(x_0^+)=f(x_0^-)\ne f(x_0)$:可去间断点
+- $f(x_0^+) \text{ or } f(x_0^-) \text{ not exists}$:无穷间断点
+
+
+</div>
+
+<div class='cbox'>
+
+在$[a,b]$上有定义的单调函数的间断点必然是跳跃间断点.
+
+</div>
+
+<div class='pbox'>
+
+那么先证明左右极限存在:若$x_0$是间断点,这里和连续函数的证明是一样的:
+
+$$
+\begin{array}{l}
+\text{let } S=\{ f(x)\vert x\in[a,x_0) \}  \\
+A=\sup S \\
+\text{if }A<f(x_0),\text{by limit's local sign-preserving property}  \\
+\exists x_1\in N^*(x_0),x_1>x_0,f(x_1)<A,\text{Contradiction!} \\
+\text{same for } A>f(x_0) \\
+\therefore A=f(x_0)  \\
+\stackrel{\text{Heine Theorem}}{\Longrightarrow}
+\lim_{x \to x_0^-}f(x)=A \\
+\text{same for } B=\lim_{x \to x_0^+}f(x)=B  \\
+\forall x_1<x_0,x_2>x_0,f(x_1)<f(x_2) \\
+f(x_1)<f(x_0) \stackrel{\lim_{x_1 \to x_0} }{\Longrightarrow}A\le f(x_0) \\
+f(x_2)>f(x_0)\stackrel{\lim_{x_2\to x_0}}{\Longrightarrow}B\ge f(x_0) \\
+\therefore A=B \Rightarrow A=f(x_0)=B \\
+\therefore A\ne B
+\end{array}
+$$
+
+</div>
+
+[think] todo
+
+<div class='cbox'>
+
+在$[a,b]$上有定义的单调函数的间断点必然至多可数个.
+
+</div>
+
+<div class='pbox'>
+
+对$x_1,x_2$两个跳跃间断点:
+
+$$
+\begin{array}{l}
+f(x_1^-)<f(x_1^+)\le f(x_2^-)<f(x_2^+)
+\end{array}
+$$
+
+于是每个间断点$x_i$对应一个$(f(x_i^-),f(x_i^+))$,且不同$x_i$对应区间互不相交.
+
+于是每个区间可以对应一个不同的有理数,有理数至多可数.
+
+</div>
+
+[think] todo
 
 
 
@@ -991,31 +1194,6 @@ $$
 <div class='pbox'>
 
 考虑取任意$M_1<M$,可以得到一个$f(x_1)\in (M_1,M)$,取$M_n>f(x_{n-1})$可得$x_n \in (M_n,M)$,显然$x_n$有界可以取收敛子列$y_n$,则$\lim_{n \to \infty} f(y_n)=f(\lim_{n \to \infty} y_n)$,则于是得证 
-
-</div>
-
-### Intermediate value theorem
-
-<div class='cbox'>
-
-$$
-\begin{cases}
-x\in [a,b], f\text{ is continuous} \\
-y\in [f(a),f(b)]
-\end{cases} \Rightarrow \exists x_0, f(x_0)=y
-$$
-
-</div>
-
-<div class='pbox'>
-
-不妨设$f(a)\le y \le f(b)$,$=$情况显然,只考虑$f(a)<y<f(b)$.
-
-取 $A=\{ x\vert f(x)<y \}$ 则它有上确界$x_1$.
-
-那么一定存在一个收敛到$x_1$的数列 $\{ z_n \}$ 你就直接发现 $\lim_{n \to \infty}  f(z_n) = f(\lim_{n \to \infty} z_n)$
-
-$\text{Q.E.D}$ 
 
 </div>
 

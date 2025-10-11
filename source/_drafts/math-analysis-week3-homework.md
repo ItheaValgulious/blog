@@ -441,3 +441,358 @@ $$
 
 </div>
 
+## Class 2
+
+### T1
+
+<div class='cbox'>
+
+solve a,b such that
+
+$$
+\begin{array}{l}
+f(x)=\lim_{n \to \infty} \dfrac{x^{2n-1}+ax^2+bx}{x^{2n}+1} \text{ is continuous} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+x>1 \Rightarrow f(x)=\dfrac{1}{x}   \\
+\Rightarrow \lim_{x \to 1^+} f(x)=1 \\
+x\in (-1,1) \Rightarrow f(x)=ax^2+bx  \\
+\Rightarrow \lim_{x \to 1^-} f(x)=ax^2+bx \\
+\therefore f(1)=\dfrac{1+a+b}{2} =1=a+b \\
+x<-1 \Rightarrow f(x)=\dfrac{1}{x}  \\
+\Rightarrow \lim_{x \to -1^-} f(x)=-1 \\
+\lim_{x \to -1^-} f(x)=\lim_{x \to -1^+} f(x)=f(-1) \\
+\Rightarrow -1=a-b=\dfrac{-1+a-b}{2}  \\
+\therefore
+\begin{cases}
+a=0 \\
+b=1
+\end{cases}
+
+\end{array}
+$$
+
+</div>
+
+### T2
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x)=\begin{cases}
+x^a\sin\dfrac{1}{x} ,x>0 \\
+e^x+b,x\le 0
+\end{cases}
+\end{array}
+$$
+
+survey continuouity of $f(0)$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+f(0)=b+1 \\
+\lim_{x \to 0^-} f(x)=b+1 \\
+\text{if } a> 0,\lim_{x \to 0^+} f(x)=x^a\sin\dfrac{1}{x} \in(-x^a,x^a) \\
+\lim_{x \to 0^+} f(x)=0 \\
+\text{if } a\le 0,\lim_{x \to 0^+} f(x)=\lim_{x \to 0^+} x^a\sin\dfrac{1}{x} \text{ not exists} 
+\\
+\therefore a>0,b=-1: f(x) \text{ is continuous at } x=0 \\
+\text{else } f(x) \text{ is continuous at } x=0
+\end{array}
+$$
+
+</div>
+
+### T3
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to 0} \dfrac{(1+x)(1+2x)(1+3x)-1}{x} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+(1+x)(1+2x)(1+3x)-1=6x+o(x) \\
+\Rightarrow \lim_{x \to 0} \dfrac{(1+x)(1+2x)(1+3x)-1}{x}  \\
+=\lim_{x \to 0} \dfrac{6x+o(x)}{x}  \\
+=6
+\end{array}
+$$
+
+</div>
+
+### T4
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to 1} \dfrac{\sqrt[ m ]{ x } -1}{\sqrt[ n ]{ x } -1} ,m,n\in N^*
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\sqrt[n]{ 1+(x-1) } -1 \\
+=\dfrac{x-1}{n} +o(x-1) \\
+\Rightarrow \lim_{x \to 1} \dfrac{\sqrt[ m ]{ x } -1}{\sqrt[ n ]{ x } -1} =\dfrac{\frac{x-1}{m}+o(x-1)}{\frac{x-1}{n}+o(x-1)} =\dfrac{n}{m} 
+\end{array}
+$$
+
+</div>
+
+
+
+### T5
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to 1} \dfrac{(1-\sqrt x)(1-\sqrt[ 3 ]{ x } )\ldots (1-\sqrt[n]{ x } )}{(1-x)^{n-1}},n\in N_{+} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+1-\sqrt[k]{ x }=1-\sqrt[k]{ 1+(x-1) }=-\dfrac{x-1}{n}+o(x-1)  
+\end{array}
+$$
+
+$$
+\begin{array}{l}
+\lim_{x \to 1} \dfrac{\prod _{i = 2} ^{n} (1-\sqrt[ i ]{ x } ) }{(1-x)^{n-1}} \\
+=\lim_{x \to 1} \dfrac{\prod _{i = 2} ^{n} \dfrac{1-x}{i}  }{(1-x)^{n-1}} \\
+=\dfrac{1}{n!} 
+\end{array}
+$$
+
+</div>
+
+### T6
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to \frac{\pi}{4} } (\tan x)^{\tan 2x}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to \frac{\pi}{4} } (\tan x)^{\tan 2x}= \\
+\lim_{x \to \frac{\pi}{4} } \exp (\tan 2x\ln (\tan x)) \\
+=\lim_{x \to \frac{\pi}{4} } \exp (2\dfrac{\tan x}{1-\tan^2 x} (\tan x-1)) \\
+=\lim_{x \to \frac{\pi}{4} } \exp -\dfrac{2\tan x}{1+\tan x}  \\
+=\dfrac{1}{e} 
+\end{array}
+$$
+
+</div>
+
+
+
+### T7
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to 0} (2e^{\frac{x}{1+x}}-1)^{\frac{1+x^2}x}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to 0} (2e^{\frac{x}{1+x}}-1)^{\frac{1+x^2}x} \\
+=\lim_{x \to 0} \exp \dfrac{1+x^2}{x} \ln(2e^{\frac{x}{1+x}}-1) \\
+=\lim_{x \to 0} \exp 2\dfrac{1+x^2}{x} (e^{\frac{x}{1+x}}-1) \\
+=\lim_{x \to 0} \exp 2\dfrac{1+x^2}{x} \dfrac{x}{1+x} \\
+=e^2
+\end{array}
+$$
+
+</div>
+
+
+
+### T8
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\vert x \vert <1,\lim_{n \to \infty} {\left( 1+\dfrac{\sum _{i = 1} ^{n}  x^i}{n}  \right)} ^n
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\sum _{i = 1} ^{n}  x^i=\dfrac{x^{n+1}-x}{x-1}  \\
+\lim_{n \to \infty} {\left( 1+\dfrac{\sum _{i = 1} ^{n}  x^i}{n}  \right)} ^n \\
+= \lim_{n \to \infty} {\left( 1+\dfrac{x^{n+1}-x}{n(x-1)}  \right)} ^n \\
+=\lim_{n\to \infty} \exp n\ln {\left( 1+\dfrac{x^{n+1}-x}{n(x-1)}  \right)} \\
+=\exp \lim_{n \to \infty} n \dfrac{x^{n+1}-x}{n(x-1)}  \\
+=\exp \dfrac{-x}{x-1}  \\
+=e^{\frac{x}{1-x} }
+\end{array}
+$$
+
+</div>
+
+
+
+### T9
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f\in C(0,+\infty),f(x^2)=f(x) \Rightarrow \exists c,f(x)=c
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\forall x_0,\text{let } a_n=x_0^{\frac{1}{2^{n-1}}} \\
+f(a_n)=f(\sqrt{a_{n-1}})=f(a_{n-1}),f(a_1)=f(x_0) \\
+\Rightarrow f(a_n)=f(x_0) \\
+\lim_{n \to \infty} a_n=1 \\
+\Rightarrow 
+f(1)=\lim_{x \to 1} f(x)=\lim_{n \to \infty} f(a_n) \\
+=\lim_{n \to \infty} f(x_0)=f(x_0) \\
+\Rightarrow \forall x_0,f(x_0)=f(1) \\
+\Rightarrow f \text{ is constant function} 
+\end{array}
+$$
+
+</div>
+
+
+
+### T10
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x+y)=f(x)+f(y),f(x) \text{ is continuous at } x=0 \\
+\Rightarrow f\in C(R)
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+f(x) \text{ is continuous at } x=0 \\
+\Rightarrow \forall \epsilon_0,\exists \delta_0,\vert x \vert<\delta_0 \Rightarrow \vert f(x)-f(0) \vert <\epsilon_0 \\
+\therefore \forall x_0, \\
+\forall \epsilon,\text{let } \epsilon_0=\dfrac{\epsilon}{2} \Rightarrow \delta:=\delta_0 \\
+\vert x-x_0 \vert <\delta \Rightarrow \\ 
+\vert f(x)-f(x_0) \vert =\vert f(x_0+(x-x_0))-f(x_0) \vert \\
+=\vert f(x_0)+f(x-x_0)-f(x_0) \vert  \\
+=\vert f(x-x_0) \vert <\epsilon_0<\epsilon \\
+\therefore \forall x_0, \lim_{x \to x_0} f(x)=f(x_0) \\
+\Rightarrow f\in C(R)
+
+\end{array}
+$$
+
+</div>
+
+
+
+### T11
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f:[0,+\infty) \Rightarrow R,f(2x)=f(x)\cos(x),f(x) \text{ is continuous at } x=0 \\
+\Rightarrow f(x)=f(0)\dfrac{\sin(x)}{x} ,x\in [0,+\infty)
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\forall x_0, \\
+\text{let } a_n=\dfrac{x_0}{2^{n-1}},x_0=a_1 \\
+f(a_n)=f(a_{n+1})\cos(a_{n+1}) \\
+\Rightarrow f(x_0)=f(a_1)=f(a_n)\prod _{i = 2} ^{n} \cos(a_i) \\
+=f(a_n)\prod_{i=1}^{n-1}\cos \dfrac{x_0}{2^i}  \\
+=f(a_n)\dfrac{\sin(x_0)}{2^{n-1}\sin\frac{x_0}{2^{n-1}}}  \\
+\stackrel{\lim_{n \to \infty} }{\Longrightarrow}
+f(x_0)=(\lim_{n \to \infty} f(a_n))\dfrac{\sin(x_0)}{\lim_{n \to \infty} 2^{n-1}\sin\frac{x_0}{2^{n-1}}}  \\
+=f(0)\dfrac{\sin(x_0)}{x_0} \\
+\therefore f(x)=f(0)\dfrac{\sin(x)}{x}  
+\end{array}
+$$
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
