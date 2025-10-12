@@ -991,6 +991,7 @@ $$
 
 <div class='pbox'>
 
+##### Sol1
 
 $$
 \begin{array}{l}
@@ -1007,13 +1008,20 @@ x_{i_n} \text{is convergent} ,\lim_{n \to \infty} x_{i_n}=X\ne x_0 \\
 \text{Contradiction to injection} 
 \end{array}
 $$
- 
+
+[think] 这里为什么数列这么好用呢?感觉因为函数极限的定义不是对称的,但  $\lim_{n \to \infty} x_n=x_0,\lim_{n \to \infty} y_n=y_0$ 这个关系是对称的.
+
+##### Sol2
+
+容易证明连续函数是单射必须严格单调.
+
+对$x_0$的任意邻域$N$,$f(N)$也是$y_0$的邻域,于是 $\forall \epsilon,x\in N(x_0,\epsilon) \Rightarrow y\in f(N(x_0,\epsilon))$,把这个翻译成$\epsilon-\delta$.
+
+[think] 考虑的是连续函数把邻域变成邻域(或者说连续函数把闭集映到闭集,于是在一边有极限在另一边也有)吧.
 
 </div>
 
 所以证连续其实是用不着单调的. 不过我们知道连续函数单射一定是单调的.
-
-[think] todo
 
 ### 初等函数都是连续函数
 
@@ -1119,7 +1127,7 @@ $$
 
 <div class='pbox'>
 
-那么先证明左右极限存在:若$x_0$是间断点,这里和连续函数的证明是一样的:
+那么先证明左右极限存在:若$x_0$是间断点,这里和介值定理的证明是一样的:
 
 $$
 \begin{array}{l}
@@ -1142,7 +1150,7 @@ $$
 
 </div>
 
-[think] todo
+[think] 这个证明和介值定理证明那里都走了:构造集合,确界存在,确界等于某值,构造集合里极限为确界的收敛数列,连续性 的流程, 似乎是推出集合边界极限的套路.
 
 <div class='cbox'>
 
@@ -1166,12 +1174,7 @@ $$
 
 </div>
 
-[think] todo
-
-
-
-
-
+[think] 于是任何一个区间的不交划分只有可数个.(禁止$[a,a]$的情况)
 
 
 ## Class Unknown

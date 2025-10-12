@@ -1921,22 +1921,108 @@ $$
 
 <div class='pbox'>
 
-todo
+考虑归纳法,归纳就要找不变子空间,比如找到  $\mathrm{range\ } N$ ,显然  $\dim \mathrm{range\ } N<\dim V$ ,于是 $N\vert_{\mathrm{range\ } N}$ 有这样一组基 $v_1\ldots v_k\in \mathrm{range\ } N,m_1\ldots m_k\in N$ 满足基的条件.
+
+$$
+\begin{array}{l}
+v_i\in\mathrm{range\ } N \\
+\Rightarrow \exists u_i,Nu_i=v_i
+\end{array}
+$$ 
+
+于是用$u_1\ldots u_k$替换$v_1\ldots v_k$并加入他们自己,得到 $N^{m_1}u_1,\ldots, u_1,\ldots, N^{m_k}u_k,\ldots, u_k = \{ e_n \}$.
+
+考虑若  $\sum _{i = 1} ^{n}  c_ie_i=0$ ,则 $0=\sum _{i = 1} ^{n}  c_iNe_i$ ,但$Ne_i$是 $\mathrm{range\ } V$ 的基是不相关的.于是$e$线性无关.
+
+那么考虑又添加 $w_1\ldots w_l$ 扩充得 $e_1\ldots e_n,w_1\ldots w_l$ 是基.对任意$w$,一定有 $w\notin \mathrm{range\ } N$,而现在的唯一问题是$Nw$可能不为$0$,注意到因为 $\mathrm{span}( \{ Ne_i \}  ) =\mathrm{range\ } N$,于是  $\exists x\in \mathrm{span}( \{ e_i \}  ) ,Nx=Nw$,于是取$e_{n+i}=w_i-x_i$即可.
+
+于是你构造出了$N$的基,归纳得证.
+
+</div>
+
+[think] 归纳解决存在基满足xx的问题是有效的(复向量的上三角,两种谱定理,到这个Jordan分解等等),要有条件构造不变子空间.
+
+同时这个是在说,幂零矩阵满足存在一组基使得它的矩阵是分块对角矩阵,且每个块只有对角线上方的一行斜线元素都是$1$,其他都是$0$.
+
+<div class='cbox'>
+
+Jordan分解
+
+存在一组基$e$满足 
+
+$$
+\begin{array}{l}
+\mathcal M( T,e ) =\mathrm{Diag}(A_i\ldots A_k), \\
+A_i=\lambda_i I+
+\begin{bmatrix}
+    0,1,0\ldots,0 \\
+    0,0,1,\ldots,0 \\
+    \ldots \\
+    0,0,\ldots,0,1 \\
+    0,0,\ldots,0,0
+\end{bmatrix}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+水到渠成了.
+
+每个块$A_i$对应了一个$T\vert_{G(\lambda_i,T)}$,而已知$T\vert_{G(\lambda_i,T)}-I$是幂零的,而刚才说过幂零矩阵有由只有对角线上方一斜线是$1$的块构成的分块对角矩阵,再加上$\lambda I$就是这样了.
 
 </div>
 
 
+
 ### 平方根
+
+<div class='cbox'>
 
 $I+N$有平方根
 
-$C$上可你算子有平方根.
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+(1+x)^{\frac{1}2}=\sum _{i = 0} ^{\infty} \binom{\frac12}{i}x^i \\
+\text{let } S_n(x)=\sum _{i = 0} ^{2} \binom{\frac12}{i}x^i \\
+\forall k<n,[x^k]S_n^2(x)=
+\sum _{i = 0} ^{k} \binom{\frac12}{i}\binom{\frac12}{k-i} =\binom{1}{k}=[k\le 1]
+\end{array}
+$$
+
+于是$S_n(x)$和$\sqrt{1+x}$的前$k$项一样,而$N$是幂零的保证了它没有某项以后的,于是只要取一个$S_n(N)$就是$\sqrt{I+N}$.
+
+</div>
+
+
+<div class='cbox'>
+
+$C$上可逆算子有平方根.
+
+</div>
+
+<div class='pbox'>
+
+约旦分解,给每个$\lambda I+N$形式找一个平方根,再拼回来.
+
+</div>
 
 ### 特征多项式和极小多项式
 
 <div class='dbox'>
 
 特征多项式
+
+$$
+\begin{array}{l}
+p(x)=\prod(xj-)
+\end{array}
+$$
 
 </div>
 
@@ -1976,15 +2062,119 @@ Caylay-Hamilton Theorem
 
 </div>
 
+### 实向量空间复化
 
+<div class='dbox'>
 
+复化
 
+</div>
 
+<div class='cbox'>
 
+每个算子都有一维或二维不变子空间
 
+</div>
 
+<div class='cbox'>
 
+复化保持极小多项式不变
 
+复化后的实本征值是复化前的本征值
 
+复本征值以共轭的形式成对出现,重数相等
 
+特征多项式不变
+
+</div>
+
+### 实空间的正规算子
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+T \text{ is normal}  \\
+\Leftrightarrow \exists e_1\ldots e_n \text{ is orthonormal basis }, \\
+\mathcal M( T,e ) = \mathrm{Diag}(A_1\ldots A_k) , \\
+A_k= [x] \text{ or } A=\begin{bmatrix}
+    a\ -b \\
+    b\ a
+\end{bmatrix}
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+T \text{ is isometry}  \\
+\Leftrightarrow \exists e_1\ldots e_n \text{ is orthonormal basis}  \\
+\mathcal M( T,e ) =\mathrm{Diag}(A_1\ldots A_k), \\
+A_k=[x] \text{ or } A=\begin{bmatrix}
+    \cos\theta\ -\sin\theta \\
+    \sin\theta\ \cos\theta
+\end{bmatrix}
+\end{array}
+$$
+
+</div>
+
+### 矩阵
+
+<div class='cbox'>
+
+基变更公式
+
+</div>
+
+<div class='dbox'>
+
+迹
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\mathrm{trace} (AB)=\mathrm{trace} (BA)
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\mathrm{trace} A=\sum _{i = 1} ^{n}  A_{i,i}
+\end{array}
+$$
+
+</div>
+
+<div class='dbox'>
+
+行列式
+
+</div>
+
+<div class='cbox'>
+
+$T$的特征多项式等于$\det(zI-T)$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\det M=\sum _{p} \prod _{i = 1} ^{n}  M_{i,p_i}(-1)^{\mathrm{rev}(p)}
+\end{array}
+$$
+
+</div>
 

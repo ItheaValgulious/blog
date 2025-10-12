@@ -108,15 +108,34 @@ $$
 
 [think] 而这个定理甚至在有限域下有反例.
 
-## Others
+## CR分解
 
 <div class='dbox'>
 
-Echelon form, Reduced echelon form
+Row Reduced Echelon Form
 
-阶梯矩阵,约化阶梯矩阵
+- 每一行的首个非零元素是 1，这个元素称为“主元”（pivot）。
+- 每个主元所在列的其他元素都是 0，也就是说主元是该列唯一的非零元素。
+- 每个主元都在其所在行的右边位置，相对于上一行的主元。
+- 所有零行（即整行都是 0）都排在非零行的下面
 
-约化是要求阶梯转角处的元素都是$1$.
+$A$的Row Reduced Echelon Form记为$\mathrm{rref}(A)$
 
 </div>
+
+<div class='cbox'>
+
+设$B=\mathrm{rref}(A)$的主元所在列构成集合$S={i\vert \text{a pivot is in } i}$,设$A=[a_1\ldots a_n]$,则$C=[a_i \vert i \in S]$,$R=B_{1~\mathrm{rank}A,1~m}$(即去除所有全$0$行),满足$A=CR$.
+
+</div>
+
+<div class='pbox'>
+
+我们把它看成用$R$组装$C$的列,那么进行初等行变换不改变列之间的线性关系.
+
+而消元之后呢,看列的话主元所在列显然是标准基,那命题是显然的了.
+
+</div>
+
+
 
