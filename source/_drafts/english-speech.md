@@ -52,13 +52,13 @@ Strike the Waves
 
 Everything begins with a wave.
 
-Not with an unbroken rigid body, not with an over-simplified particle, but a wave of possibilities. Quantum mechanics taught us this truth: every particle, every fragment of our world, is a wave, where all possible ways of existence reside. Until our observation forces it to collapse, from unknown and uncertainty into certainty.
+Not with an unbroken rigid body, not with an over-simplified particle, but a wave of possibilities. Quantum mechanics taught us this truth: every particle, every fragment of our world, is a wave, where all possible ways of existence reside. Until our observation forces it to collapse, from the unknown and uncertainty into certainty.
 
 Isn’t that what life is? We enter the world with a superposition of possibilities, an infinite wave—limitless, undefined. And with every choice we make, we strike the wave of our own existence, collapsing only one possibility into reality, while countless others fade into silence. Growing up is nothing less than the gradual collapse of a wave. Many spend their youth studying, working, conforming—until they become another cog in the machinery of society. Their wave narrows, withers, and vanishes when their time runs out.
 
 But must it always be this way?
 
-We can choose not to go gentle into that good night. If you’re weary of repetition, if your days blur, if you yearn for the road not taken, If you refuse to let the fire in your heart smolder into embers— Then strike the wave. Strike it with intension. We still have time.
+We can choose not to go gentle into that good night. If you’re weary of repetition, if your days blur, if you yearn for the road not taken, If you refuse to let the fire in your heart smolder into embers— Then strike the wave. Strike it with intention. We still have time.
 
 We can explore the unexplored, reach beyond the horizon, Start anew, or simply notice the flower blooming around the corner. The wave will collapse, yes—but we can choose where it falls.
 
