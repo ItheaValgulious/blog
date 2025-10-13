@@ -5,6 +5,8 @@ tags: [math-analysis, homework]
 
 # Math Analysis Homework - Week 4
 
+## Class 1
+
 ### T1
 
 <div class='cbox'>
@@ -376,7 +378,8 @@ g(x)-g(0) \\
 g(x) \text{ is continuous}  \\
 g(x) \text{ is increasing} 
 \end{array} \right\} \\
-\stackrel{\text{ Intermediate Theorem }}{\Longrightarrow}\exists! \xi \in R,g(\xi)=0,f(\xi)=\xi \\
+\stackrel{\text{ Intermediate Theorem }}{\Longrightarrow} \\
+\exists! \xi \in R,g(\xi)=0,f(\xi)=\xi \\
 \end{array}
 $$
 
