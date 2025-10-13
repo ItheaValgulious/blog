@@ -119,13 +119,13 @@ Row Reduced Echelon Form
 - 每个主元都在其所在行的右边位置，相对于上一行的主元。
 - 所有零行（即整行都是 0）都排在非零行的下面
 
-$A$的Row Reduced Echelon Form记为$\mathrm{rref}(A)$
+$A$的Row Reduced Echelon Form记为$\operatorname{rref}(A)$
 
 </div>
 
 <div class='cbox'>
 
-设$B=\mathrm{rref}(A)$的主元所在列构成集合$S={i\vert \text{a pivot is in } i}$,设$A=[a_1\ldots a_n]$,则$C=[a_i \vert i \in S]$,$R=B_{1~\mathrm{rank}A,1~m}$(即去除所有全$0$行),满足$A=CR$.
+设$B=\operatorname{rref}(A)$的主元所在列构成集合$S={i\vert \text{a pivot is in } i}$,设$A=[a_1\ldots a_n]$,则$C=[a_i \vert i \in S]$,$R=B_{1~\operatorname{rank}A,1~m}$(即去除所有全$0$行),满足$A=CR$.
 
 </div>
 
@@ -137,5 +137,40 @@ $A$的Row Reduced Echelon Form记为$\mathrm{rref}(A)$
 
 </div>
 
+## 秩分解
 
+<div class='cbox'>
 
+$A_{n\times m}=P_{n\times n}B_{n\times m}Q_{m\times m}$,其中$B$为只有左上角是一个 $\operatorname{rank} A\times \operatorname{rank} A$ 的单位矩阵其他位置全是$0$.
+
+</div>
+
+<div class='pbox'>
+
+$A$做行变换+列变换消元易得.
+
+能不能换个视角,这个是不是在说,对 $T\in \mathcal L( V , W )$,存在一个$V$的一个基$v_1\ldots v_n$,$W$的一个基$w_1\ldots w_m$使得 $Tv_i=[i\le \operatorname{rank} T]w_i$.
+
+那么先构造$v$,我们先找一个 $\operatorname{null} A$的基$v_{n-r+1}\ldots v_n$,然后再任意扩充出剩下的$v_1\ldots v_n$.
+
+对$w$,显然$Tv_1\ldots Tv_r$线性无关,再扩充$w_{r+1}\ldots w_m$得到一组基.
+
+显然这组基满足需求.
+
+[think] 还是对矩阵基变换理解不到位.
+
+</div>
+
+注意我们把上面那个再搞一搞:$P$的后$m-r$列是没用的,$Q$的后$m-r$行是没用的,都丢到会得到$P=CR$.
+
+而 $P=CR=[c_1\ldots c_r] [r_1^T\ldots r_n^T]^T=\sum _{i = 1} ^{n}  c_ir_i^T$,其中每个$c_ir_i^T$秩为$1$.这就是秩分解的名字.
+
+## Ax=B有解
+
+$$
+\begin{array}{l}
+\exists x,Ax=b \\
+\Leftrightarrow \operatorname{rank} A=\operatorname{rank} [A,b] \\
+\Leftrightarrow b\in \operatorname{range} A
+\end{array}
+$$

@@ -207,13 +207,13 @@ $$
 
 然后问题来到序是什么.
 
-序的结构是这样的 首先是自然数 自然数定义是$0$定义为空集开始 然后定义$\mathrm{succ}(S)=S \cup \{S\}$
+序的结构是这样的 首先是自然数 自然数定义是$0$定义为空集开始 然后定义$\operatorname{succ}(S)=S \cup \{S\}$
 
 然后定义完所有自然数后 定义$\omega=\bigcup_i i$,就是把所有的自然数的集合并起来(显然它包含所有的自然数). 然后我们可以接下来用后继的定于去定义$\omega+1,\omega+2\ldots$,并且你又可以把它们并起来得到$\omega\times 2$,不断走后继,$\omega,2\omega,3\omega\ldots$可以变成$\omega^2$,又有$\omega^3\ldots \omega^\omega$等等
 
 基本上是每个层次的运算完了之后进下一个层次的序数构造 总之它看起来包含了各种各样的无穷,可以应付所有大小的集合.
 
-然后我们要在序数的结构上做归纳法,就要证明:$x\to \mathrm{succ}(x)$,还要证明极限这一把也对,就是$a_1\ldots a_n \to \cup_i a_i$这个操作(也就是对某个极限序数,如果所有它以前的序数推到它自己)合法,就满足了你可以不断到下一极限.这样推出对全体元素合法. 这就是超限归纳法.
+然后我们要在序数的结构上做归纳法,就要证明:$x\to \operatorname{succ}(x)$,还要证明极限这一把也对,就是$a_1\ldots a_n \to \cup_i a_i$这个操作(也就是对某个极限序数,如果所有它以前的序数推到它自己)合法,就满足了你可以不断到下一极限.这样推出对全体元素合法. 这就是超限归纳法.
 
 那你对照一下我们的归纳就是一一对应啊,所以是合法的. 就结束了.
 
@@ -225,7 +225,7 @@ $$
 
 <div class='cbox'>
 
-$\mathrm{Card}(A)\le \mathrm{Card}(B),\mathrm{Card}(B)\le \mathrm{Card}(A) \Rightarrow \mathrm{Card}(A)=\mathrm{Card}(B)$
+$\operatorname{Card}(A)\le \operatorname{Card}(B),\operatorname{Card}(B)\le \operatorname{Card}(A) \Rightarrow \operatorname{Card}(A)=\operatorname{Card}(B)$
 
 或者表达为
 
@@ -972,6 +972,10 @@ todo
 
 这样正确性就保证了.
 
+然后对$F(x)(P(x)+H(x))\to F(x)(Q(x)+H(x))$是合法的,当且仅当你低次项没消掉.
+
+然后通用就是你换的时候带上配亚诺余项就不会错了.
+
 
 ### 反函数连续性
 
@@ -1176,20 +1180,216 @@ $$
 
 [think] 于是任何一个区间的不交划分只有可数个.(禁止$[a,a]$的情况)
 
+## Class 10
 
-## Class Unknown
+### Some Limits' Calculation
 
-### Continuous function's maximum/minimum
+
+<div class='bbox'>
+
+$$
+\begin{array}{l} \\
+f\to 1,g\to \infty \\
+\lim f^g=e^{\lim g\ln f}=e^{\lim g(f-1)}
+\end{array}
+$$
+
+</div>
 
 <div class='cbox'>
 
 $$
+\begin{array}{l}
+\lim_{x \to \infty} (1+\dfrac{1}{x} )^x=e
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to +\infty} (1+\dfrac{1}{x} )^x\in 
+((1+\dfrac{1}{[x]+1} )^{[x]},(1+\dfrac{1}{[x]} )^{[x]+1}) \\
+\text{let } e_n=\lim_{n \to \infty} (1+\dfrac{1}{n} )^n \\
+\lim_{x \to +\infty} (1+\dfrac{1}{[x]+1} )^{[x]} \\
+=\lim_{n \to \infty}  e_{[x]+1}(1+\dfrac{1}{[x]+1})^{-1} \\
+=e \\
+\lim_{x \to +\infty} (1+\dfrac{1}{[x]} )^{[x]+1} \\
+=\lim_{n \to \infty}  e_{[x]}(1+\dfrac{1}{[x]} ) \\
+=e \\
+\stackrel{\text{ Squeeze Theorem }}{\Longrightarrow}
+\lim_{x \to +\infty} (1+\dfrac{1}{x} )^x=e \\
+\lim_{x \to -\infty} (1+\dfrac{1}{x} )^x \\
+=\lim_{x \to +\infty}(1+\dfrac{1}{-x} )^{-x} \\
+=\lim_{x \to +\infty}(\dfrac{x}{x-1}  )^x \\
+=\lim_{x \to +\infty}(1+\dfrac{1}{x-1}  )^x \\
+=e
+\end{array}
+$$
+
+</div>
+
+真麻烦.一句话就是取整夹你.
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to 1} \dfrac{m}{x^m-1} -\dfrac{n}{x^n-1} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to 1} \dfrac{m}{x^m-1} -\dfrac{n}{x^n-1} 
+=\lim_{x \to 1} \dfrac{m(x^n-1)-n(x^m-1)}{(x^m-1)(x^n-1)}  \\
+=\lim_{x \to 1} \dfrac{m(n(x-1)+\dfrac{n(n-1)}{2} (x-1)^2)}{mn(x-1)^2}  \\
+-\dfrac{-n(m(x-1)+\dfrac{m(m-1)}{2} (x-1)^2)}{mn(x-1)^2} \\
+=\lim_{x \to 1} \dfrac{mn^2-nm^2}{2nm}  \\
+=\dfrac{n-m}{2} 
+\end{array}
+$$
+
+</div>
+
+### Uniform Continuity
+
+<div class='dbox'>
+
+Uniform Continuity
+
+$$
+\begin{array}{l}
+f(x) \text{ is uniformly continuous in } [a,b]  \\
+\Leftrightarrow 
+\forall \epsilon>0,\exists \delta,\forall x_1,x_2\in [a,b], \\
+\vert x_1-x_2 \vert <\delta \Rightarrow \vert f(x_1)-f(x_2) \vert <\epsilon
+\end{array}
+$$
+
+</div>
+
+<div class='bbox'>
+
+Not Uniform Continuity
+
+$$
+\begin{array}{l}
+\exists \epsilon,s_n,t_n, \\
+\vert s_n-t_n \vert < \dfrac{1}{n} ,\vert f(s_n)-f(t_n) \vert >\epsilon
+\end{array}
+$$
+
+</div>
+
+
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x)=\sqrt{ x } \text{ is uniformly continuous in } [0,+\infty) 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+x_1>x_2 \Rightarrow  \\
+\vert \sqrt{x_1}-\sqrt{ x_2 } \vert  ={\left \vert \dfrac{x_1-x_2}{\sqrt{ x_1 } +\sqrt{ x_2 } }  \right \vert} < {\left \vert \dfrac{x_1-x_2}{\sqrt{x_1-x_2}}  \right \vert} =\sqrt{ x_1-x_2 }<\sqrt \delta 
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x)=\dfrac{1}{x} \text{ is not uniformly continuous in } (0,1)
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\dfrac{1}{n} -\dfrac{1}{2n} <\dfrac{1}{n} , \\
+y(\dfrac{1}{n} )-y(\dfrac{1}{2n} )=n\ge 1
+\end{array}
+$$
+
+</div>
+
+### 闭区间连续函数性质
+
+<div class='cbox'>
+
+闭区间上的连续函数一致连续
+
+</div>
+
+<div class='pbox'>
+
+反证
+
+$$
+\begin{array}{l}
+\exists \epsilon,s_n,t_n,\vert s_n-t_n \vert <\dfrac{1}{n} ,\vert f(s_n)-f(t_n) \vert >\epsilon \\
+\end{array}
+$$
+
+取$s_n,t_n$的收敛子列$s'_n,t'_n$:
+
+$$
+\begin{array}{l}
+\text{let} x_0=\lim_{n \to \infty} s'_n=\lim_{n \to \infty} s_n=\lim_{n \to \infty} t'_n=\lim_{n \to \infty} t_n \in [a,b] \\
+\lim_{n \to \infty} f(s'_n)=\lim_{n \to \infty} f(t_n')=f(x_0) \\
+\Rightarrow \lim_{n \to \infty} \vert f(s'_n)-f(t'_n) \vert =0
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+闭区间上连续函数一定有界.
+
+</div>
+
+<div class='pbox'>
+
+#### Sol1
+
+反证,设无界,$\exists x_n$满足$f(x_n)>n$,取$x_n$的收敛子列,那么 $f(\lim_{n \to \infty} x_n)=\infty$矛盾.
+
+#### Sol2
+
+用上面一致连续,那么区间的值域跨度不超过 $\dfrac{b-a}{\delta} \epsilon$.
+
+</div>
+
+<div class='cbox'>
+
+闭区间上连续函数一定能取到最大值最小值.
+
+$$
 \begin{cases}
-x\in [a,b],f(x)<M \\
-\forall M'<M,\exists x \ s.t.\  f(x)>M'\\ 
+M=\sup \{ f(x) \vert x\in [a,b] \} \\ 
 \text{f is continuous}
 \end{cases}
-\Rightarrow \exists x, f(x)=M
+\Rightarrow \exists x\in [a,b], f(x)=M
 $$
 
 </div>
@@ -1199,6 +1399,11 @@ $$
 考虑取任意$M_1<M$,可以得到一个$f(x_1)\in (M_1,M)$,取$M_n>f(x_{n-1})$可得$x_n \in (M_n,M)$,显然$x_n$有界可以取收敛子列$y_n$,则$\lim_{n \to \infty} f(y_n)=f(\lim_{n \to \infty} y_n)$,则于是得证 
 
 </div>
+
+
+
+## Class Unknown
+
 
 ### About Periodicty
 

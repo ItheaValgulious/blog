@@ -61,7 +61,7 @@ $$
 
 $$
 \begin{array}{l}
-\mathrm{span}( v_1 \ldots v_n ) = \{ \sum _{i = 1} ^{n}  c_iv_i \} 
+\operatorname{span}( v_1 \ldots v_n ) = \{ \sum _{i = 1} ^{n}  c_iv_i \} 
 \end{array}
 $$
 
@@ -73,7 +73,7 @@ $$
 
 基
 
-基=张成组+线性无关组
+基=张成组 且 线性无关组
 
 </div>
 
@@ -83,9 +83,9 @@ $$
 
 <div class='cbox'>
 
-- $\mathrm{dim} V$是张成组最小长度
-- $\mathrm{dim} V$是线性无关组组最大长度
-- $\mathrm{dim} V$是任意一组基的长度
+- $\dim V$是张成组最小长度
+- $\dim V$是线性无关组组最大长度
+- $\dim V$是任意一组基的长度
 
 </div>
 
@@ -103,9 +103,17 @@ $$
 
 <div class='pbox'>
 
+### Sol1
+
 考虑一个线性无关组和一个张成组,将一个线性无关组的元素加入张成组,则形成的一定是线性相关组,删去一个**张成组中的**元素则保持张成,不断重复这个操作,注意因为被加入的线性无关,所以你想相关一定得带张成组中的,于是可以一直操作.
 
 直到线性无关组全部被加入,则因为每次删掉一个张成组元素,你一定有线性无关组长度不大于它.
+
+### Sol2
+
+另一个是更常见的证法吧,就是直接用张成组去表示线性无关组的每个向量,列方程线性无关组的某个线性组合和为$0$.
+
+然后发现你列出的方程个数(张成组长度)若小于未知数个数(线性无关组长度),那么必有非零解,就证毕.
 
 </div>
 
@@ -139,7 +147,7 @@ $$
 
 维数
 
-维数就是这个长度为 $\mathrm{dim} V$
+维数就是这个长度为 $\dim V$
 
 </div>
 
@@ -290,8 +298,8 @@ $$
 $$
 \begin{array}{l}
 \text{for linear map } T:U\to V \\
-\mathrm{range\ } T = \{ v \vert v=Tu,u\in U \}  \\
-\mathrm{null\ } T = \{ u \vert Tu=0,u \in U \} 
+\operatorname{range} T = \{ v \vert v=Tu,u\in U \}  \\
+\operatorname{null} T = \{ u \vert Tu=0,u \in U \} 
 \end{array}
 $$
 
@@ -302,7 +310,7 @@ $$
 
 $$
 \begin{array}{l}
-\dim U=\dim \mathrm{null\ } T+\dim \mathrm{range\ } T
+\dim U=\dim \operatorname{null} T+\dim \operatorname{range} T
 \end{array}
 $$
 
@@ -310,11 +318,11 @@ $$
 
 <div class='pbox'>
 
-考虑  $\mathrm{null\ } T$  的基$u_1\ldots u_n$,并添加$v_1\ldots v_m$扩充到$U$的基.
+考虑  $\operatorname{null} T$  的基$u_1\ldots u_n$,并添加$v_1\ldots v_m$扩充到$U$的基.
 
-考虑$Tv_1\ldots Tv_m$若线性相关,$\sum _{i = 1} ^{m}  c_iTv_i=0 \Rightarrow T\sum _{i = 1} ^{m}  c_iv_i=0$,则 $w=\sum _{i = 1} ^{m}  c_iv_i\in \mathrm{null\ } T,w=\sum _{i = 1} ^{m}  c_iv_i=\sum _{i = 1} ^{n}  d_iu_i$,与$u_i,v_i$构成一组基矛盾.
+考虑$Tv_1\ldots Tv_m$若线性相关,$\sum _{i = 1} ^{m}  c_iTv_i=0 \Rightarrow T\sum _{i = 1} ^{m}  c_iv_i=0$,则 $w=\sum _{i = 1} ^{m}  c_iv_i\in \operatorname{null} T,w=\sum _{i = 1} ^{m}  c_iv_i=\sum _{i = 1} ^{n}  d_iu_i$,与$u_i,v_i$构成一组基矛盾.
 
-于是$Tv_i$线性无关,且容易注意到任意$w\in U,Tw=\sum_{i=1}^n c_iTu_i+\sum_{i=1}^m d_iTv_i=\sum_{i=1}^md_iTv_i\in \mathrm{span\ } (Tv_1\ldots TV_m)$故得证.
+于是$Tv_i$线性无关,且容易注意到任意$w\in U,Tw=\sum_{i=1}^n c_iTu_i+\sum_{i=1}^m d_iTv_i=\sum_{i=1}^md_iTv_i\in \operatorname{span} (Tv_1\ldots TV_m)$故得证.
 
 </div>
 
@@ -365,8 +373,8 @@ $$
 
 $$
 \begin{array}{l}
-\mathrm{null\ } T=V \\
-\mathrm{range\ } T=U/V 
+\operatorname{null} T=V \\
+\operatorname{range} T=U/V 
 \end{array}
 $$
 
@@ -463,7 +471,7 @@ $$
 \begin{array}{l}
 p(x)\in \mathcal{P}  \\
 \Rightarrow 
-\mathrm{range\ } p(T),\mathrm{null\ } p(T)\text{ is invariant for } T
+\operatorname{range} p(T),\operatorname{null} p(T)\text{ is invariant for } T
 \end{array}
 $$
 
@@ -471,10 +479,10 @@ $$
 
 $$
 \begin{array}{l}
-u\in \mathrm{range\ } p(T) \\
+u\in \operatorname{range} p(T) \\
 \Rightarrow \exists v,p(T)v=u \\
-Tu=Tp(T)v=p(T)Tv\in \mathrm{range\ } p(T) \\
-u\in \mathrm{null\ } p(T) \\
+Tu=Tp(T)v=p(T)Tv\in \operatorname{range} p(T) \\
+u\in \operatorname{null} p(T) \\
 \Rightarrow p(T)u=0 \\
 p(T)Tu=Tp(T)u=T0=0
 \end{array}
@@ -566,9 +574,9 @@ $$
 $$
 \begin{array}{l}
 
-\mathrm{null\ } T'=(\mathrm{range\ } T)^0 \\
+\operatorname{null} T'=(\operatorname{range} T)^0 \\
 
-\mathrm{range\ } T'=(\mathrm{null\ } T)^0
+\operatorname{range} T'=(\operatorname{null} T)^0
 
 \end{array}
 $$
@@ -577,7 +585,7 @@ $$
 
 <div class='pbox'>
 
-考虑$T'fu=fTu=0$关于所有$u$成立,则$f$的范围是什么.看右侧显然是 $(\mathrm{range\ } T)^0$ 看左侧则是 $(\mathrm{null\ } T')^0$.于是得证.
+考虑$T'fu=fTu=0$关于所有$u$成立,则$f$的范围是什么.看右侧显然是 $(\operatorname{range} T)^0$ 看左侧则是 $(\operatorname{null} T')^0$.于是得证.
 
 对第二行,左边是任意$T'g=gT$,右边说你这个线性泛函把所有$Tu=0$的映到$0$,恰好是左边的$gT$满足条件.于是得证.
 
@@ -611,7 +619,7 @@ $\lambda$ 是 $T$的本征值等价于 $T-\lambda I$不是双射,或不是单射
 
 首先注意到对算子来说 单射,满射双射等价
 
-又因为单射等价于 $\mathrm{null\ } T=0$ 所以 $(T-\lambda I)v=0$ 和它不是单射等价.
+又因为单射等价于 $\operatorname{null} T=0$ 所以 $(T-\lambda I)v=0$ 和它不是单射等价.
 
 </div>
 
@@ -623,7 +631,7 @@ $\lambda$ 是 $T$的本征值等价于 $T-\lambda I$不是双射,或不是单射
 
 <div class='pbox'>
 
-反证,你要利用不同本征值这个性质,于是你设 $v_n \in \mathrm{span}( v_1\ldots v_{n-1} )$ 且$n$为满足条件对最小的.
+反证,你要利用不同本征值这个性质,于是你设 $v_n \in \operatorname{span}( v_1\ldots v_{n-1} )$ 且$n$为满足条件对最小的.
 
 $$
 \begin{array}{l}
@@ -676,8 +684,8 @@ $$
 $$
 \begin{array}{l}
 \mathcal M( T,u_1\ldots u_n ) \text{is upper triangular matrix} \\
-\Leftrightarrow \forall i, Tu_i\in \mathrm{span}( u_1\ldots u_i )  \\
-\Leftrightarrow \forall i, \mathrm{span}( u_1\ldots u_i ) \text{is invariant space} 
+\Leftrightarrow \forall i, Tu_i\in \operatorname{span}( u_1\ldots u_i )  \\
+\Leftrightarrow \forall i, \operatorname{span}( u_1\ldots u_i ) \text{is invariant space} 
 \end{array}
 $$
 
@@ -706,11 +714,11 @@ $$
 
 Proof 1
 
-归纳,假设对任意维数小于$\dim V$的空间成立,考虑取$T$的任意本征值$\lambda$,则 $U:=\mathrm{range\ } T-\lambda I$,则因为$T$不是单的所以 $\dim U<\dim V$.且 $\forall u \in U,Tu=(T-\lambda I)u+\lambda u\in U$,所以$T$在$U$不变.
+归纳,假设对任意维数小于$\dim V$的空间成立,考虑取$T$的任意本征值$\lambda$,则 $U:=\operatorname{range} T-\lambda I$,则因为$T$不是单的所以 $\dim U<\dim V$.且 $\forall u \in U,Tu=(T-\lambda I)u+\lambda u\in U$,所以$T$在$U$不变.
 
 于是可以应用归纳结假设,$T\vert_U$在$U$上有一组基$u_1\ldots u_n$使得 $\mathcal M( T\vert_U,u_1\ldots u_n )$ 是上三角矩阵.
 
-将这组基扩展到$V$上成为$u_1\ldots u_n,v_1\ldots v_m$,则对$\forall i$,$Tv_i=(T-\lambda I)v_i+\lambda v_i\in \mathrm{span}( u_1\ldots u_n ) +\mathrm{span}( v_i )\subset \mathrm{span}( u_1\ldots u_n,v_1\ldots v_i )$,于是是上三角矩阵.
+将这组基扩展到$V$上成为$u_1\ldots u_n,v_1\ldots v_m$,则对$\forall i$,$Tv_i=(T-\lambda I)v_i+\lambda v_i\in \operatorname{span}( u_1\ldots u_n ) +\operatorname{span}( v_i )\subset \operatorname{span}( u_1\ldots u_n,v_1\ldots v_i )$,于是是上三角矩阵.
 
 </div>
 
@@ -718,9 +726,9 @@ Proof 1
 
 Proof 2
 
-同样归纳,取任意本征向量 $u,U:=\mathrm{span}( u )$,考虑$T_{/U}$是维数为  $\dim V-1$ 的空间$V/U$上算子.则它有上三角矩阵.于是存在$v_1+U\ldots v_n+U$,使得 $\forall v+U\in V/U,T_{/U}(v+U)\in \mathrm{span}( v_1+U,\ldots,v_n+U )$,也就有$Tv\in \mathrm{span}( v_1,\ldots,v_n )$.
+同样归纳,取任意本征向量 $u,U:=\operatorname{span}( u )$,考虑$T_{/U}$是维数为  $\dim V-1$ 的空间$V/U$上算子.则它有上三角矩阵.于是存在$v_1+U\ldots v_n+U$,使得 $\forall v+U\in V/U,T_{/U}(v+U)\in \operatorname{span}( v_1+U,\ldots,v_n+U )$,也就有$Tv\in \operatorname{span}( v_1,\ldots,v_n )$.
 
-然后现在把$v_1\ldots v_n,u$作为新的基,容易发现 $Tu=\lambda u\in \mathrm{span}( v_1,\ldots,v_n,u )$满足条件.于是存在上三角矩阵.
+然后现在把$v_1\ldots v_n,u$作为新的基,容易发现 $Tu=\lambda u\in \operatorname{span}( v_1,\ldots,v_n,u )$满足条件.于是存在上三角矩阵.
 
 </div>
 
@@ -742,13 +750,13 @@ $T$有逆等价于$T$的上三角矩阵对角线全部非$0$
 $$
 \begin{array}{l}
 Tv_1=A_{1,1}v_1 \Rightarrow A_{1,1}\ne 0 \\
-Tv_k=u+A_{k,k}v_k,u\in \mathrm{span}( v_1\ldots v_{k-1} ) \\
+Tv_k=u+A_{k,k}v_k,u\in \operatorname{span}( v_1\ldots v_{k-1} ) \\
 \text{if } A_{k,k}= 0 \\
-Tv_k\in \mathrm{span}( v_1\ldots v_{k-1} ) \\
+Tv_k\in \operatorname{span}( v_1\ldots v_{k-1} ) \\
 \because v_1\ldots v_{k-1} \text{ is independent
 }  \\
 \therefore Tv_1\ldots Tv_{k-1} \text{ is independent, so it is a base}  \\
-\therefore Tv_k \in \mathrm{span}( Tv_1\ldots Tv_{k-1} ) \\
+\therefore Tv_k \in \operatorname{span}( Tv_1\ldots Tv_{k-1} ) \\
 \exists c \ s.t.\ 
 \sum _{i = 1} ^{k}  c_iTv_i=0 \\
 \stackrel{T^{-1}}{\Longrightarrow}\sum _{i = 1} ^{k}  c_iv_i=0 \\
@@ -758,7 +766,7 @@ $$
 
 再假设$T$关于$V$的基$v_1\ldots v_n$的矩阵为上三角矩阵且对角线元素非$0$.
 
-那么我们知道$Tv_i=A_{i,i}v_i+\sum_{j=1}^{i-1}c_jTv_{j-1}$,其中后一项属于 $\mathrm{span}( v_1\ldots v_{i-1} )$,于是容易发现$Tv_1\ldots Tv_n$线性独立,是一组基,于是$T$是满的,于是$T$可逆.
+那么我们知道$Tv_i=A_{i,i}v_i+\sum_{j=1}^{i-1}c_jTv_{j-1}$,其中后一项属于 $\operatorname{span}( v_1\ldots v_{i-1} )$,于是容易发现$Tv_1\ldots Tv_n$线性独立,是一组基,于是$T$是满的,于是$T$可逆.
 
 
 </div>
@@ -784,7 +792,7 @@ $T$的某个基下的上三角矩阵对角线元素是$T$的本征值.
 
 $$
 \begin{array}{l}
-E(\lambda,T)=\mathrm{null\ } T-\lambda I
+E(\lambda,T)=\operatorname{null} T-\lambda I
 \end{array}
 $$
 
@@ -960,7 +968,7 @@ $$
 
 <div class='pbox'>
 
-考虑刚才的构建过程里,每个 $\mathrm{span}( u_1\ldots u_i )$都没有改变,所以是显然的.
+考虑刚才的构建过程里,每个 $\operatorname{span}( u_1\ldots u_i )$都没有改变,所以是显然的.
 
 而第二条可以由 复向量空间上算子关于某基有上三角矩阵 和 第一条显然推出.
 
@@ -1018,7 +1026,7 @@ $U^{\perp}=\{ v \vert <u,v>=0,u\in U,v\in V \}$
 
 取$U$的一组规范正交基$u_1\ldots u_n$,扩充到$V$的一组规范正交基$u_1\ldots u_n,v_1\ldots v_m$.
 
-则容易发现 $U^{\perp}=\mathrm{span}( v_1\ldots v_m )$.
+则容易发现 $U^{\perp}=\operatorname{span}( v_1\ldots v_m )$.
 
 然后第一条是显然的.第二条的话你把$U^{\perp}$的基扩充到$V$的时候扩充$u_1\ldots u_n$就也是显然的.
 
@@ -1073,7 +1081,7 @@ $$
 - $(\lambda T)^*=\lambda T^*$
 - $(ST)^*=T^*S^*$
 - $(T^*)^*=T$
-- $\mathrm{null\ } T*=\mathrm{range\ } T)^{\perp}$
+- $\operatorname{null} T*=\operatorname{range} T)^{\perp}$
 
 </div>
 
@@ -1083,7 +1091,7 @@ $$
 
 第四个,$<u,T*v>=<Tu,v>=\overline{ <T*v,u> } = \overline{ <v,Tu> } =<Tu,v>$
 
-第五个,考虑是右边对任意$u$,$<Tu,w>=0$的所有$w$,$<Tu,w>=<u,T*w>$,故 $w\in \mathrm{null\ } T*$
+第五个,考虑是右边对任意$u$,$<Tu,w>=0$的所有$w$,$<Tu,w>=<u,T*w>$,故 $w\in \operatorname{null} T*$
 
 </div>
 
@@ -1348,7 +1356,7 @@ $$
 
 考虑归纳,先假设对所有小于$n$维命题成立.$1$维显然成立.
 
-取一个规范的本征向量,把它作为基的第一个向量$n_1$,设  $U=\mathrm{span}( n_1 )$,则$T$在$U$上不变.
+取一个规范的本征向量,把它作为基的第一个向量$n_1$,设  $U=\operatorname{span}( n_1 )$,则$T$在$U$上不变.
 
 注意到
 
@@ -1618,7 +1626,7 @@ $$
 \end{array}
 $$
 
-于是$S$可以是等距同构的,在 $\mathrm{range\ } \sqrt{T^*T} \to \mathrm{range\ } T$上我们定义:
+于是$S$可以是等距同构的,在 $\operatorname{range} \sqrt{T^*T} \to \operatorname{range} T$上我们定义:
 
 $$
 \begin{array}{l}
@@ -1652,16 +1660,16 @@ $$
 
 $$
 \begin{array}{l}
-\dim \mathrm{range\ } \sqrt{T^*T}=\dim \mathrm{range\ } T \\
-\Rightarrow \dim (\mathrm{range\ } \sqrt{T^*T})^\perp=\dim (\mathrm{range\ } T)^\perp
+\dim \operatorname{range} \sqrt{T^*T}=\dim \operatorname{range} T \\
+\Rightarrow \dim (\operatorname{range} \sqrt{T^*T})^\perp=\dim (\operatorname{range} T)^\perp
 \end{array}
 $$
 
-于是可以从 $(\mathrm{range\ } \sqrt{T^*T})^\perp$和$(\mathrm{range\ } T)^\perp$中分别取一组规范正交基$e_1\ldots e_n$,$f_1\ldots f_n$,那么只要让
+于是可以从 $(\operatorname{range} \sqrt{T^*T})^\perp$和$(\operatorname{range} T)^\perp$中分别取一组规范正交基$e_1\ldots e_n$,$f_1\ldots f_n$,那么只要让
 
 $$
 \begin{array}{l}
-S_2\in \mathcal L( (\mathrm{range\ } \sqrt{T^*T})^\perp , (\mathrm{range\ } T)^\perp ) \\
+S_2\in \mathcal L( (\operatorname{range} \sqrt{T^*T})^\perp , (\operatorname{range} T)^\perp ) \\
 S_2(\sum_i c_ie_i)=\sum_i c_if_i
 \end{array}
 $$
@@ -1718,9 +1726,9 @@ $$
 
 $$
 \begin{array}{l}
-{0}=\mathrm{null\ } T^0,\mathrm{null\ } T^i \subset \mathrm{null\ } T^{i+1} \\
-\mathrm{null\ } T^i= \mathrm{null\ } T^{i+1} \Rightarrow \forall j>i,\mathrm{null\ } T^j=\mathrm{null\ } T^i \\
-\mathrm{null\ } T^{\dim V}=\mathrm{null\ } T^{\dim V+1}  \\
+{0}=\operatorname{null} T^0,\operatorname{null} T^i \subset \operatorname{null} T^{i+1} \\
+\operatorname{null} T^i= \operatorname{null} T^{i+1} \Rightarrow \forall j>i,\operatorname{null} T^j=\operatorname{null} T^i \\
+\operatorname{null} T^{\dim V}=\operatorname{null} T^{\dim V+1}  \\
 \end{array}
 $$
 
@@ -1738,7 +1746,7 @@ $$
 
 $$
 \begin{array}{l}
-V=\mathrm{null\ } T^{\dim V} \oplus \mathrm{range\ } T^{\dim V}
+V=\operatorname{null} T^{\dim V} \oplus \operatorname{range} T^{\dim V}
 \end{array}
 $$
 
@@ -1767,9 +1775,9 @@ $$
 
 <div class='pbox'>
 
-先取 $\mathrm{null\ } T$ 的基,不够就加入 $\mathrm{null\ } T^2$ 零空间的基扩充,然后加 $\mathrm{null\ } T^3$的,直到加到$n$个.
+先取 $\operatorname{null} T$ 的基,不够就加入 $\operatorname{null} T^2$ 零空间的基扩充,然后加 $\operatorname{null} T^3$的,直到加到$n$个.
 
-注意到对来自 $\mathrm{null\ } T^k$ 的基$e$,$Te\in \mathrm{null\ } T^{k-1}$,于是是严格上三角矩阵.
+注意到对来自 $\operatorname{null} T^k$ 的基$e$,$Te\in \operatorname{null} T^{k-1}$,于是是严格上三角矩阵.
 
 </div>
 
@@ -1809,7 +1817,7 @@ $$
 
 $$
 \begin{array}{l}
-G(\lambda,T)=\mathrm{null\ } (T-\lambda I)^{\dim V}
+G(\lambda,T)=\operatorname{null} (T-\lambda I)^{\dim V}
 \end{array}
 $$
 
@@ -1870,7 +1878,7 @@ $$
 
 先证第一行.
 
-归纳,因为$T$有本征值,取一本征值$\lambda$,则 $V=G+\mathrm{range\ } (T-\lambda I)$, $U=\mathrm{range\ } T-\lambda I$ 在$T$下不变,于是对$T\vert_U$给出$U$的分解再加上$G(\lambda,T)$即可.
+归纳,因为$T$有本征值,取一本征值$\lambda$,则 $V=G+\operatorname{range} (T-\lambda I)$, $U=\operatorname{range} T-\lambda I$ 在$T$下不变,于是对$T\vert_U$给出$U$的分解再加上$G(\lambda,T)$即可.
 
 显然$T\vert_U$不会有$\lambda$作为本征值.证明是成立的.
 
@@ -1878,7 +1886,7 @@ $$
 
 </div>
 
-为什么你不能对普通本征空间这么干而必须广义呢?因为普通本征空间没有 $\mathrm{null\ } T-\lambda I\oplus \mathrm{range\ } T-\lambda I=V$的性质,你分解的时候递归不下去(去掉$E(\lambda,I)$剩下的不是不变子空间)
+为什么你不能对普通本征空间这么干而必须广义呢?因为普通本征空间没有 $\operatorname{null} T-\lambda I\oplus \operatorname{range} T-\lambda I=V$的性质,你分解的时候递归不下去(去掉$E(\lambda,I)$剩下的不是不变子空间)
 
 <div class='dbox'>
 
@@ -1895,7 +1903,7 @@ $$
 
 <div class='cbox'>
 
-若$T$有本征值$\lambda_1\ldots \lambda_m$,则存在一组基使得 $\mathcal M( T ) =\mathrm{Diag}(A_1,\ldots,A_m)$其中每个$A$为对角线上全为$\lambda$的上三角矩阵.
+若$T$有本征值$\lambda_1\ldots \lambda_m$,则存在一组基使得 $\mathcal M( T ) =\operatorname{Diag}(A_1,\ldots,A_m)$其中每个$A$为对角线上全为$\lambda$的上三角矩阵.
 
 </div>
 
@@ -1921,20 +1929,20 @@ $$
 
 <div class='pbox'>
 
-考虑归纳法,归纳就要找不变子空间,比如找到  $\mathrm{range\ } N$ ,显然  $\dim \mathrm{range\ } N<\dim V$ ,于是 $N\vert_{\mathrm{range\ } N}$ 有这样一组基 $v_1\ldots v_k\in \mathrm{range\ } N,m_1\ldots m_k\in N$ 满足基的条件.
+考虑归纳法,归纳就要找不变子空间,比如找到  $\operatorname{range} N$ ,显然  $\dim \operatorname{range} N<\dim V$ ,于是 $N\vert_{\operatorname{range} N}$ 有这样一组基 $v_1\ldots v_k\in \operatorname{range} N,m_1\ldots m_k\in N$ 满足基的条件.
 
 $$
 \begin{array}{l}
-v_i\in\mathrm{range\ } N \\
+v_i\in\operatorname{range} N \\
 \Rightarrow \exists u_i,Nu_i=v_i
 \end{array}
 $$ 
 
 于是用$u_1\ldots u_k$替换$v_1\ldots v_k$并加入他们自己,得到 $N^{m_1}u_1,\ldots, u_1,\ldots, N^{m_k}u_k,\ldots, u_k = \{ e_n \}$.
 
-考虑若  $\sum _{i = 1} ^{n}  c_ie_i=0$ ,则 $0=\sum _{i = 1} ^{n}  c_iNe_i$ ,但$Ne_i$是 $\mathrm{range\ } V$ 的基是不相关的.于是$e$线性无关.
+考虑若  $\sum _{i = 1} ^{n}  c_ie_i=0$ ,则 $0=\sum _{i = 1} ^{n}  c_iNe_i$ ,但$Ne_i$是 $\operatorname{range} V$ 的基是不相关的.于是$e$线性无关.
 
-那么考虑又添加 $w_1\ldots w_l$ 扩充得 $e_1\ldots e_n,w_1\ldots w_l$ 是基.对任意$w$,一定有 $w\notin \mathrm{range\ } N$,而现在的唯一问题是$Nw$可能不为$0$,注意到因为 $\mathrm{span}( \{ Ne_i \}  ) =\mathrm{range\ } N$,于是  $\exists x\in \mathrm{span}( \{ e_i \}  ) ,Nx=Nw$,于是取$e_{n+i}=w_i-x_i$即可.
+那么考虑又添加 $w_1\ldots w_l$ 扩充得 $e_1\ldots e_n,w_1\ldots w_l$ 是基.对任意$w$,一定有 $w\notin \operatorname{range} N$,而现在的唯一问题是$Nw$可能不为$0$,注意到因为 $\operatorname{span}( \{ Ne_i \}  ) =\operatorname{range} N$,于是  $\exists x\in \operatorname{span}( \{ e_i \}  ) ,Nx=Nw$,于是取$e_{n+i}=w_i-x_i$即可.
 
 于是你构造出了$N$的基,归纳得证.
 
@@ -1952,7 +1960,7 @@ Jordan分解
 
 $$
 \begin{array}{l}
-\mathcal M( T,e ) =\mathrm{Diag}(A_i\ldots A_k), \\
+\mathcal M( T,e ) =\operatorname{Diag}(A_i\ldots A_k), \\
 A_i=\lambda_i I+
 \begin{bmatrix}
     0,1,0\ldots,0 \\
@@ -2020,7 +2028,8 @@ $C$上可逆算子有平方根.
 
 $$
 \begin{array}{l}
-p(x)=\prod(xj-)
+p(z)=\prod _{i = 1} ^{k}  (z-\lambda_i)^{c_i} \\
+c_i=\dim E(\lambda_i,T)
 \end{array}
 $$
 
@@ -2030,17 +2039,42 @@ $$
 
 特征多项式的次数和零点
 
+$$
+\begin{array}{l}
+\deg p(z)=\dim V \\
+p(z)=0 \Leftrightarrow z \text{ is eigenvalue of } T
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+显然吧.
+
 </div>
 
 <div class='cbox'>
 
 Caylay-Hamilton Theorem
 
+$T$的特征多项式$p(z)$满足$p(T)=0$
+
+</div>
+
+<div class='pbox'>
+
+因为$T$可以拆成广义本征空间直和上的$T\vert_{G(\lambda_i,T)}$,而$T\vert_{G(\lambda_i,T)}$是幂零的,于是$(T\vert_{G(\lambda_i,T)}-\lambda_iI)^{\dim G(\lambda_i,T)}=0$.
+
+而$p(T)$显然包含这个因子,于是每个$G(\lambda_i,T)$上都有$p(T\vert_{G\lambda_i,T})=0$,于是$p(T)=0$
+
 </div>
 
 <div class='dbox'>
 
 极小多项式
+
+对于$T$,$p(z)$是满足最高次项为$1$且$p(T)=0$的多项式中次数最小的一个.
 
 </div>
 
@@ -2050,17 +2084,50 @@ Caylay-Hamilton Theorem
 
 </div>
 
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\text{assume }p,q \text{ is minimal polynomial}  \\
+p(T)=0,q(T)=0,\deg p=\deg q \\
+\Rightarrow (p-q)(T)=0,\deg p-q<\min(\deg p,\deg q)
+\end{array}
+$$
+
+于是和$p,q$极小矛盾,得证.
+
+</div>
+
+
 <div class='cbox'>
 
-任意满足$q(T)=0$的多项式是极小多项式的倍式.
+任意满足$q(T)=0$的多项式是极小多项式$p(z)$的倍式.
+
+</div>
+
+<div class='pbox'>
+
+考虑$q \bmod p=f,f\ne 0$,则$f(T)=q(T)-kp(T)=0$且$\deg f<\deg p$,则与$p$极小矛盾.得证.
 
 </div>
 
 <div class='cbox'>
 
-本征值是极小多项式的零点
+$T$的本征值是其极小多项式$p(z)$的零点
 
 </div>
+
+<div class='pbox'>
+
+若$Tv=\lambda v$,$p(T)=0$,则$p(T)v=p(\lambda)v=0$,于是$p(\lambda)=0$.
+
+若$p(\lambda)=0$且$\lambda$不是本征值,则$T-\lambda I$是满秩的,则设$p(T)=(T-\lambda I)q(T)$,$p(T)=0 \Leftrightarrow q(T)=0$,与$p$极小矛盾.
+
+得证.
+
+</div>
+
+
 
 ### 实向量空间复化
 
@@ -2068,25 +2135,95 @@ Caylay-Hamilton Theorem
 
 复化
 
+$V$的复化是$V_C=V\times V$,但是把$(u,v)$写作$u+iv$.
+
+$T$的复化是$T_C(u+iv)=Tu+iTv$
+
+</div>
+
+
+<div class='cbox'>
+
+实向量空间上每个算子都有一维或二维不变子空间
+
+</div>
+
+<div class='pbox'>
+
+考虑它的复化$T_C$一定有本征值,设为$\lambda=a+bi$.
+
+那么对任意$u+vi$,$T(u+vi)=(a+bi)(u+vi)=au-bv + i(av+bu)$
+
+于是$u,v$张成的二维不变子空间在$T$下不变.
+
 </div>
 
 <div class='cbox'>
 
-每个算子都有一维或二维不变子空间
+- 复化保持基不变
+- 复化保持矩阵不变
+- 复化保持极小多项式不变
+- 复化后的实本征值是复化前的本征值
+- 复本征值以共轭的形式成对出现,重数相等
 
 </div>
+
+<div class='pbox'>
+
+第一条,对一组基$e_1\ldots e_n$,有 $u\in \operatorname{span}( e ) ,v\in \operatorname{span}( ie_1,\ldots,ie_n )$,得证.
+
+第二条,因为基不变所以矩阵不变.
+
+第三条,考虑$p(T)=0$显然有$p(T_C)=0$.而若$q(T_C)=0$,取每个系数的实部得到新的多项式$r(T_C)$一定有$r(T_C)v=0,\forall v\in V$.于是若$p$是$T$的极小多项式,那么不能存在$q(T_C)=0$且$\deg q<\deg p$,于是$p$也是$T_C$的极小多项式.
+
+这也保证了复化出来的变换的极小多项式系数都是实数.
+
+第四条,本征值是极小多项式的零点,极小多项式不变故本征值不变.
+
+第五条,极小多项式系数都是实数于是在实数下可以分解成若干一次项和二次函数的乘积,分别对应了单独出现的实本征值和成对出现的复本征值.
+
+</div>
+
+<div class='dbox'>
+
+$T$的特征多项式定义为$T_C$的特征多项式.
+
+</div>
+
+我们要说明这个定义的合理性:
 
 <div class='cbox'>
 
-复化保持极小多项式不变
-
-复化后的实本征值是复化前的本征值
-
-复本征值以共轭的形式成对出现,重数相等
-
-特征多项式不变
+$T_C$的特征多项式系数都是实数.
 
 </div>
+
+<div class='pbox'>
+
+考虑:
+
+<div class='cbox'>
+
+$\lambda$与 $\overline{ \lambda }$重数相同.
+
+</div>
+
+<div class='pbox'>
+
+todo
+
+</div>
+
+
+
+我们由上面复本征值成对出现,
+
+</div>
+
+
+
+
+
 
 ### 实空间的正规算子
 
@@ -2096,7 +2233,7 @@ $$
 \begin{array}{l}
 T \text{ is normal}  \\
 \Leftrightarrow \exists e_1\ldots e_n \text{ is orthonormal basis }, \\
-\mathcal M( T,e ) = \mathrm{Diag}(A_1\ldots A_k) , \\
+\mathcal M( T,e ) = \operatorname{Diag}(A_1\ldots A_k) , \\
 A_k= [x] \text{ or } A=\begin{bmatrix}
     a\ -b \\
     b\ a
@@ -2112,7 +2249,7 @@ $$
 \begin{array}{l}
 T \text{ is isometry}  \\
 \Leftrightarrow \exists e_1\ldots e_n \text{ is orthonormal basis}  \\
-\mathcal M( T,e ) =\mathrm{Diag}(A_1\ldots A_k), \\
+\mathcal M( T,e ) =\operatorname{Diag}(A_1\ldots A_k), \\
 A_k=[x] \text{ or } A=\begin{bmatrix}
     \cos\theta\ -\sin\theta \\
     \sin\theta\ \cos\theta
@@ -2140,7 +2277,7 @@ $$
 
 $$
 \begin{array}{l}
-\mathrm{trace} (AB)=\mathrm{trace} (BA)
+\operatorname{trace} (AB)=\operatorname{trace} (BA)
 \end{array}
 $$
 
@@ -2150,7 +2287,7 @@ $$
 
 $$
 \begin{array}{l}
-\mathrm{trace} A=\sum _{i = 1} ^{n}  A_{i,i}
+\operatorname{trace} A=\sum _{i = 1} ^{n}  A_{i,i}
 \end{array}
 $$
 
@@ -2172,7 +2309,7 @@ $T$的特征多项式等于$\det(zI-T)$
 
 $$
 \begin{array}{l}
-\det M=\sum _{p} \prod _{i = 1} ^{n}  M_{i,p_i}(-1)^{\mathrm{rev}(p)}
+\det M=\sum _{p} \prod _{i = 1} ^{n}  M_{i,p_i}(-1)^{\operatorname{rev}(p)}
 \end{array}
 $$
 
