@@ -1,7 +1,12 @@
 ---
 title: Linear Algebra Done Right
-tags: [linear-algebra,note,self-study]
+tags:
+  - linear-algebra
+  - note
+  - self-study
+date: 2025-10-13 17:49:57
 ---
+
 
 # Linear Algebra Done Right
 
@@ -2141,6 +2146,19 @@ $T$的复化是$T_C(u+iv)=Tu+iTv$
 
 </div>
 
+<div class='dbox'>
+
+共轭
+
+$\overline{ u+iv } =u-iv$
+
+$\overline{ T } v=\overline{ T(\overline{ v } ) }$ 
+
+</div>
+
+容易验证 $\overline{ T }$之间的加法,数乘,复合( $\overline{ S } \circ \overline{T}=\overline{ST}$ )运算是有共轭的性质的.
+
+知乎老哥提醒大家, 复向量空间取共轭的操作是依赖额外结构的,不是所有复向量空间都是某个实向量空间的复化.
 
 <div class='cbox'>
 
@@ -2210,20 +2228,23 @@ $\lambda$与 $\overline{ \lambda }$重数相同.
 
 <div class='pbox'>
 
-todo
+$$
+\begin{array}{l}
+(T-\lambda I)^kv=0 \\
+\Rightarrow \overline{ (T-\lambda I)^k v } =0 \\
+(T-\overline{\lambda}I)^k \overline{ v }=0
+\end{array}
+$$
+
+于是若$v_1\ldots v_k$是$G(\lambda,T)$的基,那么 $\overline{ v_1 } ,\ldots, \overline{v_n}$是$G(\overline{\lambda},T)$的基,得证.
 
 </div>
 
+于是你只要把成对出现的$(x-\lambda)(x-\overline{\lambda})$合成一个就可以得到实系数二次式.
 
-
-我们由上面复本征值成对出现,
+于是系数全是实的.
 
 </div>
-
-
-
-
-
 
 ### 实空间的正规算子
 

@@ -1,7 +1,11 @@
 ---
 title: Math Analysis Homework - Week 4
-tags: [math-analysis, homework]
+tags:
+  - math-analysis
+  - homework
+date: 2025-10-13 17:49:46
 ---
+
 
 # Math Analysis Homework - Week 4
 
