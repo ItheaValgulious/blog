@@ -394,15 +394,17 @@ $$
 \text{let }\epsilon_1=\dfrac{\epsilon}{8}\\
 \exists \delta \ s.t.\ 
 x<\delta \Rightarrow 
-f(x)-f(\dfrac{x}{2} )<\epsilon_1x \\
+\vert f(x)-f(\dfrac{x}{2} )\vert <\epsilon_1x \\
 \therefore
-f(x)=f(\dfrac{x}{2^n} )+\sum _{i = 0} ^{n-1}  f(\dfrac{x}{2^i} )-f(\dfrac{x}{2^{i+1}} )  \\
-<f(\dfrac{x}{2^n} )+\sum _{i = 0} ^{n-1}  \dfrac{\epsilon_1x}{2^i}  \\
-<f(\dfrac{x}{2^n} )+2\epsilon_1x \\
-\therefore f(x)=\lim_{n \to \infty} f(x) \\
-\le \lim_{n \to \infty} f(\dfrac{x}{2^n} )+2\epsilon_1x \\
-=2\epsilon_1x \\
-<\epsilon x \\ 
+\vert f(x)\vert = \vert f(\dfrac{x}{2^n} )+\sum _{i = 0} ^{n-1} ( f(\dfrac{x}{2^i} )-f(\dfrac{x}{2^{i+1}} ) )\vert   \\
+\le \vert f(\dfrac{x}{2^n} )\vert  + \sum _{i = 0} ^{n-1} \vert  f(\dfrac{x}{2^i} )-f(\dfrac{x}{2^{i+1}} ) \vert  \\
+<\vert f(\dfrac{x}{2^n} )\vert  + \sum _{i = 0} ^{n-1}  \dfrac{\epsilon_1x}{2^i}  \\
+<\vert f(\dfrac{x}{2^n} )\vert  + 2\epsilon_1x \\
+\therefore \vert f(x)\vert =\lim_{n \to \infty} \vert f(x)\vert  \\
+\le \lim_{n \to \infty} (\vert f(\dfrac{x}{2^n} )\vert +2\epsilon_1x) \\
+= 0 + 2\epsilon_1x \\
+= 2\epsilon_1x \\
+< \epsilon x \\ 
 \Rightarrow x\to 0^+ \Rightarrow  f(x)=o(x) 
 \end{array}
 $$

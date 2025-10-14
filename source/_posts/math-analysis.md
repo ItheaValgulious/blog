@@ -1180,6 +1180,40 @@ $$
 
 [think] 于是任何一个区间的不交划分只有可数个.(禁止$[a,a]$的情况)
 
+## Ex Class 2
+
+其实这节课在Class 10后面 但讲间断点的话和这里更近.
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\forall f(x), x\in (a,b),f \text{ has at most countable point of discontinuity of the first kind} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+首先我们考虑右极限大于左极限的间断点,证明它们是可数的.
+
+对于一个间断点$x_0$,$\lim_{x \to x_0^-} f(x)=A,\lim_{x \to x_0^+} f(x)=B$,显然我们可以找到$p\in Q,p\in (A,B)$.
+
+而由于极限保号性,你也容易找到$q,r\in Q$使得$\forall x\in (q,x_0),f(x)<p,\forall x\in (x_0,r),f(x)>p$.
+
+考虑是否可能有两个间断点$x_1<x_2$对应相同的$p,r,q$,那么显然$q<x_1<x_2<r$,但是$(x_1,r)$中的值小于$p$,$(q,x_2)$中的值大于$p$,而这两个区间有交,所以不可能有两个间断点对应相同的$p,r,q$,那么这些间断点可以单射到$Q^3$上是可数的.
+
+而对于左极限小于右极限的间断点同理可得.
+
+接下来考虑左右极限相等的间断点,让$p\in (A,f(x_0))$,而$q,r$满足$(q,x_0),(x_0,r)$有$f(x)<p$,那么考虑有两个相同的这样的$p,q,r$的$x_1,x_2$,你会发现$f(x_1)$和$f(x_2)$不能都小于$p$你就爆炸了.所以也是不同的间断点对应不同的数对.
+
+于是都是可数的.总和也是可数的.
+
+</div>
+
+
+
 ## Class 10
 
 ### Some Limits' Calculation

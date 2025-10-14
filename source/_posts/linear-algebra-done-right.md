@@ -2248,6 +2248,8 @@ $$
 
 ### 实空间的正规算子
 
+
+
 <div class='cbox'>
 
 $$
@@ -2263,6 +2265,14 @@ A_k= [x] \text{ or } A=\begin{bmatrix}
 $$
 
 </div>
+
+<div class='pbox'>
+
+首先复化,那么我们定义$<a+bi,u+vi>=<a+bi,u>+<>$
+
+</div>
+
+
 
 <div class='cbox'>
 

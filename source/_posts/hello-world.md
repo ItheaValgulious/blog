@@ -11,19 +11,37 @@ date: 2025-09-02 13:01:00
 
 长期更新数学/大学课程/生活相关内容
 
+## OneNote Sharing
+
+- linear algebra(doneright,homework):https://1drv.ms/o/c/2641d3be39789d74/EtVyU7N6jrtNkENACOSdqv0Bo2fUfdZQJGhDLK1K7dm3pw?e=z9jSOo
+
 ## Function Test
 
 <div class='cbox'>
 
-test1
+box for conclusion(any theory)
 
 </div>
-
-
 
 <div class='pbox'>
 
-test2
+box for a proof or a solution
 
 </div>
+
+<div class='dbox'>
+
+box for a definition
+
+</div>
+
+<div class='bbox'>
+
+box for other special
+
+</div>
+
+
+
+
 
