@@ -1,6 +1,7 @@
 ---
 title: Linear Algebra
 tags:
+  - math
   - linear-algebra
   - note
 date: 2025-09-15 07:55:19
@@ -174,3 +175,41 @@ $$
 \Leftrightarrow b\in \operatorname{range} A
 \end{array}
 $$
+
+解唯一等价于$\operatorname{null} A=0$等价于$n=\operatorname{rank} A$
+
+
+## A quiz problem
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+A \text{ is a real matrix} , \\
+A^TAu=0 \Rightarrow Au=0
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+A=\mathcal M( T )  \\
+T^*Tu=0 \\
+\Leftrightarrow \forall v,<v,T^*Tu>=0 \\
+\Leftrightarrow \forall v,<Tv,Tu>=0 \\
+\Leftrightarrow Tu\in (\operatorname{range} T)^\perp \\
+\because Tu\in \operatorname{range} T \\
+\therefore <Tu,Tu>=0,u=0
+\end{array}
+$$
+
+</div>
+
+[think] 被这个题击败了,当时只想到用 $\operatorname{null} T^*=(\operatorname{range} T)^{\perp}$了,但其实是可以简单翻译过来的.
+
+伴随和共轭转置的关系其实是显然的,内积上伴随的性质也是显然的,所以基础操作没必要用结论.做题的时候错误的感觉算子伴随和矩阵转置的距离过远(因为done right中证明是表示成规范正交基然后拆开用内积的性质,但是不看那套框架的话其实是显然的,另外对$U\oplus U^\perp=V$的证明掌握不好).同时左零空间.
+
+总结就是记住了几何那边的结论但没有很好的联系到代数这边.

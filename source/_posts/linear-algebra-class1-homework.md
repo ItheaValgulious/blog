@@ -1,6 +1,7 @@
 ---
 title: Linea Algebra Homework - Class 1
 tags:
+  - math
   - linear-algebra
   - homework
 date: 2025-09-15 20:33:30

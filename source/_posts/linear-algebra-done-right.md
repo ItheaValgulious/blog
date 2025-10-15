@@ -1,6 +1,7 @@
 ---
 title: Linear Algebra Done Right
 tags:
+  - math
   - linear-algebra
   - note
   - self-study
@@ -2248,6 +2249,53 @@ $$
 
 ### 实空间的正规算子
 
+我们定义
+
+<div class='dbox'>
+
+内积的复化
+
+$$
+\begin{array}{l}
+<a+bi,c+di> \\
+=<a+bi,c>+i<a+bi,d>
+=\overline{ <c,a+bi> } +i \overline{ <d,a+bi> }  \\
+=<a,c>-<b,c>i+i<a,d>+<b,d> \\
+=(<a,c>+<b,d>) + i(<a,d>-<b,c>)
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+我们定义的复化的内积也满足内积的定义.
+
+$(T_C)^*=(T^*)_C$
+
+正规算子的复化还是正规算子.
+
+</div>
+
+<div class='pbox'>
+
+第一条容易验证是对的.
+
+第二条考虑
+
+$$
+\begin{array}{l}
+<T(a+bi),c+di> \\
+=(<Ta,c>+<Tb,d>+i(<Ta,d>-<Tb,c>)) \\
+=(<a,T^*c>+<b,T^*d>+i(<a,T^*d>-<b,T^*c>)) \\
+=<a+bi,T^*(c+di)>
+\end{array}
+$$
+
+第三条考虑$TT^*=T^*T,T_C(T_C)^*=T_C(T^*)_C=(TT^*)_C=(T^*T)_C=T_C(T_C)^*$
+
+</div>
+
 
 
 <div class='cbox'>
@@ -2268,11 +2316,46 @@ $$
 
 <div class='pbox'>
 
-首先复化,那么我们定义$<a+bi,u+vi>=<a+bi,u>+<>$
+于是我们复化得到$T_C$,$T_C$是正规的,有谱定理,存在一组本征向量构成的规范正交基.
+
+考虑规范正交基的每个本征值$\lambda_i$
+
+若$\lambda_i\in R,(a+bi)\in E(\lambda_i,T_C)$,则$T(a+bi)=\lambda_i a+\lambda_i bi$,于是可以分离实部虚部,则$a,b\in E(\lambda_i,T)$.
+
+若$\lambda_i=a+bi\not\in R$,有$a-bi$也是重数相等的本征值,从两个对应的本征空间中分别取一个向量$c+di,c-di$.
+
+$$
+\begin{array}{l}
+\left. \begin{array}{ll}
+T(c+di)=(a+bi)(c+di) \\
+T(c-di)=(a-bi)(c-di)
+\end{array} \right\} \\
+\Rightarrow 
+\begin{cases}
+Tc=ac-bd \\
+Td=bc+ad
+\end{cases} \\
+\end{array}
+$$
+
+于是$T$在$c,d$长成的二维子空间不变.
+
+因为你复的情况是有$n$个本征值的,于是你这么做能得到$V$的子空间分解$U_1\ldots U_k$,$\dim U_k\le 2$.
+
+且对于$\dim U_k=2$,就用$d,c$做基它的矩阵看起来是
+
+$$
+\begin{array}{l}
+\begin{bmatrix}
+    b, a \\
+    -a, b
+\end{bmatrix}
+\end{array}
+$$
+
+即为所证.
 
 </div>
-
-
 
 <div class='cbox'>
 
@@ -2290,35 +2373,101 @@ $$
 
 </div>
 
+<div class='pbox'>
+
+整个证明流程与正规完全一致.只不过最后那个矩阵中 $\vert a +bi\vert=1$,所以能化出来$\cos,\sin$形式.
+
+</div>
+
+
+
 ### 矩阵
 
 <div class='cbox'>
 
 基变更公式
 
+设两组基$e_1\dots e_n$,$f_1\ldots f_n$,$M$是$T$在$f$下的矩阵,有矩阵$A$满足
+
+$$
+\begin{array}{l}
+Af_i=\sum _{j = 1} ^{n}  A_{j,i}e_j
+\end{array}
+$$
+
+则$AMA^{-1}$是$T$在$e$下的变换矩阵.
+
 </div>
+
+<div class='pbox'>
+
+你直接尝试理解就好了:$Av$就是把$f$表示下的向量变成了$e$表示的向量.
+
+</div>
+
+另外,我们设$E=[e_1\ldots e_n]$,$F=[f_1\ldots f_n]$,则$A=F^{-1}E$.(其实就是到标准基的基变换).
+
+
 
 <div class='dbox'>
 
 迹
 
+$$
+\begin{array}{l}
+\operatorname{trace} T=\sum _{i = 1} ^{n}  \lambda_i
+\operatorname{trace} \mathcal M( T ) =\sum _{i = 1} ^{n}  \mathcal M( T ) _{i,i}
+\end{array}
+$$
+
+注意$\lambda$按代数重数重复.实向量空间的先复化.
+
 </div>
 
 <div class='cbox'>
 
 $$
 \begin{array}{l}
-\operatorname{trace} (AB)=\operatorname{trace} (BA)
+\operatorname{trace} AB=\operatorname{trace} BA
 \end{array}
 $$
 
 </div>
 
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\sum _{i = 1} ^{n} (AB)_{i,i}=\sum _{i = 1} ^{n} \sum _{j = 1} ^{n}  A_{i,j}B_{j,i} \\
+\sum _{i = 1} ^{n}  (BA)_{i,i}=\sum _{i = 1} ^{n}  \sum _{j = 1} ^{n}  B_{i,j}A_{j,i}
+\end{array}
+$$
+
+交换求和号显然相等.
+
+</div>
+
 <div class='cbox'>
 
 $$
 \begin{array}{l}
-\operatorname{trace} A=\sum _{i = 1} ^{n}  A_{i,i}
+\operatorname{trace} T=\operatorname{trace} \mathcal M( T ) 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+实空间先复化.考虑复空间.
+
+那么有一组基使得 $\mathcal M( T )$ 是上三角矩阵$A$,此时显然成立.
+
+而根据基变换公式,任意一组基下的 $\mathcal M( T ) =QAQ^{-1}$.
+
+$$
+\begin{array}{l}
+\operatorname{trace} QAQ{-1}=\operatorname{trace} AQQ^{-1}=\operatorname{trace} A=\operatorname{trace} T
 \end{array}
 $$
 
@@ -2328,11 +2477,19 @@ $$
 
 行列式
 
+定义为$\prod_i \lambda_i$.同样按重数重复.同样复化.
+
 </div>
 
 <div class='cbox'>
 
 $T$的特征多项式等于$\det(zI-T)$
+
+</div>
+
+<div class='pbox'>
+
+考虑在$T$有一组基是上三角矩阵,此时容易看出$zI-T$的特征值就是所有$z-\lambda_i$,结束.
 
 </div>
 
@@ -2345,4 +2502,17 @@ $$
 $$
 
 </div>
+
+<div class='pbox'>
+
+很难的啊
+
+证明路径大概是,我们先说明行列式的$\det(AB)=\det A\det B$,然后通过分解$M=LU$算出是特征值之积这样.
+
+而这个公式是怎么来的呢,大概是我们先规定有:
+
+- 多重线性:对
+
+</div>
+
 

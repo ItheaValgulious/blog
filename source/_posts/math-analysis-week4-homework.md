@@ -3,6 +3,7 @@ title: Math Analysis Homework - Week 4
 tags:
   - math-analysis
   - homework
+  - math
 date: 2025-10-13 17:49:46
 ---
 
@@ -388,3 +389,237 @@ g(x) \text{ is increasing}
 $$
 
 </div>
+
+## Class 2
+
+### T1
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{h \to 0} \dfrac{f^2(x_0+2h)-f^2(x_0-h)}{h} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{h \to 0} \dfrac{f^2(x_0+2h)-f^2(x_0-h)}{h}  \\
+=\lim_{h \to 0} \dfrac{(f(x_0+2h)+f(x_0-h))(f(x_0+2h)-f(x_0-h))}{h} \\
+=\lim_{h \to 0} 2f(x_0)\dfrac{f(x_0+2h)-f(x_0)+f(x_0)-f(x_0-h)}{h}   \\
+=4f(x_0)\lim_{h \to 0} \dfrac{f(x_0+2h)-f(x_0)}{2h} +2f(x_0)\dfrac{f(x_0)-f(x_0-h)}{h}   \\
+=6f(x_0)f'(x_0)
+\end{array}
+$$
+
+</div>
+
+
+
+### T2
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to x_0} \dfrac{xf(x_0)-x_0f(x)}{x-x_0} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to x_0} \dfrac{xf(x_0)-x_0f(x)}{x-x_0}  \\
+=\lim_{\delta \to 0} \dfrac{(x_0+\delta)f(x_0)-x_0f(x_0+\delta)}{\delta}  \\
+=\lim_{\delta \to 0} \dfrac{(x_0+\delta)f(x_0)-x_0f(x_0)}{\delta} +\dfrac{x_0f(x_0)-x_0f(x_0+\delta)}{\delta}  \\
+=f(x_0)-x_0f'(x_0)
+\end{array}
+$$
+
+</div>
+
+
+
+
+### T3
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\text{solve } f \\ s.t.\\ 
+f(x+y)=f(x)f(y),f'(0)=1
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+f(x+0)=f(x)f(0) \Rightarrow f(0)=1 \\
+f(x+y)=f(x)f(y) \\
+\stackrel{ \frac{d}{dx} }{\Longrightarrow}f'(x+y)=f'(x)f(y) \\
+\stackrel{ f(x+y)=f(x)f(y) }{\Longrightarrow}\dfrac{f'(x+y)}{f(x+y)} =\dfrac{f'(x)}{f(x)}  \\
+\stackrel{ f(0)=f'(0) }{\Longrightarrow}f(x)=f'(x) \\
+\Rightarrow \dfrac{f'(x)}{f(x)} =1 \\
+\Rightarrow \ln(f(x))'=1 \\
+\Rightarrow \ln(f(x))=x+C \\
+\Rightarrow f(x)=e^{x+C} \\
+\stackrel{ f(0)=1 }{\Longrightarrow}C=0 \\
+\Rightarrow  f(x)=e^x
+\end{array}
+$$
+
+</div>
+
+
+
+
+### T4
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\left. \begin{array}{ll}
+f(x)\in C[a,b],f(a)=f(b)=0 \\
+f'_+(a)f'_-(b)>0
+\end{array} \right\} \\
+\Rightarrow \exists \xi\in (a,b):f(\xi)=0
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+f'_+(a)>0 \Rightarrow \lim_{\Delta x \to 0}  \dfrac{f(a+\Delta x)-f(a)}{\Delta x}>0  \\
+\Rightarrow \lim_{\Delta x \to 0}  f(a+\Delta x)>0 \\
+\exists x_1\in N^*(a),x_1>a,f(x_1)>0 \\
+\text{same for } \exists x_2 \in N^*(b),x_2<b,f(x_2)<0 \\
+\stackrel{\text{ Intermediate Theorem }}{\Longrightarrow}\exists \xi \in [x_1,x_2],f(\xi)=0
+\end{array}
+$$
+
+</div>
+
+
+
+
+### T5
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x)=\vert x-a \vert g(x) \\
+g(x) \text{ is continuous at } x=a \\
+\text{solve under what condition } f \text{ is differentiable at } x=a
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+f \text{ is differentiable at } x=a \\
+\Leftrightarrow \lim_{\Delta x \to 0} \dfrac{f(a+\Delta x)}{\Delta x} \text{ exists}   \\
+\lim_{\Delta x \to 0^+} \dfrac{f(a+\Delta x)}{\Delta x} \\
+=\lim_{\Delta x \to 0} \dfrac{\vert \Delta x \vert g(a+\Delta x)}{\Delta x} \\
+=g(a) \\
+\text{same for } \lim_{\Delta x \to 0^-} \dfrac{f(a+\Delta x)}{\Delta x} = -g(a) \\
+\text{thus } f \text{ is differentiable at } x=a \\
+\Leftrightarrow \lim_{\Delta x \to 0} \dfrac{f(a+\Delta x)}{\Delta x} \text{ exists} \\
+\Leftrightarrow 
+g(a)=-g(a) \\
+\Leftrightarrow  g(a)=0
+\end{array}
+$$
+
+</div>
+
+
+
+
+
+### T6
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\left. \begin{array}{ll}
+f(x) \text{ is continuous at } x=0 \\
+f(0)=0 \\
+\lim_{x \to 0} \dfrac{f(2x)-f(x)}{x} = A
+\end{array} \right\} 
+\Rightarrow f'(0)=A
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\text{without lossing generality, let } A>0,x>0 \\
+f'(x)=\lim_{x \to 0} \dfrac{f(x)-f(0)}{x} =\lim_{x \to 0} \dfrac{f(x)}{x}  \\
+\lim_{x \to 0} \dfrac{f(2x)-f(x)}{Ax} =1 \\
+\Rightarrow \forall \epsilon,\exists \delta, f(2x)-f(x)  \in ((1-\epsilon)Ax,(1+\epsilon)Ax)\\
+\Rightarrow f(x) = f(\dfrac{x}{2^n} )+\sum _{i = 1} ^{n}  f(\dfrac{x}{2^{i-1}}-f(\dfrac{x}{2^i} ) )  \\
+\in (f(\dfrac{x}{2^n} )+Ax(1-\epsilon) \sum _{i = 1} ^{n}  \dfrac{1}{2^i},f(\dfrac{x}{2^n} )+Ax(1+\epsilon) \sum _{i = 1} ^{n}  \dfrac{1}{2^i}) \\
+\lim_{n \to \infty} f(x)\in [Ax(1-\epsilon),Ax(1+\epsilon)] \\
+\Rightarrow \lim_{x \to 0} \lim_{n \to \infty} \dfrac{f(x)}{x} =A
+\end{array}
+$$
+
+</div>
+
+
+
+
+
+### T7
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x) \text{ is differentiable at } x_0 \\
+\Rightarrow \forall \{ a_n \} ,\{ b_n \} , \lim_{n \to \infty} a_n=x_0^-,\lim_{n \to \infty} b_n=x_0^+ \\
+f'(x_0)=\lim_{n \to \infty} \dfrac{f(b_n)-f(a_n)}{b_n-a_n} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{n \to \infty} \dfrac{f(b_n)-f(x_0)}{b_n-x_0} =\lim_{x \to x_0} \dfrac{f(x)-f(x_0)}{x-x_0}=f'(x_0)  \\
+\text{same for } \dfrac{f(x_0)-f(a_n)}{x_0-a_n} =f'(x_0)  \\
+\dfrac{f(b_n)-f(a_n)}{b_n-a_n}  \\
+=\dfrac{f(b_n)-f(x_0)+f(x_0)-f(a_n)}{b_n-x_0+x_0-a_n} \\
+\in (\dfrac{f(b_n)-f(x_0)}{b_n-x_0} ,\dfrac{f(x_0)-f(a_n)}{a_n-x_0} )
+\stackrel{\text{ Squeeze Theorem }}{\Longrightarrow} \\
+\lim_{n \to \infty} \dfrac{f(b_n)-f(a_n)}{b_n-a_n} =f'(x_0)
+
+\end{array}
+$$
+</div>
+

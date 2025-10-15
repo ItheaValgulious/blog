@@ -3,6 +3,7 @@ title: Math Analysis
 tags:
   - math-analysis
   - note
+  - math
 date: 2025-09-15 07:55:19
 ---
 
@@ -1085,6 +1086,8 @@ $$
 
 <div class='pbox'>
 
+##### Sol1
+
 不妨设$f(a)\le y \le f(b)$,$=$情况显然,只考虑$f(a)<y<f(b)$.
 
 取 $A=\{ x\vert f(x)<y \}$ 则它有上确界$x_1$.
@@ -1099,9 +1102,18 @@ $$
 
 $\text{Q.E.D}$ 
 
+[think] 核心在 $x_0=\sup \{ x \vert f(x)<y \}$,即先看到构造$x_0$的方式.
+
+##### Sol2
+
+另一个做法是闭区间套,把区间二等分,那么把平凡情况讨论掉后,一定有$(f(a)-y)(f(b)-y)<0$,那么现在区间中点$m$处,$f(m)=y$直接结束,否则递归到值域区间包含$y$的一边.
+
+如果过程没有在中间停止,那么闭区间套定理,$\exists !\xi$在所有的区间中.考虑区间序列$[a_n,b_n]$,那么显然$f(a_n)-p$和$f(b_n)-p$符号始终不变且相异,于是对$a,b$分别取极限可以证$f(\xi)$收敛到$y$.
+
+[think] 讲题顺序很迷惑(这个证明是Class 11讲零点存在弄出来的). 不过你注意到**这个闭区间套证法是可以证明其他几条连续函数性质的(闭区间上一致连续,有界,极值定理都是可以的).**
+
 </div>
 
-[think] 核心在 $x_0=\sup \{ x \vert f(x)<y \}$,即先看到构造$x_0$的方式.
 
 ### 间断点分类.
 
@@ -1436,10 +1448,9 @@ $$
 
 
 
-## Class Unknown
+## Class 11
 
-
-### About Periodicty
+### Continuous Function's Periodicty
 
 <div class='cbox'>
 
@@ -1458,7 +1469,7 @@ $$
 $$
 \begin{array}{l}
 T:= \{ t \vert t>0,f(x+t)=f(x) \}  \\
-t_0:= \min T \\
+t_0:= \inf T \\
 \end{array}
 $$
 

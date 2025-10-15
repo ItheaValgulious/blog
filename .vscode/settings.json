@@ -15,5 +15,8 @@
         "db.json": true,
         "node_modules": true
     },
-    "hide-files.files": []
+    "hide-files.files": [],
+    "markdown.styles": [
+        "./source/css/index.css"
+    ]
 }

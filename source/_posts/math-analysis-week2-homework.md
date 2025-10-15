@@ -3,6 +3,7 @@ title: Math Analysis Homework - Week 2
 tags:
   - math-analysis
   - homework
+  - math
 date: 2025-09-26 14:54:31
 ---
 
