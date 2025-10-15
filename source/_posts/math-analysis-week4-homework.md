@@ -580,10 +580,11 @@ $$
 f'(x)=\lim_{x \to 0} \dfrac{f(x)-f(0)}{x} =\lim_{x \to 0} \dfrac{f(x)}{x}  \\
 \lim_{x \to 0} \dfrac{f(2x)-f(x)}{Ax} =1 \\
 \Rightarrow \forall \epsilon,\exists \delta, f(2x)-f(x)  \in ((1-\epsilon)Ax,(1+\epsilon)Ax)\\
-\Rightarrow f(x) = f(\dfrac{x}{2^n} )+\sum _{i = 1} ^{n}  f(\dfrac{x}{2^{i-1}}-f(\dfrac{x}{2^i} ) )  \\
+\Rightarrow f(x) = f(\dfrac{x}{2^n} )+\sum _{i = 1} ^{n}  f(\dfrac{x}{2^{i-1}})-f(\dfrac{x}{2^i} )  \\
 \in (f(\dfrac{x}{2^n} )+Ax(1-\epsilon) \sum _{i = 1} ^{n}  \dfrac{1}{2^i},f(\dfrac{x}{2^n} )+Ax(1+\epsilon) \sum _{i = 1} ^{n}  \dfrac{1}{2^i}) \\
 \lim_{n \to \infty} f(x)\in [Ax(1-\epsilon),Ax(1+\epsilon)] \\
-\Rightarrow \lim_{x \to 0} \lim_{n \to \infty} \dfrac{f(x)}{x} =A
+
+\Rightarrow \lim_{x \to 0} \dfrac{f(x)}{x} =A
 \end{array}
 $$
 
