@@ -1480,3 +1480,105 @@ $$
 于是得证.
 
 </div>
+
+### Directive
+
+导数的定义,初等函数求导,导数的四则运算.
+
+## Class 12
+
+### 极限里换元
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+u(x) \text{ is continuous},\lim_{u \to u_0} G(u)=A  \\
+\Rightarrow \lim_{x \to x_0} G(u(x)) = A
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\forall \epsilon,\exists \delta, u(x)\in N^*(u(x),\delta_1) \Rightarrow G(u(x))\in N(A,\epsilon) \\
+\Rightarrow \forall \epsilon,\exists \delta,x\in N^*(x_0,\delta) \Rightarrow u(x)\in N(u(x),\delta_1) \\
+\end{array}
+$$
+
+这里有一点小小的问题,不过你发现只要定义$G_1(u(x_0))=G_1(u_0)=A$即可避免,因为条件里这个点反正是任意的.
+
+于是结束.
+
+</div>
+
+### 复合函数求导
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+(f(g(x)))'=f'(g(x))g'(x)
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+##### Sol
+
+用上面的极限换元一换就出来啦
+
+##### My Sol
+
+$$
+\begin{array}{l}
+f(x)=f(x_0)+f'(x_0)(x-x_0)+o(x-x_0) \\
+g(x)=g(x_0)+g'(x_0)(x-x_0)+o(x-x_0) \\
+\lim_{x \to x_0} \dfrac{f(g(x))-f(g(x_0))}{x-x_0}  \\
+=\lim_{x \to x_0} \dfrac{f(g(x_0)+g'(x_0)(x-x_0)+o(x-x_0))-f(g(x_0))}{x-x_0} \\
+=\lim_{x \to x_0} \dfrac{f'(g(x_0))(g'(x_0)(x-x_0)+o(x-x_0))}{x-x_0} \\
++\dfrac{o(g'(x_0)(x-x_0)+o(x-x_0))}{x-x_0}  \\
+=\lim_{x \to x_0} f'(g(x_0))g'(x_0)+\dfrac{o(g'(x_0)(x-x_0)+o(x-x_0))}{x-x_0}      \\
+\end{array}
+$$
+
+而满足$o(x-x_0)\le\epsilon(x-x_0)$的$x$是$x_0$的一个邻域,于是
+
+$$
+\begin{array}{l}
+\lim_{x \to x_0} \dfrac{o(g'(x_0)(x-x_0)+o(x-x_0))}{x-x_0}  \\
+\le \lim_{x \to x_0} \dfrac{ o((g'(x_0)+\epsilon)(x-x_0))}{x-x_0}  \\
+=0
+\end{array}
+$$
+
+得证.
+
+只能说很暴力.
+
+</div>
+
+### 莱布尼茨求导公式
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+(uv)^{(n)}=\sum _{i = 1} ^{0} \binom{n}{i} u^{(i)}v^{(n-i)}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+归纳
+
+</div>
+
+

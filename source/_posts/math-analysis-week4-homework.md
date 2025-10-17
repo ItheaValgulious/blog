@@ -623,3 +623,294 @@ $$
 $$
 </div>
 
+## Class 3
+
+Calc the following function's directive
+
+### T1
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+y=x\sin x+\dfrac{\sin x}{x} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+y'=\sin(x)+x\cos(x)+\dfrac{x\cos x-\sin x}{x^2}  \\
+=\sin x+x\cos x+\dfrac{\cos x}{x} -\dfrac{\sin x}{x^2} 
+\end{array}
+$$
+
+</div>
+
+
+
+### T2
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+y=\dfrac{xe^x-1}{\sin x} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+y'=\dfrac{(x+1)e^x\sin x-(xe^x-1)\cos x}{\sin^2 x} \\
+=\dfrac{(x+1)e^x}{\sin x} -\dfrac{(xe^x-1)\cos x}{\sin^2 x}  
+\end{array}
+$$
+
+</div>
+
+
+
+### T3
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+y=(x^3+1)^4
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+y'=4(x^3+1)^3 3x^2 \\
+=12x^2(x^3+1)^3
+\end{array}
+$$
+
+</div>
+
+
+
+### T4
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+y=e^{\sqrt{x^3+1}}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+y'=e^{\sqrt{x^3+1}} \cdot \dfrac{3x^2}{2\sqrt {x^3+1}} 
+\end{array}
+$$
+
+</div>
+
+
+
+### T5
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+y=2^{\sin(x^2)}+2^{\tan \frac{1}{x} }
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+y'=2^{\sin x^2+1}\ln 2 \cos x^2 x-2^{\tan \frac{1}{x}}\ln 2 \sec^2 \dfrac{1}{x} \dfrac{1}{x^2} 
+\end{array}
+$$
+
+</div>
+
+
+
+### T6
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+y=\sin(\sin(\sin(\sqrt{x^2+1})))
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+y'=\cos(\sin(\sin(\sqrt{x^2+1})))\cos(\sin \sqrt{x^2+1})\cos (\sqrt {x^2+1})\dfrac{x}{\sqrt {x^2+1}} 
+\end{array}
+$$
+
+</div>
+
+
+### T7
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+y=\arctan \dfrac{2x}{1-x^2} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+arctan'=1/1+x^2
+
+$$
+\begin{array}{l}
+y'=\dfrac{1}{1+(\dfrac{2x}{1-x^2} )^2}\dfrac{2(1-x^2)+4x^2}{(1-x^2)^2}   \\
+=\dfrac{2}{(1+x^2)} 
+\end{array}
+$$
+
+</div>
+
+
+
+### T8
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+y=\ln \sqrt{\dfrac{1+\cos x}{1-\cos x} }
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\sqrt {\dfrac{1+\cos x}{1-\cos x} } \\
+=\cot \dfrac{x}{2}  \\
+\Rightarrow y=\ln \cot \dfrac{x}{2} \\
+\Rightarrow y'=-\tan \dfrac{x}{2}  \csc^2 \dfrac{x}{2} \cdot \dfrac{1}{2}  \\
+=-\dfrac{1}{2\sin \frac{x}{2}\cos \frac{x}{2}}  \\
+=-\csc x
+
+\end{array}
+$$
+
+</div>
+
+
+
+### T9
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+y=x^{a^a}+a^{a^x}+a^{x^a}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+y'=a^ax^{a^a-1}+a^{a^x+x}\ln^2 a+ a^{x^a+1}\ln ax^{a-1}
+\end{array}
+$$
+
+</div>
+
+
+
+### T10
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+y=\sin(f(\sin(x)))
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+y'=\cos(f(\sin(x)))f'(\sin x)\cos x
+\end{array}
+$$
+
+</div>
+
+
+
+### T11
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+y={\left( \dfrac{\sin(f(x))}{x}  \right)} ^{f(f(x))} \\
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+y=\exp f(f(x)) (\ln \sin(f(x))-\ln x)  \\
+={\left( \dfrac{\sin(f(x))}{x}  \right)} ^{f(f(x))} {\left( f'(f(x))f'(x)\ln\dfrac{\sin f(x)}{x} +f(f(x)) {\left( \dfrac{x}{\sin f(x)} \dfrac{xf'x \cos f(x)-\sin f(x)}{x^2}  \right)}  \right)}  \\
+={\left( \dfrac{\sin(f(x))}{x}  \right)} ^{f(f(x))} {\left( f'(f(x))f'(x)\ln\dfrac{\sin f(x)}{x} +\dfrac{f(f(x))(xf'x\cos f x-\sin f x}{x\sin f x}   \right)}
+\end{array}
+$$
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
