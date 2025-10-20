@@ -1581,4 +1581,169 @@ $$
 
 </div>
 
+据说一般用在有一个高阶导数是$0$的情况
 
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\arctan^{(50)}(0)=0
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+##### Sol 1
+
+$$
+\begin{array}{l}
+\arctan'(x)=\dfrac{1}{1+x^2}  \\
+\Rightarrow (1+x^2)\arctan'(x)=1 \\
+0=((1+x^2)\arctan'(x))^{(n)} \\
+=(1+x^2)\arctan^{(n+1)}(x)+\binom{n}{1}2x\arctan^{(n)}(x)+\binom{n}{2}2\arctan^{(n-1)}(x) \\
+\stackrel{ x=0 }{\Longrightarrow} \arctan^{(n+1)}(0)+n(n-1) \arctan^{(n-1)}(0)=0
+\end{array}
+$$
+
+于是有递推,得到是$0$.
+
+##### Sol 2
+
+注意到一阶导是偶函数,又求了奇数次变成奇函数,所以说$0$.
+
+##### Sol 3
+
+todo
+
+</div>
+
+## Class 13
+
+### 中值定理
+
+#### Theorems
+
+<div class='dbox'>
+
+极值点
+
+$f(x_0)$是极大值当且仅当存在$\delta,\forall x\in N^*(x,\delta),f(x)<f(x_0)$
+
+</div>
+
+极值和最值既不充分也不必要.
+
+最值是极值当且仅当最值在区间内部,端点不行.
+
+
+<div class='cbox'>
+
+Fermat Theorem
+
+$f(x_0)$是极值点,$f'(x_0)$存在则$f'(x_0)=0$
+
+</div>
+
+
+<div class='pbox'>
+
+不妨设是极大值.
+
+$$
+\begin{array}{l}
+f'(x_0^-)=\lim_{x \to x_0^-} \dfrac{f(x)-f(x_0)}{x-x_0} \ge 0 \\
+f'(x_0^+)=\lim_{x \to x_0} \dfrac{f(x)-f(x_0)}{x-x_0} \le 0 \\
+\Rightarrow f'(x_0)=f'(x_0^-)=f'(x_0^+)=0
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+Rolle's Theorem
+
+$$
+\begin{array}{l}
+\begin{cases}
+f(x) \in C[a,b] \\
+x\in (a,b) \Rightarrow  \exists f'(x) \\
+f(a)=f(b)
+\end{cases} \\
+\Rightarrow 
+\exists \xi\in (a,b),f'(\xi)=0
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+用连续函数最值定理,并且在$f$不是常函数由$f(a)=f(b)$显然有至少一个最值在中间取.这个最值是极值.极值处费马定理,得证.
+
+</div>
+
+<div class='cbox'>
+
+Lagrange Mean Value Theorem
+
+$$
+\begin{array}{l}
+\begin{cases}
+f(x) \in C[a,b] \\
+x\in (a,b) \Rightarrow  \exists f'(x)
+\end{cases} \\
+\Rightarrow \exists \xi\in (a,b),f'(\xi)=\dfrac{f(a)-f(b)}{a-b}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\text{let } F(x)=f(x)-\dfrac{f(a)-f(b)}{(a-b)} (x-a)
+\end{array}
+$$
+
+然后直接 Rolle's Theorem.
+
+</div>
+
+<div class='cbox'>
+
+Cauchy Mean Value Theorem
+
+$$
+\begin{array}{l}
+\begin{cases}
+f(x) \in C[a,b] \\
+x\in (a,b) \Rightarrow  \exists f'(x) \\
+g(x)\in C[a,b] \\
+x\in (a,b) \Rightarrow  \exists g'(x) \\
+\forall (a',b'),x\in (a',b'),g'(x)\not \equiv 0
+\end{cases} \\
+\exists \xi \in (a,b),\dfrac{f'(\xi)}{g'(\xi)} =\dfrac{f(a)-f(b)}{g(a)-g(b)} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\text{let } F(x)=f(x)-\dfrac{f(a)-f(b)}{g(a)-g(b)} (g(x)-g(a))
+\end{array}
+$$
+
+Rolle's Theorem 启动
+
+</div>
+
+#### Usage
+
+他说你应该在研究导函数零点的时候用Rolle,研究函数和导函数关系用Lagrange,研究两个函数的时候用Cauchy

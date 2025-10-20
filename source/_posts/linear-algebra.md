@@ -213,3 +213,188 @@ $$
 伴随和共轭转置的关系其实是显然的,内积上伴随的性质也是显然的,所以基础操作没必要用结论.做题的时候错误的感觉算子伴随和矩阵转置的距离过远(因为done right中证明是表示成规范正交基然后拆开用内积的性质,但是不看那套框架的话其实是显然的,另外对$U\oplus U^\perp=V$的证明掌握不好).同时左零空间.
 
 总结就是记住了几何那边的结论但没有很好的联系到代数这边.
+
+## Several Inequations about Rank
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\operatorname{rank} A+B \le \operatorname{rank} A+\operatorname{rank} B \\
+\operatorname{rank} AB \le \min \operatorname{rank} A,\operatorname{rank} B \\
+A_{m\times n}B_{n\times s}=0 \Rightarrow \operatorname{rank} A+\operatorname{rank} B\le  n
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+Obviously
+
+</div>
+
+
+
+
+
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\operatorname{rank} AB\ge \operatorname{rank} A+\operatorname{rank} B-n
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+##### Sol 1
+
+矩阵分解:
+
+$$
+\begin{array}{l}
+A=P_1 \begin{bmatrix}
+  I_{r_1},0 \\
+  0,0
+\end{bmatrix}Q_1 \\
+B=P_2 \begin{bmatrix}
+  I_{r_2},0 \\
+  0,0
+\end{bmatrix}Q_2 \\
+AB=P_1\begin{bmatrix}
+  I_{r_1},0 \\
+  0,0
+\end{bmatrix}Q_1P_2\begin{bmatrix}
+  I_{r_2},0 \\
+  0,0
+\end{bmatrix}Q_2
+\end{array}
+$$
+
+显然$P_1,Q_2$不影响最终的秩直接扔了,而设$D=Q_1P_2=\begin{bmatrix}
+  D_1,D_2 \\
+  D_3,D_4
+\end{bmatrix}$,那么你发现乘完只剩下$D_1$.
+
+而删去矩阵一行或一列秩最多减少$1$,$D_1$看成$D$删掉了 $n-\operatorname{rank} A + n-\operatorname{rank} B$ 行或列得到的.同时 $\operatorname{rank} D=n$,得证.
+
+##### Sol 2
+
+考虑 $\operatorname{null} AB$的一组基$a_1\ldots a_{s-\operatorname{rank} AB}$.
+
+todo here
+
+##### Sol 3
+
+考虑
+
+$$
+\begin{array}{l}
+C=\begin{bmatrix}
+  I_n,0 \\
+  0,AB
+\end{bmatrix}
+\end{array}
+$$
+
+显然 $\operatorname{rank} AB+n=\operatorname{rank} C$
+
+对它做行变换可以得到
+
+$$
+\begin{array}{l}
+C \to \begin{bmatrix}
+  I_n,0 \\
+  A,AB
+\end{bmatrix} \\
+\to \begin{bmatrix}
+  I_n,-B \\
+  A,0
+\end{bmatrix}=D \\
+\end{array}
+$$
+
+而观察这个$D$容易发现 $\operatorname{rank} D\ge \operatorname{rank} A+\operatorname{rank} B$,于是得证
+
+##### Sol 4
+
+考虑我们要证明 $\dim \operatorname{range} AB\ge \dim \operatorname{range} B-\dim \operatorname{null} A$
+
+考虑为什么 $\operatorname{range} B\ne \operatorname{range} AB$,是因为 $\operatorname{range} B$中的不同元素被合成了一个,而这个合成相当于把 差是 $\operatorname{null} A$中的元素的多个元素合成一个.所以有
+
+$$
+\begin{array}{l}
+\dim (\operatorname{range} B)/(\operatorname{range} B\cap \operatorname{null} A)=\dim \operatorname{range} A
+\end{array}
+$$
+
+</div>
+
+显然交集小于 $\operatorname{null} A$ ,得证.
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\operatorname{rank} AC+\operatorname{rank} CB\le \operatorname{rank} C+\operatorname{rank} ACB
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+这个结论可以直接由上一个的Sol3弄出来,考虑
+
+$$
+\begin{array}{l}
+\begin{bmatrix} C,0 \\
+0,ACB \end{bmatrix}
+\end{array}
+$$
+
+可以简单消元变成
+
+$$
+\begin{array}{l}
+\begin{bmatrix} C,CB \\
+AC,0 \end{bmatrix} 
+\end{array}
+$$
+
+于是直接得证.
+
+</div>
+
+[think] 学会这种拼成空间再分块矩阵消元的套路.
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+A^2=I \\
+\Rightarrow \operatorname{rank} (A-I)+\operatorname{rank} (A+I)=n
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+(A-I)(A+I)=0  \\
+\Rightarrow \operatorname{rank} (A-I)+\operatorname{rank} A+I \le n \\
+(A+I) - (A-I)=2I  \\
+\Rightarrow \operatorname{rank} (A+I)+\operatorname{rank} (A-I)\ge n
+\\
+\text{Q.E.D}
+\end{array}
+$$
+
+</div>
+
