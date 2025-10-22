@@ -398,3 +398,73 @@ $$
 
 </div>
 
+## Eular Formula
+
+<div class='cbox'>
+
+对平面图$\text{Graph}(n,m)$有$F$个面(不含最外面),证明
+
+</div>
+
+<div class='pbox'>
+
+首先考虑无向图的 Incidence Matrix $M$,容易注意到$M$中的若干行线性无关等价于这个导出子图无环.
+
+于是看出 $\operatorname{rank} M=n-c$,$c$为连通块个数.
+
+又能看出 $v\in \operatorname{null} M^T$等价于$v$中的若干条边串成若干个环,会发现 $\dim \operatorname{null} M^T=F$
+
+
+
+</div>
+
+## A Ex Problem
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+M=\begin{bmatrix} A,C \\0,B \end{bmatrix}  \\
+\det M=\det A+\det B \Leftrightarrow \exists X,Y:AX+YB=C
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+首先右推左是显然的.直接消元一下就好了.考虑左推右.
+
+考虑
+
+$$
+\begin{array}{l}
+A:U_1\to V_1,B:U_2\to V_2,C:U_2\to V_1 \\
+M:U\to V
+\end{array}
+$$
+
+分解
+
+$$
+\begin{array}{l}
+\operatorname{range} M=\operatorname{range} B\oplus W \\
+W=\{ [v,0] \vert [v,0]\in \operatorname{range} M \}  \\
+\end{array}
+$$
+
+那么因为 $[v,0]\in \operatorname{range} M$,则必然是 $[v,0]=M[u_1,u_2]^T$,一定是$Bu_2=0,Au_1+Cu_2=v$.
+
+于是 $W=\operatorname{range} A + C(\operatorname{null} B)$.又因为 $\dim W=\dim \operatorname{range} A$,于是有 $C(\operatorname{null} B) \subset \operatorname{range} A$.
+
+我们再分解 $U_2=\operatorname{null} B \oplus U_3$,此时注意到$B$在$U_3$到 $\operatorname{range} B$是双射,存在$Y',\forall u,YBu=Cu$.然后通过扩充基并任意取值将$Y'$的定义域扩充到$V_2$得到$Y$.
+
+于是$(C-YB)u$对任意$u\in U_3$为$0$,于是 $\operatorname{range} (C-YB)=(C-YB)\operatorname{null} B= C(\operatorname{null} B)$.
+
+现在只考虑 $u\in \operatorname{null} B$,显然$\exists v,Cu=Av$,那么对 $\operatorname{null} B$的一组基$u_1\ldots u_k$这样确定$v_1\ldots v_k$,就可以构造$X'u_i=v_i$满足$Cu=AX'v$.再用同样的方法扩充基并任意取值将$X'$的定义域扩充到$U_2$得到$X$.
+
+于是$C=YB+AX$
+
+</div>
+
+[think] 感觉得到 $C(\operatorname{null} B)=A$这里是容易的.然后这里进行不下去,想到 $\operatorname{null} B$去分解也是自然的. 分解后就要想办法把 $\operatorname{null} B$之外的影响消掉,就用了$C-YB$.而若 $\operatorname{range} A\subset \operatorname{range} B$那么$Ax=BTx$是显然的.

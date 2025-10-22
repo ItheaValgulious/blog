@@ -1747,3 +1747,159 @@ Rolle's Theorem 启动
 #### Usage
 
 他说你应该在研究导函数零点的时候用Rolle,研究函数和导函数关系用Lagrange,研究两个函数的时候用Cauchy
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to +\infty} f'(x)=0 \Rightarrow \lim_{x \to +\infty} \dfrac{f(x)}{x} =0
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+x>A>X \\
+\Rightarrow 
+\vert f(x)-f(A) \vert <\epsilon_1(x-A) \\
+\Rightarrow \vert \dfrac{f(x)}{x} \vert  <\dfrac{f(A)-\epsilon_1A}{x} +\epsilon_1
+\end{array}
+$$
+
+其实从这就能看出来了,同时取极限则 $\lim_{x \to +\infty} \vert \dfrac{f(x)}{x} \vert$小于任意正数,于是是$0$.
+
+</div>
+
+
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\forall a>b,\exists \xi \in (a,b),ae^b-be^a=(1-\xi)e^\xi(a-b)
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\Rightarrow \dfrac{\dfrac{e^b}{b} -\dfrac{e^a}{a} }{\dfrac{1}{b} -\dfrac{1}{a}} =(1-\xi)e^{\xi}
+\end{array}
+$$
+
+然后柯西中值结束.
+
+</div>
+
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\exists \xi\in C[a,b],\exists f''(x) \\
+\Rightarrow \exists \xi \in (a,b), \\
+f(b)+f(a)-2f(\dfrac{a+b}{2})=(\dfrac{b-a}{2})^2f''(\xi)
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\text{let } F(x)=f(x)-f(x-\dfrac{b-a}{2}) \\
+F(b)-F(\dfrac{a+b}{2} )=f(b)+f(a)-2f(\dfrac{a+b}{2}) \\
+=\dfrac{b-a}{2} (F'(\xi_1)-F'(\xi_1-\dfrac{b-a}{2} )) \\
+=(\dfrac{b-a}{2} )^2F''(\xi)
+\end{array}
+$$
+
+</div>
+
+我们注意到如果你上来不构造函数对$f(b)-f(mid),f(mid)-f(a)$分别用拉格朗日中值是做不出来的.这么干限制强(要求值对应相等而非差相等)显然就不如分开.
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x)\in C[1,+\infty),\exists f'(x) \\
+e^{-x}f'(x) \text{ is bounded in } [1,+\infty) \\
+\Rightarrow e^{-x}f(x) \text{ is bounded in }  (1,+\infty)
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\dfrac{f(x_1)-f(x_2)}{e^{x_1}-e^{x_2}} =\dfrac{f'(\xi)}{e^{\xi}}\le M  \\
+e^{-x}f(x)\le \dfrac{f(x)-f(1)}{e^x} +f(1) \\
+\le \dfrac{f(x)-f(1)}{e^x-e^1} +f(1) \\
+= \dfrac{f'(\xi)}{e^\xi}+f(1) \\
+\le M+f(1) 
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x)\in C(0,1],\exists f'(x) \\
+\exists\lim_{x \to 0^+} \sqrt xf'(x) \\
+\Rightarrow f(x) \in UC(0,1] 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\forall x\in [a,b], \\
+\exists f'(x) \\
+\Rightarrow \begin{cases}
+\forall v\in [f'(a),f'(b)],\exists \xi,f'(\xi)=v \\
+f'(x) \text{ has no discontinuity of first kind} 
+\end{cases}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+(1)
+
+先不妨设$f'(a)<0<f'(b)$
+
+由定义容易说明$a,b$不是极小值.
+
+于是存在最值定理,$(a,b)$中存在最值$x$,于是存在$f'(x)=0$
+
+其他情况显然可以规约过来.
+
+(2)
+
+考虑对一个间断点邻域内的一个小区间用(1)就能推出矛盾.
+
+
+</div>
+
