@@ -243,7 +243,7 @@ Obviously
 
 $$
 \begin{array}{l}
-\operatorname{rank} AB\ge \operatorname{rank} A+\operatorname{rank} B-n
+\operatorname{rank} AB\ge \operatorname{rank} A_{m\times n}+\operatorname{rank} B_{n\times s}-n
 \end{array}
 $$
 
@@ -284,12 +284,6 @@ $$
 
 ##### Sol 2
 
-考虑 $\operatorname{null} AB$的一组基$a_1\ldots a_{s-\operatorname{rank} AB}$.
-
-todo here
-
-##### Sol 3
-
 考虑
 
 $$
@@ -320,7 +314,7 @@ $$
 
 而观察这个$D$容易发现 $\operatorname{rank} D\ge \operatorname{rank} A+\operatorname{rank} B$,于是得证
 
-##### Sol 4
+##### Sol 3
 
 考虑我们要证明 $\dim \operatorname{range} AB\ge \dim \operatorname{range} B-\dim \operatorname{null} A$
 

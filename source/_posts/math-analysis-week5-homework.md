@@ -148,11 +148,11 @@ $$
 
 $$
 \begin{array}{l}
-\lim_{x \to 0^+} f(x)=\infty \\
+\lim_{x \to 0^+} f(x)=+\infty \\
 \exists \{ a_n \},a_n\in (0,1),a_n<a_{n-1},\lim_{n \to \infty} a_n=0,\lim_{n \to \infty} f(a_n)=+\infty \\
-\forall M<0,i,\exists k>i \ s.t.\ 
-f(a_k)<f(a_i)+M \\
-\Rightarrow \exists \xi \in (a_k,a_i),f'(\xi)=\dfrac{f(a_k)-f(a_i)}{a_k-a_i} <M \\
+\forall M>0,i,\exists k>i \ s.t.\ 
+f(a_k)>f(a_i)+M \\
+\Rightarrow \exists \xi \in (a_k,a_i),f'(\xi)=\dfrac{f(a_k)-f(a_i)}{a_k-a_i} <-M \\
 \\
 \text{Q.E.D} 
 \end{array}
@@ -332,4 +332,324 @@ f'_+(x_0)=
 $$
 
 </div>
+
+## Class 2
+
+### T1
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+x\in [0,1],p\ge 2 \\
+\Rightarrow 
+(\dfrac{1+x}{2} )^p+(\dfrac{1-x}{2} )^p\le \dfrac{1}{2} (1+x^p)
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+f(x)=\dfrac{1}{2} (1+x^p)-(\dfrac{1+x}{2} )^p-(\dfrac{1-x}{2} )^p \\
+f'(x)=\dfrac{p}{2}(x^{p-1} -(\dfrac{1+x}{2} )^{p-1}+ (\dfrac{1-x}{2} )^{p-1}) \\
+p-1>1 \Rightarrow a^{p-1}+b^{p-1}<(a+b)^{p-1} \\
+\therefore (\dfrac{1-x}{2})^{p-1}+x^{p-1}<(\dfrac{1+x}{2})^{p-1} \\
+\Rightarrow f'(x)<0 \\
+\Rightarrow f(x) \text{ is decreasing}  \\
+f(x)>f(1)=0 \\
+\\
+\text{Q.E.D} 
+\end{array}
+$$
+
+</div>
+
+
+
+### T2
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+x\in (0,\dfrac{\pi}{2} )\Rightarrow 2x<\sin x+\tan x
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+f(x)=\sin x+\tan x-2x \\
+f'(x)=\cos x+\dfrac{1}{\cos^2 x}-2 \\
+f''(x)=\sin x(\dfrac{2}{\cos^3 x} -1)>0 \\
+\Rightarrow f'(x) \text{ is increasing}  \\
+\Rightarrow f'(x)>f'(0)=0 \\
+\Rightarrow f(x) \text{ is increasing}  \\
+f(x)>f(0)=0 \\
+\\
+\text{Q.E.D}
+\end{array}
+$$
+
+</div>
+
+
+
+### T3
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\left. \begin{array}{ll}
+\forall x\in[0,+\infty),\exists f'(x) \\
+f(0)=0 \\
+f'(x) \text{ is strictly increasing}
+\end{array} \right\} \\
+\Rightarrow \dfrac{f(x)}{x} \text{ is strictly increasing} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+f(x)=f(x)-f(0)=(x-0)f'(\xi) \\
+\xi\in(0,x) \Rightarrow f'(\xi)<f'(x) \\
+\Rightarrow f(x)<xf'(x) \\
+\Rightarrow (\dfrac{f(x)}{x} )'=\dfrac{xf'(x)-f(x)}{x^2} >0 \\
+\\
+\text{Q.E.D}
+\end{array}
+$$
+
+</div>
+
+
+
+### T4
+
+<div class='cbox'>
+
+calculate the extremum point for
+
+$$
+\begin{array}{l}
+f(x)=\arcsin \dfrac{2x}{1+x^2} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+f'(x)=\dfrac{1}{\sqrt{1-(\dfrac{2x}{1+x^2} )^2}}\dfrac{2(1+x^2)-4x^2}{(1+x^2)^2}  \\
+=\dfrac{2-2x^2}{\sqrt{x^4+2x^2+1-4x^2}(1+x^2)}  \\
+=\dfrac{2(1-x^2)}{\vert 1-x^2 \vert (1+x^2)}   \\
+x<-1 \Rightarrow f'(x)<0,f(x) \text{ is decreasing}  \\
+x\in (-1,1) \Rightarrow f'(x)>0,f(x) \text{ is increasing}  \\
+x>1 \Rightarrow f'(x)<0,f(x) \text{ is decreasing}  \\
+\Rightarrow \text{minimum:} (-1,-\dfrac{\pi}{2} ),\text{maximum:} (1,\dfrac{\pi}{2} )
+\end{array}
+$$
+
+</div>
+
+
+
+### T5
+
+<div class='cbox'>
+
+calculate the extremum point for
+
+$$
+\begin{array}{l}
+f(x)=(\sum _{i = 0} ^{n} \dfrac{x^i}{i!} )e^{-x},n\ge 1
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+f'(x)=e^{-x}(\sum _{i = 0} ^{n-1}  \dfrac{x^i}{i!} -\sum _{i = 1} ^{n}  \dfrac{x^i}{i!} ) \\
+=-\dfrac{x^ne^{-x}}{n!}  \\
+n \bmod 2=0:f'(x)\le 0(f'(x)=0 \Leftrightarrow x=0) \\
+\Rightarrow f(x) \text{ has no extremum} \\
+n \bmod 2=1:\operatorname{sign}f'(x)=-\operatorname{sign}x \\
+\Rightarrow f(x) \text{ has maximum } (0,1)
+\end{array}
+$$
+
+</div>
+
+
+
+### T6
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+xf''(x)+3x(f'(x))^2=1-e^{-x} \\
+\Rightarrow \begin{cases}
+x=c(c\ne 0) \text{ is an extremum } \Rightarrow f(c)\text{ is a minimum}  \\
+x=c(c=0) \text{ is an extremum } \Rightarrow f(c) \text{ is a minimum} 
+\end{cases}
+
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+(1)
+
+$$
+\begin{array}{l}
+x=c \text{ is an extremum}  \\
+\Rightarrow f'(c)=0 \\
+cf''(c)+3c(f'(c))^2=1-e^{-c} \\
+\Rightarrow \operatorname{sign} f''(c)=\operatorname{sign} \dfrac{1-e^{-c}}{c} =1 \\
+\Rightarrow \lim_{x \to c} \dfrac{f'(x)-f'(c)}{x-c}=\dfrac{f'(x)}{x-c} >0 \\
+\Rightarrow \operatorname{sign}  f'(x)=\operatorname{sign} (x-c) \\
+\Rightarrow f(x) \text{ is a minimum} 
+\end{array}
+$$
+
+(2)
+
+$$
+\begin{array}{l}
+f'(0)=0 \\
+\lim_{x \to 0} (f''(x)+3f'^2(x))=\lim_{x \to 0} \dfrac{1-e^{-x}}{x} =1 \\
+\Rightarrow f''(0)=1 \\
+\stackrel{\text{ same as (1)'s proof }}{\Longrightarrow} f(x) \text{ is a minimum} 
+\end{array}
+$$
+
+</div>
+
+
+
+### T7
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+p>1,x\in [0,1] \Rightarrow  \\
+\dfrac{1}{2^{p-1}} \le x^p+(1-x)^p\le 1
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+x\le 1 \Rightarrow x^p\le x \Rightarrow x^p+(1-x)^p\le x+1-x=1 \\
+f(x)=x^p+(1-x)^p \\
+f'(x)=px^{p-1}-p(1-x)^{p-1}=p(x^{p-1}-(1-x)^{p-1}) \\
+x>\dfrac{1}{2} \Rightarrow x>1-x \Rightarrow f'(x)>0 \\
+x<\dfrac{1}{2} \Rightarrow f'(x)<0 \\
+\Rightarrow (\dfrac{1}{2},f(\dfrac{1}{2})) \text{ is a minimum} ,f(x)\ge f(\dfrac{1}{2})=2^{-(p-1)}
+\end{array}
+$$
+
+</div>
+
+
+
+### T8
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\left. \begin{array}{ll}
+f,g:R\to R \\
+f''(x)+f'(x)g(x)-f(x)=0 \\
+f(a)=f(b)=0(a<b)
+\end{array} \right\} \\
+\Rightarrow \forall x\in [a,b],f(x)=0
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+此证明已弃用.但应该是正确的.
+
+$$
+\begin{array}{l}
+f''(x)+f'(x)g(x)-f(x)=0 \\
+\Leftrightarrow \forall x,f'(x)\ne 0 \lor f''(x)=f(x) \\
+\forall x_0\in (a,b),f'(x_0)=0 \\
+\text{Assume } f(x_0)\ne 0 \\
+\text{Without loss of generality,assume } f(x_0)>0 \\
+\Rightarrow f''(x_0)=f(x_0)>0 \\
+\Rightarrow \exists \delta,\exists x_0'\in (x_0,\delta),f'(x_0')>0 \\
+\exists \xi,f'(\xi)=\dfrac{f(x_0)-f(b)}{x_0-b} <0 \\
+\stackrel{\text{ Darbox Theorem }}{\Longrightarrow}\exists x_1\in (x_0,\xi),f'(x_1)=0 \\
+\text{Repeat this you get } \{ x_n \} ,x_i\in (x_{i-1},\xi),f'(x_i)=0 \\
+\lim_{n \to \infty} x_n=\xi,\lim_{n \to \infty} f'(x_n)=0\ne f'(\xi) \\
+\text{Ridiculous!} \\
+\Rightarrow f'(x)=0 \Rightarrow f(x)=f''(x)=0 \\
+\text{Assume } f(x_0)\ne 0,a_0=a,b_0=b \\
+\exists x_1\in (a_i,x_0),x_2\in (x_0,b_i), \\
+f'(x_1)=\dfrac{f(x_0)}{x_0-a_i} \ne 0 \\
+f'(x_2)=\dfrac{f(x_0)}{x_0-b_i} \ne 0 \\
+f'(x_1)f'(x_2)<0 \Rightarrow \exists x_3,f'(x_3)=0 \\
+\Rightarrow f'(x_3)=f(x_3)=0 \\
+f'(x_1)\ne 0 \Rightarrow \exists x_1'\in N(x_1),f(x_1')\ne 0 \\
+\text{same for } \exists x_2'\in N(x_2),f(x_2')\ne 0 \\
+\Rightarrow \exists f(a_i)=f(x_3)=0,x_1'\in(a_i,x_3),f(x_1')\ne 0 \\
+\exists f(x_3)=f(b_i)=0,x_2'\in (x_3,b_i),f(x_2')\ne 0 \\
+\text{let } [a_{i+1},b_{i+1}]=\text{the shorter one in } [a_i,x_3],[x_3,b_i] \\
+\Rightarrow \begin{cases}
+b_{i+1}-a_{i+1}\le \dfrac{1}{2} (b_i-a_i) \\
+[a_i,b_i]\supset [a_{i+1},b_{i+1}] \\
+\exists c_i\in [a_i,b_i],f(c_i)\ne 0
+\end{cases}
+ \\
+\stackrel{\text{ Nested Intervals Principle }}{\Longrightarrow} \\
+\exists \xi \in [a_i,b_i] \\
+\lim_{n \to \infty} a_n=\xi \\
+\lim_{n \to \infty} c_n=\xi \\
+\lim_{n \to \infty} f(a_n)=\lim_{n \to \infty} f(c_n) \\
+\text{Ridiculous!} \\
+\Rightarrow \forall x\in (a,b),f(x)=0 
+\\
+\text{Q.E.D}
+\end{array}
+$$
+
+上面那个太麻烦了
+
+考虑区间中的最大值$f(x_0)$,注意到$f'(x_0)=0,f(x_0)\ge 0,f''(x_0)\le 0$矛盾.于是$f(x_0)=0$
+
+最小值同理.
+
+</div>
+
+
+
+
 

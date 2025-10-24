@@ -1615,7 +1615,16 @@ $$
 
 ##### Sol 3
 
-todo
+对
+
+$$
+\begin{array}{l}
+\dfrac{1}{1+x^2}=\dfrac{1}{(x-i)(x+i)} =\dfrac{1}{(1-ix)(1+ix) }  \\
+=\dfrac{1}{2i} (\dfrac{1}{x-i}-\dfrac{1}{x+i})
+\end{array}
+$$
+
+于是可以对两个分数分别求导.复变函数从实数轴上逼近的导数当然就是原函数的导数.
 
 </div>
 
@@ -1869,6 +1878,10 @@ $$
 
 </div>
 
+## Class 14
+
+### Darbox Theorem
+
 <div class='cbox'>
 
 $$
@@ -1898,8 +1911,78 @@ $$
 
 (2)
 
-考虑对一个间断点邻域内的一个小区间用(1)就能推出矛盾.
+考虑对一个间断点$x_0$
 
+第一类间断点所以有左右极限$L,R$,那么$\forall \epsilon\exists \delta, x \in (x_0-\delta,x_0) \Rightarrow f'(x_0)\in N(L,\epsilon)$.同理有$\forall x\in(x_0,x_0+\delta) \Rightarrow f'(x)\in N(R,\epsilon)$.
+
+于是可以取$\epsilon$使得两个邻域不交,则这个小区间上至少越过了一个值.对$[x_0-\dfrac{\delta}{2},x_0+\dfrac{\delta}{2}]$用(1)
+
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x)\in C[a,b],\forall x\in [a,b]-D,f'(x)>0 \\
+D \text{ is finite set}  \\
+\Rightarrow f(x) \text{ is strictly increasing at }[a,b] 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$\forall x_1<x_2$,把$D$在$(x_1,x_2)$中的点排序得到$d_1\ldots d_k$,令$d_0=x_1,d_k=x_2$,显然有
+
+$$
+\begin{array}{l}
+f(x_2)-f(x_1)=\sum _{i = 1} ^{k+1}  f(d_i)-f(d_{i-1}) \\
+=\sum _{i = 1} ^{k+1}  f'(\xi_i) (d_i-d_{i-1}) \\
+>0
+\end{array}
+$$
+
+每个区间都有闭区间连续开区间可导推导闭区间上中值定理.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+p,q>1,a,b>0,\dfrac{1}{p} + \dfrac{1}{q} =1 \\
+\Rightarrow \dfrac{a^p}{p} +\dfrac{b^q}{q} \ge ab
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+ab\le \epsilon a\ln a+\dfrac{\epsilon}{e} e^{\frac{b}{\epsilon} }
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+求偏导,代入结束.
+
+$$
+\begin{array}{l}
+f(b)=\epsilon a\ln a+\dfrac{\epsilon}{e} e^{\frac{b}{\epsilon}}-ab \\
+f'(b)=e^{\frac{b}{\epsilon} -1}-a \\
+a_0=e^{\frac{b_0}{\epsilon}-1} \\
+f(b_0)=(b-\epsilon)e^{\frac{b}{\epsilon}-1 }+\dfrac{\epsilon}{e} e^{\frac{b}{\epsilon}}-be^{\frac{b}{\epsilon}-1} \\
+=\dfrac{\epsilon}{e} e^{\frac{b}{\epsilon}}-\epsilon e^{\frac{b}{e}-1 } \\
+=0
+\end{array}
+$$
 
 </div>
 

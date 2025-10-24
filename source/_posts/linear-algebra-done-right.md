@@ -835,8 +835,6 @@ $T$在基$v_1\ldots v_n$下为对角矩阵等价于
 
 </div>
 
-todo [think] 定性
-
 <div class='cbox'>
 
 - 内积$<u,v>$关于$u$也是线性的.
