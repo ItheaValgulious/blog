@@ -1920,6 +1920,8 @@ $$
 
 </div>
 
+### 单调性
+
 <div class='cbox'>
 
 $$
@@ -1959,6 +1961,22 @@ $$
 
 </div>
 
+<div class='pbox'>
+
+也是求偏导啊.
+
+然后下节课讲了凸函数之后还有个做法说的是
+
+$$
+\begin{array}{l}
+f(x)=\ln x,x_1=a^p,x_2=a^q
+\end{array}
+$$
+
+用琴声.
+
+</div>
+
 <div class='cbox'>
 
 $$
@@ -1968,6 +1986,9 @@ ab\le \epsilon a\ln a+\dfrac{\epsilon}{e} e^{\frac{b}{\epsilon} }
 $$
 
 </div>
+
+
+
 
 <div class='pbox'>
 
@@ -1986,3 +2007,105 @@ $$
 
 </div>
 
+这节课其实是讲单调性和导数关系的,只是看起来比较高中能记的不多.
+
+## Class 15
+
+### 凹凸性
+
+定义成了
+
+<div class='dbox'>
+
+Convex/Concave function
+
+$$
+\begin{array}{l}
+f(x) \text{ is convex function} \Leftrightarrow  \\
+\forall x,y\in D,\lambda \in (0,1) \\
+f(\lambda x+(1-\lambda)y)\le \lambda f(x)+(1-\lambda)f(y)
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x) \text{ is convex} \Leftrightarrow  \\
+\forall \{ x_n \} ,\{ \lambda_n \},
+f(\dfrac{\sum _{i = 1} ^{n}  \lambda_ix_i}{\sum _{i = 1} ^{n}  \lambda_i} )\le \dfrac{\sum _{i = 1} ^{n}  \lambda_if(x_i)}{\sum _{i = 1} ^{n}  \lambda_i} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+归纳显然.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x) \text{ is convex} ,\exists f'(x) \\
+\Leftrightarrow f'(x) \text{ is increasing} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+显然凸性等价于
+
+$$
+\begin{array}{l}
+x_1<x_2<x_3 \Rightarrow  \\
+\dfrac{f(x_1)-f(x_2)}{x_1-x_2} <\dfrac{f(x_2)-f(x_3)}{x_2-x_3} 
+\end{array}
+$$
+
+这个定理反向用拉格朗日中值是显然的.对正向:
+
+$$
+\begin{array}{l}
+\forall x_1<x_2 \\
+f'(x_1)=\lim_{x \to x_1^-} \dfrac{f(x_1)-f(x)}{x_1-x} \le \dfrac{f(x_1)-f(x_2)}{x_1-x_2} \\
+\text{same for} f'(x_2)\ge \dfrac{f(x_1)-f(x_2)}{x_1-x_2}  
+\end{array}
+$$
+
+于是结束.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\sum _{i = 1} ^{n}  a_ib_i\le (\sum _{i = 1} ^{n}  a^p )^{\frac1p}(\sum _{i = 1} ^{n}  b^q)^{\frac1q}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+(\dfrac{a_i}{(\sum _{i = 1} ^{n}  a^p)^{\frac{1}{p}}} )(\dfrac{b_i}{(\sum _{i = 1} ^{n}  b^q)^{\frac{1}{q}}} )
+\le \dfrac{1}{p} \dfrac{a_i^p}{\sum _{i = 1} ^{n}  a^p}+\dfrac{1}{q} \dfrac{b_i^q}{\sum _{i = 1} ^{n}  b^q} 
+\end{array}
+$$
+
+同时累加即证.
+
+</div>
+
+### L' Hopita
+
+todo

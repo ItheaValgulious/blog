@@ -1067,6 +1067,7 @@ $$
 
 </div>
 
+
 ### 伴随,自伴算子,正规算子.
 
 #### 伴随
@@ -1140,7 +1141,7 @@ $T=T^*$
 
 </div>
 
-所以这个也是我们实对称矩阵啊.
+所以这个实空间下就是我们实对称矩阵啊.
 
 <div class='cbox'>
 
@@ -1209,6 +1210,28 @@ $$
 
 
 </div>
+
+<div class='cbox'>
+
+投影算子是自伴算子
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+<P_Uu,v>=<P_Uu,P_Uv+(v-P_Uv)>=<P_Uu,P_Uv>+<P_Uu,(v-P_Uv)>=<P_Uu,P_Uv>=<u,P_Uv>
+\end{array}
+$$
+
+显然的啦.
+
+</div>
+
+
+
+
 
 #### 正规算子
 

@@ -462,3 +462,71 @@ $$
 </div>
 
 [think] 感觉得到 $C(\operatorname{null} B)=A$这里是容易的.然后这里进行不下去,想到 $\operatorname{null} B$去分解也是自然的. 分解后就要想办法把 $\operatorname{null} B$之外的影响消掉,就用了$C-YB$.而若 $\operatorname{range} A\subset \operatorname{range} B$那么$Ax=BTx$是显然的.
+
+## 投影
+
+<div class='bbox'>
+
+向一个向量投影
+
+$$
+\begin{array}{l}
+a,b\in R^n \\
+\dfrac{<a,b>}{<a,a>} a = (\dfrac{a^Tba}{a^T a})= (\dfrac{a\cdot a^T}{a^T a}) b
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+向一个平面投影(平面是$C(A)$)
+
+$$
+\begin{array}{l}
+p=A(A^TA)^{-1}A^Tb
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑$b$的投影$p\in C(A)$有$(b-p)\in C(A)^\perp$,于是$b-p \in N(A^T)$.
+
+于是$A^Tb=A^Tp$,又$p\in C(A) \Rightarrow \exists x,Ax=p$.
+
+于是$A^Tb=A^TAx$,$A$一定可以用一个满秩的,于是除过去.于是得证.
+
+</div>
+
+
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+A^TAx=A^Tb
+\end{array}
+$$
+
+一定有解
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\operatorname{rank} (A^TA,A^Tb) \\
+=\operatorname{rank} (A^T(A,b))\le \operatorname{rank} A \\
+=\operatorname{rank} AA^T
+\end{array}
+$$
+
+所以这个证明是依赖实数的.
+
+[think] 复数你应该把$A^T$换成$\overline{A^T}$,或者说这个定理本来就应该是$\overline{A^T}$的.
+
+</div>
+
