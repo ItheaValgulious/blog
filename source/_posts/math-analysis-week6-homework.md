@@ -318,3 +318,232 @@ $$
 $$
 
 </div>
+
+## Class 2
+
+### T1
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to \frac{\pi}{2} } \dfrac{\ln \sin(x)}{(\pi-2x)^2} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to \frac{\pi}{2} } \dfrac{\ln \sin(x)}{(\pi-2x)^2}  \\
+=\lim_{x \to \frac{\pi}{2} } \dfrac{\dfrac{\cos x}{\sin x} }{4(2x-\pi)}  \\
+=\lim_{x \to \frac{\pi}{2} } \dfrac{\cos x}{4(2x-\pi)}  \\
+=\lim_{x \to \frac{\pi}{2} } \dfrac{-\sin x}{8} \\
+=-\dfrac{1}{8}  
+\end{array}
+$$
+
+</div>
+
+
+
+### T2
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to 1^-} \ln x\ln(1-x)
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to 1^-} \ln x\ln(1-x) \\
+=\lim_{x \to 1^-} \ln(1+(x-1))\ln(1-x) \\
+=\lim_{x \to 1^-} (x-1)\ln(1-x) \\
+=\lim_{x \to 1^-} \dfrac{\ln(1-x)}{\dfrac{1}{x-1} }  \\
+=\lim_{x \to 1^-} \dfrac{-\dfrac{1}{1-x} }{-\dfrac{1}{(x-1)^2} } =0
+\end{array}
+$$
+
+</div>
+
+
+
+### T3
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to \infty} x[(1+\dfrac{1}{x} )^x-e]
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+
+$$
+\begin{array}{l}
+\lim_{x \to \infty} x[(1+\dfrac{1}{x} )^x-e] \\
+=\lim_{x \to \infty} \dfrac{(1+\dfrac{1}{x} )^x-e}{\dfrac{1}{x} }  \\
+=\lim_{x \to 0} \dfrac{e^{\frac{\ln (x+1)}x}-e}{x}  \\
+=\lim_{x \to 0} e^{\frac{\ln (1+x)}{x} } \cdot \dfrac{\frac{x}{1+x}-\ln(1+x)}{x^2}  \\
+=\lim_{x \to 0} e \dfrac{\dfrac{1}{(1+x)^2} -\dfrac{1}{1+x} }{2x}  \\
+=-\dfrac{1}{2} e
+\end{array}
+$$
+
+</div>
+
+
+
+### T4
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to 0} {\left( \dfrac{(1+x)^\frac1x}{e}  \right)}^{\frac{1}{x}}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to 0} \exp \dfrac{1}{x} {\left( \dfrac{1}{x} \ln(1+x)-1 \right)}  \\
+=\lim_{x \to 0} \exp \dfrac{\ln(1+x)-x}{x^2}  \\
+=\exp \lim_{x\to 0}\dfrac{\ln(1+x)-x }{x^2}  \\ \\
+=\exp \lim_{x\to 0}\dfrac{\dfrac{1}{1+x} -1}{2x} 
+=e^{-\frac12}
+\end{array}
+$$
+
+</div>
+
+
+
+### T5
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\left. \begin{array}{ll}
+f(x)\in C^2(a,+\infty) \\
+\lim_{x \to +\infty} (f(x)+2f'(x)+f''(x))=l
+\end{array} \right\} \\
+\Rightarrow \begin{cases}
+\lim_{x \to +\infty} f(x)=l \\
+\lim_{x \to +\infty} f'(x)=\lim_{x \to +\infty} f''(x)=0
+\end{cases}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\text{let } F(x)=e^xf(x) \\
+\Rightarrow 
+\begin{cases}
+F'(x)=e^x(f(x)+f'(x)) \\
+F''(x)=e^x (f(x)+2f'(x)+f''(x))
+\end{cases} \\
+\Rightarrow \lim_{x \to +\infty} \dfrac{F''(x)}{e^x}=l \\
+\lim_{x \to +\infty} \dfrac{F(x)}{e^x}  \\
+=\lim_{x \to +\infty} \dfrac{F'(x)}{e^x} \\
+=\lim_{x \to +\infty} \dfrac{F''(x)}{e^x} =l \\
+\Rightarrow 
+\begin{cases}
+\lim_{x \to +\infty} f(x)=l \\
+\lim_{x \to +\infty} f'(x)=\lim_{x \to +\infty} \dfrac{F'(x)}{e^x} -f(x)=0 \\
+\lim_{x \to +\infty} f''(x)=\lim_{x \to +\infty} \dfrac{F''(x)}{e^x} -2f'(x)-f(x)=0
+\end{cases}
+
+
+
+\end{array}
+$$
+
+</div>
+
+
+
+### T6
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\exists f''(x_0),f'(x_0)\ne 0 \\
+\text{calc } \lim_{x \to x_0} {\left( \dfrac{1}{f(x)-f(x_0)} -\dfrac{1}{(x-x_0)f'(x_0)}  \right)} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to x_0} {\left( \dfrac{1}{f(x)-f(x_0)} -\dfrac{1}{(x-x_0)f'(x_0)}  \right)}  \\
+=\lim_{x \to x_0} \dfrac{(x-x_0)f'(x_0)-(f(x)-f(x_0))}{(f(x)-f(x_0))(x-x_0)f'(x_0)} \\
+=\lim_{x \to x_0} \dfrac{f'(x_0)-f'(x)}{f'(x_0)(f(x)+xf'(x)-x_0f'(x)-f(x_0))} \\
+=\lim_{x \to x_0} \dfrac{-f''(x)}{f'(x_0)(2f'(x)+(x-x_0)f''(x))} \\
+=-\dfrac{f''(x_0)}{2(f'(x_0))^2}
+\end{array}
+$$
+
+</div>
+
+
+
+### T7
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\vert x \vert <1,\arcsin x=\dfrac{x}{\sqrt{1-\theta^2x^2}} ,\theta\in (0,1) \\
+\text{calc } \lim_{x \to 0}\theta
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\theta^2=\dfrac{1}{x^2} -\dfrac{1}{\arcsin^2(x)}  \\
+=\dfrac{\arcsin^2(x)-x^2}{x^2\arcsin^2(x)}  \\
+\text{let } t=\arcsin(x),x=\sin t \\
+\Rightarrow \theta^2=\dfrac{t^2-\sin^2 t}{t^2\sin^2 t}  \\
+\lim_{x \to 0} \theta^2 \\
+=\lim_{t \to 0} \dfrac{t^2-\sin^2t}{t^2\sin^2t}  \\
+=\lim_{t \to 0} \dfrac{t^2-\sin^2 t}{t^4}   \\
+=\lim_{t \to 0} \dfrac{2t-\sin 2t}{4t^3}  \\
+=\lim_{t \to 0} \dfrac{1-\cos2t}{6t^2}  \\
+=\lim_{t \to 0} \dfrac{t^2}{3t^2} \\
+=\dfrac{1}{3} \\
+\Rightarrow \lim_{x \to 0} \theta = \dfrac{\sqrt 3}{3} 
+\end{array}
+$$
+
+</div>
+

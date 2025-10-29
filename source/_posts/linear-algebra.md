@@ -530,3 +530,30 @@ $$
 
 </div>
 
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+P^2=P,P^*=P \Rightarrow P \text{ is a projection}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+显然那$P$只能说  $\operatorname{range} P$ 的投影.
+
+只需证明  $\forall u,(Pu-u)\in (\operatorname{range} P)^\perp$.
+
+$$
+\begin{array}{l}
+\forall v,<Pu-u,Pv>=<PPu-Pu,v>=<Pu-Pu,v>=<0,v> \\
+\Rightarrow Pu-u\in (\operatorname{range} P)^\perp
+\end{array}
+$$
+
+得证!
+
+</div>
+

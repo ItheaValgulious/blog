@@ -1067,6 +1067,29 @@ $$
 
 </div>
 
+<div class='cbox'>
+
+$\forall u\in U,\vert\vert u-v \vert\vert \ge \vert\vert P_Uv-v \vert\vert$
+
+</div>
+
+<div class='pbox'>
+
+分解! $v=v_1+v_2,v_1\in U,v_2\in U^\perp$.
+
+$$
+\begin{array}{l}
+\vert\vert u-v_1-v_2 \vert\vert^2 =(u-v_1)^2+v_2^2
+\end{array}
+$$
+
+于是显然取$u=v_1$最小,即证.
+
+</div>
+
+
+
+
 
 ### 伴随,自伴算子,正规算子.
 

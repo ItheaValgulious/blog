@@ -1515,7 +1515,7 @@ $$
 
 </div>
 
-### 复合函数求导
+### 复合函数求导(链式法则)
 
 <div class='cbox'>
 
@@ -2106,6 +2106,268 @@ $$
 
 </div>
 
-### L' Hopita
+## Ex Class 3
 
-todo
+<div class='cbox'>
+
+对这样的常微分方程:
+
+$$
+\begin{array}{l}
+y'=\Phi(x,y) \\
+y(a)=0
+\end{array}
+$$
+
+若
+
+$$
+\begin{array}{l}
+\exists A,\forall y_1,y_2, \\
+\vert \Phi(x,y_1)-\Phi(x,y_2) \vert \le A \vert y_1-y_2 \vert 
+\end{array}
+$$
+
+则微分方程的解唯一.
+
+</div>
+
+<div class='pbox'>
+
+假设存在两个解$y_1(x),y_2(x)$,令$g(x)=y_2(x)-y_1(x)$有
+
+$$
+\begin{array}{l}
+g'(x)=\vert \Phi(x,y_2)-\Phi(x,y_1) \vert \le A \vert y_2-y_1 \vert =A g(x)
+\end{array}
+$$
+
+于是由作业[Math Analysis Homework Week5-Class1-T6](/post/math-analysis-week5-homework/)易证$g(x)=0$
+
+</div>
+
+<div class='dbox'>
+
+压缩映射
+
+$$
+\begin{array}{l}
+f(x) \text{ is contraction } \Leftrightarrow  \\
+
+\exists A\in (0,1),\forall x_1,x_2 \\
+\vert f(x_1)-f(x_2) \vert \le A\vert x_1-x_2 \vert 
+\end{array}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x) \text{ is contraction},\{ x_n \} \ s.t.\ 
+x_{n+1}=f(x_n)  \\
+\Rightarrow  \lim_{n \to \infty} x_n=X\land X \text{ is the unique fixed point of }f 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑任意数列 $\{ x_n \}$,则
+
+$$
+\begin{array}{l}
+\forall n<m \\
+\vert x_m-x_n \vert =\sum _{i = n} ^{m-1} \vert x_{i+1}-x_i  \vert  \\
+\le \sum _{i = 1} ^{m-1} \vert x_1-x_2 \vert A^{n+i-1} \\
+\le \vert x_1-x_2 \vert \dfrac{A^n}{1-A}  \\
+\to 0
+\end{array}
+$$
+
+于是$x_n$收敛,且同时取极限能看出极限是不动点.
+
+考虑如果由两个不动点$X_1,X_2$,那么 $\vert X_1-X_2 \vert \le A\vert f(X_1)-f(X_2) \vert=A\vert X_1-X_2 \vert$,可以得到$X_1=X_2$,得证.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\left. \begin{array}{ll}
+f\in C^2[a,b],f'(x)\ge \delta>0,f''(x)\in (0,M),f(X)=0 \\
+x_1\in (X,b),x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)} 
+\end{array} \right\} \\
+\Rightarrow \begin{cases}
+\lim_{n \to \infty} x_n=X \\
+\exists N,n>N \Rightarrow (x_n-X)\sim (x_{n-1}-X)^2
+\end{cases}
+
+\end{array}
+$$
+
+</div>
+
+就是牛顿迭代
+
+<div class='pbox'>
+
+显然$f'(x)>0$得到$f$增.
+
+尝试证明 $x_n>X$,即$f(x_n)>0$.
+
+
+
+</div>
+
+
+
+### L' Hopital
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\left. \begin{array}{ll}
+f,g \in C^1(a,b),g'(x)\ne 0 \\
+\lim_{x \to a^+} f(x)=\lim_{x \to a^+} g(x)=0
+\end{array} \right\} \\
+\Rightarrow \lim_{x \to a^+} \dfrac{f(x)}{g(x)} =\lim_{x \to a^+} \dfrac{f'(x)}{g'(x)}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+不妨设$f(a)=g(a)=0$
+
+然后你可以对一个$[a,\dfrac{a+b}{2}]$用柯西中值,有
+
+$$
+\begin{array}{l}
+\exists \xi\in (a,x) \\ s.t.\\ 
+\dfrac{f(x)-f(a)}{g(x)-g(a)}=\dfrac{f'(\xi)}{g'(\xi)}   \\
+\therefore \lim_{x \to a^+} \dfrac{f(x)}{g(x)} =\lim_{x \to a^+} \dfrac{f'(\xi)}{g'(\xi)}=\lim_{\xi \to a^+} \dfrac{f'(\xi)}{g'(\xi)} 
+\end{array}
+$$
+
+</div>
+
+[think] 为什么 $\lim_{x \to a^+} f(x)=\lim_{\xi \to a^+} f(\xi)$若$\xi\in (a,x)$.因为你转换到数列上,就是对任意$x$趋近到$a$的序列你可以找到一个$\xi$趋近到$a$的序列.
+
+你还可以对无穷区间用:对$(a,+\infty)$,考虑复合 $\dfrac1x$
+
+$$
+\begin{array}{l}
+\lim_{x \to +\infty} \dfrac{f(x)}{g(x)}=\lim_{x \to 0} \dfrac{f(\dfrac{1}{x} )}{g(\dfrac{1}{x})} \\
+=\lim_{x \to 0} \dfrac{-\dfrac{1}{x^2} f'(\dfrac{1}{x})}{-\dfrac{1}{x^2} g'(\dfrac{1}{x} )} \\
+=\lim_{x \to +\infty} \dfrac{f'(x)}{g'(x)}   
+\end{array}
+$$
+
+
+另外,考虑若$g,f\to \infty$,可以
+
+
+$$
+\begin{array}{l}
+\dfrac{g}{f} =\dfrac{\dfrac{1}{f} }{\dfrac{1}{g} } = \dfrac{\dfrac{f'}{f^2} }{\dfrac{g'}{g^2} }=\dfrac{g^2f'}{f^2g'}   \\
+\Rightarrow \dfrac{f'}{g'} =\dfrac{f}{g} 
+\end{array}
+$$
+
+于是也可以对 $\dfrac{\infty}{\infty}$用?但问题在于这样要求预先知道 $\dfrac{f}{g}$极限存在,所以考虑下面的结论.
+
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\left. \begin{array}{ll}
+f,g \in C^1(a,b),g'(x)\ne 0 \\
+\lim_{x \to a^+} g(x)=+\infty
+\end{array} \right\} \\
+\Rightarrow \lim_{x \to a^+} \dfrac{f(x)}{g(x)} =\lim_{x \to a^+} \dfrac{f'(x)}{g'(x)}
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+Solution 1
+
+你先转化成对于任意趋近到$a^+$且满足$g(x)$单调的序列$x$,然后有
+
+$$
+\begin{array}{l}
+\lim_{n \to \infty} \dfrac{f(x_n)}{g(x_n)} \\
+\xlongequal{Stolz}\lim_{n \to \infty} \dfrac{f(x_n)-f(x_{n-1})}{g(x_n)-g(x_{n-1})} \\
+=\lim_{n \to \infty} \dfrac{(x_n-x_{n-1})f'(\xi_n)}{(x_n-x_{n-1})g'(\xi_n)},\xi_n\in (x_{n-1},x_n) \\
+=\lim_{n \to \infty} \dfrac{f'(\xi_n)}{g'(\xi_n)}  \\
+=\lim_{x \to a^+} \dfrac{f'(x)}{g'(x)} 
+\end{array}
+$$
+
+但是海涅要求对任意的序列$x$怎么办呢?
+
+考虑一个数列的一个性质:若数列的任何一个子列都有一个子列趋近到$A$,则原数列也趋近到$A$,这个反证是容易的.
+
+那么而对于你这个任意数列的任意子列,显然都能再取一个子列使得$g(x)$单调,于是得证.
+
+Solution 2
+
+我们现在的问题是$f(a)$没有任何信息,所以想办法取$c\in (a,a+\delta)$,然后对$x\in(a,c)$ 用 $[x,c]$ 用柯西证明
+
+你有
+
+$$
+\begin{array}{l}
+\dfrac{f(x)-f(c)}{g(x)-g(c)} =\dfrac{f'(\xi)}{g'(\xi)}  \\
+\Rightarrow \dfrac{f(x)}{g(x)} =\dfrac{f'(\xi)}{g'(\xi)} -\dfrac{g(c)}{g(x)} (x-c)+\dfrac{f(c)}{g(x)} 
+\end{array}
+$$
+
+然后第二项,第三项显然趋近于$0$.
+
+然后你同时趋向于$a$就得证了.
+
+</div>
+
+[think] 但是我还是喜欢第一种. 因为它一直保持着$\dfrac{f}{g}$的结构()
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\left. \begin{array}{ll}
+f\in C^1(a,+\infty),\alpha>0 \\
+\lim_{x \to +\infty} (\alpha f(x)+xf'(x))=\beta \\
+
+\end{array} \right\} \\
+\Rightarrow \lim_{x \to +\infty} f(x)=\dfrac{\alpha}{\beta} 
+
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to +\infty}f(x) \\
+=\lim_{x \to +\infty}\dfrac{f(x)x^\alpha}{x^\alpha}   \\
+=\lim_{x \to +\infty}\dfrac{f(x)\alpha x^{\alpha-1}+f'(x)x^\alpha}{\alpha x^{\alpha-1}} \\
+=\dfrac{\alpha}{\beta} 
+\end{array}
+$$
+
+如果你好奇如何注意到,那么考虑解微分方程用的那个积分因子,对$P(x)f(x)+f'(x)$应该使用$e^{\int P(x)dx}$
+
+</div>
+

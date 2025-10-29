@@ -233,6 +233,10 @@ F'(x)=2e^{-2x}f(x)(f'(x)-f(x))\le 0 \\
 \end{array}
 $$
 
+Solution2:
+
+假设$f(x)$不为$0$,那么存在一个点的邻域$(c,d)$,$f(c)=0$且$f(x)>0,\forall x\in (c,d)$.于是令 $g(x)=\ln \vert f(x) \vert$,得到$\vert g'(x)\vert\le 1$,这意味这$g$有界,但是$g(c^+)$是$-\infty$,矛盾.
+
 </div>
 
 
