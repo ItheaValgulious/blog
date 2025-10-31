@@ -18,5 +18,8 @@
     "hide-files.files": [],
     "markdown.styles": [
         "./source/css/index.css"
-    ]
+    ],
+    "markdown.copyFiles.destination": {
+        "**/*.md": "${documentDirName}/../imgs/${documentBaseName}/img-${unixTime}.png"
+    }
 }

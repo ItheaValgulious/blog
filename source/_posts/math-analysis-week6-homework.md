@@ -547,3 +547,87 @@ $$
 
 </div>
 
+## Class 3
+
+### T1
+
+![alt text](../imgs/math-analysis-week6-homework/img-1761888263357.png)
+
+### T2
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\text{calc } \vert S \vert \\
+\vert S \vert = \{ x \vert \ln x-\dfrac{x}{e} =k,x\in(0,+\infty) \} 
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\text{let } f(x)=\ln x-\dfrac{x}{e}  \\
+f'(x)=\dfrac{1}{x} -\dfrac{1}{e}  \\
+\Rightarrow \begin{cases}
+x<e \Rightarrow f'(x)>0,f(x) \text{ is increasing}  \\
+x>e \Rightarrow f'(x)<0,f(x) \text{ is decreasing}  \\
+f(e)=0 \text{ is maximum of } f \\
+\end{cases} \\
+\left. \begin{array}{ll}
+\lim_{x \to +\infty} f(x)=-\infty \\
+\lim_{x \to 0^+} f(x)=-\infty    \\
+\end{array} \right\} \\
+\Rightarrow \begin{cases}
+\vert S \vert =0,k>0 \\
+\vert S \vert =1,k=0 \\
+\vert S \vert =2,k<0
+\end{cases}
+
+\end{array}
+$$
+
+</div>
+
+
+
+### T3
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+x>0 \Rightarrow \exists !x_0,kx+\dfrac{1}{x_0^2} =1 \\
+\text{solve } k
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\text{let } f(x)=\dfrac{x^2-1}{x^3} \\
+f'(x)=\dfrac{3-x^2}{x^4} \\
+\Rightarrow \begin{cases}
+x<\sqrt 3 \Rightarrow f'(x)>0,f(x) \text{ is increasing}  \\
+x>\sqrt 3 \Rightarrow f'(x)<0,f(x) \text{ is decreasing}  \\
+f(\sqrt 3)=\dfrac{2\sqrt 3}{9} \text{ is maximum} 
+\end{cases} \\
+\begin{cases}
+\lim_{x \to 0^+} f(x)=-\infty \\
+\lim_{x \to +\infty} f(x)=0
+\end{cases} \\
+\Rightarrow k \in \{ \dfrac{2\sqrt 3}{9}  \} \cup (-\infty,0]
+
+
+\end{array}
+$$
+
+</div>
+
+

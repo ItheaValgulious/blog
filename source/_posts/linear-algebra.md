@@ -412,14 +412,14 @@ $$
 
 </div>
 
-## A Ex Problem
+## An Ex Problem
 
 <div class='cbox'>
 
 $$
 \begin{array}{l}
 M=\begin{bmatrix} A,C \\0,B \end{bmatrix}  \\
-\det M=\det A+\det B \Leftrightarrow \exists X,Y:AX+YB=C
+\operatorname{rank}  M=\operatorname{rank}  A+\operatorname{rank}  B \Leftrightarrow \exists X,Y:AX+YB=C
 \end{array}
 $$
 
