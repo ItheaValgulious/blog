@@ -557,3 +557,22 @@ $$
 
 </div>
 
+## QR分解
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\forall A,\exists Q \text{ is orthogonal matrix},R \text{ is upper triangle matrix} \\ s.t.\\ 
+A=QR
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑$A$可以看成把标准基变成$a_1\ldots a_n$,那我们把$a_1\ldots a_n$这组基用Gram-Schmidt变成$b_1\ldots b_n$,问题就可以变成先把标准基变成$b$,再变成$a$,其中第一步是等距同构,第二步中我们知道$a_1\ldots a_i$和$b_1\ldots b_i$张成空间相同,所以第二步是上三角.
+
+</div>
+

@@ -2371,3 +2371,91 @@ $$
 
 </div>
 
+## Class 16
+
+### Taylor's Formula With Peano Reminder
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x)=\sum _{i = 0} ^{n}  \dfrac{f^{(i)}(x_0)}{i!} (x-x_0)^i+o((x-x_0)^n)
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+减过来变成
+
+$$
+\begin{array}{l}
+\dfrac{f(x)-\sum _{i = 0} ^{n}  \dfrac{f^{(i)}}{i!}(x-x_0)^i }{(x-x_0)^{n}} 
+\end{array}
+$$
+
+然后洛$n-1$次.
+
+</div>
+
+
+
+
+<div class='cbox'>
+
+设$f^{(k)}(x_0)\ne 0$中$k$为满足条件的最小正整数,则若$k$为奇数$x_0$不是极值点.若$k$为偶数则$x_0$是极值点.
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\lim_{x \to x_0} \dfrac{f(x)-f(x_0)}{(x-x_0)^k} =\dfrac{f^{(k)}(x_0)}{k!} \ne 0
+\end{array}
+$$
+
+于是邻域内 $\dfrac{f(x)-f(x_0)}{(x-x_0)^k}$和$f^{(k)}(x_0)$同号.
+
+</div>
+
+
+### Taylor's Formula With Lagrange/Cauchy Reminder
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f(x)=\sum _{i = 0} ^{n}  \dfrac{f^{(i)}}{i!} (x-x_0)^i + \dfrac{f^{(n+1)}(\xi)}{(n+1)!} (x-x_0)^{n+1}
+\end{array}
+$$
+
+$$
+\begin{array}{l}
+f(x)=\sum _{i = 0} ^{n}  \dfrac{f^{(i)}}{i!} (x-x_0)^i + \dfrac{f^{(n+1)}(\xi)}{n!} (x-x_0)(x-\xi)^n
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+\text{let } F(t,x)=\sum _{i = 0} ^{n}  \dfrac{f^{(i)}(t)}{i!} (x-t)^i \\
+\dfrac{\delta F}{\delta t}=f'(t)+\sum _{i = 1} ^{n}  \dfrac{f^{(i+1)}(t)}{i!} (x-t)^i-\dfrac{f^{(i)}(t)}{(i-1)!} (x-t)^{i-1} \\
+=\dfrac{f^{(n+1)(t)}}{n!} (x-t)^n \\
+f(x)-T_n(x) \\
+=F(x,x)-F(x_0,x) \\
+=(x-x_0)\dfrac{\delta F}{\delta t}(\xi) \\
+=\dfrac{f^{(n+1)}}{n!} (x-x_0)(x-\xi)^n  \\
+\dfrac{f(x)-T_n(x)}{(x-x_0)^n} \\
+=\dfrac{F(x,x)-F(x_0,x)}{(x-x_0)^n-(x_0-x_0)^n} \\
+=\dfrac{\dfrac{\delta F}{\delta x} (\xi)}{n(\xi-x_0)^{n-1}}  \\
+\Rightarrow f(x)-T_n(x)= \dfrac{f^{(n+1)}(\xi)}{n!} (x-x_0)(x-\xi)^n
+\end{array}
+$$
+
+</div>
+
