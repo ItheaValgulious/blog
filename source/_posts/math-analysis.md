@@ -996,7 +996,7 @@ $$
 
 <div class='pbox'>
 
-##### Sol1
+#### Sol1
 
 $$
 \begin{array}{l}
@@ -1016,7 +1016,7 @@ $$
 
 [think] 这里为什么数列这么好用呢?感觉因为函数极限的定义不是对称的,但  $\lim_{n \to \infty} x_n=x_0,\lim_{n \to \infty} y_n=y_0$ 这个关系是对称的.
 
-##### Sol2
+#### Sol2
 
 容易证明连续函数是单射必须严格单调.
 
@@ -1086,7 +1086,7 @@ $$
 
 <div class='pbox'>
 
-##### Sol1
+#### Sol1
 
 不妨设$f(a)\le y \le f(b)$,$=$情况显然,只考虑$f(a)<y<f(b)$.
 
@@ -1104,7 +1104,7 @@ $\text{Q.E.D}$
 
 [think] 核心在 $x_0=\sup \{ x \vert f(x)<y \}$,即先看到构造$x_0$的方式.
 
-##### Sol2
+#### Sol2
 
 另一个做法是闭区间套,把区间二等分,那么把平凡情况讨论掉后,一定有$(f(a)-y)(f(b)-y)<0$,那么现在区间中点$m$处,$f(m)=y$直接结束,否则递归到值域区间包含$y$的一边.
 
@@ -1529,11 +1529,11 @@ $$
 
 <div class='pbox'>
 
-##### Sol
+#### Sol
 
 用上面的极限换元一换就出来啦
 
-##### My Sol
+#### My Sol
 
 $$
 \begin{array}{l}
@@ -1595,7 +1595,7 @@ $$
 
 <div class='pbox'>
 
-##### Sol 1
+#### Sol 1
 
 $$
 \begin{array}{l}
@@ -1609,11 +1609,11 @@ $$
 
 于是有递推,得到是$0$.
 
-##### Sol 2
+#### Sol 2
 
 注意到一阶导是偶函数,又求了奇数次变成奇函数,所以说$0$.
 
-##### Sol 3
+#### Sol 3
 
 对
 
@@ -2458,4 +2458,64 @@ f(x)-T_n(x) \\
 $$
 
 </div>
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+f\in C^2[0,1],\vert f(x) \vert \le 1,\vert f''(x) \vert \le 2 \\
+\Rightarrow \vert f'(x) \vert \le 3
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{array}{l}
+f(a)=f(x)+f'(x)(a-x)+\dfrac{f''(\xi)(a-x)^2}{2} 
+\end{array}
+$$
+
+带入$a=1$和$0$然后解方程,把范围带进去.
+
+</div>
+
+
+
+<div class='cbox'>
+
+$$
+\begin{array}{l}
+\begin{cases}
+f\in C^3[a,+\infty) \\
+\exists \lim_{x \to +\infty} f(x)=A,\lim_{x \to +\infty} f'''(x)=B \\
+
+\end{cases}
+\Rightarrow  \\
+\lim_{x \to +\infty} f'(x)= \lim_{x \to +\infty} f''(x)=\lim_{x \to +\infty} f'''(x)=0
+\end{array}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑展开
+
+$$
+\begin{array}{l}
+f(x+d)=f(x)+f'(x)d+\dfrac{f''(x)d^2}{2} +\dfrac{f'''(x+\theta d)d^3}{6}
+\end{array}
+$$
+
+然后随便取几个固定$d=1,-1,2$,让$x$到无穷,解方程就能解出来.
+
+这里有个点是因为你不保证导数存在你得先趋近无穷再解方程.
+
+</div>
+
+[think] 当我们试图拿几个数的多项式表示函数,那函数相关条件自然都变成这几个数的多项式的方程.
+
 
