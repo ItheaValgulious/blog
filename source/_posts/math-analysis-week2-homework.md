@@ -24,7 +24,7 @@ date: 2025-09-26 14:54:31
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 x_n>1 \Rightarrow  1<x_{n+1}=\dfrac{3x_n+1}{x_n+3}<3 \\
 \text{Inductively},x_n\in (1,3)
 x_{n+1}-x_n \\
@@ -36,7 +36,7 @@ x_{n+1}-x_n \\
 x_{n+1}=\dfrac{3x_n+1}{x_n+3} \\
 \Rightarrow \lim_{n \to \infty} x_{n}=\dfrac{3(\lim_{n \to \infty} x_n)+1}{(\lim_{n \to \infty} x_n)+3}  \\
 \Rightarrow \lim_{n \to \infty} x_n=1
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -54,7 +54,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall n,a_n<b_n \\
 \Rightarrow \begin{cases}
 b_n>a_{n+1}=\sqrt{a_n b_n}>a_n \\
@@ -82,7 +82,7 @@ A=\sqrt{ A B } \\
 \end{cases}
 \Rightarrow A=B
 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -98,7 +98,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dfrac{1}{4(1-x_n)}<x_{n+1}<1  \\
 \Rightarrow x_n<\dfrac{3}{4}  \\
 \dfrac{1}{4(1-x_{n-1})}<x_n<\dfrac{3}{4}  \\
@@ -113,7 +113,7 @@ X=\lim_{n \to \infty} x_n \text{ exists}  \\
 x_{n+1}>\dfrac{1}{4(1-x_n)}  \\
 \Rightarrow X\ge \dfrac{1}{4(1-X)}  \\
 \Rightarrow X=\dfrac{1}{2} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -131,26 +131,26 @@ $$
 
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{n \to \infty} \dfrac{\dfrac{1}{x_n} }{n} \\
 \stackrel{\text{ Stolz Theorem }}{\Longleftarrow}
 \lim_{n \to \infty} \dfrac{1}{x_n} -\dfrac{1}{x_{n-1}}  \\
 =\lim_{n \to \infty} \dfrac{1}{x_{n-1}(1-x_{n-1})} -\dfrac{1}{x_{n-1}} \\
 =\lim_{n \to \infty} \dfrac{1}{1-x_{n-1}}   \\
 =\dfrac{1}{1-\lim_{n \to \infty} x_{n-1}} 
-\end{array} \\
+\end{gathered} \\
 $$
 
 对于$x$,
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 x_1\le \dfrac{1}{1},x_2<\min(x_1,1-x_1)\le \dfrac{1}{2}   \\
 x_n\le \dfrac{1}{n},n\ge 2 
 \Rightarrow 
 x_{n+1}<\dfrac{1}{n}(1-\dfrac{1}{n} )=\dfrac{n-1}{n^2} <\dfrac{1}{n+1}
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow x_n\le \dfrac{1}{n} \\
 0<x_n\le  \dfrac{1}{n} \\
 \stackrel{\text{Squeeze Theorem}}{\Longrightarrow}  \\
@@ -158,7 +158,7 @@ x_{n+1}<\dfrac{1}{n}(1-\dfrac{1}{n} )=\dfrac{n-1}{n^2} <\dfrac{1}{n+1}
 \Rightarrow 
 \lim_{n \to \infty} \dfrac{\dfrac{1}{x_n} }{n} =\dfrac{1}{1-\lim_{n \to \infty} x_{n}}=1 \\
 \Rightarrow \lim_{n \to \infty} nx_n=1
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -176,7 +176,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 a_n=n!e-[n!e] \\
 =\lim_{n \to \infty} \{ n!e \}  \\
 =\lim_{n \to \infty} {\left\{ \sum _{i = 0} ^{\infty}  \dfrac{n!}{i!}  \right\}}  \\
@@ -185,7 +185,7 @@ a_n=n!e-[n!e] \\
 <\lim_{n \to \infty} {\left\{ \sum _{i = 1} ^{\infty} (n+1)^{-i}  \right\}}  \\
 =\lim_{n \to \infty} {\left\{ \dfrac{1}{n}  \right\}}  \\
 =0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -203,14 +203,14 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 x>\ln(x)+1 \\
 \Rightarrow \dfrac{1}{x}\in(\ln(\dfrac{x}{x-1}),\ln(\dfrac{x+1}{x} ) )  \\
 \Rightarrow a_n\in (\sum _{i = n+1} ^{2n} \ln(\dfrac{i}{i-1}),\sum _{i = n+1} ^{2n} \ln(\dfrac{i+1}{i} ) ) \\
 =(\ln(\dfrac{2n}{n}),\ln(\dfrac{2n+1}{n+1} ) ) \\
 \stackrel{\text{Squeeze Theorem}}{\Longrightarrow}
 \lim_{n \to \infty} a_n=\ln(2)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -228,7 +228,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 x_n \text{ is obviously incresing}  \\
 \ln(x_n)=\sum_{i=1}^n \ln(1+\dfrac{1}{2^i} ) \\
 <\sum _{i = 1} ^{n} \dfrac{1}{2^i}  \\
@@ -236,7 +236,7 @@ x_n \text{ is obviously incresing}  \\
 \Rightarrow x_n<e
 \Rightarrow \lim_{n \to \infty} x_n \text{exists}
 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -252,9 +252,9 @@ $$
 用柯西收敛准则证明数列收敛.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 a_n=\sum _{i = 2} ^{n}  \dfrac{\sin(ix)}{i(i+\sin(ix))} ,x\in R
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -262,7 +262,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \vert a_{n+m}-a_n \vert  \\
 ={\left \vert \sum _{i = n+1} ^{n+m}  \dfrac{\sin(ix)}{i(i+\sin(ix))} \right \vert}    \\
 < \sum _{i = n+1} ^{n+m}  {\left \vert \dfrac{\sin(ix)}{i(i+\sin(ix))}  \right \vert}  \\
@@ -277,7 +277,7 @@ $$
 \stackrel{\text{Cauchy Convergence Theorem}}{\Longrightarrow} \\
 \\
 \text{Q.E.D}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -290,10 +290,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 b_n=\sum _{i = 1} ^{n-1}  \vert a_{i+1}-a_i \vert \text{ is bounded} 
 \Rightarrow a_n \text{ is convergent} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -301,11 +301,11 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 b_n \text{ is increasing}  \\
 b_n \text{ is bounded} 
-\end{array} \right\}\Rightarrow \lim_{n \to \infty} b_n =B \\
+\end{cases}\Rightarrow \lim_{n \to \infty} b_n =B \\
 a_{n+m}-a_n=\sum _{i = n+1} ^{n+m}  a_{i}-a_{i-1} \\
 \le \sum _{i = n+1} ^{n+m}  \vert a_i-a_{i-1} \vert  \\
 =b_{n+m} - b_n
@@ -318,7 +318,7 @@ n>N \Rightarrow \vert b_n-B \vert < \epsilon_1 \\
 \stackrel{\text{Cauchy Convergence Theorem}}{\Longrightarrow} \\
 \\
 \text{Q.E.D}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -330,12 +330,12 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall \epsilon , \exists N_1=N(\epsilon) \\ s.t.\\ 
 i,j>N_1 \Rightarrow \vert x_i-x_j \vert < \epsilon \\
 \Leftrightarrow  \\
 x_n \text{ is convergent} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -345,10 +345,10 @@ $$
 逆向三角不等式显然.考虑正向
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \epsilon_1:=1 \therefore i>N \Rightarrow x_i \in [x_N-\epsilon_1,x_N+\epsilon_1] \\
 a_1:=x_N-\epsilon_1,b_1:=x_N+\epsilon_1 \\
-\end{array}
+\end{gathered}
 $$
 
 对 $[a_i,b_i]$ ,考虑取 $\epsilon_i=\dfrac{\epsilon_{i-1}}{2}$ ,有 
@@ -360,12 +360,12 @@ $$
 于是令$a_i=\max(a_{i-1},x_{N_i}-\epsilon),b_i=\min(b_{i-1},x_{N_i}+\epsilon_i)$. 显然$\vert b_i-a_i \vert < \dfrac{1}{2^{i-1}}$,于是
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 a_i\le a_{i+1} \\
 b_i\ge b_{i+1} \\
 \lim_{n \to \infty} b_n-a_n = 0
-\end{array} \right\}
+\end{cases}
 \\
 \Rightarrow \exists!  \xi \in [a_n,b_n] \\ s.t.\\ 
 \forall \epsilon,N=\min \{ i \vert b_i-a_i<\epsilon \} 
@@ -373,7 +373,7 @@ b_i\ge b_{i+1} \\
 n>N \Rightarrow \vert \xi-x_n\vert<\epsilon
 \\
 \text{Q.E.D}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -386,13 +386,13 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 a_0=3,a_n=a_{n-1}^2-2 \\
 \Rightarrow \begin{cases}
 \lim_{n \to \infty} a_n=+\infty \\
 A_n:=\dfrac{a_n}{\prod_{i=0}^{n-1}a_i} \Rightarrow \lim_{n \to \infty} A_n = \sqrt{5}
 \end{cases}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -402,21 +402,21 @@ $$
 (1)
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 a_0=3,a_1=7,a_2=47 \\
 n>2,a_{n-1}>2^{n} \Rightarrow a_n = a_{n-1}^2-2>2^{2n}-2>2^{n+1}
-\end{array} \right\} \\
+\end{cases} \\
 \stackrel{\text{induction}}{\Longrightarrow} a_n>2^{n+1} \\
 \therefore
 \lim_{n \to \infty} a_n\ge \lim_{n \to \infty} 2^{n+1} = \infty
-\end{array}
+\end{gathered}
 $$
 
 (2)
 
 $$
-\begin{array}{l}
+\begin{gathered}
 a_n=a_{n-1}^2-2 \\
 \Rightarrow (a_n-2)=(a_{n-1}-2)(a_{n-1}+2) \\
 \Rightarrow \prod _{i = 1} ^{n}  (a_i+2 ) = \dfrac{a_{n+1}-2}{a_1-2} =\dfrac{a_{n+1}-2}{5}  \\
@@ -427,7 +427,7 @@ A_n^2=\dfrac{a_{n}^2}{\prod _{i = 0} ^{n-1}  a_i^2}  \\
 =5\dfrac{a_{n+1}+2}{a_{n+1}-2}  \\
 \therefore \lim_{n \to \infty} A_n=\sqrt{5\dfrac{a_{n+1}+2}{a_{n+1}-2} }=\sqrt 5
 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -439,10 +439,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 A,B \text{is upper bounder},S\subset\{ x+y\vert x\in A,y\in B \}   \\
 \Rightarrow \sup S\le \sup A+\sup B
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -468,14 +468,14 @@ eg. 当$A,B,S$均为有限集恰好为 $\{ x+y\vert x\in A,y\in B \} $ 时显然
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 A,B \text{ aren't empty},\alpha\ge 0, \\
 C=A+\alpha B =\{ x\vert x=a+\alpha b,a\in A,b\in B \}  
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow \sup(A+\alpha B)=M=\sup A+\alpha \sup B
 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -483,7 +483,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall c\in C=a+\alpha b, \\
 a\le \sup A,b\le \sup B \Rightarrow a+\alpha b\le \sup A+\alpha \sup B=M \\
 \forall M'<M,\epsilon=M-M' \\
@@ -491,7 +491,7 @@ a\le \sup A,b\le \sup B \Rightarrow a+\alpha b\le \sup A+\alpha \sup B=M \\
 \text{According to the definition of supremum, } \exists a>X\in A,y>Y\in B \\
 \Rightarrow  \exists c=a+b\in C,c>X+Y>M'
 \Rightarrow \sup C=\sup A+\alpha \sup B
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -503,10 +503,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 A\subset B \\
 \Rightarrow \sup A\le \sup B,\inf A \ge \inf B
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -514,17 +514,17 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{if }\sup A>\sup B \\
 \text{let }M=\sup B
 \stackrel{\text{Def of supremum}}{\Longrightarrow} \exists a\in A,a>M=\sup B \\
-\left. \begin{array}{ll}
+\begin{cases}
 a\in A \stackrel{A\subset B}{\Longrightarrow} a\in B \\
 a>\sup B
-\end{array} \right\}
+\end{cases}
 \Rightarrow \text{False}  \\
 \therefore \sup A\le \sup B
-\end{array}
+\end{gathered}
 $$
 
 取 $C=-A,D=-B,C\subset D,\sup C\le \sup D \Rightarrow \inf A\ge \inf B$,
@@ -536,10 +536,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall x\in A,y\in B,x\le y \\
 \Rightarrow \sup A\le \inf B
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -559,9 +559,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to x_0} \sqrt{ x } =\sqrt x_0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -570,29 +570,29 @@ $$
 
 if $x_0\ne 0$
 $$
-\begin{array}{l}
+\begin{gathered}
 \vert \sqrt x-\sqrt {x_0} \vert  \\
 ={\left \vert \dfrac{x-x_0}{\sqrt x+\sqrt {x_0}} \right \vert}   \\
 \le \dfrac{\delta}{\sqrt{x_0} }  \\
 \therefore \delta:=\dfrac{\sqrt{x_0}\epsilon}{2} \Rightarrow  \\
 \forall \epsilon,x\in N(x_0,\delta),\vert \sqrt x-\sqrt {x_0} \vert <\epsilon
-\end{array}
+\end{gathered}
 $$
 
 if $x_0=0,\sqrt x_0=0$
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \delta:=\dfrac{\epsilon^2}{4} \Rightarrow \forall \epsilon,x\in N(x_0,\delta), \\
 \vert \sqrt x-\sqrt {x_0} \vert =\dfrac{\epsilon}{4} <\epsilon
-\end{array}
+\end{gathered}
 $$
 
 $$
-\begin{array}{l}
+\begin{gathered}
 
 \text{Q.E.D}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -606,9 +606,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to +\infty} (\sqrt{ x+1 } -\sqrt{ x-1 } ) =0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -616,7 +616,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \sqrt{ x+1 } -\sqrt{ x-1 }   \\
 =\dfrac{2}{\sqrt{x+1}+\sqrt{x-1}}  \\
 <\dfrac{1}{\sqrt{x}} \\
@@ -626,7 +626,7 @@ $$
 x>\delta \Rightarrow \sqrt{x+1}-\sqrt{ x-1 } <\dfrac{1}{\sqrt{ x } } =\dfrac{\epsilon}{2} < \epsilon
 \\
 \text{Q.E.D}
-\end{array}
+\end{gathered}
 $$
 
 </div>

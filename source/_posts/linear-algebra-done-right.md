@@ -66,9 +66,9 @@ $$
 张成,张成组
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \operatorname{span}( v_1 \ldots v_n ) = \{ \sum _{i = 1} ^{n}  c_iv_i \} 
-\end{array}
+\end{gathered}
 $$
 
 张成$V$的组简称张成组
@@ -166,9 +166,9 @@ $$
 空间的和
 
 $$
-\begin{array}{l}
+\begin{gathered}
 U+V = \{ u+v \vert u\in U,v\in V \} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -182,10 +182,10 @@ $$
 空间直和
 
 $$
-\begin{array}{l}
+\begin{gathered}
 W = U\oplus V = U + V \\ s.t.\\ 
 \forall w \in W, \exists! u\in U,v\in V, u+v=w
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -201,9 +201,9 @@ $$
 就是笛卡尔积.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 U\times V=\{ (u,v) \vert u\in U,v\in V \} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -215,11 +215,11 @@ $$
 仿射空间
 
 $$
-\begin{array}{l}
+\begin{gathered}
 u+V=\{ u+v \vert u+V \}  \\
 (u+V)+(w+V)=(u+w) + V \\
 \lambda (u+V) = \lambda u + V
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -233,9 +233,9 @@ $$
 空间的商
 
 $$
-\begin{array}{l}
+\begin{gathered}
 U/V={\left\{ u+V \vert u\in U \right\}} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -247,11 +247,11 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dim U\times V=\dim U\oplus V=\dim U+\dim V \\
 \dim U+V = \dim U+\dim V-\dim U\cap V \\
 \dim U/V=\dim U-\dim V
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -285,11 +285,11 @@ $$
 线性变换的运算
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (S+T)u=Su+Tu \\
 (\lambda T)u=\lambda (Tu) \\
 (ST)u=S(T(u))
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -302,11 +302,11 @@ $$
 值域,零空间
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{for linear map } T:U\to V \\
 \operatorname{range} T = \{ v \vert v=Tu,u\in U \}  \\
 \operatorname{null} T = \{ u \vert Tu=0,u \in U \} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -315,9 +315,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dim U=\dim \operatorname{null} T+\dim \operatorname{range} T
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -364,9 +364,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dim  U/V=\dim U-\dim V
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -378,10 +378,10 @@ $$
 则
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \operatorname{null} T=V \\
 \operatorname{range} T=U/V 
-\end{array}
+\end{gathered}
 $$
 
 套用上面值域和零空间的维数公式即可.
@@ -397,9 +397,9 @@ $$
 选取$U,V$分别一组基$u_1\ldots u_m$,$v_1\ldots v_n$,可以把线性变换$T$写成$n\times m$的矩阵$\mathcal{M}(T,u_1\ldots u_m,v_1\ldots v_n)=A_{n\times m}$满足
 
 $$
-\begin{array}{l}
+\begin{gathered}
 Tu_i=\sum_{j=1}^n A_{j,i}v_j
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -414,11 +414,11 @@ $$
 
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \mathcal M( S ) \mathcal M( T ) = \mathcal M( ST ) \\
 \mathcal M( S ) + \mathcal M( T ) = \mathcal M( ST ) \\
 \mathcal \lambda\mathcal M( T ) = \mathcal M( \lambda T )
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -437,9 +437,9 @@ $$
 算子
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T\in \mathcal L( V , V ) 
-\end{array}
+\end{gathered}
 $$
 
 即映射到自身空间的线性变换.
@@ -459,10 +459,10 @@ $$
 商算子,限制算子
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T_{/U}\in \mathcal L( V/U , V/U ),(T_{/U})(v+U)=(Tv+U) \\
 T\vert_U \in \mathcal L( U , U ), T\vert_U v=Tv
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -474,24 +474,24 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 p(x)\in \mathcal{P}  \\
 \Rightarrow 
 \operatorname{range} p(T),\operatorname{null} p(T)\text{ is invariant for } T
-\end{array}
+\end{gathered}
 $$
 
 </div>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 u\in \operatorname{range} p(T) \\
 \Rightarrow \exists v,p(T)v=u \\
 Tu=Tp(T)v=p(T)Tv\in \operatorname{range} p(T) \\
 u\in \operatorname{null} p(T) \\
 \Rightarrow p(T)u=0 \\
 p(T)Tu=Tp(T)u=T0=0
-\end{array}
+\end{gathered}
 $$
 
 
@@ -514,9 +514,9 @@ $$
 若 $T\in\mathcal L( U , V )$ ,定义 $T'\in \mathcal L( V' , U' )$ 满足
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall f \in V',T'f=fT
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -529,22 +529,22 @@ $T'$是反的可以理解因为$V'$的泛函的输入才是$T$的输出.导致�
 
 对偶映射的运算
 $$
-\begin{array}{l}
+\begin{gathered}
 (ST)'=T'S' \\
 (S+T)'=S'+T' \\
 (\lambda S)'=\lambda S'
-\end{array}
+\end{gathered}
 $$
 </div>
 
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (ST)'f=fST=T'(fS)=T'(S'f) \\
 (S+T)'f=f(S+T)=fS+fT=S'f+T'f \\
 (\lambda S)'f=f\lambda S=\lambda fS=S'f \\
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -562,9 +562,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dim U+\dim U^0=\dim V
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -578,13 +578,13 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 
 \operatorname{null} T'=(\operatorname{range} T)^0 \\
 
 \operatorname{range} T'=(\operatorname{null} T)^0
 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -640,12 +640,12 @@ $\lambda$ 是 $T$的本征值等价于 $T-\lambda I$不是双射,或不是单射
 反证,你要利用不同本征值这个性质,于是你设 $v_n \in \operatorname{span}( v_1\ldots v_{n-1} )$ 且$n$为满足条件对最小的.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 v_n=\sum _{i = 1} ^{n-1} c_iv_i \\
 Tv_n=\sum _{i = 1} ^{n-1}  Tc_iv_i \\
 \lambda_n (\sum _{i = 1} ^{n-1}  c_iv_i)=\sum _{i = 1} ^{n-1}  \lambda_i c_iv_i \\
 0=\sum _{i = 1} ^{n-1} (\lambda_i-\lambda_n) c_iv_i
-\end{array}
+\end{gathered}
 $$
 
 因为$n$是最小的,所以$v_1\ldots v_{n-1}$线性无关,然后你就推出矛盾.
@@ -666,7 +666,7 @@ $$
 考虑
 
 $$
-\begin{array}{l}
+\begin{gathered}
 v\in V,\dim V=n \\
 v,Tv,T^2v\ldots T^{n}V \text{ is dependent} \\
 \sum _{i = 0} ^{n} c_iT^iv  =0 \\
@@ -674,7 +674,7 @@ v,Tv,T^2v\ldots T^{n}V \text{ is dependent} \\
 (\prod _{i = 1} ^{n} (T-\lambda_i I))v=0
 \Rightarrow \exists i,T-\lambda_i I=0 \\
 \Rightarrow \lambda_i \text{is a eigenvalue of } T \\
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -688,11 +688,11 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \mathcal M( T,u_1\ldots u_n ) \text{is upper triangular matrix} \\
 \Leftrightarrow \forall i, Tu_i\in \operatorname{span}( u_1\ldots u_i )  \\
 \Leftrightarrow \forall i, \operatorname{span}( u_1\ldots u_i ) \text{is invariant space} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -708,10 +708,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall T\in \mathcal L( V , V ), V \text{ is complex vector space} \\
 \Rightarrow \exists u_1\ldots u_n,\mathcal M( T,u_1\ldots u_n ) \text{ is upper triangular matrix}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -754,7 +754,7 @@ $T$有逆等价于$T$的上三角矩阵对角线全部非$0$
 先假设矩阵有逆,设空间$V$基为$v_1\ldots v_n$.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 Tv_1=A_{1,1}v_1 \Rightarrow A_{1,1}\ne 0 \\
 Tv_k=u+A_{k,k}v_k,u\in \operatorname{span}( v_1\ldots v_{k-1} ) \\
 \text{if } A_{k,k}= 0 \\
@@ -767,7 +767,7 @@ Tv_k\in \operatorname{span}( v_1\ldots v_{k-1} ) \\
 \sum _{i = 1} ^{k}  c_iTv_i=0 \\
 \stackrel{T^{-1}}{\Longrightarrow}\sum _{i = 1} ^{k}  c_iv_i=0 \\
 \text{contradiction!} 
-\end{array}
+\end{gathered}
 $$
 
 再假设$T$关于$V$的基$v_1\ldots v_n$的矩阵为上三角矩阵且对角线元素非$0$.
@@ -797,9 +797,9 @@ $T$的某个基下的上三角矩阵对角线元素是$T$的本征值.
 本征空间
 
 $$
-\begin{array}{l}
+\begin{gathered}
 E(\lambda,T)=\operatorname{null} T-\lambda I
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -846,11 +846,11 @@ $T$在基$v_1\ldots v_n$下为对角矩阵等价于
 
 第一条用共轭对称性换到后面再换回来:
 $$
-\begin{array}{l}
+\begin{gathered}
 a<u_1,v>+b<u_2,v>=a \overline{ <v,u_1> } +b \overline{ <v,u_2> }  \\
 =\overline{ <v,au_1+bu_2> }  \\
 =<au_1+bu_2,v>
-\end{array}
+\end{gathered}
 $$
 
 第二条考虑线性映射$0$映到$0$.
@@ -876,17 +876,17 @@ $\vert\vert v \vert\vert = \sqrt{<v,v>}$定义为向量的范数.
 对实向量空间:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 <u,v>=\dfrac{\vert\vert u+v \vert\vert ^2-\vert\vert u-v \vert\vert ^2}{4} 
-\end{array}
+\end{gathered}
 $$
 
 对复向量空间:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 <u,v>=\dfrac{\vert\vert u+v \vert\vert ^2-\vert\vert u-v \vert\vert ^2}{4} + \dfrac{\vert\vert u+iv \vert\vert ^2-\vert\vert u-iv \vert\vert ^2}{4}i
-\end{array}
+\end{gathered}
 $$
 
 拆开验算显然是对的.
@@ -922,12 +922,12 @@ $<u,v> {\ } \le {\ } \vert\vert u \vert\vert \vert\vert v \vert\vert$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let} w=\dfrac{u}{\vert\vert u \vert\vert^2 }<u,v>\\
 
 v=w+(v-w),w\perp v-w \\
 \Rightarrow v^2=w^2+(v-w)^2\le w^2=\dfrac{<u,v>^2}{\vert\vert u \vert\vert ^2} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -952,10 +952,10 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 v_i=u_i-\sum_{j=1}^{i-1}<u_i,e_j>e_j \\
 e_i=\dfrac{v_i}{\vert\vert v_i \vert\vert } 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -993,12 +993,12 @@ $$
 设$e_1\ldots e_n$是一组规范正交基,则
 
 $$
-\begin{array}{l}
+\begin{gathered}
 fv=f\sum _{i = 1} ^{n}  <v,e_i> e_i \\
 =\sum _{i = 1} ^{n}  <v,e_i> fe_i \\
 =\sum _{i = 1} ^{n}  <v,fe_i\cdot e_i> \\
 =<v,\sum _{i = 1} ^{n}  e_ife_i>
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1042,10 +1042,10 @@ $U^{\perp}=\{ v \vert <u,v>=0,u\in U,v\in V \}$
 正交投影
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } u=w_1+w_2,w_1\in U,w_2\in U^{\perp} \\
 \Rightarrow P_U=w_1
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1078,9 +1078,9 @@ $\forall u\in U,\vert\vert u-v \vert\vert \ge \vert\vert P_Uv-v \vert\vert$
 分解! $v=v_1+v_2,v_1\in U,v_2\in U^\perp$.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \vert\vert u-v_1-v_2 \vert\vert^2 =(u-v_1)^2+v_2^2
-\end{array}
+\end{gathered}
 $$
 
 于是显然取$u=v_1$最小,即证.
@@ -1126,10 +1126,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \mathcal M( T^*, v_1\ldots v_m, u_1\ldots u_n) = \overline{ \mathcal M( T ,u_1\ldots u_n,v_1\ldots v_m)^T  }  \\
 (v_1\ldots v_m),(u_1\ldots u_n) \text{ are regular orthogonal bases} 
-\end{array}
+\end{gathered}
 $$
 
 右边说的是转置再把每一项共轭.
@@ -1139,7 +1139,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 <Tu,v>=<u,T^*v> \\
 Tu=\sum _{i = 1} ^{m} \sum_{j=1}^n A_{j,i}<u,u_i>v_j \\
 <Tu,v> \\
@@ -1147,7 +1147,7 @@ Tu=\sum _{i = 1} ^{m} \sum_{j=1}^n A_{j,i}<u,u_i>v_j \\
 =\sum _{i = 1} ^{m} \sum_{j=1}^n A_{j,i}<u,u_i><v_j,v> \\
 =<u,\sum _{i = 1} ^{m} \sum_{j=1}^n A_{j,i}<v_j,v>u_i> \\
 =<u,Tv>
-\end{array}
+\end{gathered}
 $$
 
 其实就是直接用规范正交基写开直接做.
@@ -1169,11 +1169,11 @@ $T=T^*$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T=T^* \Rightarrow T\text{'s eigenvalues}\in R  \\
 T=T^* \Leftrightarrow \forall v,<v,Tv> \in R \\
 T=T^* \Leftrightarrow (<v,Tv>=0 \Rightarrow T=0)
-\end{array} 
+\end{gathered} 
 $$
 
 注意,前两条对复向量空间成立,最后一条是对实向量空间成立.
@@ -1191,12 +1191,12 @@ $$
 反推的话
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall v,0 \\
 =<v,Tv>-\overline{ v,Tv } \\
 =<v,Tv>-<v,T^*v> \\
 =<v,(T-T^*)v>=0
-\end{array}
+\end{gathered}
 $$
 
 这里我们似乎需要点引理:
@@ -1223,10 +1223,10 @@ $$
 
 第三行,考虑
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall u,v, \\
 <u,Tv>=\dfrac{<u+v,Tu+Tv>-<u-v,Tu-Tv>}{4} 
-\end{array}
+\end{gathered}
 $$
 
 于是任意$<u,Tv>=0$,$T=0$.
@@ -1243,9 +1243,9 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 <P_Uu,v>=<P_Uu,P_Uv+(v-P_Uv)>=<P_Uu,P_Uv>+<P_Uu,(v-P_Uv)>=<P_Uu,P_Uv>=<u,P_Uv>
-\end{array}
+\end{gathered}
 $$
 
 显然的啦.
@@ -1263,9 +1263,9 @@ $$
 正规算子
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T \text{ is normal} \Leftrightarrow  TT^*=T^*T
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1273,9 +1273,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T \text{ is normal} \Leftrightarrow \forall v,\vert\vert Tv \vert\vert = \vert\vert T^*v \vert\vert 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1283,9 +1283,9 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 <Tv,Tv>=<T^*Tv,v>=<TT^*v,v>=<T^*v,T^*v>
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1293,9 +1293,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T \text{ is normal} ,\lambda \text{ is eigen value of } T \Rightarrow T-\lambda I \text{ is normal}  
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1303,12 +1303,12 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (T-\lambda I)^*=T^*-\overline{ \lambda } I \\
 \Rightarrow (T-\lambda I)(T-\lambda I)^* \\
 =TT^*-(\lambda+\overline{ \lambda } )T+\lambda \overline{ \lambda } \\
 =(T-\lambda I)^*(T-\lambda I) 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1318,9 +1318,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T \text{ is normal}, Tv=\lambda v \Rightarrow T^*v=\overline{ \lambda } v 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1328,12 +1328,12 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (T-\lambda I)v=0 \\
 \Rightarrow \vert\vert (T-\lambda I)v \vert\vert =0 \\
 \Rightarrow \vert\vert (T-\lambda I)^*v \vert\vert =0 \\
 T^*v=\overline{\lambda}v
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1341,9 +1341,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T \text{ is normal} \Rightarrow \text{eigen vectors of } T \text{ are orthogonal} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1351,13 +1351,13 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } Tu=\lambda_1 u,Tv=\lambda_2 v \\
 (\lambda_2-\lambda_1)<u,v> \\
 =<u,\lambda_2 v>-<\overline{ \lambda_1 } u,v> \\
 =<u,Tv>-<T^*u,v>  \\
 =0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1413,10 +1413,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 u\in U \Rightarrow Tu\in U \\
 \Leftrightarrow v\in U^{\perp},Tv\in U^\perp
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1424,12 +1424,12 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 u\in U,v\in U^{\perp} \\
 \Rightarrow <Tu,v>=0 \\
 \Rightarrow <u,Tv>=0 \\
 \Rightarrow Tv\in U^{\perp}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1453,10 +1453,10 @@ $$
 将$f$质因式分解,
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=a\prod_i (x-\lambda_i)\prod_i (x^2+b_ix+c_i) \\
 f(T)v=a\prod_i (T-\lambda_i I)\prod_i (T^2+b_iT+c_iI)v=0
-\end{array}
+\end{gathered}
 $$
 
 由于$T^2+b_iT+c_i$不可分解,有$b_i^2-4c<0$
@@ -1466,13 +1466,13 @@ $$
 而 
 
 $$
-\begin{array}{l}
+\begin{gathered}
 <(T^2+b_iT+c_i)v,v> \\
 =<((T+\dfrac{b_i}{2}I )^2+(c-\dfrac{b^2}{4}))v,v> \\
 =<(T+\dfrac{b_i}{2} I)^2v,v>+(c-\dfrac{b^2}{4})v^2 \\
 =(Tv+\dfrac{b_iv}{2} )^2+(c-\dfrac{b^2}{4}  )v^2 \\
 >0
-\end{array}
+\end{gathered}
 $$
 
 于是它也是单的,则$f(T)$是单的,和$f(T)v=0$矛盾
@@ -1490,13 +1490,13 @@ $$
 正算子
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T \text{ is positive} \Leftrightarrow 
 \begin{cases}
 \forall v,<v,Tv>\ge 0 \\
 T \text{ is self-adjoint} 
 \end{cases}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1508,9 +1508,9 @@ $$
 平方根
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T=R^2 \Leftrightarrow R \text{ is squre root of T} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1520,13 +1520,13 @@ $$
 下列条件等价:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T \text{ is positive} \\ 
 T \text{ is self-adjoint and each T's eigenvalues is not negative} \\
 T \text{ has positive squre root}  \\
 T \text{ has adjoint squre root}  \\
 \exists R,T=R^*R
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1563,18 +1563,18 @@ $$
 现在考虑已经有一个正平方根$S$,取$S$的本征向量构成的规范正交基$e_1\ldots e_n$,再取$T$的本征向量$v$,有
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 Tv=\lambda v \\
 v=\sum _{i = 1} ^{n}  <v,e_i>e_i
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow 
 Tv=\sum _{i = 1} ^{n}  \lambda <v,e_i> \\
 R^2v=\sum _{i = 1} ^{n} \lambda_i^2 <v,e_i>e_i=Tv=\sum _{i = 1} ^{n}  \lambda <v,e_i> \\
 \Rightarrow \sum _{i = 1} ^{n}  (\lambda_i^2-\lambda)<v,e_i>e_i=0 \\
 \Rightarrow \forall i,<v,e_i>\ne 0:\lambda_i^2=\lambda \\
 \Rightarrow Rv=\lambda_i v=\sqrt{\lambda} v
-\end{array}
+\end{gathered}
 $$
 
 于是可以证明$R$对$T$的每个本征向量的作用都与前面通过对角线直接取平方根构造出的$R_0$相同,故$R=R_0$
@@ -1587,9 +1587,9 @@ $$
 等距同构
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T \text{ is an isometry} \Leftrightarrow \forall v,\vert\vert Tv \vert\vert =\vert\vert v \vert\vert  
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1599,7 +1599,7 @@ $$
 下列条件等价:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T \text{ is an isometry}  \\
 \forall u,v,<Tu,Tv>=<u,v> \\
 \forall \text{orthonormal base } e, Te_1\ldots Te_n \text{ is orthonormal}  \\
@@ -1607,7 +1607,7 @@ T \text{ is an isometry}  \\
 TT^*=I \\
 T^*T=I \\
 T^*=T^{-1}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1634,11 +1634,11 @@ $$
 复向量空间下
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T \text{ is an isometry}  \\
 \Leftrightarrow \exists \text{orthonormal base }e, \\
 \forall i, Te_i=\lambda_i e_i,\vert \lambda_i \vert =1 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1658,9 +1658,9 @@ $$
 极分解
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T=S\sqrt{T^*T},S \text{ is isometry} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1670,38 +1670,38 @@ $$
 首先我们之前说明过$T^*T$是正的,于是这个平凡根存在.且
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \vert\vert Tv \vert\vert =\sqrt{<Tv,Tv>}=\sqrt{<T^*Tv,v>} \\
 =\sqrt{<\sqrt{T^*Tv},\sqrt{T^*T}v>}=\vert\vert \sqrt{T^*T}v \vert\vert
-\end{array}
+\end{gathered}
 $$
 
 于是$S$可以是等距同构的,在 $\operatorname{range} \sqrt{T^*T} \to \operatorname{range} T$上我们定义:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 S_1\sqrt{T^*T}v=Tv
-\end{array}
+\end{gathered}
 $$
 
 $$
-\begin{array}{l}
+\begin{gathered}
 S_1\sqrt{T^*T}(v_1+v_2)=T(v_1+v_2) \\
 \Rightarrow S_1(\sqrt{T^*T}v_1)+S_1(\sqrt{T^*T}v_2)=Tv_1+Tv_2 \\
 S_1\sqrt{T^*T}kv_1=kTv_1
-\end{array}
+\end{gathered}
 $$
 
 这样可以说明$S_1$是线性变换.
 
 并且
 $$
-\begin{array}{l}
+\begin{gathered}
 \sqrt{T^*T}v_1= \sqrt{T^*T}v_2 \\
 \Leftrightarrow  \vert\vert \sqrt{T^*T}(v_1-v_2) \vert\vert =0 \\
 \Leftrightarrow  \vert\vert T(v_1-v_2) \vert\vert =0 \\
 \Leftrightarrow  Tv_1=Tv_2
-\end{array}
+\end{gathered}
 $$
 
 于是$S_1$是单射.显然也是满射.于是$S_1$是双射.
@@ -1709,27 +1709,27 @@ $$
 于是
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dim \operatorname{range} \sqrt{T^*T}=\dim \operatorname{range} T \\
 \Rightarrow \dim (\operatorname{range} \sqrt{T^*T})^\perp=\dim (\operatorname{range} T)^\perp
-\end{array}
+\end{gathered}
 $$
 
 于是可以从 $(\operatorname{range} \sqrt{T^*T})^\perp$和$(\operatorname{range} T)^\perp$中分别取一组规范正交基$e_1\ldots e_n$,$f_1\ldots f_n$,那么只要让
 
 $$
-\begin{array}{l}
+\begin{gathered}
 S_2\in \mathcal L( (\operatorname{range} \sqrt{T^*T})^\perp , (\operatorname{range} T)^\perp ) \\
 S_2(\sum_i c_ie_i)=\sum_i c_if_i
-\end{array}
+\end{gathered}
 $$
 
 并最后让$S=S_1+S_2$即可.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{Q.E.D}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1757,12 +1757,12 @@ $T$的奇异值即$\sqrt{T^* T}$的本征值,且每个值$\lambda$重复$\dim E(
 那么极分解$T=S\sqrt{T^*T}$,于是
 
 $$
-\begin{array}{l}
+\begin{gathered}
 Tv=S\sqrt{T^*T}v \\
 =S\sum_i s_i<v,e_i>e_i \\
 =\sum_i s_i<v,e_i>Se_i \\
 =\sum_i s_i<v,e_i>f_i
-\end{array}
+\end{gathered}
 $$
 
 因为$S$是等距同构所以把规范正交基变换成规范正交基.
@@ -1775,11 +1775,11 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 {0}=\operatorname{null} T^0,\operatorname{null} T^i \subset \operatorname{null} T^{i+1} \\
 \operatorname{null} T^i= \operatorname{null} T^{i+1} \Rightarrow \forall j>i,\operatorname{null} T^j=\operatorname{null} T^i \\
 \operatorname{null} T^{\dim V}=\operatorname{null} T^{\dim V+1}  \\
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1795,9 +1795,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 V=\operatorname{null} T^{\dim V} \oplus \operatorname{range} T^{\dim V}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1836,10 +1836,10 @@ $$
 广义本征向量
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \exists n,(T-\lambda I)^nv=0 \\
 \Leftrightarrow v \text{ is generalized eigen vector of } T.
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1847,9 +1847,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (T-\lambda I)^n v=0 \Rightarrow \lambda \text{ is eigenvalue of } T
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1866,9 +1866,9 @@ $$
 广义本征空间
 
 $$
-\begin{array}{l}
+\begin{gathered}
 G(\lambda,T)=\operatorname{null} (T-\lambda I)^{\dim V}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1881,10 +1881,10 @@ $$
 不同广义本征空间中的向量线性无关.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 v_i\in G(\lambda_i,T) \\
 \Rightarrow \{ v_n \} \text{ is linear independent} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1892,7 +1892,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } k=\max {i\vert (T-\lambda_1 I)^i v_1\ne 0} \\
 \text{let } w=(T-\lambda_1 I)^k v_1 \\
 \Rightarrow Tw=\lambda_1w \\
@@ -1902,7 +1902,7 @@ $$
 \Rightarrow Fc_1v_1=0 \\
 \Rightarrow c_1w=0 \\
 \Rightarrow c_1=0
-\end{array}
+\end{gathered}
 $$
 
 于是对所有$v_i$做一遍可以得到$c$全是$0$,得证.
@@ -1914,12 +1914,12 @@ $$
 任意复向量空间上的算子$T$的所有本征值$\lambda_1\ldots \lambda_k$满足
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \bigoplus_i G(\lambda_i,T)=V \\
 \sum_i \dim G(\lambda_i,T)=\dim V \\
 \exists e_1\ldots e_n,e_i \text{ is generalized eigenvector} ,\{ e_n \} \text{ is basis of } V \\
 (T-\lambda_iI)\vert_{G(\lambda_i,T)} \text{is nilpotent} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1943,10 +1943,10 @@ $$
 代数重数,几何重数
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{代数重数} =\dim G(\lambda,T) \\
 \text{几何重数} =\dim E(\lambda,T)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1982,10 +1982,10 @@ $$
 考虑归纳法,归纳就要找不变子空间,比如找到  $\operatorname{range} N$ ,显然  $\dim \operatorname{range} N<\dim V$ ,于是 $N\vert_{\operatorname{range} N}$ 有这样一组基 $v_1\ldots v_k\in \operatorname{range} N,m_1\ldots m_k\in N$ 满足基的条件.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 v_i\in\operatorname{range} N \\
 \Rightarrow \exists u_i,Nu_i=v_i
-\end{array}
+\end{gathered}
 $$ 
 
 于是用$u_1\ldots u_k$替换$v_1\ldots v_k$并加入他们自己,得到 $N^{m_1}u_1,\ldots, u_1,\ldots, N^{m_k}u_k,\ldots, u_k = \{ e_n \}$.
@@ -2009,7 +2009,7 @@ Jordan分解
 存在一组基$e$满足 
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \mathcal M( T,e ) =\operatorname{Diag}(A_i\ldots A_k), \\
 A_i=\lambda_i I+
 \begin{bmatrix}
@@ -2019,7 +2019,7 @@ A_i=\lambda_i I+
     0,0,\ldots,0,1 \\
     0,0,\ldots,0,0
 \end{bmatrix}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2045,12 +2045,12 @@ $I+N$有平方根
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (1+x)^{\frac{1}2}=\sum _{i = 0} ^{\infty} \binom{\frac12}{i}x^i \\
 \text{let } S_n(x)=\sum _{i = 0} ^{2} \binom{\frac12}{i}x^i \\
 \forall k<n,[x^k]S_n^2(x)=
 \sum _{i = 0} ^{k} \binom{\frac12}{i}\binom{\frac12}{k-i} =\binom{1}{k}=[k\le 1]
-\end{array}
+\end{gathered}
 $$
 
 于是$S_n(x)$和$\sqrt{1+x}$的前$k$项一样,而$N$是幂零的保证了它没有某项以后的,于是只要取一个$S_n(N)$就是$\sqrt{I+N}$.
@@ -2077,10 +2077,10 @@ $C$上可逆算子有平方根.
 特征多项式
 
 $$
-\begin{array}{l}
+\begin{gathered}
 p(z)=\prod _{i = 1} ^{k}  (z-\lambda_i)^{c_i} \\
 c_i=\dim E(\lambda_i,T)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2090,10 +2090,10 @@ $$
 特征多项式的次数和零点
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \deg p(z)=\dim V \\
 p(z)=0 \Leftrightarrow z \text{ is eigenvalue of } T
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2137,11 +2137,11 @@ $T$的特征多项式$p(z)$满足$p(T)=0$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{assume }p,q \text{ is minimal polynomial}  \\
 p(T)=0,q(T)=0,\deg p=\deg q \\
 \Rightarrow (p-q)(T)=0,\deg p-q<\min(\deg p,\deg q)
-\end{array}
+\end{gathered}
 $$
 
 于是和$p,q$极小矛盾,得证.
@@ -2274,11 +2274,11 @@ $\lambda$与 $\overline{ \lambda }$重数相同.
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (T-\lambda I)^kv=0 \\
 \Rightarrow \overline{ (T-\lambda I)^k v } =0 \\
 (T-\overline{\lambda}I)^k \overline{ v }=0
-\end{array}
+\end{gathered}
 $$
 
 于是若$v_1\ldots v_k$是$G(\lambda,T)$的基,那么 $\overline{ v_1 } ,\ldots, \overline{v_n}$是$G(\overline{\lambda},T)$的基,得证.
@@ -2300,13 +2300,13 @@ $$
 内积的复化
 
 $$
-\begin{array}{l}
+\begin{gathered}
 <a+bi,c+di> \\
 =<a+bi,c>+i<a+bi,d>
 =\overline{ <c,a+bi> } +i \overline{ <d,a+bi> }  \\
 =<a,c>-<b,c>i+i<a,d>+<b,d> \\
 =(<a,c>+<b,d>) + i(<a,d>-<b,c>)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2328,12 +2328,12 @@ $(T_C)^*=(T^*)_C$
 第二条考虑
 
 $$
-\begin{array}{l}
+\begin{gathered}
 <T(a+bi),c+di> \\
 =(<Ta,c>+<Tb,d>+i(<Ta,d>-<Tb,c>)) \\
 =(<a,T^*c>+<b,T^*d>+i(<a,T^*d>-<b,T^*c>)) \\
 =<a+bi,T^*(c+di)>
-\end{array}
+\end{gathered}
 $$
 
 第三条考虑$TT^*=T^*T,T_C(T_C)^*=T_C(T^*)_C=(TT^*)_C=(T^*T)_C=T_C(T_C)^*$
@@ -2345,7 +2345,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T \text{ is normal}  \\
 \Leftrightarrow \exists e_1\ldots e_n \text{ is orthonormal basis }, \\
 \mathcal M( T,e ) = \operatorname{Diag}(A_1\ldots A_k) , \\
@@ -2353,7 +2353,7 @@ A_k= [x] \text{ or } A=\begin{bmatrix}
     a\ -b \\
     b\ a
 \end{bmatrix}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2369,17 +2369,17 @@ $$
 若$\lambda_i=a+bi\not\in R$,有$a-bi$也是重数相等的本征值,从两个对应的本征空间中分别取一个向量$c+di,c-di$.
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 T(c+di)=(a+bi)(c+di) \\
 T(c-di)=(a-bi)(c-di)
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow 
 \begin{cases}
 Tc=ac-bd \\
 Td=bc+ad
 \end{cases} \\
-\end{array}
+\end{gathered}
 $$
 
 于是$T$在$c,d$长成的二维子空间不变.
@@ -2389,12 +2389,12 @@ $$
 且对于$\dim U_k=2$,就用$d,c$做基它的矩阵看起来是
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \begin{bmatrix}
     b, a \\
     -a, b
 \end{bmatrix}
-\end{array}
+\end{gathered}
 $$
 
 即为所证.
@@ -2404,7 +2404,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T \text{ is isometry}  \\
 \Leftrightarrow \exists e_1\ldots e_n \text{ is orthonormal basis}  \\
 \mathcal M( T,e ) =\operatorname{Diag}(A_1\ldots A_k), \\
@@ -2412,7 +2412,7 @@ A_k=[x] \text{ or } A=\begin{bmatrix}
     \cos\theta\ -\sin\theta \\
     \sin\theta\ \cos\theta
 \end{bmatrix}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2434,9 +2434,9 @@ $$
 设两组基$e_1\dots e_n$,$f_1\ldots f_n$,$M$是$T$在$f$下的矩阵,有矩阵$A$满足
 
 $$
-\begin{array}{l}
+\begin{gathered}
 Af_i=\sum _{j = 1} ^{n}  A_{j,i}e_j
-\end{array}
+\end{gathered}
 $$
 
 则$AMA^{-1}$是$T$在$e$下的变换矩阵.
@@ -2458,10 +2458,10 @@ $$
 迹
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \operatorname{trace} T=\sum _{i = 1} ^{n}  \lambda_i
 \operatorname{trace} \mathcal M( T ) =\sum _{i = 1} ^{n}  \mathcal M( T ) _{i,i}
-\end{array}
+\end{gathered}
 $$
 
 注意$\lambda$按代数重数重复.实向量空间的先复化.
@@ -2471,9 +2471,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \operatorname{trace} AB=\operatorname{trace} BA
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2481,10 +2481,10 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \sum _{i = 1} ^{n} (AB)_{i,i}=\sum _{i = 1} ^{n} \sum _{j = 1} ^{n}  A_{i,j}B_{j,i} \\
 \sum _{i = 1} ^{n}  (BA)_{i,i}=\sum _{i = 1} ^{n}  \sum _{j = 1} ^{n}  B_{i,j}A_{j,i}
-\end{array}
+\end{gathered}
 $$
 
 交换求和号显然相等.
@@ -2494,9 +2494,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \operatorname{trace} T=\operatorname{trace} \mathcal M( T ) 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2510,9 +2510,9 @@ $$
 而根据基变换公式,任意一组基下的 $\mathcal M( T ) =QAQ^{-1}$.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \operatorname{trace} QAQ{-1}=\operatorname{trace} AQQ^{-1}=\operatorname{trace} A=\operatorname{trace} T
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2540,9 +2540,9 @@ $T$的特征多项式等于$\det(zI-T)$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \det M=\sum _{p} \prod _{i = 1} ^{n}  M_{i,p_i}(-1)^{\operatorname{rev}(p)}
-\end{array}
+\end{gathered}
 $$
 
 </div>

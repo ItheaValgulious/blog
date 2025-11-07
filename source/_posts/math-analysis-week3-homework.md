@@ -17,9 +17,9 @@ date: 2025-10-11 15:58:54
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{Calculate left/right limits of }f(x)=\dfrac{2^{\frac{1}{x} }-1}{2^{\frac{1}{x} } +1}  (x_0=0)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -27,10 +27,10 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 x\to 0^+,\dfrac{1}{x} \to +\infty,\lim_{x \to 0^+} = f(x)=\dfrac{1-2^{-\frac{1}{x}}}{1+2^{-\frac1x}}=1 \\
 x\to 0^-,\dfrac{1}{x} \to -\infty,2^{\frac{1}x}\to 0,\lim_{x \to 0^-} f(x)=-1 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -40,9 +40,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 0} \dfrac{\sqrt{ 1+x } -\sqrt{ 1-x } }{x}  
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -50,13 +50,13 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \sqrt{1+x}-1\sim\dfrac{x}{2} \\
 \lim_{x \to 0} \dfrac{\sqrt{ 1+x } -\sqrt{ 1-x } }{x} \\
 =\lim_{x \to 0}\dfrac{(\sqrt{ 1+x }-1) -(\sqrt{ 1-x }-1) }{x} \\
 =\lim_{x \to 0}\dfrac{\frac{x}{2}+\frac{x}{2}}{x}  \\
 =1
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -67,9 +67,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 1} \dfrac{\sum _{i = 1} ^{m}  x^i -m}{x-1} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -77,14 +77,14 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } f_m(x)=\dfrac{\sum _{i = 1} ^{m}  x^i-m}{x-1}  \\
 \lim_{x \to 1} f_1(x)=1 \\
 f_n(x)-f_{n-1}(x)=\dfrac{x^m-1}{x-1}=\sum _{i = 0} ^{m-1}  x^i \\
 \therefore \lim_{x \to 1} f_n(x)=\lim_{x \to 1} f_1(x)+\sum _{i = 2} ^{n}  f(i)-f(i-1) \\
 =1+\sum _{i = 2} ^{n}  i \\
 =\dfrac{n(n+1)}{2}   
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -94,9 +94,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{n \to \infty} \prod_{i=1}^n \cos\dfrac{x}{2^i} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -104,14 +104,14 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \prod _{i = 1} ^{n}  \cos\dfrac{x}{2^i}  \\
 =\dfrac{\sin\dfrac{x}{2^n}\prod _{i = 1} ^{n}  \cos\dfrac{x}{2^i}}{\sin\dfrac{x}{2^n} } \\
 =\dfrac{sin(x)}{2^n\sin\dfrac{x}{2^n} } \\
 \sin\dfrac{x}{2^n} \sim\dfrac{x}{2^n}  \\
 \Rightarrow \lim_{n \to \infty} \dfrac{sin(x)}{2^n\sin\dfrac{x}{2^n} } \\
 =\dfrac{\sin(x)}{x} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -122,9 +122,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to \infty} (\sin\dfrac{1}{x} +\cos\dfrac{1}{x} )^x 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -132,14 +132,14 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to \infty} (\sin\dfrac{1}{x} +\cos\dfrac{1}{x} )^x  \\
 =\lim_{x \to \infty} e^{x\ln(\sin\frac{1}{x}+\cos\frac1x)} \\
 =e^{\lim_{x \to \infty} x\ln(\sin\frac{1}{x}+\cos\frac1x)} \\
 =e^{\lim_{x \to \infty} x(\sin\frac{1}{x}+(\cos\frac1x-1))} \\
 =e^{\lim_{x \to \infty} x(\frac{1}{x}+(1-\frac{1}{2x^2} -1))} \\
 =e
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -150,9 +150,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 0} x \lbrack \dfrac{1}{x}  \rbrack 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -160,14 +160,14 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 x\lbrack \dfrac{1}{x}  \rbrack \in (1-x,1] \\
 \lim_{x \to 0} 1-x=\lim_{x \to 1} 1=1
-\end{array} \right\} \\
+\end{cases} \\
 \stackrel{\text{Squeeze Theorem}}{\Longrightarrow}
 \lim_{x \to 0} x \lbrack \dfrac{1}{x}  \rbrack =1 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -178,9 +178,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to \infty} (\dfrac{1+x}{3+x}  )^x
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -188,7 +188,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (\dfrac{1+x}{3+x}  )^x
 =(1-\dfrac{2}{x+3} )^x \\
 \text{let } t=-\dfrac{x+3}{2},x=-2t-3  \\
@@ -196,7 +196,7 @@ $$
 \therefore \lim_{x \to \infty} (1+\dfrac{2}{x+3} )^x \\
 =\lim_{t \to \infty} (1+\dfrac{1}{t} )^{-2t} \\
 =e^{-2}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -207,9 +207,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 0} (\dfrac{a^x+b^x+c^x}{3} )^\frac{1}{x}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -217,7 +217,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 0} (\dfrac{a^x+b^x+c^x}{3} )^\frac{1}{x} \\
 =\exp \lim_{x \to 0} \dfrac{\ln(\dfrac{a^x+b^x+c^x}{3} )}{x}  \\
 =\exp \lim_{x\to 0}\dfrac{(\dfrac{a^x+b^x+c^x}{3} )-1}{x} \\
@@ -227,7 +227,7 @@ a^x=e^{x\ln(a)}=1+x\ln(a)+o(x) \\
 =\exp \dfrac{\ln(abc)}{3} \\
 =\sqrt[ 3 ]{ abc }  
 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -238,9 +238,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 0} \dfrac{x\tan^4x}{\sin^3x(1-\cos x)} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -248,12 +248,12 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 0} \dfrac{x\tan^4x}{\sin^3x(1-\cos x)}  \\
 =\lim_{x \to 0} \dfrac{x\sin x}{\cos^3x(1-\cos x)}  \\
 =\lim_{x \to 0} \dfrac{x^2}{\cos^3x\dfrac{x^2}{2} }  \\
 =2
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -264,9 +264,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 0} \dfrac{\sqrt{ 1+x^4 } -1}{1-\cos^2x} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -274,12 +274,12 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 0} \dfrac{\sqrt{ 1+x^4 } -1}{1-\cos^2x}  \\
 =\lim_{x \to 0} \dfrac{x^4}{2x^2} \\
 =\lim_{x \to 0} \dfrac{x^2}{2}  \\
 =0 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -292,9 +292,9 @@ $$
 solve a,b:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to +\infty} (\sqrt{ x^2-x+1 } -ax-b)=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -302,14 +302,14 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \sqrt{ x^2-x+1 }=\sqrt{(x-\dfrac{1}{2} )^2+\dfrac{3}{4} } \\
 \text{let } t=x-\dfrac{1}{2}  \\
 \lim_{x \to \infty} \sqrt{ x^2-x+1 } -(x-\dfrac{1}{2} ) \\
 =\lim_{x \to \infty} \sqrt{ t^2+\dfrac{3}{4}  }-\sqrt{ t^2 }  \\
 =\lim_{x \to \infty} \dfrac{3}{4(\sqrt{t^2+\frac{3}{4}}+\sqrt{t^2})}   \\
 =0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -319,9 +319,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x_0^-)<f(x_0^+) \Rightarrow \exists \delta>0,\forall x\in (x_0-\delta,x_0),\forall y\in (x_0,x_0+\delta),f(x)<f(y)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -329,13 +329,13 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to x_0^-} f(x)<\lim_{x \to x_0^+} f(x) \\
 \text{let } \epsilon=\dfrac{f(x_0^+)-f(x_0^-)}{3} ,\exists \delta=\min(\delta_1,\delta_2) \\ s.t.\\ 
 \forall x\in (x_0-\delta,x_0), \vert f(x)-f(x_0^-) \vert <\epsilon, \\
 \forall y\in (x_0,x_0+\delta), \vert f(y)-f(x_0^+) \vert <\epsilon \\
 \therefore f(x)<f(x_0^-)+\epsilon<f(x_0^+)-\epsilon<f(y)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -345,10 +345,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f \text{ is periodic function} ,\lim_{x \to \infty} f(x)=0 \\
 \Rightarrow f(x)=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -356,7 +356,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } T \text{ is a period of } f \\
 \forall x_0,\epsilon,
 \exists X>x_0 \ s.t.\ 
@@ -365,7 +365,7 @@ x>X \Rightarrow f(x)<\epsilon \\
 \Rightarrow  f(x_0)=f(x_0+nT)<\epsilon \\
 \Rightarrow \lim_{x \to x_0} f(x)=0 \\
 \Rightarrow f(x)=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -375,14 +375,14 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 f(x),x\in(0,1) \\
 x\to 0^+ \Rightarrow f(x)=o(1) \\
 f(x)-f(\dfrac{x}{2} )=o(x)
-\end{array} \right\}
+\end{cases}
 \Rightarrow x\to 0^+ ,f(x)=o(x)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -390,7 +390,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall \epsilon, \\
 \text{let }\epsilon_1=\dfrac{\epsilon}{8}\\
 \exists \delta \ s.t.\ 
@@ -407,7 +407,7 @@ x<\delta \Rightarrow
 = 2\epsilon_1x \\
 < \epsilon x \\ 
 \Rightarrow x\to 0^+ \Rightarrow  f(x)=o(x) 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -417,13 +417,13 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 a,b>1,f(x) \text{ is bounded in } N^*(0) \\
 f(ax)=bf(x)
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow \lim_{x \to 0} f(x)=f(0)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -431,7 +431,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(ax)=bf(x) \\
 \Leftrightarrow f(\dfrac{x}{a} )=\dfrac{f(x)}{b} \\
 a,b>1,f(x) \text{ is bounded in } N^*(0)  \\
@@ -443,7 +443,7 @@ a,b>1,f(x) \text{ is bounded in } N^*(0)  \\
 \Rightarrow \lim_{x \to _0}  f(x)=0 \\
 f(a0)=bf(0) \Rightarrow f(0)=0 \\
 \therefore \lim_{x \to 0} f(x)=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -457,9 +457,9 @@ $$
 solve a,b such that
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\lim_{n \to \infty} \dfrac{x^{2n-1}+ax^2+bx}{x^{2n}+1} \text{ is continuous} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -467,7 +467,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 x>1 \Rightarrow f(x)=\dfrac{1}{x}   \\
 \Rightarrow \lim_{x \to 1^+} f(x)=1 \\
 x\in (-1,1) \Rightarrow f(x)=ax^2+bx  \\
@@ -483,7 +483,7 @@ a=0 \\
 b=1
 \end{cases}
 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -493,12 +493,12 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\begin{cases}
 x^a\sin\dfrac{1}{x} ,x>0 \\
 e^x+b,x\le 0
 \end{cases}
-\end{array}
+\end{gathered}
 $$
 
 survey continuouity of $f(0)$
@@ -508,7 +508,7 @@ survey continuouity of $f(0)$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(0)=b+1 \\
 \lim_{x \to 0^-} f(x)=b+1 \\
 \text{if } a> 0,\lim_{x \to 0^+} f(x)=x^a\sin\dfrac{1}{x} \in(-x^a,x^a) \\
@@ -517,7 +517,7 @@ f(0)=b+1 \\
 \\
 \therefore a>0,b=-1: f(x) \text{ is continuous at } x=0 \\
 \text{else } f(x) \text{ is discontinuous at } x=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -527,9 +527,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 0} \dfrac{(1+x)(1+2x)(1+3x)-1}{x} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -537,12 +537,12 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (1+x)(1+2x)(1+3x)-1=6x+o(x) \\
 \Rightarrow \lim_{x \to 0} \dfrac{(1+x)(1+2x)(1+3x)-1}{x}  \\
 =\lim_{x \to 0} \dfrac{6x+o(x)}{x}  \\
 =6
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -552,9 +552,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 1} \dfrac{\sqrt[ m ]{ x } -1}{\sqrt[ n ]{ x } -1} ,m,n\in N^*
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -562,11 +562,11 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \sqrt[n]{ 1+(x-1) } -1 \\
 =\dfrac{x-1}{n} +o(x-1) \\
 \Rightarrow \lim_{x \to 1} \dfrac{\sqrt[ m ]{ x } -1}{\sqrt[ n ]{ x } -1} =\dfrac{\frac{x-1}{m}+o(x-1)}{\frac{x-1}{n}+o(x-1)} =\dfrac{n}{m} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -578,9 +578,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 1} \dfrac{(1-\sqrt x)(1-\sqrt[ 3 ]{ x } )\ldots (1-\sqrt[n]{ x } )}{(1-x)^{n-1}},n\in N_{+} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -588,17 +588,17 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 1-\sqrt[k]{ x }=1-\sqrt[k]{ 1+(x-1) }=-\dfrac{x-1}{k}+o(x-1)  
-\end{array}
+\end{gathered}
 $$
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 1} \dfrac{\prod _{i = 2} ^{n} (1-\sqrt[ i ]{ x } ) }{(1-x)^{n-1}} \\
 =\lim_{x \to 1} \dfrac{\prod _{i = 2} ^{n} \dfrac{1-x}{i}  }{(1-x)^{n-1}} \\
 =\dfrac{1}{n!} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -608,9 +608,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to \frac{\pi}{4} } (\tan x)^{\tan 2x}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -618,13 +618,13 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to \frac{\pi}{4} } (\tan x)^{\tan 2x}= \\
 \lim_{x \to \frac{\pi}{4} } \exp (\tan 2x\ln (\tan x)) \\
 =\lim_{x \to \frac{\pi}{4} } \exp (2\dfrac{\tan x}{1-\tan^2 x} (\tan x-1)) \\
 =\lim_{x \to \frac{\pi}{4} } \exp -\dfrac{2\tan x}{1+\tan x}  \\
 =\dfrac{1}{e} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -636,9 +636,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 0} (2e^{\frac{x}{1+x}}-1)^{\frac{1+x^2}x}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -646,13 +646,13 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 0} (2e^{\frac{x}{1+x}}-1)^{\frac{1+x^2}x} \\
 =\lim_{x \to 0} \exp \dfrac{1+x^2}{x} \ln(2e^{\frac{x}{1+x}}-1) \\
 =\lim_{x \to 0} \exp 2\dfrac{1+x^2}{x} (e^{\frac{x}{1+x}}-1) \\
 =\lim_{x \to 0} \exp 2\dfrac{1+x^2}{x} \dfrac{x}{1+x} \\
 =e^2
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -664,9 +664,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \vert x \vert <1,\lim_{n \to \infty} {\left( 1+\dfrac{\sum _{i = 1} ^{n}  x^i}{n}  \right)} ^n
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -674,7 +674,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \sum _{i = 1} ^{n}  x^i=\dfrac{x^{n+1}-x}{x-1}  \\
 \lim_{n \to \infty} {\left( 1+\dfrac{\sum _{i = 1} ^{n}  x^i}{n}  \right)} ^n \\
 = \lim_{n \to \infty} {\left( 1+\dfrac{x^{n+1}-x}{n(x-1)}  \right)} ^n \\
@@ -682,7 +682,7 @@ $$
 =\exp \lim_{n \to \infty} n \dfrac{x^{n+1}-x}{n(x-1)}  \\
 =\exp \dfrac{-x}{x-1}  \\
 =e^{\frac{x}{1-x} }
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -694,9 +694,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f\in C(0,+\infty),f(x^2)=f(x) \Rightarrow \exists c,f(x)=c
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -704,7 +704,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall x_0,\text{let } a_n=x_0^{\frac{1}{2^{n-1}}} \\
 f(a_n)=f(\sqrt{a_{n-1}})=f(a_{n-1}),f(a_1)=f(x_0) \\
 \Rightarrow f(a_n)=f(x_0) \\
@@ -714,7 +714,7 @@ f(1)=\lim_{x \to 1} f(x)=\lim_{n \to \infty} f(a_n) \\
 =\lim_{n \to \infty} f(x_0)=f(x_0) \\
 \Rightarrow \forall x_0,f(x_0)=f(1) \\
 \Rightarrow f \text{ is constant function} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -726,10 +726,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x+y)=f(x)+f(y),f(x) \text{ is continuous at } x=0 \\
 \Rightarrow f\in C(R)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -737,7 +737,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(0+0)=f(0)+f(0)\Rightarrow f(0)=0 \\
 f(x) \text{ is continuous at } x=0 \\
 \Rightarrow \forall \epsilon_0,\exists \delta_0,\vert x \vert<\delta_0 \Rightarrow \vert f(x)-f(0) \vert <\epsilon_0 \\
@@ -750,7 +750,7 @@ f(x) \text{ is continuous at } x=0 \\
 \therefore \forall x_0, \lim_{x \to x_0} f(x)=f(x_0) \\
 \Rightarrow f\in C(R)
 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -762,10 +762,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f:[0,+\infty) \Rightarrow R,f(2x)=f(x)\cos(x),f(x) \text{ is continuous at } x=0 \\
 \Rightarrow f(x)=f(0)\dfrac{\sin(x)}{x} ,x\in [0,+\infty)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -773,7 +773,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall x_0, \\
 \text{let } a_n=\dfrac{x_0}{2^{n-1}},x_0=a_1 \\
 f(a_n)=f(a_{n+1})\cos(a_{n+1}) \\
@@ -784,7 +784,7 @@ f(a_n)=f(a_{n+1})\cos(a_{n+1}) \\
 f(x_0)=(\lim_{n \to \infty} f(a_n))\dfrac{\sin(x_0)}{\lim_{n \to \infty} 2^{n-1}\sin\frac{x_0}{2^{n-1}}}  \\
 =f(0)\dfrac{\sin(x_0)}{x_0} \\
 \therefore f(x)=f(0)\dfrac{\sin(x)}{x}  
-\end{array}
+\end{gathered}
 $$
 
 </div>

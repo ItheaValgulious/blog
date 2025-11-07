@@ -17,10 +17,10 @@ date: 2025-10-20 21:21:51
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \sum _{i = 0} ^{n}  \dfrac{a_i}{n+1-i}=0 \\
 \Rightarrow \exists x_0\in(0,1),\sum _{i = 0} ^{n}  a_ix_0^{n-i}=0 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -28,13 +28,13 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } f(x)=\sum _{i = 0} ^{n}  a_ix^{n-i} \\
 \text{let } F(x)=\sum _{i = 0} ^{n}  \dfrac{a_ix^{n-i+1}}{n-i+1}  \\
 F(0)=0,F(1)=\sum _{i = 0} ^{n}  \dfrac{a_i}{n+1-i} =0 \\
 \stackrel{\text{ Rolle's Theorem }}{\Longrightarrow} \exists \xi \in (0,1),f(\xi)=F'(\xi)=0 \\
 \Rightarrow x_0=\xi
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -46,17 +46,17 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 f(x)\in C[a,b] \\
 \forall x\in (a,b),\exists f'(x) \\
 f(a)=f(b)=0
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow \begin{cases}
 a>0 \Rightarrow \exists \xi\in(a,b),f'(\xi)=\dfrac{f(\xi)}{\xi}  \\
 \forall \lambda,\exists \xi,f'(\xi)=\lambda f(\xi)
 \end{cases}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -66,19 +66,19 @@ $$
 (1)
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } F(x)=\dfrac{f(x)}{x}  \\
 F(a)=F(b)=0 \\
 \stackrel{\text{ Rolle's Theorem }}{\Longrightarrow}\exists \xi\in (a,b),F'(\xi)=0 \\
 \Rightarrow F'(\xi)=\dfrac{f'(\xi)\xi-f(\xi)}{\xi^2} =0 \\
 \Rightarrow f'(\xi)=\dfrac{f(\xi)}{\xi} 
-\end{array}
+\end{gathered}
 $$
 
 (2)
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } F(x)=e^{-\lambda x}f(x) \\
 F(a)=F(b)=0
 \Rightarrow
@@ -86,7 +86,7 @@ F(a)=F(b)=0
 \Rightarrow x=\xi,
 F'(x)=e^{-\lambda x}(f'(x)-\lambda f(x))=0 \\
 \Rightarrow f'(x)=\lambda f(x)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -98,13 +98,13 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 \forall x\in [0,1],\exists f'''(x) \\
 f(0)=f(1)=0 \\
 F(x)=x^2f(x)
-\end{array} \right\}\Rightarrow \exists \xi\in (0,1),F'''(\xi)=0
-\end{array}
+\end{cases}\Rightarrow \exists \xi\in (0,1),F'''(\xi)=0
+\end{gathered}
 $$
 
 </div>
@@ -112,7 +112,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 F'(x)=2xf(x)+x^2f'(x) \\
 F''(x)=2f(x)+4xf'(x)+x^2f''(x) \\
 F(0)=0,F(1)=0 \\
@@ -121,7 +121,7 @@ F'(0)=0,F'(x_1)=0 \\
 \stackrel{\text{ Rolle's Theorem }}{\Longrightarrow}\exists x_2\in (0,x_1),F''(x_2)=0 \\
 F''(0)=0,F''(x_2)=0 \\
 \stackrel{\text{ Rolle's Theorem }}{\Longrightarrow}\exists \xi \in (0,x_2) \subset (0,1),F'''(\xi)=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -133,13 +133,13 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 \forall x\in (0,a),\exists f'(x) \\
 f(0^+)=+\infty
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow f'(x) \text{ has no lower bound on the right-hand neibourhood of } 0 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -147,7 +147,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 0^+} f(x)=+\infty \\
 \exists \{ a_n \},a_n\in (0,1),a_n<a_{n-1},\lim_{n \to \infty} a_n=0,\lim_{n \to \infty} f(a_n)=+\infty \\
 \forall M>0,i,\exists k>i \ s.t.\ 
@@ -155,7 +155,7 @@ f(a_k)>f(a_i)+M \\
 \Rightarrow \exists \xi \in (a_k,a_i),f'(\xi)=\dfrac{f(a_k)-f(a_i)}{a_k-a_i} <-M \\
 \\
 \text{Q.E.D} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -167,14 +167,14 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 f \in C[a,b] \\
 \forall x\in(a,b),\exists f'(x) \\
 f \text{ is not constant or linear function}  \\
-\end{array} \right\}  \\
+\end{cases}  \\
 \Rightarrow \exists \xi \in (a,b),\vert f'(\xi) \vert >{\left \vert \dfrac{f(b)-f(a)}{b-a}  \right \vert} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -184,7 +184,7 @@ $$
 不妨设$f(b)>f(a)$
 
 $$
-\begin{array}{l} \\
+\begin{gathered} \\
 \text{let } k=\dfrac{f(b)-f(a)}{b-a}=
 \exist x_0,f(x_0)\ne (x_0-a)k+f(a) \\
 \dfrac{f(b)-f(a)}{b-a}=\dfrac{f(b)-f(x_0)+f(x_0)-f(a)}{b-x_0+x_0-a}  \text{ is bewteen } \\
@@ -193,7 +193,7 @@ $$
 f(x)\stackrel{\text{ Lagrange Mean Value Theorem }}{\Longrightarrow} \\
 \exists x_1,f'(x_1)=\dfrac{f(x_0)-a}{x_0-a}  \\
 \exists x_2,f'(x_2)=\dfrac{f(b)-f(x_0)}{b-x_0}  \\
-\end{array}
+\end{gathered}
 $$
 
 则  $\vert k \vert$在$f'(x_1),f'(x_2)$之间,取绝对值大的一个即可.
@@ -207,14 +207,14 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 \forall x\in [a,+\infty),\exists f'(x) \\
 f(a)=0 \\
 x \ge a \Rightarrow  \vert f'(x) \vert \le \vert f(x) \vert 
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow \forall x\in [a,+\infty),f(x)=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -224,13 +224,13 @@ $$
 不妨设$a=0$
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } F(x)=e^{-2x}f^2(x)\ge 0 \\
 F'(x)=2e^{-2x}f(x)(f'(x)-f(x))\le 0 \\
 \forall x>a=0,F(x)\le F(a) \\
 \because F(x)\ge 0 \\
 \Rightarrow F(x)=0,f(x)=0
-\end{array}
+\end{gathered}
 $$
 
 Solution2:
@@ -246,15 +246,15 @@ Solution2:
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 f\in C[a,b] \\
 \forall x\in(a,b),\exists f''(x) \\
 f(a)=f(b)=0 \\
 f'_+(a)>0
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow \exists \xi \in (a,b),f''(\xi)<0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -262,13 +262,13 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(a)=f(b)=0 \\
 \stackrel{\text{ Rolle's Theorem }}{\Longrightarrow}\exists x_1\in(a,b),f'(x_1)=0 \\
 \exists f''(x) \Rightarrow f'(x) \in C(a,b) \\
 f'_+(a)>0 \Rightarrow \exists x_2 \in (a,a+\delta),f'(x_2)>0 \\
 \exists \xi \in (x_2,x_1) \subset (a,b),f''(\xi)=\dfrac{f'(x_1)-f'(x_2)}{x_1-x_2} <0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -280,10 +280,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall x \in (0,+\infty),\exists f'(x) \\
 \lim_{x \to +\infty} f'(x)=+\infty
-\end{array} \\
+\end{gathered} \\
 \Rightarrow f(x) \text{ is not uniformly continuous in } (0,+\infty)
 $$
 
@@ -292,7 +292,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to +\infty} f'(x)=+\infty \\
 \epsilon=1 \\
 \forall \delta \\
@@ -300,7 +300,7 @@ $$
 \forall x>M,\vert f(x+\delta)-f(x) \vert = \vert \delta f'(\xi) \vert >2>\epsilon \\
 \\
 \text{Q.E.D}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -312,14 +312,14 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 \lim_{x \to x_0^+} f(x)=f(x_0) \\
 \forall x \in (x_0,x_0+\delta_0),\exists f'(x) \\
 \exists f'(x_0^+)
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow f'_+(x_0)=f'(x_0^+)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -327,12 +327,12 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \stackrel{\text{ Lagrange Mean Value Theorem }}{\Longrightarrow} \\
 \dfrac{f(x_0+h)-f(x_0)}{h}=f'(\xi),\xi \in (x_0,x_0+h) \\ \\
 f'_+(x_0)=
 \lim_{h \to 0^+} \dfrac{f(x_0+h)-f(x_0)}{h}=\lim_{\xi \to x_0^+} f'(\xi) =f'(x_0^+)\\
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -344,11 +344,11 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 x\in [0,1],p\ge 2 \\
 \Rightarrow 
 (\dfrac{1+x}{2} )^p+(\dfrac{1-x}{2} )^p\le \dfrac{1}{2} (1+x^p)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -356,7 +356,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\dfrac{1}{2} (1+x^p)-(\dfrac{1+x}{2} )^p-(\dfrac{1-x}{2} )^p \\
 f'(x)=\dfrac{p}{2}(x^{p-1} -(\dfrac{1+x}{2} )^{p-1}+ (\dfrac{1-x}{2} )^{p-1}) \\
 p-1>1 \Rightarrow a^{p-1}+b^{p-1}<(a+b)^{p-1} \\
@@ -366,7 +366,7 @@ p-1>1 \Rightarrow a^{p-1}+b^{p-1}<(a+b)^{p-1} \\
 f(x)>f(1)=0 \\
 \\
 \text{Q.E.D} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -378,9 +378,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 x\in (0,\dfrac{\pi}{2} )\Rightarrow 2x<\sin x+\tan x
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -388,7 +388,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\sin x+\tan x-2x \\
 f'(x)=\cos x+\dfrac{1}{\cos^2 x}-2 \\
 f''(x)=\sin x(\dfrac{2}{\cos^3 x} -1)>0 \\
@@ -398,7 +398,7 @@ f''(x)=\sin x(\dfrac{2}{\cos^3 x} -1)>0 \\
 f(x)>f(0)=0 \\
 \\
 \text{Q.E.D}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -410,14 +410,14 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 \forall x\in[0,+\infty),\exists f'(x) \\
 f(0)=0 \\
 f'(x) \text{ is strictly increasing}
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow \dfrac{f(x)}{x} \text{ is strictly increasing} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -425,14 +425,14 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=f(x)-f(0)=(x-0)f'(\xi) \\
 \xi\in(0,x) \Rightarrow f'(\xi)<f'(x) \\
 \Rightarrow f(x)<xf'(x) \\
 \Rightarrow (\dfrac{f(x)}{x} )'=\dfrac{xf'(x)-f(x)}{x^2} >0 \\
 \\
 \text{Q.E.D}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -446,9 +446,9 @@ $$
 calculate the extremum point for
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\arcsin \dfrac{2x}{1+x^2} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -456,7 +456,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f'(x)=\dfrac{1}{\sqrt{1-(\dfrac{2x}{1+x^2} )^2}}\dfrac{2(1+x^2)-4x^2}{(1+x^2)^2}  \\
 =\dfrac{2-2x^2}{\sqrt{x^4+2x^2+1-4x^2}(1+x^2)}  \\
 =\dfrac{2(1-x^2)}{\vert 1-x^2 \vert (1+x^2)}   \\
@@ -464,7 +464,7 @@ x<-1 \Rightarrow f'(x)<0,f(x) \text{ is decreasing}  \\
 x\in (-1,1) \Rightarrow f'(x)>0,f(x) \text{ is increasing}  \\
 x>1 \Rightarrow f'(x)<0,f(x) \text{ is decreasing}  \\
 \Rightarrow \text{minimum:} (-1,-\dfrac{\pi}{2} ),\text{maximum:} (1,\dfrac{\pi}{2} )
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -478,9 +478,9 @@ $$
 calculate the extremum point for
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=(\sum _{i = 0} ^{n} \dfrac{x^i}{i!} )e^{-x},n\ge 1
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -488,14 +488,14 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f'(x)=e^{-x}(\sum _{i = 0} ^{n-1}  \dfrac{x^i}{i!} -\sum _{i = 1} ^{n}  \dfrac{x^i}{i!} ) \\
 =-\dfrac{x^ne^{-x}}{n!}  \\
 n \bmod 2=0:f'(x)\le 0(f'(x)=0 \Leftrightarrow x=0) \\
 \Rightarrow f(x) \text{ has no extremum} \\
 n \bmod 2=1:\operatorname{sign}f'(x)=-\operatorname{sign}x \\
 \Rightarrow f(x) \text{ has maximum } (0,1)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -507,14 +507,14 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 xf''(x)+3x(f'(x))^2=1-e^{-x} \\
 \Rightarrow \begin{cases}
 x=c(c\ne 0) \text{ is an extremum } \Rightarrow f(c)\text{ is a minimum}  \\
 x=c(c=0) \text{ is an extremum } \Rightarrow f(c) \text{ is a minimum} 
 \end{cases}
 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -524,7 +524,7 @@ $$
 (1)
 
 $$
-\begin{array}{l}
+\begin{gathered}
 x=c \text{ is an extremum}  \\
 \Rightarrow f'(c)=0 \\
 cf''(c)+3c(f'(c))^2=1-e^{-c} \\
@@ -532,18 +532,18 @@ cf''(c)+3c(f'(c))^2=1-e^{-c} \\
 \Rightarrow \lim_{x \to c} \dfrac{f'(x)-f'(c)}{x-c}=\dfrac{f'(x)}{x-c} >0 \\
 \Rightarrow \operatorname{sign}  f'(x)=\operatorname{sign} (x-c) \\
 \Rightarrow f(x) \text{ is a minimum} 
-\end{array}
+\end{gathered}
 $$
 
 (2)
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f'(0)=0 \\
 \lim_{x \to 0} (f''(x)+3f'^2(x))=\lim_{x \to 0} \dfrac{1-e^{-x}}{x} =1 \\
 \Rightarrow f''(0)=1 \\
 \stackrel{\text{ same as (1)'s proof }}{\Longrightarrow} f(x) \text{ is a minimum} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -555,10 +555,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 p>1,x\in [0,1] \Rightarrow  \\
 \dfrac{1}{2^{p-1}} \le x^p+(1-x)^p\le 1
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -566,14 +566,14 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 x\le 1 \Rightarrow x^p\le x \Rightarrow x^p+(1-x)^p\le x+1-x=1 \\
 f(x)=x^p+(1-x)^p \\
 f'(x)=px^{p-1}-p(1-x)^{p-1}=p(x^{p-1}-(1-x)^{p-1}) \\
 x>\dfrac{1}{2} \Rightarrow x>1-x \Rightarrow f'(x)>0 \\
 x<\dfrac{1}{2} \Rightarrow f'(x)<0 \\
 \Rightarrow (\dfrac{1}{2},f(\dfrac{1}{2})) \text{ is a minimum} ,f(x)\ge f(\dfrac{1}{2})=2^{-(p-1)}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -585,14 +585,14 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 f,g:R\to R \\
 f''(x)+f'(x)g(x)-f(x)=0 \\
 f(a)=f(b)=0(a<b)
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow \forall x\in [a,b],f(x)=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -602,7 +602,7 @@ $$
 此证明已弃用.但应该是正确的.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f''(x)+f'(x)g(x)-f(x)=0 \\
 \Leftrightarrow \forall x,f'(x)\ne 0 \lor f''(x)=f(x) \\
 \forall x_0\in (a,b),f'(x_0)=0 \\
@@ -642,7 +642,7 @@ b_{i+1}-a_{i+1}\le \dfrac{1}{2} (b_i-a_i) \\
 \Rightarrow \forall x\in (a,b),f(x)=0 
 \\
 \text{Q.E.D}
-\end{array}
+\end{gathered}
 $$
 
 上面那个太麻烦了

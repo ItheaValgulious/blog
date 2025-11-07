@@ -24,14 +24,14 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
     -{\left \vert a \right \vert} {\left \vert b \right \vert} \le ab\le {\left \vert a \right \vert} {\left \vert b \right \vert}
  \Rightarrow  \\
 {\left \vert a \right \vert} ^2-2 {\left \vert a \right \vert} {\left \vert b \right \vert}  + {\left \vert a+b \right \vert} ^2
 \le a^2+2ab+b^2 
 \le {\left \vert a \right \vert} ^2+2 {\left \vert a \right \vert} {\left \vert b \right \vert}  + {\left \vert a+b \right \vert} ^2 \Rightarrow  \\
 ({\left \vert a \right \vert} -{\left \vert b \right \vert} )^2\le (a+b)^2\le ({\left \vert a \right \vert} +{\left \vert b \right \vert} )^2
-\end{array}
+\end{gathered}
 $$
 
 
@@ -44,10 +44,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 0<x_i \in R  \Rightarrow 
 \dfrac{\sum_i x_i}{n} \ge \sqrt[n]{\prod_i x_i} \ge \dfrac{n}{\sum_i \dfrac{1}{x_i} }  
-\end{array}
+\end{gathered}
 $$
 
 
@@ -68,11 +68,11 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 lim_{n\to \infty} a_n = A  \Leftrightarrow  \\
 \forall \epsilon >0 \exists N \ s.t.\ 
 n\ge N  \Rightarrow \left \vert a_n-A \right \vert < \epsilon
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -94,24 +94,24 @@ $\lim_{n \to \infty} n^{\frac{1}{n} }=1$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \vert n^{\frac{1}{n} }-1 \vert  \\
 = \vert (\sqrt n \sqrt n)^{\frac{1}{n} } -1 \vert \\
 ={\left \vert (\prod_i 1 \cdot \sqrt n\sqrt n)^{\frac{1}{n} } -1 \right \vert}  \\
 \le {\left \vert \dfrac{n-2+2\sqrt n}{n}  -1 \right \vert}  \\
 \le \dfrac{2}{\sqrt n} 
-\end{array}
+\end{gathered}
 $$
 
 Or try this:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 {\left \vert n^{\frac{1}{n} }-1 \right \vert} =n^{\frac{1}{n} }-1<\epsilon \\
 \Leftarrow  n^{\frac{1}{n}}<(\epsilon+1) \\
 \Leftarrow  n<(1+\epsilon)^n \\
 \Leftarrow n<1+\epsilon n+\frac{\epsilon^2n(n-1)}{2} 
-\end{array}
+\end{gathered}
 $$
 
 Solve the equation, it's a parabola with upward opening so the solution exists.
@@ -127,9 +127,9 @@ Solve the equation, it's a parabola with upward opening so the solution exists.
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \sqrt n \in Z \cup Q^C
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -168,7 +168,7 @@ Find a bijection of $[0,1]$ and $(0,1)$
 
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x):(0,1) \to [0,1]=\begin{cases}
 0,x=\dfrac{1}{2} \\
 1,x=\dfrac{1}{3} \\
@@ -176,7 +176,7 @@ f(x):(0,1) \to [0,1]=\begin{cases}
 x, \text{otherwise}
 \end{cases}
 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -188,10 +188,10 @@ Wow!
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall A,B, {\ } \exists f(x):A\to B \\ s.t.\\ 
 \text{f is injective or surjective}
-\end{array}
+\end{gathered}
 $$
 
 (承认选择公理)
@@ -231,13 +231,13 @@ $\operatorname{Card}(A)\le \operatorname{Card}(B),\operatorname{Card}(B)\le \ope
 或者表达为
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 \forall A,B,g:A\to B,f:B\to A\\
 f,g \text{ is injective} 
-\end{array} \right\}
+\end{cases}
  \Rightarrow \exists h:A \leftrightarrow B \text{ is bijective} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -282,11 +282,11 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 {\left \vert a_nb_n-AB \right \vert} = \\
 {\left \vert a_nb_n-a_nB+a_nB-AB \right \vert} \\ \\
 \le {\left \vert a_N \right \vert} {\left \vert b_n-B \right \vert} +{\left \vert B \right \vert} {\left \vert a_n-A \right \vert} \\
-\end{array}
+\end{gathered}
 $$
 
 显然$a_n,b_n$有界,令$M$是他俩共同的界,取$\epsilon'=\dfrac{1}{114514M+114514}$用到$a_n,b_n$上即证.
@@ -307,11 +307,11 @@ $$
 
 证取倒数:
 $$
-\begin{array}{l}
+\begin{gathered}
 {\left \vert \frac{1}{b_n}-\frac{1}{B}  \right \vert}<\epsilon \\
 \Leftarrow {\left \vert B-b_n \right \vert} <\epsilon b_nB \\
 \Leftarrow \epsilon'=\frac{\epsilon}{BM+114514} (\vert M\vert>b_n)
-\end{array}
+\end{gathered}
 \\
 \text{Q.E.D}
 $$
@@ -346,24 +346,24 @@ $$
 $b=0$时,考虑$a有界M$.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{n \to \infty} \dfrac{\sum_i a_ib_{n-i}}{n} \\
 \le \lim_{n \to \infty} M\dfrac{b_{n-i}}{n} =0
-\end{array}
+\end{gathered}
 $$
 
 $b\ne 0$,$b'_i=b_i-b$,有
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{n \to \infty} \frac{\sum_i a_ib_{n-i}}{n} =\lim_{n \to \infty} \frac{\sum_i a_ib'_{n-i}}{n} +\frac{\sum_i a_i}{n} b=0+ab
-\end{array}
+\end{gathered}
 $$
 
 $$
-\begin{array}{l}
+\begin{gathered}
 
-\end{array}
+\end{gathered}
 $$
 
 #### Solution 2
@@ -373,7 +373,7 @@ $$
 考虑影响值的肯定是中间的项,所以直接拆,取$\epsilon$,对$a,b$可以得到$N_1$
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{n \to \infty} \dfrac{\sum_i a_ib_{n-i}}{n}= \\
 =\lim_{n \to \infty} \dfrac{\sum _{i = 1} ^{N_1} a_ib_{n-i}+\sum _{i = 1} ^{N_1} b_ia_{n-i}+\sum _{i = N_1+1} ^{n-N_1-1} a_ib_{n-i} }{n}  \\
 =\lim_{n \to \infty} \dfrac{\sum _{i = 1} ^{N_1} a_ib_{n-i}}{n} \\
@@ -382,7 +382,7 @@ $$
 \in (\lim_{n \to \infty} \dfrac{n-2N_1-1}{n} (a-\epsilon)(b-\epsilon) \\
 ,\lim_{n \to \infty} \dfrac{n-2N_1-1}{n} (a+\epsilon)(b+\epsilon)) \\
 = ((a-\epsilon)(b-\epsilon),(a+\epsilon)(b+\epsilon))
-\end{array}
+\end{gathered}
 $$
 
 后面显然.`
@@ -396,9 +396,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 a>1,k\in N^*,\lim_{n \to \infty} \frac{n^k}{a^n} =0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -414,14 +414,14 @@ $a^n=(1+b)^n$展开会出现$n$的任意次方,然后显然.
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 y_n \uparrow,\lim_{n \to \infty} y_n=\infty \\
 \lim_{n \to \infty} \dfrac{x_n-x_{n-1}}{y_n-y_{n-1}} =a\in[-\infty,+\infty]
-\end{array} \right\}
+\end{cases}
  \\
 \Rightarrow \lim_{n \to \infty} \dfrac{x_n}{y_n} =a
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -435,12 +435,12 @@ $$
 然后可以证$a=0$时,你取$\epsilon_1$得$N_1$,变成 $\dfrac{\Delta x_n}{\Delta y_n} <\epsilon$.于是
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dfrac{x_n}{y_n}  \\
 =\dfrac{x_{N_1}+\sum _{i = N_1+1} ^{n}  \Delta x_i}{y_{N_1}+\sum _{i = N_1+1} ^{n}  \Delta y_i}  \\
 \le \dfrac{x_{N_1}+\epsilon\sum _{i = N_1+1} ^{n}  \Delta y_i}{y_{N_1}+\sum _{i = N_1+1} ^{n}  \Delta y_i}  \\
 \le \dfrac{x_{N_1}+\epsilon\sum _{i = N_1+1} ^{n}  \Delta y_i}{\sum _{i = N_1+1} ^{n}  \Delta y_i}
-\end{array}
+\end{gathered}
 $$
 
 因为你  $Y=\sum _{i = N_1+1} ^{n} \Delta y_i \to +\infty$,所以一定可以有$\epsilon Y>x_{N_1}$.就能证$<2\epsilon$,你再取一下$\epsilon$就得证了.
@@ -456,14 +456,14 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 a_i>a_{i-1} \\
 a_i<M
-\end{array} \right\}
+\end{cases}
 \Rightarrow 
 \lim_{n \to \infty} a_i \text{ exists} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -484,9 +484,9 @@ a_i\in (M',M_0]$,则$\forall n>i,\vert a_n-M\vert<\epsilon$.
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 a_n:=\lim_{n \to \infty} (1+\dfrac{1}{n} )^n = b_n:=\lim_{n \to \infty} \sum _{i = 0} ^{n}  \dfrac{1}{i!}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -496,21 +496,21 @@ $$
 右边那个单调有界都是好证的.证相等:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 a_n=(1+\dfrac{1}{n} )^n=\sum _{i = 0} ^{n}  \dfrac{1}{n^i} \binom{n}{i} \\
 =\sum _{i = 0} ^{n}  \dfrac{1}{i!} \prod_{j=0}^{i-1} (1-\dfrac{j}{n} )
 <b_n \\
-\end{array}
+\end{gathered}
 $$
 
 又有
 
 $$
-\begin{array}{l}
+\begin{gathered}
 k<n \Rightarrow 
 a_n=\sum _{i = 0} ^{n}  \dfrac{1}{i!} \prod_{j=0}^{i-1} (1-\dfrac{j}{n} )
 >\sum _{i = 0} ^{k}  \dfrac{1}{i!} \prod_{j=0}^{i-1} (1-\dfrac{j}{n} )
-\end{array}
+\end{gathered}
 $$
 于是先令$k\to \infty$得到$a_n>b_k$,则$a$逐项大于$b$的一个子列,最后得证.
 
@@ -525,10 +525,10 @@ $$
 [think] 
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{a \to \infty} \lim_{b \to \infty} f(a,b) = X
 \Rightarrow \lim_{n \to \infty} f(n,n) = X
-\end{array}
+\end{gathered}
 $$
 
 用定义是显然的.且如果极限都存在(要$f(a,n)$和$f(n,b)$极限存在)的话你还可以看出左式两取极限交换(都是右式)
@@ -538,9 +538,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 0<e-\sum _{i = 0} ^{n}  \dfrac{1}{i!} < \dfrac{1}{n\cdot n!} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -548,22 +548,22 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 b_n:=\sum _{i = 0} ^{n}  \dfrac{1}{i!} \\
 X=b_{n+m}-b_n=\sum _{i = n+1} ^{n+m}  \dfrac{1}{i!}  \\
 <\dfrac{1}{(n+1)!} \sum _{i = 0} ^{m-1}  \dfrac{1}{(n+1)^i}<\dfrac{1}{n!\cdot n}   \\ \Rightarrow e-b_n= \lim_{m \to \infty} X<\dfrac{1}{n!\cdot n} 
-\end{array}
+\end{gathered}
 $$
 
 然后说为什么取极限小于号还是小于号呢?
 
 $$
-\begin{array}{l}
+\begin{gathered}
 X=b_{n+m}-b_n<b_{n+m+k}-b_n<\dfrac{1}{n!\cdot n} 
 \\
 \stackrel{\lim_{k \to \infty} }{\Longrightarrow}
 e-b_n<\dfrac{1}{n!\cdot n} 
-\end{array}
+\end{gathered}
 $$
 
 [think] 对单调数列让一个独立变量趋近无穷说明严格不等号.
@@ -585,11 +585,11 @@ $e\not \in Q$
 假设$e=\dfrac{p}{q}$
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dfrac{p}{q} -b_n<\dfrac{1}{n\cdot n!} 
 \stackrel{n=q}{\Longrightarrow}
 p(q-1)!-b_q q!<\dfrac{1}{q} 
-\end{array}
+\end{gathered}
 $$
 
 左边是不为$0$的整数(为$0$与$b$增矛盾),右边是分数
@@ -601,10 +601,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (1+\dfrac{1}{n} )^n \uparrow \\
 (1+\dfrac{1}{n} )^{n+1} \downarrow
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -612,9 +612,9 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (1+\dfrac{1}{n} )^n\cdot 1< (\dfrac{n\cdot (1+\dfrac{1}{n}+1 )}{n+1} )^{n+1}=(1+\dfrac{1}{n+1} )^{n+1}
-\end{array}
+\end{gathered}
 $$
 
 第二个取倒数同理.
@@ -648,11 +648,11 @@ $$
 Cauchy Convergance Theorem
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall \epsilon, \exists N \\ s.t.\\ 
 \forall n,m>N, \vert a_n-a_m\vert<\epsilon
 \Leftrightarrow \lim_{n \to \infty} a_n \text{ exists} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -694,10 +694,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 S=\{ (x,y) \vert x<y \},T\subset S , \cup_{I\in T} I \supset [a,b] \\
 \Rightarrow \exists A \in T,\cup_{I\in A} I \supset [a,b],\vert A\vert\in N(\text{not infinity} ) 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -721,11 +721,11 @@ $$
 <div class='dbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to x_0} f(x) = A  \\
 \Leftrightarrow \forall \epsilon, \exists \delta,\\ s.t.\\ 
 \forall x, \vert x-x_0 \vert \in (0,\delta), \vert f(x)-A \vert <\epsilon
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -735,11 +735,11 @@ $$
 Heine Theorem
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to x_0} f(x)=A \\
 \Leftrightarrow \forall \{ x_n \} ,\lim_{n \to \infty} x_n  = x_0 \\
 \lim_{n \to \infty} f(x_n) = A
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -766,9 +766,9 @@ $$
 柯西收敛
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to x_0} \text{ exists} \Leftrightarrow \forall \epsilon, \exists \delta,\forall x_1,x_2 \in N^*(x_0,\delta),\vert f(x_1)-f(x_2) \vert < \epsilon
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -786,14 +786,14 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 \lim_{x \to x_0} f(x) = A \\
 \lim_{t \to t_0} g(t) = x_0 \\
 \exists \eta>0, t\in N(t_0,\eta) \Rightarrow g(t)\ne 0
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow \lim_{t \to t_0} f(g(t)) = A
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -807,9 +807,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{ \to _0} \dfrac{\sin(x)}{x} = 1
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -819,14 +819,14 @@ $$
 通过$\sin(x)\le x \le \tan(x)$同时除以$x$得到:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \begin{cases}
 \dfrac{\sin(x)}{x} \le 1 \\
 \dfrac{\sin(x)}{x} \ge \cos(x)
 \end{cases} \\
 \stackrel{\text{Squeeze Theorem}}{\Longrightarrow} \\
 \lim_{x \to 0} \dfrac{\sin(x)}{x} =1
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -834,14 +834,14 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 R(x)=\begin{cases}
 1,x=0 \\
 \dfrac{1}{q}, x=\dfrac{p}{q}  \\
 0,x\notin Q
 \end{cases}
 \Rightarrow \lim_{x \to x_0} R(x)=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -879,9 +879,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall x>0,n\in N^*,\exists! y {\ } s.t. {\ } y^n=x
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -916,9 +916,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 r=\dfrac{m}{n} =\dfrac{p}{q} \Rightarrow a=(x^m)^{\frac1n}=(x^p)^{\frac1q}=b
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -926,11 +926,11 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 a^{nq}=x^{nrq},b^{nq}=x^{nrq} \\
 \Rightarrow  a^{nq}=b^{nq} \\
 \Rightarrow a=b
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -944,10 +944,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 a^xa^y=a^{x+y} \\
 (a^x)^y=a^{xy}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -986,10 +986,10 @@ todo
 连续函数的反函数是连续的.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x) \text{ is continuous} ,f\circ f^{-1}=x \\
 \Rightarrow f^{-1} \text{is continuous} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -999,7 +999,7 @@ $$
 #### Sol1
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{y \to y_0} f^{-1}(y)=f^{-1}(y_0)=x_0 \\
 \Leftrightarrow \forall \{ y_n \} ,\lim_{n \to \infty} y_n=y_0 \ s.t.\ 
 \lim_{n \to \infty} f^{-1}(y)=x_0 \\
@@ -1011,7 +1011,7 @@ x_{i_n} \text{is convergent} ,\lim_{n \to \infty} x_{i_n}=X\ne x_0 \\
 \because \lim_{n \to \infty} f(x_n) =\lim_{n \to \infty} y_n=y_0 \\
 \therefore f(X)=y_0=f(x_0),X\ne x_0  \\
 \text{Contradiction to injection} 
-\end{array}
+\end{gathered}
 $$
 
 [think] 这里为什么数列这么好用呢?感觉因为函数极限的定义不是对称的,但  $\lim_{n \to \infty} x_n=x_0,\lim_{n \to \infty} y_n=y_0$ 这个关系是对称的.
@@ -1046,22 +1046,22 @@ $x^a=e^{a\ln x}$,于是只要证:
 指数:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to x_0} e^x = e^{x_0} \lim_{x \to x_0}  e^{x-x_0} = e^{x_0} \lim{x\to 0} e^x \\
 \Rightarrow e^x \text{ is continuous} \Leftrightarrow e^x \text{ is continuous at } 0 \\
 \lim_{x \to 0} e^x=0  \\
 \Leftrightarrow \forall x_n,\lim_{n \to \infty} e^{x_n} = 0,\lim_{n \to \infty} x_n=0 \\
 \lim_{n \to \infty} n^{\frac{1}{n}}=1 \Rightarrow  \lim_{n \to \infty} e^{x_n}=0
-\end{array}
+\end{gathered}
 $$
 
 三角:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{\Delta x \to 0} \sin(x+\Delta x)=\sin x\cos \Delta x+\cos x\sin \Delta x \\
 =\sin x
-\end{array}
+\end{gathered}
 $$
 
 反函数用前面的方法.
@@ -1120,10 +1120,10 @@ $\text{Q.E.D}$
 <div class='dbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{when } 
 \lim_{x \to x_0} f(x)=f(x_0) \text{ not satisfied} 
-\end{array}
+\end{gathered}
 $$
 
 分类:
@@ -1146,7 +1146,7 @@ $$
 那么先证明左右极限存在:若$x_0$是间断点,这里和介值定理的证明是一样的:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } S=\{ f(x)\vert x\in[a,x_0) \}  \\
 A=\sup S \\
 \text{if }A<f(x_0),\text{by limit's local sign-preserving property}  \\
@@ -1161,7 +1161,7 @@ f(x_1)<f(x_0) \stackrel{\lim_{x_1 \to x_0} }{\Longrightarrow}A\le f(x_0) \\
 f(x_2)>f(x_0)\stackrel{\lim_{x_2\to x_0}}{\Longrightarrow}B\ge f(x_0) \\
 \therefore A=B \Rightarrow A=f(x_0)=B \\
 \therefore A\ne B
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1179,9 +1179,9 @@ $$
 对$x_1,x_2$两个跳跃间断点:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x_1^-)<f(x_1^+)\le f(x_2^-)<f(x_2^+)
-\end{array}
+\end{gathered}
 $$
 
 于是每个间断点$x_i$对应一个$(f(x_i^-),f(x_i^+))$,且不同$x_i$对应区间互不相交.
@@ -1199,9 +1199,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall f(x), x\in (a,b),f \text{ has at most countable point of discontinuity of the first kind} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1234,10 +1234,10 @@ $$
 <div class='bbox'>
 
 $$
-\begin{array}{l} \\
+\begin{gathered} \\
 f\to 1,g\to \infty \\
 \lim f^g=e^{\lim g\ln f}=e^{\lim g(f-1)}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1245,9 +1245,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to \infty} (1+\dfrac{1}{x} )^x=e
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1255,7 +1255,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to +\infty} (1+\dfrac{1}{x} )^x\in 
 ((1+\dfrac{1}{[x]+1} )^{[x]},(1+\dfrac{1}{[x]} )^{[x]+1}) \\
 \text{let } e_n=\lim_{n \to \infty} (1+\dfrac{1}{n} )^n \\
@@ -1272,7 +1272,7 @@ $$
 =\lim_{x \to +\infty}(\dfrac{x}{x-1}  )^x \\
 =\lim_{x \to +\infty}(1+\dfrac{1}{x-1}  )^x \\
 =e
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1282,9 +1282,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 1} \dfrac{m}{x^m-1} -\dfrac{n}{x^n-1} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1292,14 +1292,14 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to 1} \dfrac{m}{x^m-1} -\dfrac{n}{x^n-1} 
 =\lim_{x \to 1} \dfrac{m(x^n-1)-n(x^m-1)}{(x^m-1)(x^n-1)}  \\
 =\lim_{x \to 1} \dfrac{m(n(x-1)+\dfrac{n(n-1)}{2} (x-1)^2)}{mn(x-1)^2}  \\
 -\dfrac{-n(m(x-1)+\dfrac{m(m-1)}{2} (x-1)^2)}{mn(x-1)^2} \\
 =\lim_{x \to 1} \dfrac{mn^2-nm^2}{2nm}  \\
 =\dfrac{n-m}{2} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1311,12 +1311,12 @@ $$
 Uniform Continuity
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x) \text{ is uniformly continuous in } [a,b]  \\
 \Leftrightarrow 
 \forall \epsilon>0,\exists \delta,\forall x_1,x_2\in [a,b], \\
 \vert x_1-x_2 \vert <\delta \Rightarrow \vert f(x_1)-f(x_2) \vert <\epsilon
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1326,10 +1326,10 @@ $$
 Not Uniform Continuity
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \exists \epsilon,s_n,t_n, \\
 \vert s_n-t_n \vert < \dfrac{1}{n} ,\vert f(s_n)-f(t_n) \vert >\epsilon
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1339,9 +1339,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\sqrt{ x } \text{ is uniformly continuous in } [0,+\infty) 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1349,10 +1349,10 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 x_1>x_2 \Rightarrow  \\
 \vert \sqrt{x_1}-\sqrt{ x_2 } \vert  ={\left \vert \dfrac{x_1-x_2}{\sqrt{ x_1 } +\sqrt{ x_2 } }  \right \vert} < {\left \vert \dfrac{x_1-x_2}{\sqrt{x_1-x_2}}  \right \vert} =\sqrt{ x_1-x_2 }<\sqrt \delta 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1360,9 +1360,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\dfrac{1}{x} \text{ is not uniformly continuous in } (0,1)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1370,10 +1370,10 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dfrac{1}{n} -\dfrac{1}{2n} <\dfrac{1}{n} , \\
 y(\dfrac{1}{n} )-y(\dfrac{1}{2n} )=n\ge 1
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1391,19 +1391,19 @@ $$
 反证
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \exists \epsilon,s_n,t_n,\vert s_n-t_n \vert <\dfrac{1}{n} ,\vert f(s_n)-f(t_n) \vert >\epsilon \\
-\end{array}
+\end{gathered}
 $$
 
 取$s_n,t_n$的收敛子列$s'_n,t'_n$:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let} x_0=\lim_{n \to \infty} s'_n=\lim_{n \to \infty} s_n=\lim_{n \to \infty} t'_n=\lim_{n \to \infty} t_n \in [a,b] \\
 \lim_{n \to \infty} f(s'_n)=\lim_{n \to \infty} f(t_n')=f(x_0) \\
 \Rightarrow \lim_{n \to \infty} \vert f(s'_n)-f(t'_n) \vert =0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1467,10 +1467,10 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 T:= \{ t \vert t>0,f(x+t)=f(x) \}  \\
 t_0:= \inf T \\
-\end{array}
+\end{gathered}
 $$
 
 若$t_0\ne 0$,取 $\{ t_n \},t_i\in T,\lim_{n \to \infty} t_n=t_0$,则 $f(x)=f(x+t_n)=\lim_{n \to \infty} f(x+t_n)=f(x+\lim_{n \to \infty} t_n)=f(x+t_0)$
@@ -1492,10 +1492,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 u(x) \text{ is continuous},\lim_{u \to u_0} G(u)=A  \\
 \Rightarrow \lim_{x \to x_0} G(u(x)) = A
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1503,10 +1503,10 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall \epsilon,\exists \delta, u(x)\in N^*(u(x),\delta_1) \Rightarrow G(u(x))\in N(A,\epsilon) \\
 \Rightarrow \forall \epsilon,\exists \delta,x\in N^*(x_0,\delta) \Rightarrow u(x)\in N(u(x),\delta_1) \\
-\end{array}
+\end{gathered}
 $$
 
 这里有一点小小的问题,不过你发现只要定义$G_1(u(x_0))=G_1(u_0)=A$即可避免,因为条件里这个点反正是任意的.
@@ -1520,9 +1520,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (f(g(x)))'=f'(g(x))g'(x)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1536,7 +1536,7 @@ $$
 #### My Sol
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=f(x_0)+f'(x_0)(x-x_0)+o(x-x_0) \\
 g(x)=g(x_0)+g'(x_0)(x-x_0)+o(x-x_0) \\
 \lim_{x \to x_0} \dfrac{f(g(x))-f(g(x_0))}{x-x_0}  \\
@@ -1544,17 +1544,17 @@ g(x)=g(x_0)+g'(x_0)(x-x_0)+o(x-x_0) \\
 =\lim_{x \to x_0} \dfrac{f'(g(x_0))(g'(x_0)(x-x_0)+o(x-x_0))}{x-x_0} \\
 +\dfrac{o(g'(x_0)(x-x_0)+o(x-x_0))}{x-x_0}  \\
 =\lim_{x \to x_0} f'(g(x_0))g'(x_0)+\dfrac{o(g'(x_0)(x-x_0)+o(x-x_0))}{x-x_0}      \\
-\end{array}
+\end{gathered}
 $$
 
 而满足$o(x-x_0)\le\epsilon(x-x_0)$的$x$是$x_0$的一个邻域,于是
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to x_0} \dfrac{o(g'(x_0)(x-x_0)+o(x-x_0))}{x-x_0}  \\
 \le \lim_{x \to x_0} \dfrac{ o((g'(x_0)+\epsilon)(x-x_0))}{x-x_0}  \\
 =0
-\end{array}
+\end{gathered}
 $$
 
 得证.
@@ -1568,9 +1568,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (uv)^{(n)}=\sum _{i = 1} ^{0} \binom{n}{i} u^{(i)}v^{(n-i)}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1586,9 +1586,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \arctan^{(50)}(0)=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1598,13 +1598,13 @@ $$
 #### Sol 1
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \arctan'(x)=\dfrac{1}{1+x^2}  \\
 \Rightarrow (1+x^2)\arctan'(x)=1 \\
 0=((1+x^2)\arctan'(x))^{(n)} \\
 =(1+x^2)\arctan^{(n+1)}(x)+\binom{n}{1}2x\arctan^{(n)}(x)+\binom{n}{2}2\arctan^{(n-1)}(x) \\
 \stackrel{ x=0 }{\Longrightarrow} \arctan^{(n+1)}(0)+n(n-1) \arctan^{(n-1)}(0)=0
-\end{array}
+\end{gathered}
 $$
 
 于是有递推,得到是$0$.
@@ -1618,10 +1618,10 @@ $$
 对
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dfrac{1}{1+x^2}=\dfrac{1}{(x-i)(x+i)} =\dfrac{1}{(1-ix)(1+ix) }  \\
 =\dfrac{1}{2i} (\dfrac{1}{x-i}-\dfrac{1}{x+i})
-\end{array}
+\end{gathered}
 $$
 
 于是可以对两个分数分别求导.复变函数从实数轴上逼近的导数当然就是原函数的导数.
@@ -1661,11 +1661,11 @@ $f(x_0)$是极值点,$f'(x_0)$存在则$f'(x_0)=0$
 不妨设是极大值.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f'(x_0^-)=\lim_{x \to x_0^-} \dfrac{f(x)-f(x_0)}{x-x_0} \ge 0 \\
 f'(x_0^+)=\lim_{x \to x_0} \dfrac{f(x)-f(x_0)}{x-x_0} \le 0 \\
 \Rightarrow f'(x_0)=f'(x_0^-)=f'(x_0^+)=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1675,7 +1675,7 @@ $$
 Rolle's Theorem
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \begin{cases}
 f(x) \in C[a,b] \\
 x\in (a,b) \Rightarrow  \exists f'(x) \\
@@ -1683,7 +1683,7 @@ f(a)=f(b)
 \end{cases} \\
 \Rightarrow 
 \exists \xi\in (a,b),f'(\xi)=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1699,13 +1699,13 @@ $$
 Lagrange Mean Value Theorem
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \begin{cases}
 f(x) \in C[a,b] \\
 x\in (a,b) \Rightarrow  \exists f'(x)
 \end{cases} \\
 \Rightarrow \exists \xi\in (a,b),f'(\xi)=\dfrac{f(a)-f(b)}{a-b}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1713,9 +1713,9 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } F(x)=f(x)-\dfrac{f(a)-f(b)}{(a-b)} (x-a)
-\end{array}
+\end{gathered}
 $$
 
 然后直接 Rolle's Theorem.
@@ -1727,7 +1727,7 @@ $$
 Cauchy Mean Value Theorem
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \begin{cases}
 f(x) \in C[a,b] \\
 x\in (a,b) \Rightarrow  \exists f'(x) \\
@@ -1736,7 +1736,7 @@ x\in (a,b) \Rightarrow  \exists g'(x) \\
 \forall (a',b'),x\in (a',b'),g'(x)\not \equiv 0
 \end{cases} \\
 \exists \xi \in (a,b),\dfrac{f'(\xi)}{g'(\xi)} =\dfrac{f(a)-f(b)}{g(a)-g(b)} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1744,9 +1744,9 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } F(x)=f(x)-\dfrac{f(a)-f(b)}{g(a)-g(b)} (g(x)-g(a))
-\end{array}
+\end{gathered}
 $$
 
 Rolle's Theorem 启动
@@ -1760,9 +1760,9 @@ Rolle's Theorem 启动
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to +\infty} f'(x)=0 \Rightarrow \lim_{x \to +\infty} \dfrac{f(x)}{x} =0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1770,12 +1770,12 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 x>A>X \\
 \Rightarrow 
 \vert f(x)-f(A) \vert <\epsilon_1(x-A) \\
 \Rightarrow \vert \dfrac{f(x)}{x} \vert  <\dfrac{f(A)-\epsilon_1A}{x} +\epsilon_1
-\end{array}
+\end{gathered}
 $$
 
 其实从这就能看出来了,同时取极限则 $\lim_{x \to +\infty} \vert \dfrac{f(x)}{x} \vert$小于任意正数,于是是$0$.
@@ -1787,9 +1787,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall a>b,\exists \xi \in (a,b),ae^b-be^a=(1-\xi)e^\xi(a-b)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1797,9 +1797,9 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \Rightarrow \dfrac{\dfrac{e^b}{b} -\dfrac{e^a}{a} }{\dfrac{1}{b} -\dfrac{1}{a}} =(1-\xi)e^{\xi}
-\end{array}
+\end{gathered}
 $$
 
 然后柯西中值结束.
@@ -1810,11 +1810,11 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \exists \xi\in C[a,b],\exists f''(x) \\
 \Rightarrow \exists \xi \in (a,b), \\
 f(b)+f(a)-2f(\dfrac{a+b}{2})=(\dfrac{b-a}{2})^2f''(\xi)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1822,12 +1822,12 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } F(x)=f(x)-f(x-\dfrac{b-a}{2}) \\
 F(b)-F(\dfrac{a+b}{2} )=f(b)+f(a)-2f(\dfrac{a+b}{2}) \\
 =\dfrac{b-a}{2} (F'(\xi_1)-F'(\xi_1-\dfrac{b-a}{2} )) \\
 =(\dfrac{b-a}{2} )^2F''(\xi)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1837,11 +1837,11 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)\in C[1,+\infty),\exists f'(x) \\
 e^{-x}f'(x) \text{ is bounded in } [1,+\infty) \\
 \Rightarrow e^{-x}f(x) \text{ is bounded in }  (1,+\infty)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1849,13 +1849,13 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dfrac{f(x_1)-f(x_2)}{e^{x_1}-e^{x_2}} =\dfrac{f'(\xi)}{e^{\xi}}\le M  \\
 e^{-x}f(x)\le \dfrac{f(x)-f(1)}{e^x} +f(1) \\
 \le \dfrac{f(x)-f(1)}{e^x-e^1} +f(1) \\
 = \dfrac{f'(\xi)}{e^\xi}+f(1) \\
 \le M+f(1) 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1863,11 +1863,11 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)\in C(0,1],\exists f'(x) \\
 \exists\lim_{x \to 0^+} \sqrt xf'(x) \\
 \Rightarrow f(x) \in UC(0,1] 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1885,14 +1885,14 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall x\in [a,b], \\
 \exists f'(x) \\
 \Rightarrow \begin{cases}
 \forall v\in [f'(a),f'(b)],\exists \xi,f'(\xi)=v \\
 f'(x) \text{ has no discontinuity of first kind} 
 \end{cases}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1925,11 +1925,11 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)\in C[a,b],\forall x\in [a,b]-D,f'(x)>0 \\
 D \text{ is finite set}  \\
 \Rightarrow f(x) \text{ is strictly increasing at }[a,b] 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1939,11 +1939,11 @@ $$
 $\forall x_1<x_2$,把$D$在$(x_1,x_2)$中的点排序得到$d_1\ldots d_k$,令$d_0=x_1,d_k=x_2$,显然有
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x_2)-f(x_1)=\sum _{i = 1} ^{k+1}  f(d_i)-f(d_{i-1}) \\
 =\sum _{i = 1} ^{k+1}  f'(\xi_i) (d_i-d_{i-1}) \\
 >0
-\end{array}
+\end{gathered}
 $$
 
 每个区间都有闭区间连续开区间可导推导闭区间上中值定理.
@@ -1953,10 +1953,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 p,q>1,a,b>0,\dfrac{1}{p} + \dfrac{1}{q} =1 \\
 \Rightarrow \dfrac{a^p}{p} +\dfrac{b^q}{q} \ge ab
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1968,9 +1968,9 @@ $$
 然后下节课讲了凸函数之后还有个做法说的是
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\ln x,x_1=a^p,x_2=a^q
-\end{array}
+\end{gathered}
 $$
 
 用琴声.
@@ -1980,9 +1980,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 ab\le \epsilon a\ln a+\dfrac{\epsilon}{e} e^{\frac{b}{\epsilon} }
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -1995,14 +1995,14 @@ $$
 求偏导,代入结束.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(b)=\epsilon a\ln a+\dfrac{\epsilon}{e} e^{\frac{b}{\epsilon}}-ab \\
 f'(b)=e^{\frac{b}{\epsilon} -1}-a \\
 a_0=e^{\frac{b_0}{\epsilon}-1} \\
 f(b_0)=(b-\epsilon)e^{\frac{b}{\epsilon}-1 }+\dfrac{\epsilon}{e} e^{\frac{b}{\epsilon}}-be^{\frac{b}{\epsilon}-1} \\
 =\dfrac{\epsilon}{e} e^{\frac{b}{\epsilon}}-\epsilon e^{\frac{b}{e}-1 } \\
 =0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2020,11 +2020,11 @@ $$
 Convex/Concave function
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x) \text{ is convex function} \Leftrightarrow  \\
 \forall x,y\in D,\lambda \in (0,1) \\
 f(\lambda x+(1-\lambda)y)\le \lambda f(x)+(1-\lambda)f(y)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2032,11 +2032,11 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x) \text{ is convex} \Leftrightarrow  \\
 \forall \{ x_n \} ,\{ \lambda_n \},
 f(\dfrac{\sum _{i = 1} ^{n}  \lambda_ix_i}{\sum _{i = 1} ^{n}  \lambda_i} )\le \dfrac{\sum _{i = 1} ^{n}  \lambda_if(x_i)}{\sum _{i = 1} ^{n}  \lambda_i} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2050,10 +2050,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x) \text{ is convex} ,\exists f'(x) \\
 \Leftrightarrow f'(x) \text{ is increasing} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2063,20 +2063,20 @@ $$
 显然凸性等价于
 
 $$
-\begin{array}{l}
+\begin{gathered}
 x_1<x_2<x_3 \Rightarrow  \\
 \dfrac{f(x_1)-f(x_2)}{x_1-x_2} <\dfrac{f(x_2)-f(x_3)}{x_2-x_3} 
-\end{array}
+\end{gathered}
 $$
 
 这个定理反向用拉格朗日中值是显然的.对正向:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall x_1<x_2 \\
 f'(x_1)=\lim_{x \to x_1^-} \dfrac{f(x_1)-f(x)}{x_1-x} \le \dfrac{f(x_1)-f(x_2)}{x_1-x_2} \\
 \text{same for} f'(x_2)\ge \dfrac{f(x_1)-f(x_2)}{x_1-x_2}  
-\end{array}
+\end{gathered}
 $$
 
 于是结束.
@@ -2086,9 +2086,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \sum _{i = 1} ^{n}  a_ib_i\le (\sum _{i = 1} ^{n}  a^p )^{\frac1p}(\sum _{i = 1} ^{n}  b^q)^{\frac1q}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2096,10 +2096,10 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (\dfrac{a_i}{(\sum _{i = 1} ^{n}  a^p)^{\frac{1}{p}}} )(\dfrac{b_i}{(\sum _{i = 1} ^{n}  b^q)^{\frac{1}{q}}} )
 \le \dfrac{1}{p} \dfrac{a_i^p}{\sum _{i = 1} ^{n}  a^p}+\dfrac{1}{q} \dfrac{b_i^q}{\sum _{i = 1} ^{n}  b^q} 
-\end{array}
+\end{gathered}
 $$
 
 同时累加即证.
@@ -2113,19 +2113,19 @@ $$
 对这样的常微分方程:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 y'=\Phi(x,y) \\
 y(a)=0
-\end{array}
+\end{gathered}
 $$
 
 若
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \exists A,\forall y_1,y_2, \\
 \vert \Phi(x,y_1)-\Phi(x,y_2) \vert \le A \vert y_1-y_2 \vert 
-\end{array}
+\end{gathered}
 $$
 
 则微分方程的解唯一.
@@ -2137,9 +2137,9 @@ $$
 假设存在两个解$y_1(x),y_2(x)$,令$g(x)=y_2(x)-y_1(x)$有
 
 $$
-\begin{array}{l}
+\begin{gathered}
 g'(x)=\vert \Phi(x,y_2)-\Phi(x,y_1) \vert \le A \vert y_2-y_1 \vert =A g(x)
-\end{array}
+\end{gathered}
 $$
 
 于是由作业[Math Analysis Homework Week5-Class1-T6](/post/math-analysis-week5-homework/)易证$g(x)=0$
@@ -2151,12 +2151,12 @@ $$
 压缩映射
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x) \text{ is contraction } \Leftrightarrow  \\
 
 \exists A\in (0,1),\forall x_1,x_2 \\
 \vert f(x_1)-f(x_2) \vert \le A\vert x_1-x_2 \vert 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2164,11 +2164,11 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x) \text{ is contraction},\{ x_n \} \ s.t.\ 
 x_{n+1}=f(x_n)  \\
 \Rightarrow  \lim_{n \to \infty} x_n=X\land X \text{ is the unique fixed point of }f 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2178,13 +2178,13 @@ $$
 考虑任意数列 $\{ x_n \}$,则
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall n<m \\
 \vert x_m-x_n \vert =\sum _{i = n} ^{m-1} \vert x_{i+1}-x_i  \vert  \\
 \le \sum _{i = 1} ^{m-1} \vert x_1-x_2 \vert A^{n+i-1} \\
 \le \vert x_1-x_2 \vert \dfrac{A^n}{1-A}  \\
 \to 0
-\end{array}
+\end{gathered}
 $$
 
 于是$x_n$收敛,且同时取极限能看出极限是不动点.
@@ -2196,17 +2196,17 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 f\in C^2[a,b],f'(x)\ge \delta>0,f''(x)\in (0,M),f(X)=0 \\
 x_1\in (X,b),x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)} 
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow \begin{cases}
 \lim_{n \to \infty} x_n=X \\
 \exists N,n>N \Rightarrow (x_n-X)\sim (x_{n-1}-X)^2
 \end{cases}
 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2230,13 +2230,13 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 f,g \in C^1(a,b),g'(x)\ne 0 \\
 \lim_{x \to a^+} f(x)=\lim_{x \to a^+} g(x)=0
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow \lim_{x \to a^+} \dfrac{f(x)}{g(x)} =\lim_{x \to a^+} \dfrac{f'(x)}{g'(x)}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2248,11 +2248,11 @@ $$
 然后你可以对一个$[a,\dfrac{a+b}{2}]$用柯西中值,有
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \exists \xi\in (a,x) \\ s.t.\\ 
 \dfrac{f(x)-f(a)}{g(x)-g(a)}=\dfrac{f'(\xi)}{g'(\xi)}   \\
 \therefore \lim_{x \to a^+} \dfrac{f(x)}{g(x)} =\lim_{x \to a^+} \dfrac{f'(\xi)}{g'(\xi)}=\lim_{\xi \to a^+} \dfrac{f'(\xi)}{g'(\xi)} 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2262,11 +2262,11 @@ $$
 你还可以对无穷区间用:对$(a,+\infty)$,考虑复合 $\dfrac1x$
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to +\infty} \dfrac{f(x)}{g(x)}=\lim_{x \to 0} \dfrac{f(\dfrac{1}{x} )}{g(\dfrac{1}{x})} \\
 =\lim_{x \to 0} \dfrac{-\dfrac{1}{x^2} f'(\dfrac{1}{x})}{-\dfrac{1}{x^2} g'(\dfrac{1}{x} )} \\
 =\lim_{x \to +\infty} \dfrac{f'(x)}{g'(x)}   
-\end{array}
+\end{gathered}
 $$
 
 
@@ -2274,10 +2274,10 @@ $$
 
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dfrac{g}{f} =\dfrac{\dfrac{1}{f} }{\dfrac{1}{g} } = \dfrac{\dfrac{f'}{f^2} }{\dfrac{g'}{g^2} }=\dfrac{g^2f'}{f^2g'}   \\
 \Rightarrow \dfrac{f'}{g'} =\dfrac{f}{g} 
-\end{array}
+\end{gathered}
 $$
 
 于是也可以对 $\dfrac{\infty}{\infty}$用?但问题在于这样要求预先知道 $\dfrac{f}{g}$极限存在,所以考虑下面的结论.
@@ -2286,13 +2286,13 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 f,g \in C^1(a,b),g'(x)\ne 0 \\
 \lim_{x \to a^+} g(x)=+\infty
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow \lim_{x \to a^+} \dfrac{f(x)}{g(x)} =\lim_{x \to a^+} \dfrac{f'(x)}{g'(x)}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2304,13 +2304,13 @@ Solution 1
 你先转化成对于任意趋近到$a^+$且满足$g(x)$单调的序列$x$,然后有
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{n \to \infty} \dfrac{f(x_n)}{g(x_n)} \\
 \xlongequal{Stolz}\lim_{n \to \infty} \dfrac{f(x_n)-f(x_{n-1})}{g(x_n)-g(x_{n-1})} \\
 =\lim_{n \to \infty} \dfrac{(x_n-x_{n-1})f'(\xi_n)}{(x_n-x_{n-1})g'(\xi_n)},\xi_n\in (x_{n-1},x_n) \\
 =\lim_{n \to \infty} \dfrac{f'(\xi_n)}{g'(\xi_n)}  \\
 =\lim_{x \to a^+} \dfrac{f'(x)}{g'(x)} 
-\end{array}
+\end{gathered}
 $$
 
 但是海涅要求对任意的序列$x$怎么办呢?
@@ -2326,10 +2326,10 @@ Solution 2
 你有
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dfrac{f(x)-f(c)}{g(x)-g(c)} =\dfrac{f'(\xi)}{g'(\xi)}  \\
 \Rightarrow \dfrac{f(x)}{g(x)} =\dfrac{f'(\xi)}{g'(\xi)} -\dfrac{g(c)}{g(x)} (x-c)+\dfrac{f(c)}{g(x)} 
-\end{array}
+\end{gathered}
 $$
 
 然后第二项,第三项显然趋近于$0$.
@@ -2343,15 +2343,15 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
-\left. \begin{array}{ll}
+\begin{gathered}
+\begin{cases}
 f\in C^1(a,+\infty),\alpha>0 \\
 \lim_{x \to +\infty} (\alpha f(x)+xf'(x))=\beta \\
 
-\end{array} \right\} \\
+\end{cases} \\
 \Rightarrow \lim_{x \to +\infty} f(x)=\dfrac{\alpha}{\beta} 
 
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2359,12 +2359,12 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to +\infty}f(x) \\
 =\lim_{x \to +\infty}\dfrac{f(x)x^\alpha}{x^\alpha}   \\
 =\lim_{x \to +\infty}\dfrac{f(x)\alpha x^{\alpha-1}+f'(x)x^\alpha}{\alpha x^{\alpha-1}} \\
 =\dfrac{\alpha}{\beta} 
-\end{array}
+\end{gathered}
 $$
 
 如果你好奇如何注意到,那么考虑解微分方程用的那个积分因子,对$P(x)f(x)+f'(x)$应该使用$e^{\int P(x)dx}$
@@ -2378,9 +2378,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\sum _{i = 0} ^{n}  \dfrac{f^{(i)}(x_0)}{i!} (x-x_0)^i+o((x-x_0)^n)
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2390,9 +2390,9 @@ $$
 减过来变成
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dfrac{f(x)-\sum _{i = 0} ^{n}  \dfrac{f^{(i)}}{i!}(x-x_0)^i }{(x-x_0)^{n}} 
-\end{array}
+\end{gathered}
 $$
 
 然后洛$n-1$次.
@@ -2411,9 +2411,9 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \lim_{x \to x_0} \dfrac{f(x)-f(x_0)}{(x-x_0)^k} =\dfrac{f^{(k)}(x_0)}{k!} \ne 0
-\end{array}
+\end{gathered}
 $$
 
 于是邻域内 $\dfrac{f(x)-f(x_0)}{(x-x_0)^k}$和$f^{(k)}(x_0)$同号.
@@ -2426,15 +2426,15 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\sum _{i = 0} ^{n}  \dfrac{f^{(i)}}{i!} (x-x_0)^i + \dfrac{f^{(n+1)}(\xi)}{(n+1)!} (x-x_0)^{n+1}
-\end{array}
+\end{gathered}
 $$
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\sum _{i = 0} ^{n}  \dfrac{f^{(i)}}{i!} (x-x_0)^i + \dfrac{f^{(n+1)}(\xi)}{n!} (x-x_0)(x-\xi)^n
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2442,7 +2442,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \text{let } F(t,x)=\sum _{i = 0} ^{n}  \dfrac{f^{(i)}(t)}{i!} (x-t)^i \\
 \dfrac{\delta F}{\delta t}=f'(t)+\sum _{i = 1} ^{n}  \dfrac{f^{(i+1)}(t)}{i!} (x-t)^i-\dfrac{f^{(i)}(t)}{(i-1)!} (x-t)^{i-1} \\
 =\dfrac{f^{(n+1)(t)}}{n!} (x-t)^n \\
@@ -2454,7 +2454,7 @@ f(x)-T_n(x) \\
 =\dfrac{F(x,x)-F(x_0,x)}{(x-x_0)^n-(x_0-x_0)^n} \\
 =\dfrac{\dfrac{\delta F}{\delta x} (\xi)}{n(\xi-x_0)^{n-1}}  \\
 \Rightarrow f(x)-T_n(x)= \dfrac{f^{(n+1)}(\xi)}{n!} (x-x_0)(x-\xi)^n
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2462,10 +2462,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f\in C^2[0,1],\vert f(x) \vert \le 1,\vert f''(x) \vert \le 2 \\
 \Rightarrow \vert f'(x) \vert \le 3
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2473,9 +2473,9 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(a)=f(x)+f'(x)(a-x)+\dfrac{f''(\xi)(a-x)^2}{2} 
-\end{array}
+\end{gathered}
 $$
 
 带入$a=1$和$0$然后解方程,把范围带进去.
@@ -2487,7 +2487,7 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \begin{cases}
 f\in C^3[a,+\infty) \\
 \exists \lim_{x \to +\infty} f(x)=A,\lim_{x \to +\infty} f'''(x)=B \\
@@ -2495,7 +2495,7 @@ f\in C^3[a,+\infty) \\
 \end{cases}
 \Rightarrow  \\
 \lim_{x \to +\infty} f'(x)= \lim_{x \to +\infty} f''(x)=\lim_{x \to +\infty} f'''(x)=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -2505,9 +2505,9 @@ $$
 考虑展开
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x+d)=f(x)+f'(x)d+\dfrac{f''(x)d^2}{2} +\dfrac{f'''(x+\theta d)d^3}{6}
-\end{array}
+\end{gathered}
 $$
 
 然后随便取几个固定$d=1,-1,2$,让$x$到无穷,解方程就能解出来.
@@ -2517,5 +2517,170 @@ $$
 </div>
 
 [think] 当我们试图拿几个数的多项式表示函数,那函数相关条件自然都变成这几个数的多项式的方程.
+
+## Class 17
+
+### 不定积分
+
+<div class='dbox'>
+
+找反导数
+
+$$
+\begin{gathered}
+F(x)=\int f(x)dx \Leftrightarrow F'(x)=f(x)
+\end{gathered}
+$$
+
+</div>
+
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int \sec dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=\int \dfrac{\cos x}{\cos^2 x}dx \\
+=\int \dfrac{d\sin x}{(1+\sin x)(1-\sin x)}  \\
+=\int \dfrac{1}{2} (\dfrac{1}{1-\sin x} +\dfrac{1}{1+\sin x} d\sin x ) \\
+=\dfrac{1}{2} \ln \vert \dfrac{1+\sin x}{1-\sin x} \vert  +C \\
+=\ln \vert \sec x+\tan x \vert +C
+\end{gathered}
+$$
+
+</div>
+
+### 分部积分
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int udv=uv-\int vdu
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+求导的乘法法则,同时积分一下.
+
+</div>
+
+
+
+
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int (\dfrac{1}{x} -\dfrac{1}{x^2} )e^xdx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=\int \dfrac{e^x}{x} dx+\int d(\dfrac{1}{x} )e^x \\
+=\int \dfrac{e^x}{x} dx+\dfrac{e^x}{x} -\int \dfrac{e^x}{x}+C  \\
+=\dfrac{e^x}{x} +C
+\end{gathered}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int \sec^3 x dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\int \sec^3 xdx=\int \sec x d\tan x \\
+=\sec x\tan x-\int \tan^2 x\sec x \\
+=\sec x\tan x-\int \sec^3 xdx+\int \sec xdx \\
+\Rightarrow \int \sec^3 xdx=\dfrac{1}{2} (\sec x\tan x+\int \sec x) \\=\dfrac{1}{2} (\sec x\tan x+\ln (\sec x+\tan x))+C
+\end{gathered}
+$$
+
+</div>
+
+### 换元积分
+
+换就不好了......
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int \dfrac{3\sin x+\cos x}{\sin x+2\cos x} dx \\
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+3\sin x+\cos x=(\sin x+2\cos x)-(\cos x-2\sin x) \\
+\int \dfrac{3\sin x+\cos x}{\sin x+2\cos x} dx \\
+=x-\int \dfrac{d(\sin x+2\cos x)}{\sin x+2\cos x}  \\
+=x-\ln \vert \sin x+2\cos x \vert 
+\end{gathered}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int \dfrac{x\arctan x}{(1+x^2)^2} dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=\dfrac{1}{2} \int \dfrac{\arctan x}{(1+x^2)^2} d(x^2+1) \\
+=\dfrac{1}{2} \int \arctan x d(\dfrac{1}{1+x^2}) \\ 
+=\dfrac{\arctan x}{2(1+x^2)}-\dfrac{1}{2} \int \dfrac{dx}{(1+x^2)^2}   \\
+\text{let } x=\tan t \\
+=\dfrac{\arctan x}{2(1+x^2)}-\dfrac{1}{2} \int \dfrac{\sec^2 x}{\sec^4 x}dx \\
+=\dfrac{\arctan x}{2(1+x^2)}-\dfrac{1}{2} \int \dfrac{\sec^2 x}{\sec^4 x}dx \\
+=\dfrac{\arctan x}{2(1+x^2)}-\dfrac{1}{2} \dfrac{2-\sin2t}{4}
+\end{gathered}
+$$
+
+然后换成$x$就行了 懒得写了.
+
+</div>
+
+
 
 

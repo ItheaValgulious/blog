@@ -13,9 +13,9 @@ date: 2025-11-03 07:58:58
 ### right continuous at every point but not left continuous on a **point**
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\lbrack x \rbrack 
-\end{array}
+\end{gathered}
 $$
 
 ### right continuous at every point but not left continuous on a **dense point set**
@@ -23,9 +23,9 @@ $$
 考虑取一个包含全部有理数的序列$q_1,q_2\ldots$
 
 $$
-\begin{array}{l}
+\begin{gathered}
 f(x)=\sum _{i = 1} ^{+\infty} [q_i\le x]\dfrac{1}{2^i}  
-\end{array}
+\end{gathered}
 $$
 
 $2^{-i}$可以换成任意收敛级数.
@@ -35,9 +35,9 @@ $2^{-i}$可以换成任意收敛级数.
 ### right continuous at every point but not left continuous on a point on **every point**
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \huge \text{Not Exists!} 
-\end{array}
+\end{gathered}
 $$
 
 我们称一个点$x$被$\epsilon$否决当且仅当$\forall \delta,\exists y\in [x-\delta,x],\vert f(y)-f(x)\vert>\epsilon$,即左不连续.

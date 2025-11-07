@@ -90,11 +90,11 @@ We noticed $0<v^2=(\sum_{i\in A} c_i x_i) \cdot (\sum_{j\in B} c_jx_j)<0$, contr
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 F \text{ is inifinite Field} \\ 
 \forall U_1\ldots U_k,U_i \text{ is subspace of } V(F) \\
 V\ne \bigcup_{i=1}^k U_i
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -169,11 +169,11 @@ $A$做行变换+列变换消元易得.
 ## Ax=B有解
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \exists x,Ax=b \\
 \Leftrightarrow \operatorname{rank} A=\operatorname{rank} [A,b] \\
 \Leftrightarrow b\in \operatorname{range} A
-\end{array}
+\end{gathered}
 $$
 
 解唯一等价于$\operatorname{null} A=0$等价于$n=\operatorname{rank} A$
@@ -184,10 +184,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 A \text{ is a real matrix} , \\
 A^TAu=0 \Rightarrow Au=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -195,7 +195,7 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 A=\mathcal M( T )  \\
 T^*Tu=0 \\
 \Leftrightarrow \forall v,<v,T^*Tu>=0 \\
@@ -203,7 +203,7 @@ T^*Tu=0 \\
 \Leftrightarrow Tu\in (\operatorname{range} T)^\perp \\
 \because Tu\in \operatorname{range} T \\
 \therefore <Tu,Tu>=0,u=0
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -219,11 +219,11 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \operatorname{rank} A+B \le \operatorname{rank} A+\operatorname{rank} B \\
 \operatorname{rank} AB \le \min \operatorname{rank} A,\operatorname{rank} B \\
 A_{m\times n}B_{n\times s}=0 \Rightarrow \operatorname{rank} A+\operatorname{rank} B\le  n
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -242,9 +242,9 @@ Obviously
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \operatorname{rank} AB\ge \operatorname{rank} A_{m\times n}+\operatorname{rank} B_{n\times s}-n
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -256,7 +256,7 @@ $$
 矩阵分解:
 
 $$
-\begin{array}{l}
+\begin{gathered}
 A=P_1 \begin{bmatrix}
   I_{r_1},0 \\
   0,0
@@ -272,7 +272,7 @@ AB=P_1\begin{bmatrix}
   I_{r_2},0 \\
   0,0
 \end{bmatrix}Q_2
-\end{array}
+\end{gathered}
 $$
 
 显然$P_1,Q_2$不影响最终的秩直接扔了,而设$D=Q_1P_2=\begin{bmatrix}
@@ -287,12 +287,12 @@ $$
 考虑
 
 $$
-\begin{array}{l}
+\begin{gathered}
 C=\begin{bmatrix}
   I_n,0 \\
   0,AB
 \end{bmatrix}
-\end{array}
+\end{gathered}
 $$
 
 显然 $\operatorname{rank} AB+n=\operatorname{rank} C$
@@ -300,7 +300,7 @@ $$
 对它做行变换可以得到
 
 $$
-\begin{array}{l}
+\begin{gathered}
 C \to \begin{bmatrix}
   I_n,0 \\
   A,AB
@@ -309,7 +309,7 @@ C \to \begin{bmatrix}
   I_n,-B \\
   A,0
 \end{bmatrix}=D \\
-\end{array}
+\end{gathered}
 $$
 
 而观察这个$D$容易发现 $\operatorname{rank} D\ge \operatorname{rank} A+\operatorname{rank} B$,于是得证
@@ -321,9 +321,9 @@ $$
 考虑为什么 $\operatorname{range} B\ne \operatorname{range} AB$,是因为 $\operatorname{range} B$中的不同元素被合成了一个,而这个合成相当于把 差是 $\operatorname{null} A$中的元素的多个元素合成一个.所以有
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \dim (\operatorname{range} B)/(\operatorname{range} B\cap \operatorname{null} A)=\dim \operatorname{range} A
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -333,9 +333,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \operatorname{rank} AC+\operatorname{rank} CB\le \operatorname{rank} C+\operatorname{rank} ACB
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -345,19 +345,19 @@ $$
 这个结论可以直接由上一个的Sol3弄出来,考虑
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \begin{bmatrix} C,0 \\
 0,ACB \end{bmatrix}
-\end{array}
+\end{gathered}
 $$
 
 可以简单消元变成
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \begin{bmatrix} C,CB \\
 AC,0 \end{bmatrix} 
-\end{array}
+\end{gathered}
 $$
 
 于是直接得证.
@@ -369,10 +369,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 A^2=I \\
 \Rightarrow \operatorname{rank} (A-I)+\operatorname{rank} (A+I)=n
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -380,14 +380,14 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 (A-I)(A+I)=0  \\
 \Rightarrow \operatorname{rank} (A-I)+\operatorname{rank} A+I \le n \\
 (A+I) - (A-I)=2I  \\
 \Rightarrow \operatorname{rank} (A+I)+\operatorname{rank} (A-I)\ge n
 \\
 \text{Q.E.D}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -417,10 +417,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 M=\begin{bmatrix} A,C \\0,B \end{bmatrix}  \\
 \operatorname{rank}  M=\operatorname{rank}  A+\operatorname{rank}  B \Leftrightarrow \exists X,Y:AX+YB=C
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -432,19 +432,19 @@ $$
 考虑
 
 $$
-\begin{array}{l}
+\begin{gathered}
 A:U_1\to V_1,B:U_2\to V_2,C:U_2\to V_1 \\
 M:U\to V
-\end{array}
+\end{gathered}
 $$
 
 分解
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \operatorname{range} M=\operatorname{range} B\oplus W \\
 W=\{ [v,0] \vert [v,0]\in \operatorname{range} M \}  \\
-\end{array}
+\end{gathered}
 $$
 
 那么因为 $[v,0]\in \operatorname{range} M$,则必然是 $[v,0]=M[u_1,u_2]^T$,一定是$Bu_2=0,Au_1+Cu_2=v$.
@@ -470,10 +470,10 @@ $$
 向一个向量投影
 
 $$
-\begin{array}{l}
+\begin{gathered}
 a,b\in R^n \\
 \dfrac{<a,b>}{<a,a>} a = (\dfrac{a^Tba}{a^T a})= (\dfrac{a\cdot a^T}{a^T a}) b
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -483,9 +483,9 @@ $$
 向一个平面投影(平面是$C(A)$)
 
 $$
-\begin{array}{l}
+\begin{gathered}
 p=A(A^TA)^{-1}A^Tb
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -505,9 +505,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 A^TAx=A^Tb
-\end{array}
+\end{gathered}
 $$
 
 一定有解
@@ -517,11 +517,11 @@ $$
 <div class='pbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \operatorname{rank} (A^TA,A^Tb) \\
 =\operatorname{rank} (A^T(A,b))\le \operatorname{rank} A \\
 =\operatorname{rank} AA^T
-\end{array}
+\end{gathered}
 $$
 
 所以这个证明是依赖实数的.
@@ -533,9 +533,9 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 P^2=P,P^*=P \Rightarrow P \text{ is a projection}
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -547,10 +547,10 @@ $$
 只需证明  $\forall u,(Pu-u)\in (\operatorname{range} P)^\perp$.
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall v,<Pu-u,Pv>=<PPu-Pu,v>=<Pu-Pu,v>=<0,v> \\
 \Rightarrow Pu-u\in (\operatorname{range} P)^\perp
-\end{array}
+\end{gathered}
 $$
 
 得证!
@@ -562,10 +562,10 @@ $$
 <div class='cbox'>
 
 $$
-\begin{array}{l}
+\begin{gathered}
 \forall A,\exists Q \text{ is orthogonal matrix},R \text{ is upper triangle matrix} \\ s.t.\\ 
 A=QR
-\end{array}
+\end{gathered}
 $$
 
 </div>
@@ -573,6 +573,89 @@ $$
 <div class='pbox'>
 
 考虑$A$可以看成把标准基变成$a_1\ldots a_n$,那我们把$a_1\ldots a_n$这组基用Gram-Schmidt变成$b_1\ldots b_n$,问题就可以变成先把标准基变成$b$,再变成$a$,其中第一步是等距同构,第二步中我们知道$a_1\ldots a_i$和$b_1\ldots b_i$张成空间相同,所以第二步是上三角.
+
+</div>
+
+## determinance
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\det A\det B=\det AB
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+Sol1:分块矩阵.
+
+Sol2:都拆成初等变换矩阵再乘.
+
+Sol3:考虑定义函数 $\alpha(B)=\dfrac{\det BA}{\det A}$,容易验证它满足行列式三条公里,于是$\alpha(B)=\det B$
+
+</div>
+
+<div class='cbox'>
+
+Laplace Theorem
+
+$$
+\begin{gathered}
+\forall S\subset [1,n]\cap Z \\
+\det A=\sum _{T\subset [1,n]\cap Z,\vert T \vert =\vert S \vert } A(S,T)C(S,T)
+\end{gathered}
+$$
+
+其中$A(S,T)$表示子式,$C(S,T)$表示代数余子式
+
+</div>
+
+<div class='pbox'>
+
+注意到你就是把$S$行对应的元素钦定的时候的某个组合,我们可以先用$\sum_{t\in T} t+\sum_{s\in S} s$次交换把这些行列顺序不变的换到前  $\vert S \vert=\vert T \vert$ 行列,则最终符号显然就是此时的符号(即两个行列式内部的符号)再乘上交换操作的符号,于是得证.
+
+</div>
+
+<div class='cbox'>
+
+求
+
+$$
+\begin{gathered}
+\det M \\
+M_{i,j} = \begin{cases}
+a,i=j \\
+b,i\ne j
+\end{cases}
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+### Sol1
+
+考虑消元,注意到每行的和是一样的,所以我们把第一列变成所有列的和,然后用它去消后面的,模拟一下即可.
+
+### Sol2
+
+考虑$M=(a-b)I+xB$,其中$B=(b)_{i,j}$,应用公式
+
+$$
+\begin{gathered}
+\operatorname{d} \det(M)=\operatorname{trace} (\operatorname{adj} A \operatorname{d} A)
+\end{gathered}
+$$
+
+右边三项全是好算的,于是可以把导数对$x$积分积回去.
+
+### Sol3
+
+考虑$M=B+(a-b)I$,若$Bv=\lambda v,则显然有$(B+(a-b)I)v=(\lambda+a-b)v$,于是求出$B$的特征值,就可以直接得到$M$的特征值算行列式.
 
 </div>
 
