@@ -1,9 +1,9 @@
 ---
-title: Math Analysis Homework - Clas 7
+title: Math Analysis Homework - Week 7
 tags: [math-analysis,math,homework]
 ---
 
-# Math Analysis Homework - Clas 7
+# Math Analysis Homework - Week 7
 
 ## Class 1
 

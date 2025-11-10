@@ -615,7 +615,7 @@ $$
 
 <div class='pbox'>
 
-注意到你就是把$S$行对应的元素钦定的时候的某个组合,我们可以先用$\sum_{t\in T} t+\sum_{s\in S} s$次交换把这些行列顺序不变的换到前  $\vert S \vert=\vert T \vert$ 行列,则最终符号显然就是此时的符号(即两个行列式内部的符号)再乘上交换操作的符号,于是得证.
+注意到你就是把$S$行对应的元素钦定的时候的某个组合,我们可以先用$\sum_{t\in T} t-\sum_{i=1}^{\vert T\vert}i+\sum_{s\in S} s-\sum_{i=1}^{\vert S\vert}i\equiv \sum_{t\in T}t+\sum_{s\in S}s \pmod 2$次交换把这些行列顺序不变的换到前  $\vert S \vert=\vert T \vert$ 行列,则最终符号显然就是此时的符号(即两个行列式内部的符号)再乘上交换操作的符号,于是得证.
 
 </div>
 
@@ -656,6 +656,94 @@ $$
 ### Sol3
 
 考虑$M=B+(a-b)I$,若$Bv=\lambda v,则显然有$(B+(a-b)I)v=(\lambda+a-b)v$,于是求出$B$的特征值,就可以直接得到$M$的特征值算行列式.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\operatorname{rank} A=a \\
+\Leftrightarrow \begin{cases}
+\vert T \vert =\forall \vert S \vert > a,\det A_{S,T}=0 \\
+\exists \vert S \vert =\vert T \vert =a,\det A_{S,T}\ne 0
+\end{cases}
+
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+首先如果存在$\det A_{S,T}=\ne 0$,那么$S$对应的这些行必然是满秩的,所以 $\operatorname{rank} A\ge a$.
+
+而如果 $\operatorname{rank} A>a$,那么选出$a$个线性无关行,再从这里面找到$a$个线性无关列,这就是一个行列式非$0$的矩阵.
+
+于是得证.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\operatorname{rank} A=n-1 \Leftrightarrow \operatorname{rank} C=1 \\
+\operatorname{rank} A<n-1 \Leftrightarrow \operatorname{rank} C=0
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+由上一个conclusion,第二行是显然的(全0).
+
+对于第一行,考虑$AC^T$=0,于是 $AC^T=0,\operatorname{rank} A+\operatorname{rank} C^T\le n$ ,又有 $\operatorname{rank} C\ne 0$ 因为至少有一个非$0$.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+A_{m\times n},B_{n\times m},m\le n \\
+\Rightarrow \det AB=\sum _{\vert S \vert =m,S\subset [1,n]} \det A_{[1,m]\cap Z,S}\det B_{S,[1,m]\cap Z}
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑矩阵
+
+$$
+\begin{gathered}
+\det \begin{bmatrix}
+  I_n&B \\
+  A&0
+\end{bmatrix}=\det
+\begin{bmatrix}
+  I_n&B \\
+  0&-AB
+\end{bmatrix}
+\end{gathered}
+$$
+
+右边的行列式是$(-1)^m\det (AB)$,考虑左边用拉普拉斯定理,则显然你的子式的列只能选$A$里面的,而它的余子式就是$B$左边再加上若干列,若第$i$列没被子式选,则这列一定要选$i$行的元素,于是$B$中恰好只有$S$中的行能选.
+
+对于符号,Laplace中的是$\sum_{i\in S} i+\dfrac{m(n+1+n+m)}2$,算代数余子式行列式的时候还有一个$\sum_{i\notin S} i-\dfrac{(n-m)(n-m+1)}2$,然后这些加起来是同余$m$的.
+
+这样符号一乘正好是$0$.
+
+</div>
+
+<div class='cbox'>
+
+行列式与导数
+
+todo
 
 </div>
 

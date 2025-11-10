@@ -2681,6 +2681,110 @@ $$
 
 </div>
 
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int \dfrac{dx}{(x+1)^2(x+2)^3} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\text{let } t=\dfrac{x+1}{x+2}  \\
+ans=\int \dfrac{(1-t)^5}{t^2(1-t)^2}dt 
+\end{gathered}
+$$
+
+然后拆了做就行了.
+
+就是分母是两个一次多项式的幂的积你换元它们的比.
+
+</div>
+
+## Class 18
+
+### 有理分式积分
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\forall P(x),\deg P(x)<\deg (\prod_i Q_i(x)),\deg Q_i(x)\le 2 \\
+\exists R_i(x),\deg R_i(x)<\deg Q_i(x) \\ s.t.\\ 
+\dfrac{P(x)}{\prod_{i=1}^k Q_i(x)} =\sum _{i = 1} ^{n}  \dfrac{R_i(x)}{Q_{q_i}(x)^{k_i}} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+待定系数,启动!
+
+左边有$\deg P$个方程.
+
+右边有$\deg Q$个未知数.
+
+结束.
+
+注意分解的时候如果有若干个相同的$Q_i$,则拆成$Q_i^k(x)$,如出现
+
+$$
+\begin{gathered}
+\dfrac{ax^2+bx+c}{(x-1)^3} 
+\end{gathered}
+$$
+
+就可以拆成$\dfrac{r_1}{x-1} ,\dfrac{r_2}{(x-1)^2},\dfrac{r_3}{(x-1)^3}$去表示,$r_i\in R$.
+
+</div>
+
+所以有理分式你先分解,分解完了分母一次的和$\dfrac{r}{(x-x_0)^k}$的直接秒,现在问题来到分母是二次的函数.
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int \dfrac{5x+6}{x^2+x+1} dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑我们会积$\dfrac1{x^2+a}$的形式,于是你要把分子干成一次,分母干成没有一次,先换元分母$t=x^2+x+1$,$dt=2x+1$.
+
+$$
+\begin{gathered}
+=\int \dfrac{\dfrac{5}{2} dt }{t} +\int\dfrac{7}{2(x^2+x+1)}dx
+\end{gathered}
+$$
+
+</div>
+
+然后右边配方即可.
+
+那如果分母是二次项的幂呢?可以用一样的办法消掉分子上的一次项,然后还是三角换元,这样你变成积三角函数的幂了.
+
+<div class='bbox'>
+
+去分母根号:
+
+$$
+\begin{gathered}
+\sqrt{ (x-a)(x-b) } \to t=\sqrt{ \dfrac{x-a}{x-b} }   \\
+\sqrt{ x^2+bx+c } \to \sqrt{x^2+bx+c}=t+x,x=\dfrac{t^2-c}{b-2t}  \\
+\sqrt{ ax^2+bx+1 } \to \sqrt{ ax^2+bx+c } = xt+1
+\end{gathered}
+$$
+
+</div>
 
 
 
