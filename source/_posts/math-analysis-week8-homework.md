@@ -1,7 +1,12 @@
 ---
 title: Math Analysis Homework - Week 8
-tags: [math,math-analysis,homework]
+tags:
+  - math
+  - math-analysis
+  - homework
+date: 2025-11-10 16:55:40
 ---
+
 
 # Math Analysis Homework - Week 8
 
