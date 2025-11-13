@@ -740,3 +740,53 @@ $$
 </div>
 
 行列式与导数:容易注意到行列式每行不会有两个乘到一起,而最终的行列式是$n$行各取一个数乘起来,于是遵循导数求导乘积的法则,或者说把每一行求导其他行不变再加起来.
+
+## Another Quiz Problem
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\forall A_{m\times n},\exists B_{n\times m}\ s.t.\ 
+ABA=A
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+### Sol 1
+
+$$
+\begin{gathered}
+A=P\begin{bmatrix}
+  I_k&0 \\
+  0&0
+\end{bmatrix}Q
+\end{gathered}
+$$
+
+于是让
+
+$$
+\begin{gathered}
+B=Q^{-1}\begin{bmatrix}
+  I_k&0 \\
+  0&0
+\end{bmatrix}P^{-1}
+\end{gathered}
+$$
+
+### Sol 2
+
+考虑一个任意情况,对任意集合$X,Y$和任意映射$f$,你可以找到一个$g$使得$f\circ g\circ f=f$
+
+显然的,因为你可以让$g$把$f$的像映射到任意一个原像.
+
+那么这个显然的在说什么呢?它实际上在说,对任意一个$f$,我们可以找到$X,Y$各自的一个子集$X',Y'$,使得$f$限制在$X'\to Y'$是双射.于是$g$是这上面的逆,而这之外的随意映射就可以满足$fgf=f$.
+
+然后你再看第一个证明,那么中间那个有$I_k$的矩阵实际上就是,$I_k$对应了$X'\to Y'$的双射部分,这也是上面的做法为啥有道理.
+
+</div>
+

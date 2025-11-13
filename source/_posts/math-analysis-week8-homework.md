@@ -444,6 +444,75 @@ $$
 
 </div>
 
+## Class 2
 
+### T1
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+f(x) \text{ is integrable on } [a,b], \\
+\forall [\alpha,\beta]\subset [a,b],\sup_{x\in [\alpha,\beta]}f(x)\ge M
+\end{cases} \\
+\Rightarrow \int_a^b f(x)dx\ge M(b-a)
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\forall \epsilon>0, \\
+\forall T=\{ a=t_0<t_1<t_2\ldots t_n=b \} , \\
+\exists \xi_i\in [t_{i-1},t_i] \ s.t.\ 
+f(\xi_i)>M-\epsilon \\
+\Rightarrow \sum _{i = 1} ^{n}  f(\xi_i)(t_i-t_{i-1}) \\
+\ge \sum _{i = 1} ^{n}  (M-\epsilon)(t_i-t_{i-1}) \\
+=(M-\epsilon)(b-a) \\
+f(x) \text{ is integrable} \Rightarrow  \\
+\int _a^bf(x)dx \\
+=\lim_{\vert\vert T \vert\vert \to 0} \sum _{i = 1} ^{n}  f(\xi_i)(t_i-t_{i-1}) \\
+\ge (M-\epsilon)(b-a) \\
+\Rightarrow \int_a^b f(x)dx=\lim_{\epsilon \to 0} \int_a^b f(x)dx\ge M(b-a)
+\end{gathered}
+$$
+
+</div>
+
+### T2
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+f(x)=x(1-x)D(x) \\
+D(x)=[x\in Q]
+\end{cases} \\
+\Rightarrow f(x) \text{ is not integrable on }[0,1] 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+T=\{ a=t_0<t_1<\ldots<t_n=b \}  \\
+S(T,\xi)=\sum _{i = 1} ^{n}  f(\xi_i)(t_i-t_{i-1}) \\
+\forall i,\exists \xi_i\in Q\cap [t_i,t_{i-1}],\xi_i'\in Q^C\cap [t_i,t_{i-1}] \\
+\lim_{\vert\vert T \vert\vert  \to 0} S(T,\xi)=\int_0^1 x(1-x)dx\ne 0 \\
+\lim_{\vert\vert T \vert\vert  \to 0} S(T,\xi')=\lim_{\vert\vert T \vert\vert  \to 0}\sum _{i = 1} ^{n}  0x(1-x)(t_i-t_{i-1})=0 \\ \\
+\ne \lim_{\vert\vert T \vert\vert  \to 0} S(T,\xi) \\
+\therefore \text{Not integrable} 
+\end{gathered}
+$$
+
+</div>
 
 

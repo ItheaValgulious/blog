@@ -503,16 +503,7 @@ a_n=(1+\dfrac{1}{n} )^n=\sum _{i = 0} ^{n}  \dfrac{1}{n^i} \binom{n}{i} \\
 \end{gathered}
 $$
 
-又有
-
-$$
-\begin{gathered}
-k<n \Rightarrow 
-a_n=\sum _{i = 0} ^{n}  \dfrac{1}{i!} \prod_{j=0}^{i-1} (1-\dfrac{j}{n} )
->\sum _{i = 0} ^{k}  \dfrac{1}{i!} \prod_{j=0}^{i-1} (1-\dfrac{j}{n} )
-\end{gathered}
-$$
-于是先令$k\to \infty$得到$a_n>b_k$,则$a$逐项大于$b$的一个子列,最后得证.
+又有你考虑级数$a$展开的某个部分和$\sum _{i = 0} ^{k}  \dfrac{1}{i!} \prod_{j=0}^{i-1} (1-\dfrac{j}{n} )$,当$n$趋近于无穷大的时候这个部分和趋近于$b_k$,于是会大于$b_{k-1}$,也就是说你对每个$b_k$都能找打比他大的$a$,就解决了.
 
 </div>
 
@@ -531,7 +522,8 @@ $$
 \end{gathered}
 $$
 
-用定义是显然的.且如果极限都存在(要$f(a,n)$和$f(n,b)$极限存在)的话你还可以看出左式两取极限交换(都是右式)
+
+Fixed:这是不一定的啊,当我们学了多元函数,需要一致收敛之类的条件啊,但其实这里也用不到这个内容啊,我们实际上是用到的是对函数中的无关变量取极限就没有影响.
 
 </div>
 
@@ -1874,7 +1866,7 @@ $$
 
 <div class='pbox'>
 
-
+todo
 
 </div>
 
@@ -2787,4 +2779,54 @@ $$
 </div>
 
 
+## Class 19
 
+### 定积分
+
+<div class='dbox'>
+
+$$
+\begin{gathered}
+\int_a^b f(x)=\lim_{\vert\vert T \vert\vert  \to 0} \sum _{i = 1} ^{n}  f(\xi_i)\Delta x_i \\
+\text{where} \\
+T=\{ t_1\ldots t_n \} ,t_i<t_{i+1},t_0=a,t_n=b, \\
+\Delta x_i=t_i-t_{i-1},\xi\in (t_{i-1},t_i) \\
+\vert\vert T \vert\vert =\max_i \Delta x_i
+\end{gathered}
+$$
+
+</div>
+
+极限存在则称为黎曼可积. 
+
+### 牛顿莱布尼茨公式
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+f(x) \text{ is integrable on }[a,b]  \\
+F(x)\in C[a,b],D(a,b) \\
+f(x)=F'(x)
+\end{cases} \\
+\Rightarrow \int_a^b f(x)=F(b)-F(a)
+
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+F(b)-F(a) \\
+=\sum _{i = 1} ^{n} F(t_i)-F(t_{i-1}) \\
+=\sum _{i = 1} ^{n}  (t_i-t_{i-1})f(\xi_i),\xi_i\in (t_{i-1}-t_i) \\
+=S \\
+\lim_{\vert\vert T \vert\vert  \to 0} F(b)-F(a)=\lim_{\vert\vert T \vert\vert \to 0} S=\int_a^b f(x)
+\end{gathered}
+$$
+
+</div>
