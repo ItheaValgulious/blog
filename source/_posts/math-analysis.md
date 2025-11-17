@@ -2764,6 +2764,8 @@ $$
 
 那如果分母是二次项的幂呢?可以用一样的办法消掉分子上的一次项,然后还是三角换元,这样你变成积三角函数的幂了.
 
+### 根式积分
+
 <div class='bbox'>
 
 去分母根号:
@@ -2830,3 +2832,254 @@ F(b)-F(a) \\
 $$
 
 </div>
+
+## Class 20
+
+### 积分练习
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f(x)\in C[a,b],f(x)>0 \\
+\Rightarrow \dfrac{1}{b-a} \int_a^b \ln(f(x))dx\le \ln(\dfrac{1}{b-a} \int_a^b f(x)dx)
+\end{gathered}
+$$
+
+</div>
+
+几何均值小于代数均值
+
+<div class='pbox'>
+
+我们两边任取相同的$[a,b]$的分割和取点,于是就是$\ln$的琴生,即
+
+$$
+\begin{gathered}
+LHS=\dfrac{1}{b-a} \sum_i \ln(f(\xi_i)) (t_i-t_{i-1})\\
+RHS=\ln(\dfrac{1}{b-a} \sum_i f(\xi_i)(t_i-t_{i-1}))
+\end{gathered}
+$$
+
+</div>
+
+<div class='cbox'>
+
+Holder
+
+$$
+\begin{gathered}
+\begin{cases}
+p,q>1,\dfrac{1}{p} +\dfrac{1}{q} \\
+f,g \text{ is integrable} 
+\end{cases} \\
+\Rightarrow \int_a^b f(x)g(x)dx\le (\int_a^b f(x)^pdx)^{\frac{1}{p} }(\int_a^b g(x)^qdx)^{\frac{1}{q} }
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+感觉你直接弄到离散上也行啊.
+
+要么就是抄带权柯西的步骤
+
+$$
+\begin{gathered}
+\dfrac{f(x)g(x)}{(\int_a^b f(x)^pdx)^{\frac1p}\int_a^b g(x)^qdx)^{\frac1q}}\le \dfrac{1}{p} \dfrac{f^p(x)}{(\int_a^b f(x)^pdx)^{\frac1p}}+\dfrac{1}{q} \dfrac{f^q(x)}{(\int_a^b g(x)^qdx)^{\frac1q}} 
+\end{gathered}
+$$
+
+然后同时积分,结束.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f(x)\in D^2[a,b],f''(x)>0,f(x)\le 0 \\
+\Rightarrow f(x)\ge \dfrac{2}{b-a} \int_a^b f(x)dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+f(x)=f(t)+f'(t)(x-t)+\dfrac{f''(\xi)}{2} (x-t)^2 \\
+\ge f(t)+f'(t)(x-t) \\
+(b-a)f(x)\ge \int_a^bf(t)dt+\int_a^bf'(t)(x-t)dt
+\end{gathered}
+$$
+
+只需证
+
+$$
+\begin{gathered}
+\int_a^b f'(t)(x-t)dt\ge \int_a^b f(t)dt
+\end{gathered}
+$$
+
+考虑
+
+$$
+\begin{gathered}
+\int_a^b f'(t)(x-t)dt \\
+=x(f(b)-f(a))-(bf(b)-af(a))+\int_a^b f(t)dt \\
+=-(b-x)f(b)-(x-a)f(a)+\int_a^b f(t)dt
+\end{gathered}
+$$
+
+得证.
+
+唉傻了,你考虑这个的意思其实就是,一个上凸的图形的面积面积比直接连起来的大.所以你琴声才是正解.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f(x)\in C[0,1] \\
+\Rightarrow \lim_{n \to \infty} \int_0^1 f(\sqrt[ n ]{ x } )dx =f(1)
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+你大概体会一下,$n$很大的时候基本上$\sqrt[n]{x}$都很接近$1$,而在一个$0$的小邻域内离$1$比较远,所以能猜到答案是$f(1)$,能交换.
+
+$$
+\begin{gathered}
+\int_0^1 f(\sqrt[ n ]{ x } )=\int_0^{\frac1n} f(\sqrt[ n ]{ x } )dx+\int_{\frac1n}^1f(\sqrt[ n ]{ x } )dx \\
+\end{gathered}
+$$
+
+因为$f$有界,所以左边是$0$.右边用中值得到
+
+$$
+\begin{gathered}
+=(1-\dfrac{1}{n})f(\sqrt[n]{\xi})
+\end{gathered}
+$$
+
+因为你$1\ge \sqrt[n]{\xi}\ge \sqrt[n]{\dfrac1n}=1$,于是结束了.
+
+</div>
+
+### 原函数存在定理
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f(x) \text{ is integrable on } [a,b] \\
+\Rightarrow F(x)=\int_a^x f(x)dx \in C[a,b]
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+因为可积,设$\vert f\vert \le M$.
+
+$$
+\begin{gathered}
+\vert F(x_0+h)-F(x_0) \vert =\vert \int_{x_0}^{x_0+h} f(x)dx \vert \le hM
+\end{gathered}
+$$
+
+显然连续.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f\in C[a,b] \Rightarrow F(x)=\int_a^x f(x)dx \ s.t.\ 
+F'(x)=f(x)
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+F'(x_0)=\lim_{h \to 0} \dfrac{F(x_0+h)-F(x_0)}{h} \\
+=\lim_{h \to 0} \dfrac{\int_{x_0}^{x_0+h}f(x)dx}{h} \\
+=\lim_{h \to 0} \dfrac{hf(\xi)}{h},\xi\in (x_0,x_0+h) \\
+=\lim_{h \to 0} f(\xi)    \\
+=f(x_0)
+\end{gathered}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+g(x)\in D \\
+F(x)=\int_{g(0)}^{g(x)}f(x)dx \\
+\Rightarrow F'(x)=g'(x)f(x)
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+换元,$x=g(t)$,看成关于$t$的复合函数求导.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f\in C^1[a,b],f(a)=0 \\
+\Rightarrow \int_a^b f^2(x)dx\le \dfrac{1}{2} (b-a)^2 \int_a^b (f'(x))^2 dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+f(x)=\int_a^x f'(t)dt \\
+=\int_a^x 1\cdot f'(t)dt \\
+\le (\int_a^x 1^2dt)^\frac12(\int_a^x f'^2(t)dt)^\frac12 \\
+\le (x-a)^{\frac12}(\int_a^b f'^2(t)dt)^\frac12
+\end{gathered}
+$$
+
+同时平方再积分,结束.
+
+另一个神秘做法是
+
+$$
+\begin{gathered}
+\int_a^x (f'(x)+c)^2\ge 0
+\end{gathered}
+$$
+
+展开后,让左边的式子关于$c$最小得到一个不等式去做,但同样难以想到啊.
+
+</div>
+
+
+
+
+

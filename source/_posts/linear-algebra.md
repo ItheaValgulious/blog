@@ -790,3 +790,35 @@ $$
 
 </div>
 
+## Circulant Matrix's det
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\forall a_0\ldots a_{n-1} \\
+A_{i,j}=a_{i+j-2\bmod n} \\
+\Rightarrow \det A=\prod _{i = 1} ^{n} \sum _{j = 1} ^{n} w_n^{ij}c_j
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+首先我们让$P_n$是循环移位$P(x_0,\ldots, x_n)=(x_1,\ldots, x_n,x_0)$,那么有
+
+$$
+\begin{gathered}
+A=\sum _{i = 0} ^{n-1}  a_iP^i
+\end{gathered}
+$$
+
+那么因为所有$P$乘法的时候是保持不变子空间的,也就是说$A$的特征值就是$P$的特征值带入$f(x)=\sum_{i=0}^{n-1}a_ix^i$,所以只需要看$P$的特征值.
+
+考虑$Px=\lambda x$,那么$x_{i+1\bmod n}=\lambda x_i$,于是你乘一圈就有$\lambda^n=1$,能相应的构造出$x_i=w_n^{il},\lambda=w_n^l$这样的特征向量和特征值.
+
+于是$P$的特征值就是单位根,带进去就得证.
+
+</div>
+
