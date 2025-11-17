@@ -65,7 +65,11 @@ $$
 
 $$
 \begin{gathered}
-
+\int_{-a}^0x^2f(x)dx\le \int_{-a}^0 f(x)(-x)adx=\int_{0}^b f(x)xadx\le \int_0^b f(x)abdx \\
+\text{similarily, }\int_{0}^b x^2f(x)dx\le \int_{-a}^0 f(x)abdx  \\
+\Rightarrow \int_{-a}^b x^2f(x)dx \\
+\le \int_{-a}^0 f(x)abdx+\int_0^b f(x)abdx \\
+=ab\int_{-a}^b f(x)dx \\
 \end{gathered}
 $$
 
@@ -80,6 +84,17 @@ $$
 $$
 \begin{gathered}
 f(x)\in C[0,1],f(x)>0 \\
+\Rightarrow \int_0^1 f(x)dx\int_0^1 \dfrac{1}{f(x)} dx\ge 1
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+1=\int_0^1 \sqrt{f(x)}\cdot \dfrac{1}{\sqrt{f(x)}} dx\le (\int_0^1 \sqrt{f(x)}^2dx)^\frac12 (\int_0^1 \dfrac{1}{\sqrt{f(x)}} dx)^\frac12 \\
 \Rightarrow \int_0^1 f(x)dx\int_0^1 \dfrac{1}{f(x)} dx\ge 1
 \end{gathered}
 $$
@@ -102,6 +117,18 @@ $$
 
 </div>
 
+<div class='pbox'>
+
+若$f(x)$无零点,则$f(x)\sin (x)$无变号零点,$\int_0^\pi f(x)\sin x dx\ne 0$,$f$至少一个变号零点.
+
+若$f(x)$恰有一个零点$x_1$.
+
+考虑令$\int_0^\pi f(x)(\sin x\cos \varphi+\cos x\sin \varphi)dx=0=\int_0^\pi f(x)\sin(x+\varphi)dx$,于是令$\phi=-x_1$,则$\int f(x)\sin(x+\varphi)dx$不变号,不为$0$,矛盾,得证.
+
+</div>
+
+
+
 ### T5
 
 <div class='cbox'>
@@ -117,6 +144,28 @@ M=\max f([a,b])
 $$
 
 </div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\int_a^b f^n(x)\le (b-a)M^n  \\
+\Rightarrow \lim_{n \to \infty} (\int_a^b f^n(x)dx)^\frac1n\le \lim_{n \to \infty} ((b-a)M^n)^\frac1n=M  \\
+\text{let } f(x_0)=M \\
+f(x)\in C[a,b] \Rightarrow \forall p<1,\exists \delta,\ s.t.\  \\
+
+\forall x \in (x_0-\delta,x_0+\delta)\cap [a,b],f(x)>pM  \\
+\Rightarrow \int_a^b f^n(x)dx>2\delta(pM)^n \\
+\Rightarrow \forall p\in(0,1),
+\lim_{n \to \infty} (\int_a^b f^n(x)dx)^\frac1n>\lim_{n \to \infty} (2\delta(pM)^n)^\frac1n=pM \\
+\Rightarrow \lim_{n \to \infty} (\int_a^b f^n(x)dx)^\frac1n\ge M \\
+\Rightarrow \lim_{n \to \infty} (\int_a^b f^n(x)dx)^\frac1n= M \\
+\end{gathered}
+$$
+
+</div>
+
+
 
 ### T6
 
@@ -136,6 +185,33 @@ $$
 
 </div>
 
+<div class='pbox'>
+
+$f$严格单增且连续则$f^{-1}$存在且连续,故只需证
+
+$$
+\begin{gathered}
+f(b)=\lim_{p \to +\infty} f(x_p)=\lim_{p \to +\infty} (\dfrac{1}{b-a} \int_a^b f^p(t)dt)^\frac1p \\
+\end{gathered}
+$$
+
+而
+
+$$
+\begin{gathered}
+\lim_{p \to +\infty} (\dfrac{1}{b-a} \int_a^b f^p(t)dt)^\frac1p
+=\lim_{p \to +\infty} (\dfrac{1}{b-a} )^\frac1p (\int_a^b f^p(t)dt)^\frac1p \\
+\xlongequal{by T5}\lim_{p \to +\infty} (\dfrac{1}{b-a} )^\frac1p M^\frac1p \\
+=M=f(b)
+\end{gathered}
+$$
+
+
+
+</div>
+
+
+
 ### T7
 
 <div class='cbox'>
@@ -153,6 +229,20 @@ $$
 
 </div>
 
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\text{let }  g(x)=xf(x) \\
+g(1)=2\int_0^\frac12 g(x)dx=2\times \dfrac{1}{2} g(\xi),\xi\in (0,\dfrac{1}{2} ) \\
+g(1)=g(\xi) \xRightarrow{\text{Rolle's Theorem} }\exist \xi',g'(\xi')=0=f(\xi)+\xi f'(\xi)
+\end{gathered}
+$$
+
+</div>
+
+
+
 ### T8
 
 <div class='cbox'>
@@ -164,6 +254,24 @@ $$
 $$
 
 </div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=\lim_{n \to \infty} \int_0^{\frac\pi2-\delta_n}\sin^n xdx+\int_{\frac\pi2-\delta_n}^{\frac\pi2}\sin^n xdx \\
+=\lim_{n \to \infty} (\dfrac{\pi}{2} -\delta)\sin^n \xi+\delta_n\sin^n\xi_2 \\
+\le \lim_{n \to \infty} \dfrac{\pi}{2}\cos^n(\delta_n)+\delta_n \\
+\text{let }\delta_n=\text{max } v \\ s.t.\\ 
+\cos^n(v)<\dfrac{1}{n}  \\
+\Rightarrow \lim_{n \to \infty} \delta_n=\lim_{n \to \infty} \arccos((\dfrac{1}{n} )^\frac1n)=\arccos(1)=0 \\
+\Rightarrow Ans=\lim_{n \to \infty} \dfrac{\pi}{2} \cos^n(\delta_n)+\delta_n=0
+\end{gathered}
+$$
+
+</div>
+
+
 
 ### T9
 
@@ -182,6 +290,25 @@ $$
 
 </div>
 
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\exists X,x>X \Rightarrow \vert f(x)-l \vert <\epsilon \\
+\lim_{x \to +\infty} \dfrac{1}{x} \int_0^x f(t)dt \\
+=\lim_{x \to +\infty} \dfrac{1}{x} (\int_0^X f(t)dt+\int_X^x f(t)dt) \\
+=\lim_{x \to +\infty} \dfrac{1}{x} \int_X^xf(t)dt \\
+\in(\lim_{x \to +\infty} \dfrac{1}{x} (l-\epsilon)(x-X),\lim_{x \to +\infty} (l+\epsilon)(x+X )) \\
+=(l-\epsilon,l+\epsilon)
+\end{gathered}
+$$
+
+因为对任意$\epsilon>0$均成立,于是得证.
+
+</div>
+
+
+
 ### T10
 
 <div class='cbox'>
@@ -196,6 +323,30 @@ $$
 
 </div>
 
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\forall T=\{ a=t_0<\ldots< t_n=b \}  \\
+\lim_{\vert\vert T \vert\vert  \to 0} \sum _{i = 1} ^{n} w_i(t_i-t_{i-1})=0 \\(w_i=\sup_{x,y \in [t_{i-1},t_i]} f(x)-f(y))
+\end{gathered}
+$$
+
+对一个$h$,按长度$h$分割得到$\forall i<n,t_i-t_{i-1}=h$的$T$,则$\forall x\in [t_{i-1},t_i]$,$\vert f(x+h)-f(x)\vert\le w_i+w_{i+1}$,于是
+
+$$
+\begin{gathered}
+\lim_{h \to 0} \int_a^b \vert f(x_h)-f(x) \vert dx\le \lim_{h \to 0} \sum_{i=1}^{n-1}(t_i-t_{i-1})(w_i+w_{i+1})+(t_n-t_{n-1})w_n \\
+\le \lim_{h \to 0} 2 \sum _{i = 1} ^{n}w_i(t_i-t_{i-1}) \\
+=\lim_{\vert\vert T \vert\vert  \to 0} 2w_i(t_i-t_{i-1}) \\
+=0
+\end{gathered}
+$$
+
+</div>
+
+
+
 ### T11
 
 <div class='cbox'>
@@ -207,6 +358,21 @@ $$
 $$
 
 </div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\xlongequal{\text{L'Hospital} }
+\lim_{x \to +\infty} \dfrac{\sqrt{1+x^2}\arctan^2 x}{x}  \\
+=\lim_{x \to +\infty} \sqrt{ 1+\dfrac{1}{x^2}  } \arctan^2 x \\
+=\dfrac{\pi^2}{4} 
+\end{gathered}
+$$
+
+</div>
+
+
 
 ### T12
 
@@ -224,6 +390,20 @@ $$
 
 </div>
 
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\int_0^b f(x)(2x-b)dx \\
+=-\int_0^\frac{b}2f(x)(b-2x)dx+\int_\frac{b}2^bf(x)(2x-b)dx \\
+=\int_0^\frac{b}2 f(x)(b-2x)(f(b-x)-f(x))dx\ge 0
+\end{gathered}
+$$
+
+</div>
+
+
+
 ### T13
 
 <div class='cbox'>
@@ -236,6 +416,25 @@ f(x)\in D[0,1],f(0)=0,f'(x)\in[0,1] \\
 $$
 
 </div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\text{let } F(x)=\int_0^x f^3(t)dt-(\int_0^x f(t)dt)^2 \\
+F'(x)=f^3(x)-2(\int_0^x f(t)dt)f(x) \\
+\text{let } F_1(x)=f^2(x)-2\int_0^x f(t)dt \\
+F_1'(x)=2f(x)f'(x)-2f(x)\le 0 \\
+\Rightarrow F_1'(x)\le F_1'(0)=0 \\
+\Rightarrow F'(x)<0 \\
+\Rightarrow F(x)<F(0)=0 \\
+\text{Q.E.D}
+\end{gathered}
+$$
+
+</div>
+
+
 
 ### T14
 
@@ -253,6 +452,26 @@ $$
 
 </div>
 
+<div class='pbox'>
+
+$x=0$时,显然同样$\int_0^x f(t)dt=\dfrac{1}{2}xf(x)$,这个式子对$[0,+\infty)$成立.
+
+两边同时求导,$f(x)=\dfrac{1}{2} f(x)+\dfrac{1}{2} xf'(x)$,于是
+
+$$
+\begin{gathered}
+f(x)=xf'(x) \\
+\dfrac{f(x)-xf'(x)}{x^2} =0 \\
+\Rightarrow (\dfrac{f(x)}{x} )'=0 \\
+\Rightarrow f(x)=cx
+\end{gathered}
+$$
+
+
+</div>
+
+
+
 ### T15
 
 <div class='cbox'>
@@ -266,6 +485,21 @@ $$
 
 </div>
 
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\int_0^x tf(t)dt<\int_0^x xf(t)dt \\
+\Rightarrow 
+\phi'(x)=\dfrac{xf(x)\int_0^x f(t)dt-f(x)\int_0^x tf(t)dt}{(\int_0^x f(t)dt)^2}>0 \\
+\text{Q.E.D}
+\end{gathered}
+$$
+
+</div>
+
+
+
 ### T16
 
 <div class='cbox'>
@@ -277,6 +511,17 @@ $$
 $$
 
 </div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+
+\end{gathered}
+$$
+
+</div>
+
 
 
 
@@ -292,6 +537,26 @@ $$
 
 </div>
 
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=\lim_{n \to \infty} \sum _{k = 1} ^{n}  \dfrac{1}{n} \sqrt{ (\dfrac{k}{n} +1)(\dfrac{k+1}{n} +1) } \\
+\end{gathered}
+$$
+
+令$f(x)=x,T=\{ t_i=1+\dfrac in \},\xi_i=\sqrt{(\dfrac{k}{n} +1)(\dfrac{k+1}{n} +1)}$,于是原式就是
+
+$$
+\begin{gathered}
+\int_1^2 xdx=\dfrac{3}{2}
+\end{gathered}
+$$
+
+</div>
+
+
+
 ### T18
 
 <div class='cbox'>
@@ -305,22 +570,17 @@ $$
 
 </div>
 
-### T19
-
-<div class='cbox'>
+<div class='pbox'>
 
 $$
 \begin{gathered}
-\begin{cases}
-f(x) \in D^2[0,1] \\
-f(0)=f(1)=0 \\
-x\in (0,1) \Rightarrow  f(x)\ne 0
-\end{cases} \\
-\Rightarrow \int_0^1 \vert \dfrac{f''(x)}{f(x)}  \vert dx\ge 4
-
+\text{let } u=e^{\frac1t} \\
+f(x)=-\int_{\frac1e}^{\frac1{e^x}} \dfrac{1}{(1+u)^2} du \\
+=\dfrac{1}{e^\frac1x+1} -\dfrac{e}{e+1},x<0 \\
+f(0)=1-\dfrac{e}{1+e} =\dfrac{1}{1+e}  \\
+x>0 \Rightarrow f(x)=f(0)+f(x)-f(0^+)=\dfrac{1}{e^\frac1x+1} -\dfrac{e}{1+e} +1
 \end{gathered}
 $$
 
 </div>
-
 
