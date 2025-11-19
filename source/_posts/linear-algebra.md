@@ -822,3 +822,96 @@ $$
 
 </div>
 
+## A Determinance about Vandermonde plus 1
+
+<div class='cbox'>
+
+求
+
+$$
+\begin{gathered}
+\det A,A_{i,j}=x_i^j+1
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+容易想到用线性性去拆分,如果我们对列拆分,你发现你就是要求$A$有一列换成全$1$之后的矩阵的行列式的和,我们设第$i$列换掉之后的矩阵是$B_i$.
+
+考虑Cramer's Rule,你注意到设$Ay=b$,其中$b$是全$1$向量,则$y_i=\dfrac{\det B_i}{\det A}$,于是我们实际上是求$y_i$,
+
+如果我们这里用$y=A^{-1}b$我们可以得到一个结论:
+
+$$
+\begin{gathered}
+\det(A+uv^T)=\det A(1+v^TA^{-1}u)
+\end{gathered}
+$$
+
+然后对这个题,我们也不知道$A^{-1}$,所以你仍然要想办法求$y_i$.
+
+碰到范德蒙德矩阵一定要想多项式,于是你想到$P(z)=\sum_{i=1}^n y_iz^i$,则$P(x_i)=1$,于是$P(z)=A\prod_i (z-x_i)$,于是你能通过比较常数项求出$A$,然后再计算$P(1)$就能求出$\sum y_i$了.
+
+</div>
+
+[think] 碰到范德蒙德矩阵一定要想多项式
+
+<div class='bbox'>
+
+$$
+\begin{gathered}
+\det(A+uv^T)=\det A(1+v^TA^{-1}u)
+\end{gathered}
+$$
+
+</div>
+
+## about eigen values
+
+<div class='cbox'>
+
+相似矩阵有相同的特征多项式
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\det QAQ^{-1}-\lambda I \\
+=\det QAQ^{-1}-Q\lambda I Q^{-1}  \\
+= \det Q(A-\lambda I)Q^{-1} \\
+=\det A-\lambda I
+\end{gathered}
+$$
+
+</div>
+
+显然的吧,因为都是一个线性变换在不同的基下的.
+
+<div class='cbox'>
+
+对称矩阵的特征向量一定垂直
+
+</div>
+
+<div class='pbox'>
+
+首先你可以谱定理启动.
+
+否则考虑
+
+$$
+\begin{gathered}
+v_1Av_2=v_1\lambda_2 v_2 \\
+(v_1Av_2)^T=\lambda_1 v_1v_2
+\end{gathered}
+$$
+
+于是就得证了.
+
+</div>
+
+

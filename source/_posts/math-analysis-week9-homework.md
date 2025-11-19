@@ -514,11 +514,7 @@ $$
 
 <div class='pbox'>
 
-$$
-\begin{gathered}
-
-\end{gathered}
-$$
+等价于积$\int_0^1 e^{x^2}dx$,感觉做不了.
 
 </div>
 
@@ -584,3 +580,343 @@ $$
 
 </div>
 
+## Class 2
+
+### T1
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_0^1 \vert 1-2x \vert dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=2\int_0^{\frac12}(1-2x)dx \\
+=2(x-x^2\vert^{\frac12}_0)dx \\
+=\dfrac{1}{2} 
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T2
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_{-\frac\pi2}^{\frac\pi2} \sqrt{ \cos x-\cos^3 x } dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=-2\int^{\frac\pi2}_{0} \sqrt{ \cos x } d\cos x \\
+=-\dfrac{4}{3} \cos^{\frac32} x \vert_0^{\frac\pi2} \\
+=\dfrac{4}{3} 
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T3
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_{\frac1e}^e \vert \ln x \vert dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=-\int_{\frac1e}^1 \ln xdx+\int_1^e \ln xdx \\
+=-(x\ln x-x)\vert_{\frac1e}^1+(x\ln x-x)\vert_1^e \\
+=1-\dfrac{2}{e}+1 \\
+=2-\dfrac{2}{e} 
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T4
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_0^\pi e^x \cos^2 xdx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=e^x\cos^2 x \vert_0^\pi+\int_0^\pi e^x 2\cos x\sin xdx \\
+=e^\pi-1+\int_0^\pi e^x \sin 2x dx \\
+\end{gathered}
+$$
+
+$$
+\begin{gathered}
+\int_0^\pi e^x \sin 2xdx \\
+=\dfrac{1}{2}\int_0^{2\pi }e^{\frac{x}{2} }\sin xdx \\
+=(e^{\frac x2}\sin x\vert _0^{2\pi})-\int_0^{2\pi}e^{\frac x2}\cos xdx \\
+=(e^{\frac x2}\sin x\vert _0^{2\pi})-(2e^{\frac x2}\cos x\vert_0^{2\pi})-2\int_0^{2\pi}e^{\frac x2}\sin xdx \\
+\Rightarrow \int_0^\pi e^x\sin 2xdx=-\dfrac{2}{5} e^\pi+\dfrac{2}{5} 
+\Rightarrow Ans=\dfrac{3}{5} e^\pi-\dfrac{3}{5} 
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T5
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_1^e (x\ln x)^2 dx \\
+=(\dfrac{1}{3} x^3\ln^2 x-\dfrac{2}{9} x^3\ln x+\dfrac{2}{27} x^3)\vert_1^e \\
+=\dfrac{5e^3-2}{27} 
+\end{gathered}
+$$
+
+</div>
+
+### T6
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_0^1 (1-x^2)^n dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+x=\sin t \\
+\int_0^1 (1-x^2)^n dx \\
+=\int_0^{\frac{\pi}{2}} \cos^{2n+1}tdt
+\end{gathered}
+$$
+
+$$
+\begin{gathered}
+I_m=\int_0^{\frac{\pi}{2}}\cos^m tdt \\
+=\sin t\cos^{m-1}t\vert_0^{\frac{\pi}{2}}+(m-1)\int_0^{\frac{\pi}{2}}\sin^2 t\cos^{m-2}tdt \\
+=+(m-1)\int_0^{\frac{\pi}{2}}\cos^{m-2}tdt-(m-1)\int_0^{\frac{\pi}{2}}\cos^m tdt \\
+=+(m-1)I_{m-2}-(m-1)I_m \\
+\Rightarrow I_m=\dfrac{m-1}m I_{m-2} \\
+I_1=1 \\
+Ans=I_{2n+1}=\dfrac{(2n)!!}{(2n+1)!!} 
+\end{gathered}
+$$
+
+</div>
+
+### T7
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_0^{\frac\pi4}\cos^7 (2x)dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=\dfrac{1}{2}\int_0^{\frac\pi2}\cos^7 xdx \\
+=\dfrac{1}{2} I_7 \\
+=\dfrac{8}{35} 
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T8
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_0^{\frac\pi4}\ln(1+\tan x)dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+I \\
+=\int_0^{\frac\pi4}\ln(1+\tan x)dx \\
+=\int_0^{\frac\pi4}\ln(1+\tan(\dfrac{\pi}4-x))dx \\
+=\int_0^{\frac\pi4}\ln(1+\dfrac{1-\tan x}{1+\tan x} )dx \\
+=\int_0^{\frac\pi4}(\ln2-\ln (1+\tan x))dx\\
+=\dfrac{\pi}{4} \ln 2-I \\
+\Rightarrow I=\dfrac{\pi}{8} \ln 2
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T9
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_0^{\frac\pi2}\dfrac{1}{1+\tan^\alpha x} dx(\alpha>0)
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+I=\int_0^{\frac\pi2}\dfrac{1}{1+\tan^\alpha x} dx \\
+=\int_0^{\frac\pi2}\dfrac{\tan \alpha x}{1+\tan \alpha x} dx \\
+=\int_0^\frac\pi21dx-\int_0^\frac\pi2 \dfrac{dx}{1+\tan \alpha x}  \\
+=\dfrac{\pi}{2} -I \\
+\Rightarrow I=\dfrac{\pi}{4} 
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T10
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_0^{n\pi} x \vert \sin x \vert dx,n\in N
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+I_k=\int_{k\pi}^{(k+1)\pi} x \vert \sin x \vert dx \\
+=\int_{(k-1)\pi}^{k\pi} (x+\pi) \vert \sin (x+\pi) \vert dx \\
+=\int_{(k-1)\pi}^{k\pi} x \vert \sin x \vert dx
++\pi\int_{(k-1)\pi}^{k\pi}\vert \sin x \vert  \\
+=I_{k-1} +2\pi \\
+I_0=\int_0^\pi x\sin xdx \\
+=(-x\cos x+\sin x) \vert_0^\pi \\
+=\pi \\
+\Rightarrow Ans=\sum _{i = 0} ^{n-1}  I_i \\
+=n^2\pi
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T11
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f(x)\in C(R), \\
+\text{calculate }  \dfrac{d}{dx} \int_0^x tf(x^2-t^2)dt
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+F(x)=\int_0^x tf(x^2-t^2)dt \\
+\text{let } s=x^2-t^2,ds=-2tdt \\
+F(x)=\int_{x^2}^0 \dfrac{-1ds}{2} f(s) \\
+=\int_0^{x^2} \dfrac{1}{2} f(s)ds \\
+F'(x)=2x \dfrac{1}{2} f(x^2)=xf(x^2)
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T12
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f(x)\in C(R), \\
+f(x)=x+2\int_0^1 f(t)dt \\
+\text{calculate }  f(x)
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+f'(x)=1 \Rightarrow f(x)=x+C \\
+x+C=x+2\int_0^1 (t+C)dt \\
+=x+2(\dfrac{t^2}{2} +Ct)\vert_0^1 \\
+=x+1+2C \\
+\Rightarrow C=-1,f(x)=x-1
+\end{gathered}
+$$
+
+</div>

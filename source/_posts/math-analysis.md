@@ -3079,7 +3079,157 @@ $$
 
 </div>
 
+## Class 21
+
+### 一道例题
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+f(x)\in C^2[0,1] \\
+f(0)=f(1)=0 \\
+\forall x\in(0,1),f(x)\ne 0
+\end{cases} \\
+\Rightarrow \int_0^1 \vert \dfrac{f''(x)}{f(x)}  \vert dx\ge 4
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+这个$\dfrac{f''}{f}$太鬼了,于是你直接把$f$放掉.不妨设$f(x)>0$,$f(x_0)$为$f$最大值,则
+
+$$
+\begin{gathered}
+f(x)=f(x_0)+(x-x_0)f'(\xi) \\
+\Rightarrow \begin{cases}
+0=f(0)=f(x_0)+x_0f'(\xi_1) \\
+0=f(1)=f(x_0)+(1-x_0)f'(\xi_2)
+\end{cases}
+\end{gathered}
+$$
+
+于是
+
+$$
+\begin{gathered}
+\int_0^1 \vert \dfrac{f''(x)}{f(x)}  \vert  dx \\
+\ge \dfrac{1}{f(x_0)} \vert \int_0^1 f''(x)  \vert dx  \\
+\ge \dfrac{1}{f(x_0)} \vert \int_{\xi_1}^{\xi_2}f''(x) \vert dx \\
+=\dfrac{1}{f(x_0)} \vert f'(\xi_1)-f'(\xi_2) \vert  \\
+=\dfrac{1}{f(x_0)} \vert \dfrac{f(x_0)}{x_0}-\dfrac{f(x_0)}{1-x_0}  \vert  \\
+\ge \dfrac{1}{4} 
+\end{gathered}
+$$
+
+[think] todo
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+I_m=\int_0^\frac\pi2 \cos^m xdx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+I_m=\int_0^\frac\pi2 \cos x\cos^{m-1}x dx \\
+=\sin x \cos^{m-1} \vert^{\frac\pi2}_0- \int_0^\frac\pi2 \sin x(m-1) \cos^{m-2} x(-\sin x)dx \\
+=(m-1)\int_0^\frac\pi2 (1-cos^2 x)\cos^{m-2}xdx \\
+=(m-1)I_{m-2}-(m-1)I_m \\
+\Rightarrow I_m=\dfrac{m-1}{m} I_{m-2}
+\end{gathered}
+$$
+
+于是递推即可.
+
+</div>
+
+### 积分型泰勒
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f\in C^{n+1} \\
+\Rightarrow f(x)=T_n(f,x_0,x)+\int_{x_0}^x f^{(n+1)}(t)(x-t)^ndt
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+注意到
+
+$$
+\begin{gathered}
+\int_{x_0}^x f^{(n)}(t)\dfrac{(t-x_0)^{n-1}}{(n-1)!}dt  \\
+=f^{(n)}(t)\dfrac{(t-x_0)^n}{n!}-\int_{x_0}^x f^{(n+1)}(t)\dfrac{(t-x_0)^n}{n!} dt 
+\end{gathered}
+$$
 
 
+于是你直接递归的做一下:
 
+$$
+\begin{gathered}
+f(x)-f(x_0)=\sum _{i = 1} ^{n}  \dfrac{f^{(i)}(x)}{i!} (-1)^{i-1}(x-x_0)^i + (-1)^n \int_{x_0}^x f^{(n+1)}(t)\dfrac{(t-x_0)^n}{n!} dt
+\end{gathered}
+$$
+
+发现两个问题:求导在$x$上,以及交错,所以你直接把$x_0$和$x$交换一下:
+
+$$
+\begin{gathered}
+f(x_0)-f(x)=-\sum _{i = 1} ^{n}  \dfrac{f^{(i)}(x_0)}{i!} (x-x_0)^i
+-\int_{x_0}^x f^{(n+1)}(t) \dfrac{(t-x_0)^n}{n!} dt \\
+\Leftrightarrow  \\
+f(x)=\sum _{i = 0} ^{n}  \dfrac{f^{(i)}(x_0)}{i!} (x-x_0)^i+\int_{x_0}^x f^{(n+1)}(t) \dfrac{(t-x_0)^n}{n!} dt 
+\end{gathered}
+$$
+
+最后的积分部分还涉及一个对称的换元.
+
+所以其实就是你一开始对$x_0$积分就对了.
+
+</div>
+
+从这里我们可以注意到,对最后一个式子用积分中值是柯西中值.
+
+要得到拉格朗日余项,也对最后一个式子用积分中值$\int f(x)g(x)dx$的版本即可.
+
+### 换元为什么对
+
+也就是为什么可以说:
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_a^b f(x)dx=\int_c^d f(g(t))g'(t)dt
+\end{gathered}
+$$
+
+$g$可逆,$g(c)=a,g(d)=b$
+
+</div>
+
+<div class='pbox'>
+
+如果条件是$f\in C,g\in C^1$,那么直接对两边的变上限积分求导即可.
+
+如果条件是黎曼可积,你需要回归定义+拉格朗日中值得到$g'$去证明.
+
+</div>
 
