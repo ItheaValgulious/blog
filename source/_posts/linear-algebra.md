@@ -251,7 +251,7 @@ $$
 
 <div class='pbox'>
 
-##### Sol 1
+### Sol 1
 
 矩阵分解:
 
@@ -282,7 +282,7 @@ $$
 
 而删去矩阵一行或一列秩最多减少$1$,$D_1$看成$D$删掉了 $n-\operatorname{rank} A + n-\operatorname{rank} B$ 行或列得到的.同时 $\operatorname{rank} D=n$,得证.
 
-##### Sol 2
+### Sol 2
 
 考虑
 
@@ -314,7 +314,7 @@ $$
 
 而观察这个$D$容易发现 $\operatorname{rank} D\ge \operatorname{rank} A+\operatorname{rank} B$,于是得证
 
-##### Sol 3
+### Sol 3
 
 考虑我们要证明 $\dim \operatorname{range} AB\ge \dim \operatorname{range} B-\dim \operatorname{null} A$
 
@@ -913,5 +913,49 @@ $$
 于是就得证了.
 
 </div>
+
+
+<div class='cbox'>
+
+特征多项式的$n-i$项系数等于:$(-1)^i\times \text{sum of all A's principle minor of order i}$
+
+</div>
+
+<div class='pbox'>
+
+观察$A-\lambda I$显然.
+
+</div>
+
+## 实谱定理(矩阵版)
+
+<div class='cbox'>
+
+任意对称矩阵$A$可以写成$A=PDP^{-1}$,其中$D$是对角矩阵,$P$是正交矩阵.
+
+</div>
+
+<div class='pbox'>
+
+首先复化,考虑$A$的一组特征值特征向量$Av=\lambda v$,则 $v^TA\overline{v}=\overline\lambda \vert\vert v \vert\vert$,同时取共轭得这个还等于 $\lambda \vert\vert v \vert\vert$,于是能证明$\lambda \in R$.
+
+然后我们说明了$A$的特征值都是实的,我们取$v_1$是一个特征值,并将其扩充到一组标准正交基$v_1,v_2\ldots v_n$,于是
+
+$$
+\begin{gathered}
+A[v_1\ldots v_n]=[v_1\ldots v_n]
+\begin{bmatrix}
+\lambda_1&x \\
+0&A_1
+\end{bmatrix}
+\end{gathered}
+$$
+
+其中$x$和$A_1$是任意向量/矩阵,而中间$v_1\ldots v_n$是一个正交矩阵设为$B$,则右边那个分块矩阵是$B^{-1}AB=B^TAB$,于是这个也是对称的,从而$x=0$,$A_1$是对称矩阵,从而可以归纳到$n-1$维.归纳得证.
+
+这里$x=0$就是$T$在$U^\perp$不变,$A_1$对称就是$T$限制仍然是自伴.
+
+</div>
+
 
 

@@ -3233,3 +3233,48 @@ $g$可逆,$g(c)=a,g(d)=b$
 
 </div>
 
+## Class 22
+
+### 一道例题
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_0^1 f(x)dx=1,\int_0^1 xf(x)dx=0 \\
+\Rightarrow \sup_{x\in [0,1]} \vert f(x) \vert \ge \sqrt 2+1
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑反证,则 $\vert f(x) \vert <\sqrt 2+1$
+
+$$
+\begin{gathered}
+-1=\int_0^1 f(x)(\sqrt 2x-1)dx \\
+1=\vert \int_0^1 f(x)(\sqrt 2x-1)dx \vert  \\
+<(\sqrt2+1)\int_0^1 \vert \sqrt2 x-1 \vert dx \\
+=(\sqrt 2+1)(\sqrt 2-1) \\
+=1
+\end{gathered}
+$$
+
+得证.
+
+</div>
+
+[think] 首先,$\int_0^1 (ax+b)f(x)=b$包含了所有信息是你应该想到的.其次$f(x)$的最优形态看起来是最大值最小值的绝对值相等的二值的函数,所以这个放缩是有的.
+
+### 可积性理论
+
+按照这个路径:
+
+- 定义上和,下和
+- 任意和介于上和,下和之间
+- 于是显然可积等价于上和极限与下和极限相等
+- 细分之后,上和不增下和不降
+- 于是我们发现对于一列确定的上和下和的分割$T_n$,如果它们收敛,那么对任意另一列$S_n$,我们把它们的分割并起来拼一个新的$S_n\cup T_k$一定收敛,而拼起来的过程中的值的变化是不超过 $K=\vert T_k \vert 2M\Vert S_n \Vert$,$M$为被积函数的界.于是你让$S$去和满足$K<\epsilon$的$T_k$去拼得到一个新的$S_n\cup T_k$,显然这个也收敛.且这个和我们原来的$S$每项差都小于$\epsilon$,所以原$S$也收敛.
+- 于是你说明任意一列分割的上下和极限相等就所有的都相等.
