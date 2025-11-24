@@ -1,6 +1,7 @@
 ---
 title: Math Analysis Homework - Week 9
 tags: [math-analysis,homework,math]
+date: 2025-11-23 16:55:40
 ---
 
 # Math Analysis Homework - Week 9
