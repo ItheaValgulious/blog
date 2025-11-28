@@ -3279,3 +3279,219 @@ $$
 - 于是我们发现对于一列确定的上和下和的分割$T_n$,如果它们收敛,那么对任意另一列$S_n$,我们把它们的分割并起来拼一个新的$S_n\cup T_k$一定收敛,而拼起来的过程中的值的变化是不超过 $K=\vert T_k \vert 2M\Vert S_n \Vert$,$M$为被积函数的界.于是你让$S$去和满足$K<\epsilon$的$T_k$去拼得到一个新的$S_n\cup T_k$,显然这个也收敛.且这个和我们原来的$S$每项差都小于$\epsilon$,所以原$S$也收敛.
 - 于是你说明任意一列分割的上下和极限相等就所有的都相等.
 - 然后还有一个可积性的理论是任意值$v$和$\epsilon$可以取$T$,使得$T$中最大值减最小值超过$v$的区间长度和小于$\epsilon$:由这个推可积只要容易转化到$\sum w_i \Delta x$的可积条件,而如果这个不成立,则存在$v,\epsilon$,那你能找到两列差$v$的就爆炸了.
+
+### 第二积分中值
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+g \text{ is decreasing on } [a,b] \\
+g(x)\ge 0 \\
+f\in R[a,b] 
+\end{cases}\\
+\Rightarrow \int_a^b f(x)g(x)dx = g(a)\int_a^c f(x)dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+首先我们定义$F(x)=\int_a^x f(t)dt$,我们就是要证明$g(a)F(x)$的最大值比左侧大,最小值比左侧小.
+
+其实最大值是显然的.
+
+考虑
+
+$$
+\begin{gathered}
+\int_a^b f(x)g(x)dx \\
+=\sum _{i = 1} ^{n} \int_{x_i}^{x_{i+1}}f(x)g(x)dx \\
+=\sum _{i = 1} ^{n}  \int_{x_i}^{x_{i+1}}f(x)(g(x)-g(x_i))dx \\
++\sum_{i=1}^n \int_{x_i}^{x_{i+1}}f(x)g(x_i)dx
+\end{gathered}
+$$
+
+其中对第一项,考虑$g$可积所以我们可以取分割是的$g(x)-g(x_i)$的积分是任意小,然后你把$f(x)$放成他的界就说明这块最后是$0$.
+
+对第二项转化成
+
+todo
+
+</div>
+
+
+
+$g$是增的情况是相同的,而结合可以证明:
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+g \text{ is monotonic on } [a,b] \\
+f(x)\in R[a,b] 
+\end{cases}
+\\
+\Rightarrow \exists c,\int_a^b f(x)g(x)dx=g(a)\int_a^cf(x)dx+g(b)\int_c^b f(x)dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+取$g_0(x)=g(x)-g(a)$(或者$g$递减,取$g_0(x)=g(x)-g(b)$)用上面的形式.
+
+</div>
+
+## Class 23
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f \text{ is decreasing on } [0,2\pi] \\
+\Rightarrow \forall n\in Z,\int_0^{2\pi} f(x)\sin(nx)dx\ge 0
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+直接用中值就是
+
+$$
+\begin{gathered}
+f(0)(-\cos nt+\cos 0) \\
++f(2\pi)(\cos nt-\cos 2\pi) \\
+\ge 0
+\end{gathered}
+$$
+
+</div>
+
+
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+x>0 \Rightarrow \forall c,\vert \int_x^{x+c} \sin(t^2)dt \vert \le \dfrac{1}{x} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+你考虑$t^2$肯定要处理:
+
+$$
+\begin{gathered}
+=\int_x^{x+c} \dfrac{1}{\sqrt{t^2}} \sin(t^2)d(t^2) \\
+=\int_{x^2}^{(x+c)^2}\dfrac{1}{2\sqrt s}\sin sds \\ 
+\end{gathered}
+$$
+
+然后用第二中值
+
+$$
+\begin{gathered}
+=\vert \dfrac{1}{2x} \int_{x^2}^\xi \sin sds \vert   \\
+\le \dfrac{1}{2x} 
+\end{gathered}
+$$
+
+</div>
+
+### Lebeisge Theorem
+
+<div class='cbox'>
+
+勒贝格测度下,$R$上零测集等价于可以被总长为任意小的可数个区间覆盖.
+
+</div>
+
+<div class='pbox'>
+
+因为勒贝格测度是完备的.任意一个区间覆盖的测度是有定义 的,空集是有定义的,于是完备化定义了中间的是$0$.
+
+</div>
+
+<div class='cbox'>
+
+$f$可积当且仅当$f$有界且不连续点的集合测度为$0$.
+
+</div>
+
+<div class='pbox'>
+
+#### Sol 1
+
+定义函数一点的振幅为
+
+$$
+\begin{gathered}
+w(x)=\lim_{d \to 0} \sup_{y_1,y_2\in[x-d,x+d]}\vert f(y_1)-f(y_2) \vert 
+\end{gathered}
+$$
+
+容易看出连续等价于$w(x)=0$.
+
+(实际上是上极限减下极限,等于0就是只有一个极限).
+
+于是考虑零测集的一组开覆盖$I=\bigcup I_1,I_2,\ldots$满足长度和小于任意$\epsilon_1$.
+
+那么对区间$[a,b]$的每个点,考虑
+- 若当前点在$I$中,则你取一个它的小邻域也在$I$中($I$是开集).
+- 否则,当前点是连续点,则连续点满足$w(x)=0$是一个极限,所以存在一个$d$使得$N(x,d)$上的振幅小于任意$\epsilon_2$.我们取这样一个邻域$N(x,d)$.
+
+于是所有点对应的区间构成对$[a,b]$的无限开覆盖,于是它有有限子覆盖,于是你可以拿出有限个区间.
+
+把这些区间的端点组成划分$T$,考虑$T$中的每个区间:
+
+如果它被一个来自$I$的点的区间包含,那么这样的区间总长度小于$I$的总长度.而剩下的区间被第二种区间包含,每个振幅小于$\epsilon_2$.
+
+这样你的$\sum w\Delta x$就是第一类的加第二类的,第一类的是$2M\epsilon_1$,第二类是$(b-a)\epsilon_2$,都是乘常数,所以可以任意小得证.这是充分.
+
+对于必要性,那么如果$f$真的可积,你考虑等价条件之一是对任意$\epsilon,\delta$,可以找到分割$T$使得振幅大于$\epsilon$的区间长度小于$\delta$.
+
+于是你取$\epsilon=\dfrac1n$,取$\delta=\dfrac1{2^n}$再把这些区间并起来结束.
+
+#### Sol 2
+
+或者我们看到振幅是上极限减下极限(包含自身),所以是上半连续的,所以振幅大于等于$\epsilon$的集合是一个闭集,所以覆盖零测集的一组集合可以取有限覆盖来覆盖大于等于$\epsilon$的.后面的仍然一样走.
+
+#### Sol 3
+
+老师上课讲的:
+
+首先我们需要一个引理:若$D=\{x \vert w(x)\ne 0\}$有一个可数开区间覆盖且是零测集,则
+
+$$
+\begin{gathered}
+\forall \epsilon,\exists \delta,\forall x\in [a,b]-D,y\in [a,b],\vert x-y \vert <\delta \\
+\Rightarrow \vert f(x)-f(y) \vert <\epsilon
+\end{gathered}
+$$
+
+证明考虑反证,则存在
+
+$$
+\begin{gathered}
+c_n\in [a,b]-D,d_n\in [a,b] \\
+\lim_{n \to \infty} \vert c_n-d_n \vert =0 \\
+\lim_{n \to \infty} \vert f(c_n)-f(d_n) \vert >\epsilon
+\end{gathered}
+$$
+
+那我们取$a$的一个收敛子列,则$b$对应子列也收敛到相同点,而你用闭集减去若干开集得到的是闭集,所以这个共同的点落在$[a,b]-D$中,对这个连续点用连续性定义即推出矛盾.
+
+有了引理之后,对任意分割$T$满足$\Vert T\Vert<\delta$,考虑$T$的每个小区间把和$K=[a-b]-D$的交是否为空集分类.为空的集合完全包含于覆盖长度很小,而不为空集的有该区间内振幅一定小于$2\epsilon$,于是随便取一下$\epsilon$把结果加一下就得证.
+
+</div>
+

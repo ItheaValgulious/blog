@@ -1,7 +1,12 @@
 ---
 title: Cayley Hamilton
-tags: [linear-algebra,math,whims]
+tags:
+  - linear-algebra
+  - math
+  - whims
+date: 2025-11-24 14:28:49
 ---
+
 
 # Cayley Hamilton
 
@@ -80,3 +85,67 @@ $$
 这样你就通过在$n\times n$矩阵的环上定义的矩阵和行列式,以及它们和原本矩阵的结构的相似性证明了这个问题.
 
 这个证法其实和走抽象代数,走张量积的做法本质相同(甚至你把矩阵塞到矩阵里就是张量积的坐标形式).
+
+## 另一个证法
+
+考虑有理标准型的想法,对任意$v$,取$k$使得$v,Tv,T^2v,\ldots,T^kv$线性无关且$k$是最大的满足无关的.那么它们构成一组基且张成$T$的一个不变子空间.在这组基下$T$的矩阵形如:
+
+$$
+A = 
+\begin{pmatrix}
+ &        &        & c_0 \\
+1 &        &        & c_1 \\
+  & \ddots &        & \vdots \\
+  &        & 1      & c_{p-1}
+\end{pmatrix}
+$$
+
+然后这个东西的特征多项式是 $x^p-\sum _{i = 0} ^{p-1} c_ix^i$,且它能零化这个矩阵,它又一定是$T$特征多项式的因子,就结束了.
+
+## 重要推论
+
+我们还是想带入,或者更广义的说:
+
+<div class='cbox'>
+
+现在你有一个矩阵系数多项式$f(x)=\sum_i C_ix^i$,和一个标量系数多项式$g(x)=\det f(x)$,则我们说若$f(A)=0$则$g(A)=0$
+
+</div>
+
+<div class='pbox'>
+
+注意到
+
+$$
+\begin{gathered}
+x^kI-A^k=(xI-A)(\sum_{i=0}^{k-1} x^iIA^{k-i-1}) \\
+\Rightarrow xI-A \vert x^kI-A^k
+\end{gathered}
+$$
+
+于是
+
+$$
+\begin{gathered}
+f(x)=f(x)-f(A)=\sum_i C_i (x_iI-A^k) \\
+\Rightarrow x_iI-A \vert f(x) \\
+\Rightarrow f(x)=(x_iI-A)Q(x)
+\end{gathered}
+$$
+
+注意到这里,$f$是矩阵系数多项式,$x$是一个标量.而在取行列式后,我们会得到标量多项式:
+
+$$
+\begin{gathered}
+g(x)=\det f(x)=\det (x_iI-A) \det Q(x)
+\end{gathered}
+$$
+
+这是两个标量多项式相乘,而第一个根据Cayley-Hamilton在带入$A$后值为$0$,所以$g(A)=0$.
+
+一个核心点就在于,我们往矩阵多项式里带入矩阵的话是很小心的(比如$F(B)\ne (BI-A)Q(B)$,因为因式分解的时候利用了$xI$和$A$的交换律,而替换成任意矩阵就没有这个性质),但是取行列式转化成标量多项式后就没问题了.
+
+</div>
+
+
+

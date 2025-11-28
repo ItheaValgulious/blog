@@ -858,15 +858,38 @@ $$
 
 [think] 碰到范德蒙德矩阵一定要想多项式
 
-<div class='bbox'>
+  <div class='cbox'>
 
-$$
-\begin{gathered}
-\det(A+uv^T)=\det A(1+v^TA^{-1}u)
-\end{gathered}
-$$
+  $$
+  \begin{gathered}
+  \det(A+uv^T)=\det A(1+v^TA^{-1}u)
+  \end{gathered}
+  $$
 
-</div>
+  </div>
+
+  <div class='pbox'>
+
+  一个是上面提到的证法.
+
+  或者考虑
+
+  $$
+  \begin{gathered}
+  \det(I+uv^T)=(1+v^Tu)=(1+u^Tv)
+  \end{gathered}
+  $$
+
+  这个可以直接考虑$uv^T$特征值是$n-1$个$0$和一个$v^Tu$(对应特征向量$u$).
+  $A^{-1}v^T$
+
+  然后$\det (A+Auv^T)=\det A(1+u^Tv)$
+
+  所以让$u'=A^{-1}u$,那么式子就成了$\det (A+u'v^T)=\det A(1+v^TA^{-1}u')$.即我们所证的.
+
+  </div>
+
+
 
 ## about eigen values
 
@@ -957,5 +980,23 @@ $$
 
 </div>
 
+## 二次型
 
+### 惯性定理 Inertia Theorem
+
+<div class='cbox'>
+
+任意二次型$A$通过任意可逆矩阵$P$合同变换到对角矩阵$PDP^T$,$D$的对角线上$0$的个数,正数个数,负数个数都是确定的(与$P$无关).
+
+</div>
+
+<div class='pbox'>
+
+首先$0$的个数是确定的,因为这是矩阵的秩.
+
+考虑在两组基下,假设它们对角型正数的个数分别为$a,b$,负数是$r-a,r-b$,不妨设$a<b$.
+
+那么我们不考虑$0$的那部分限制到$r$维的空间上考虑,则你可以找到一个$a$维的空间,上面值都是正的(要求所有负惯性指数位置都是负的),再找一个$r-b$上面都是负的.而$a+r-b>r$所以这俩空间有交,爆炸了.
+
+</div>
 

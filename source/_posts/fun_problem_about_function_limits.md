@@ -4,6 +4,7 @@ tags:
   - math
   - math-analysis
   - whims
+date: 2025-11-10 14:28:49
 ---
 
 # A Fun Problem about Function Limits
