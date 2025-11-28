@@ -1,6 +1,7 @@
 ---
 title: Math Analysis Homework - Week 6
 tags: [math-analysis,math,homework]
+date: 2025-10-27 21:21:51
 ---
 
 # Math Analysis Homework - Week 6
