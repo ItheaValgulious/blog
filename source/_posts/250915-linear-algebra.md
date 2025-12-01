@@ -858,37 +858,36 @@ $$
 
 [think] 碰到范德蒙德矩阵一定要想多项式
 
-  <div class='cbox'>
+<div class='cbox'>
 
-  $$
-  \begin{gathered}
-  \det(A+uv^T)=\det A(1+v^TA^{-1}u)
-  \end{gathered}
-  $$
+$$
+\begin{gathered}
+\det(A+uv^T)=\det A(1+v^TA^{-1}u)
+\end{gathered}
+$$
 
-  </div>
+</div>
 
-  <div class='pbox'>
+<div class='pbox'>
 
-  一个是上面提到的证法.
+一个是上面提到的证法.
 
-  或者考虑
+或者考虑
 
-  $$
-  \begin{gathered}
-  \det(I+uv^T)=(1+v^Tu)=(1+u^Tv)
-  \end{gathered}
-  $$
+$$
+\begin{gathered}
+\det(I+uv^T)=(1+v^Tu)=(1+u^Tv)
+\end{gathered}
+$$
 
-  这个可以直接考虑$uv^T$特征值是$n-1$个$0$和一个$v^Tu$(对应特征向量$u$).
-  $A^{-1}v^T$
+这个可以直接考虑$uv^T$特征值是$n-1$个$0$和一个$v^Tu$(对应特征向量$u$).
+$A^{-1}v^T$
 
-  然后$\det (A+Auv^T)=\det A(1+u^Tv)$
+然后$\det (A+Auv^T)=\det A(1+u^Tv)$
 
-  所以让$u'=A^{-1}u$,那么式子就成了$\det (A+u'v^T)=\det A(1+v^TA^{-1}u')$.即我们所证的.
+所以让$u'=A^{-1}u$,那么式子就成了$\det (A+u'v^T)=\det A(1+v^TA^{-1}u')$.即我们所证的.
 
-  </div>
-
+</div>
 
 
 ## about eigen values
@@ -998,5 +997,20 @@ $$
 
 那么我们不考虑$0$的那部分限制到$r$维的空间上考虑,则你可以找到一个$a$维的空间,上面值都是正的(要求所有负惯性指数位置都是负的),再找一个$r-b$上面都是负的.而$a+r-b>r$所以这俩空间有交,爆炸了.
 
+[think] 注意到正惯性指数是最大的子空间满足这里面的值带进去都是正的.
+
 </div>
+
+<div class='cbox'>
+
+所有顺序主子式大于$0$等价于正定
+
+</div>
+
+<div class='pbox'>
+
+考虑对角化的过程,如果已经消除了左上角$k\times k$的矩阵,接下来这些地方就不会动了.然后你消$(k+1)\times (k+1)$的左上角,注意到我们前面已经进行的行列变换都是在前$k$行进行的,所以前面所有的操作都不会改变当前$(k+1)\times (k+1)$矩阵的行列式,直到你消完.于是每个顺序主子式对应的子矩阵消前和消后的行列式是一样的.
+
+</div>
+
 

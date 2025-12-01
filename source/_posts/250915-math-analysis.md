@@ -1,5 +1,5 @@
 ---
-title: Math Analysis
+title: Math Analysis(Class Note)
 tags:
   - math-analysis
   - note
