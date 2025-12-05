@@ -1066,7 +1066,7 @@ $A=U\Sigma V^T$,$A^+=V\Sigma^+ U^T$,其中$\Sigma^+$是把所有非零对角线�
 $$
 \begin{gathered}
 A=UDV^T=\sum_i u_is_iv_i^T \\
-\Rightarrow \min_{\operatorname{rank} C=k} \Vert A-C \Vert =  \Vert \sum_{i=k+1} u_is_iv_i^T \Vert
+\Rightarrow \min_{\operatorname{rank} C=k} \Vert A-C \Vert =  s_{k+1}
 \end{gathered}
 $$
 
@@ -1074,23 +1074,30 @@ $$
 
 <div class='pbox'>
 
+设$A_{m\times n},V_{n\times n},U_{m\times m},D_{m\times n}$
 
-考虑
+考虑对$A$分解得$A=UDV^T$,则我们让$D$只保留前$k$个特征值,其余设为$0$得到$D'$,令$C=UD'V^T$,则显然$A-C$的SVD分解就是$U(D-D')V^T$,其最大的奇异值恰为$s_{k+1}$(就是只用前$k$个奇异值去逼近啦).
+
+然后只需要证明这是最小值.考虑$A$的前$k+1$个右奇异向量($v_1\ldots v_k$)张成的子空间和$B$的零空间的交( $\dim \operatorname{null} B=n-\operatorname{rank} B=n-k$,故必然有交)中的单位向量$x$.
+
+而
 
 $$
 \begin{gathered}
-A=UDV^T,C=UFV^T \\
-\min \Vert A-C \Vert^2 =\min n^T(A-C)^T(A-C)n \\
-=\min n^T(V(D-F^T)U)(U(D-F)V^T)n \\
-=\min n^T(D-F^T)(D-F)n \\
+\Vert (A-B)x \Vert^2  \\
+=\Vert Ax \Vert^2  \\
+=x^TA^TAx \\
+=x^TVD^2V^Tx \\
+=(V^Tx)^TD^2(V^Tx) \\
+\ge s_{k+1}^2
 \end{gathered}
 $$
 
-显然题目中的那个值是可以做到的(让$F$为前$k$个$s$组成的对角矩阵).
-
-那要证明最优,todo
+于是得证.
 
 </div>
+
+[think] 证明最小化的时候从分析矩阵结构改为找一个向量.因为这个向量显然一定可以在前$k+1$维(这个每个维度都放大需求倍数的空间中任何一个向量也都被放大需求倍数).
 
 
 
