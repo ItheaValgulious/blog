@@ -1013,4 +1013,84 @@ $$
 
 </div>
 
+## SVD
+
+### PCA(主成分分析)
+
+你有若干个向量$a_i$(若干个点)
+
+先让$a$都减去平均值得到$a'$令$A=[a_1'\ldots a_n']$,令$B=AA^T$,你发现$B_{i,j}=\operatorname{Var}(x_i,x_j)$(两维的协方差.)
+
+<div class='cbox'>
+
+对$A$进行SVD分解$A=UDV$,则若$s_1$对应的方向$v_1$,直线$tv_1$是最小化每个点到直线距离(垂线段距离)平方的直线.
+
+</div>
+
+<div class='pbox'>
+
+设最优方向为单位向量$n$.
+
+$$
+\begin{gathered}
+L=\sum (x_i-n<x_i,n>)^2 \\
+=\sum a_i^2+n^2<a_i,n>^2-2<a_i,n><a_i,n> \\
+=(\sum a_i^2)-(\sum_i<a_i,n>^2)
+\end{gathered}
+$$
+
+只要最大化第二项.考虑
+
+$$
+\begin{gathered}
+\sum_i <a_i,n>^2 \\
+=n^T(\sum a_i a_i^T)n \\
+=n^T(AA^T)n
+\end{gathered}
+$$
+
+这是二次型,把$AA^T$谱分解就看出显然最大值在它最大的特征值对应特征向量方向,也就是$v_1$方向.
+
+你还可以看出这个值是$\sum a_i^2-s_1^2$
+
+</div>
+
+### SVD求伪逆
+
+$A=U\Sigma V^T$,$A^+=V\Sigma^+ U^T$,其中$\Sigma^+$是把所有非零对角线元素变成倒数再取转置.
+
+### 用SVD逼近
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+A=UDV^T=\sum_i u_is_iv_i^T \\
+\Rightarrow \min_{\operatorname{rank} C=k} \Vert A-C \Vert =  \Vert \sum_{i=k+1} u_is_iv_i^T \Vert
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+
+考虑
+
+$$
+\begin{gathered}
+A=UDV^T,C=UFV^T \\
+\min \Vert A-C \Vert^2 =\min n^T(A-C)^T(A-C)n \\
+=\min n^T(V(D-F^T)U)(U(D-F)V^T)n \\
+=\min n^T(D-F^T)(D-F)n \\
+\end{gathered}
+$$
+
+显然题目中的那个值是可以做到的(让$F$为前$k$个$s$组成的对角矩阵).
+
+那要证明最优,todo
+
+</div>
+
+
 

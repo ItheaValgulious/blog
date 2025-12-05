@@ -13,6 +13,8 @@ date: 2025-10-13 17:49:57
 
 记录大致讲了什么
 
+## Book Edition 3
+
 ### 向量空间
 
 我们定义向量空间
@@ -2574,4 +2576,88 @@ $$
 </div>
 
 第三版的内容到此结束.剩下的随缘更.
+
+## 补充
+
+### Gershgorin
+
+<div class='cbox'>
+
+矩阵$A$的所有特征值$\lambda$都满足存在$k$使得
+
+$$
+\begin{gathered}
+\vert \lambda-A_{k,k} \vert \le \sum_{i\ne k} \vert A_{i,k} \vert 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑一组$Av=\lambda v$
+
+则选取$v$绝对值最大的分量$v_k$,那么它满足:
+
+$$
+\begin{gathered}
+\sum_i A_{k,i}v_i=\lambda v_k \\
+\Rightarrow (\lambda-A_{k,k})v_k=\sum_{i\ne k}A_{k,i}v_i \\
+\Rightarrow \vert (\lambda-A_{k,k})v_k \vert =\vert \sum_{i\ne k}A_{k,i}v_i \vert  \\
+\Rightarrow \vert \lambda-A_{k,k} \vert \vert v_k \vert \le \sum_{i\ne k} \vert A_{k,i} \vert  \vert v_k \vert 
+\end{gathered}
+$$
+
+除过去即证.
+
+</div>
+
+### 关于交换矩阵
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+AB=BA \Rightarrow E(\lambda,A) \text{ is invariant to } B
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+ABv=BAV \\
+\Rightarrow A(Bv)=\lambda (Bv)
+\end{gathered}
+$$
+
+</div>
+
+<div class='cbox'>
+
+可对角化矩阵可交换等价于可同时对角化
+
+</div>
+
+<div class='pbox'>
+
+从同时对角化推交换是显然的.
+
+考虑现在$AB=BA$,那由上面的不变性可以考虑$B\vert_{E(\lambda,A)}$,注意到它一定也是可对角化的(为什么呢,考虑可对角化等价于极小多项式无重根,而$B\vert_{E(\lambda,A)}$的的极小多项式是$B$的因数).那么你可以在这一小块把$B\vert_{E(\lambda,A)}$对角化,而$A\vert_{E(\lambda,A)}$一定是对角阵,每块都这么做一下就好了.
+
+</div>
+
+<div class='cbox'>
+
+复矩阵可交换等则同时上三角化
+
+</div>
+
+<div class='pbox'>
+
+感觉把舒尔定理取一个特征向量那步改成取公共特征向量是不是就行了.
+
+</div>
 

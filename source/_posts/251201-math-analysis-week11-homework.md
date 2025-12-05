@@ -255,3 +255,420 @@ $$
 
 </div>
 
+## Class 2
+
+### T1
+<div class="cbox">
+
+1. 计算下列反常积分：
+$$
+\begin{gathered}
+(5) \int_0^{+\infty} \frac{1+x^2}{1+x^4} \mathrm{d}x
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=\int_0^{+\infty} \dfrac{1+\dfrac{1}{x^2} }{x^2+\dfrac{1}{x^2} } dx \\
+\text{let }t=x-\dfrac{1}{x}  \\
+Ans=\int_{-\infty}^{+\infty} \dfrac{1}{t^2+2}dt  \\
+\text{let } t=\sqrt 2\tan t \\
+Ans=\int_{-\frac{\pi}2}^{\frac{\pi}2} \dfrac{\sqrt 2\sec^2 t}{2\sec^2 t} dt \\
+=\dfrac{\sqrt 2\pi}{2} 
+\end{gathered}
+$$
+
+
+
+</div>
+
+
+
+### T2
+<div class="cbox">
+
+1. 计算下列反常积分：
+$$
+\begin{gathered}
+(6) \int_0^{+\infty} \frac{x \mathrm{e}^{-x}}{\left(1+\mathrm{e}^{-x}\right)^2} \mathrm{d}x
+\end{gathered}
+$$  
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\int \dfrac{e^{-x}}{(1+e^{-x})^2} dx \\
+=\int -\dfrac{dt}{(1+t)^2}  \\
+=\dfrac{1}{1+t}+C \\
+=\dfrac{1}{1+e^{-x}}+C \\
+\text{let } C=-1 \\
+
+\Rightarrow Ans=\dfrac{-xe^{-x}}{1+e^{-x}}\vert_0^{+\infty} -\int_0^{+\infty} \dfrac{-e^{-x}}{1+e^{-x}}dx \\
+=  0+\ln 2 \\
+=\ln 2
+\end{gathered}
+$$
+
+</div>
+
+
+
+
+### T3
+<div class="cbox">
+
+2. 判断下列无穷积分的敛散性：
+$$
+\begin{gathered}
+(4) \int_0^{+\infty} \frac{x}{\mathrm{e}^x + \mathrm{e}^{-x}} \mathrm{d}x
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\le \int_0^{\infty} \dfrac{x}{e^x}  \\
+\le \int_0^\infty \dfrac{x}{1+x+\dfrac{x^2}{2}+\dfrac{x^3}{6} }  \\
+\le \int_0^1 \dfrac{x}{e^x}+\int_1^\infty \dfrac{6}{x^2}   \\
+\le 1+\int_1^{\infty} \dfrac{6}{x^2} 
+\end{gathered}
+$$
+
+第二项收敛.所以收敛.
+
+</div>
+
+
+
+### T4
+<div class="cbox">
+
+2. 判断下列无穷积分的敛散性：
+$$
+\begin{gathered}
+(5) \int_1^{+\infty} \left[ \ln\left(1+\frac{1}{x^2}\right) - \frac{1}{1+x^2} \right] \mathrm{d}x
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\ln(1+\dfrac{1}{x^2} )-\dfrac{1}{1+x^2}  \\
+=\dfrac{1}{x^2}-\dfrac{1}{2x^4}+o(\dfrac{1}{x^5} ) -\dfrac{1}{x^2} +\dfrac{1}{x^4}  \\
+=\dfrac{1}{2x^4} +o(\dfrac{1}{x^5} ) \\
+\Rightarrow \lim_{x \to \infty} \dfrac{\left[ \ln\left(1+\frac{1}{x^2}\right) - \frac{1}{1+x^2} \right]}{\dfrac{1}{2x^4} } =1 \\
+\Rightarrow \text{Convergent} 
+ 
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T5
+<div class="cbox">
+
+2. 判断下列无穷积分的敛散性：
+$$
+\begin{gathered}
+(6) \int_1^{+\infty} x\left(1-\cos\frac{1}{x^2}\right)^p \mathrm{d}x, \quad p \in \mathbb{R}
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\cos \dfrac{1}{x^2} =1-\dfrac{1}{2x^4}+o(x^5) \\
+\Rightarrow \lim_{x \to \infty} \dfrac{x(1-\cos \dfrac{1}{x^2} )^p}{x^{1-4p}} =C\in (0,\infty) \\
+\int_1^{+\infty} x(1-\cos \dfrac{1}{x^2} )^p\begin{cases}
+\text{ is convergent} ,p>\dfrac{1}{2}  \\
+\text{ isn't convergent} ,p\le \dfrac{1}{2} 
+\end{cases}
+
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T6
+<div class="cbox">
+
+3. 判断下列无穷积分的敛散性（含绝对收敛性与条件收敛性）：
+$$
+\begin{gathered}
+(3) \int_1^{+\infty} \sin\left(\frac{\sin x}{x}\right) \mathrm{d}x
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\int_a^b \sin(\dfrac{\sin x}{x} )dx \\
+=\sum_{i=A}^B \int_{k\pi}^{(k+1)\pi}\sin(\dfrac{\sin x}{x} )dx \\
++\int_a^{A\pi}\sin(\dfrac{\sin x}{x} )dx+\int_{B\pi}^b \sin(\dfrac{\sin x}{x} )dx
+\end{gathered}
+$$
+
+其中第一项因为正负交替且递减,求和式绝对值小于第一项$\int_{k\pi}^{(k+1)\pi}\sin (\dfrac{\sin x}x)$.于是这三项都为$\int_c^d \sin \dfrac{\sin x}x<2\pi \dfrac{1}{x}$,从而小于$\dfrac{6\pi}{a}$,应用柯西收敛准则得知手收敛.
+
+而
+
+$$
+\begin{gathered}
+\int_1^{+\infty}{\left \vert  \sin \dfrac{\sin x}{x} dx \right \vert}  \\
+> \int_1^{+\infty} {\left\vert \dfrac{\sin x}{x}dx\right \vert} -{\left\vert\int_1^{+\infty}\dfrac16(\dfrac{\sin x}{x} )^3dx \right \vert} 
+\end{gathered}
+$$
+
+第一项发散,第二项收敛,故发散.
+
+条件收敛.
+
+</div>
+
+
+
+### T7
+<div class="cbox">
+
+3. 判断下列无穷积分的敛散性（含绝对收敛性与条件收敛性）：
+$$
+\begin{gathered}
+(4) \int_1^{+\infty} \frac{\cos(x^p)}{x} \mathrm{d}x, \quad p \in \mathbb{R}
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$p>0$时.
+
+$$
+\begin{gathered}
+=\int_1^{+\infty}\dfrac{\cos x}{x^{\frac1p}}x^{\frac1p-1} dx \\
+=\int_1^{+\infty}\dfrac{\cos x}{x} dx \\
+\end{gathered}
+$$
+
+$\cos x$积分有界,$\dfrac{1}{x}$递减且收敛到$0$,原式收敛.
+
+绝对值:
+
+$$
+\begin{gathered}
+\vert \dfrac{\cos x}{x} \vert \ge \dfrac{\sin (x+\frac\pi2)}{x+\frac\pi2} 
+\end{gathered}
+$$
+
+而后一项积分发散.
+
+故原式条件收敛.
+
+$p\le 0$时,$\lim_{x\to +\infty}\cos x^p=1$
+
+于是取$X$足够大使$\cos x^p>\dfrac{1}{2}$,$\int_X^{+\infty}\dfrac{\cos(x^p)}{x} dx>\dfrac{1}{2}\int_X^{+\infty}\dfrac1x=\infty$,发散.
+
+</div>
+
+
+
+### T8
+<div class="cbox">
+
+4. 设 $P_m(x)$ 和 $P_n(x)$ 分别为 $m$ 和 $n$ 次多项式，并且当 $x \geqslant a$ 时，$P_n(x) > 0$. 试研究
+$$
+\begin{gathered}
+\int_a^{+\infty} \frac{P_m(x)}{P_n(x)} \sin x \mathrm{d}x
+\end{gathered}
+$$
+的绝对收敛性和条件收敛性.
+
+</div>
+
+<div class='pbox'>
+
+不妨设$x\to +\infty$时$P_m(x)>0$
+
+若$m\ge n$,$\lim_{x\to \infty}\dfrac{P_m(x)}{P_n(x)}=A>0$
+
+$$
+\begin{gathered}
+\exists X,x>X \Rightarrow \dfrac{P_m(x)}{P_n(x)} >B(B<A) \\
+\Rightarrow {\left \vert \int_{2n\pi+\frac\pi4}^{2n\pi+\frac\pi2} \dfrac{P_m(x)}{P_n(x)} \sin xdx \right \vert}  \\
+>\dfrac{\sqrt 2B\pi}{8}
+\end{gathered}
+$$
+
+发散.
+
+若$m<n-1$,
+
+$$
+\begin{gathered}
+\int {\left \vert \dfrac{P_m(x)}{P_n(x)} \sin x \right \vert} \le \int {\left \vert \dfrac{1}{x^r}  \right \vert}<+\infty, (r>1)
+\end{gathered}
+$$
+
+绝对收敛
+
+若$m=n-1$,
+
+$$
+\begin{gathered}
+\dfrac{P_m(x)}{P_n(x)}=\dfrac{1}{x} +o(\dfrac{1}{x})
+\end{gathered}
+$$
+
+其中第一部分最后条件收敛,第二部分最后收敛,故整体条件收敛.
+
+</div>
+
+
+
+### T9
+<div class="cbox">
+
+5. 证明无穷积分的对数判别法：设 $f(x) \in C[1, +\infty)$ 且恒正，若 $\lim_{x\to+\infty} \frac{\ln f(x)}{\ln x} = -\lambda$，则当 $\lambda > 1$ 时无穷积分 $\int_1^{+\infty} f(x) \mathrm{d}x$ 收敛.
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\lim_{x \to +\infty} \dfrac{\ln f(x)}{\ln x} =-\lambda \\
+\Rightarrow  \exists 1<a<\lambda,X \ s.t.\ 
+x>X \Rightarrow \dfrac{\ln f(x)}{\ln x} <-a, \\
+\Rightarrow f(x)<\dfrac{1}{x^a}
+\end{gathered}
+$$
+
+应用比较判别法,$\int_1^{\infty}\dfrac{1}{x^a}$收敛,得证.
+
+</div>
+
+
+
+### T10
+<div class="cbox">
+
+6. 设在 $[a, +\infty)$ 上满足：$g(x) \leqslant f(x) \leqslant h(x)$，且 $\int_a^{+\infty} g(x) \mathrm{d}x$ 与 $\int_a^{+\infty} h(x) \mathrm{d}x$ 收敛，请问 $\int_a^{+\infty} f(x) \mathrm{d}x$ 是否收敛？
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+f(x)-g(x)\le h(x)-g(x)<+\infty \\
+f(x)=g(x)+(f(x)-g(x))<+\infty
+\end{gathered}
+$$
+
+收敛.
+
+</div>
+
+
+
+### T11
+<div class="cbox">
+
+8. 设函数 $f(x)$ 在 $[a, +\infty)$ 上单调减少且趋于 0. 证明：无穷积分 $\int_a^{+\infty} f(x) \mathrm{d}x$ 与 $\int_a^{+\infty} f(x)\sin^2 x \mathrm{d}x$ 同敛散.
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+I_1=\int_a^{+\infty}f(x)dx \\
+I_2=\int_a^{+\infty}f(x)\sin^2 xdx\le I_1
+\end{gathered}
+$$
+
+故$I_1$收敛推出$I_2$收敛.
+
+若$I_1$发散,因为$f$递减,则
+
+$$
+\begin{gathered}
+F(x)=\int_a^x f(t)dt \\
+F(x)<C+4\sum_{i=a} \int_{2i\pi+\frac{\pi}4}^{2i\pi+\frac{3\pi}4}f(t)dt=C+G(x)
+\end{gathered}
+$$
+
+而
+
+$$
+\begin{gathered}
+\int_a^x f(t)dt\sin^2 tdt \\
+=
+H(x) \\
+>\sum_{i=a} \int_{2i\pi+\frac\pi4}^{2i\pi+\frac{3\pi}4}f(t)\sin^2tdt \\
+>\sum_{i=a} \int_{2i\pi+\frac\pi4}^{2i\pi+\frac{3\pi}4}f(t)\dfrac{1}{2}dt \\
+=\dfrac{1}{2} G(x)
+\end{gathered}
+$$
+
+于是$F(x)<kH(x)$推出$I_2$发散.
+
+
+</div>
+
+
+
+### T12
+<div class="cbox">
+
+9. 设函数 $f(x)$ 在 $[a, +\infty)$ 上连续可微，且无穷积分 $\int_a^{+\infty} f(x) \mathrm{d}x$ 与 $\int_a^{+\infty} f'(x) \mathrm{d}x$ 都收敛. 证明：$\lim_{x\to+\infty} f(x) = 0$.
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\exists X,\forall c,d>X,
+{\left \vert \int_c^d f'(x)dx \right \vert} =\vert f(d)-f(c) \vert <\epsilon
+\end{gathered}
+$$
+
+于是$f(x)$收敛,设收敛到$a$,若$a\ne 0$,存在$0<b<\vert a\vert$
+
+则
+
+$$
+\begin{gathered}
+\exists X,\forall x>X,\vert f(x) \vert >b,\forall x_1,x_2>X,f(x_1)f(x_2)>0 \\
+\vert \int_{a}^\infty f(x)dx \vert =\int_{a}^\infty \vert f(x) \vert dx>\int_a^{\infty}bdx=+\infty
+\end{gathered}
+$$
+
+矛盾.于是得证.
+
+</div>
+
