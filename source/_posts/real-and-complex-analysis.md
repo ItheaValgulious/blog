@@ -1,7 +1,14 @@
 ---
 title: Real And Complex Analysis
-tags:[math,note,real-analysis,complex-analysis,self-study]
+tags:
+  - math
+  - note
+  - real-analysis
+  - complex-analysis
+  - self-study
+date: 2025-12-08 09:06:15
 ---
+
 
 # Real And Complex Analysis
 

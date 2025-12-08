@@ -348,5 +348,160 @@ $$
 
 用泰勒展开判断它和$\dfrac1x$的几次方同阶,然后比较判别法.
 
+然后展开的时候你应该展开到小$o$不影响你的结果,即小$o$那块拿出来是收敛的.
+
+</div>
+
+## Class 27
+
+### Egs
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_1^\infty x\sin(x^4)dx
+\end{gathered}
+$$
+
+收敛
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=\int_1^{\infty}x^{\frac14}\sin x \dfrac{1}{4} x^{-\frac34} \\
+=\dfrac{1}{4} \int_1^\infty \dfrac{\sin x}{\sqrt x} dx
+\end{gathered}
+$$
+
+条件收敛(迪利克雷)
+
+但$x\sin x^4$不趋近于$0$.
+
+</div>
+
+所以广义积分收敛不代表被积函数趋近于$0$.它可以有一些面积很小但值恒定的突起(不断变窄的).如
+
+$$
+\begin{gathered}
+\int_1^\infty \sum_n \chi_{[n,n+\frac1{n^2}]}
+\end{gathered}
+$$
+
+是更直观的体现.然后如果你把指示函数做个平滑处理就可以弄成连续的.
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+f \text{ is monotonic}  \\
+\int_1^\infty f(x)dx<\infty
+\end{cases} \\
+\Rightarrow f(x)=o(\dfrac{1}{x} ) 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+柯西收敛定理:
+
+$$
+\begin{gathered}
+\epsilon>{\left \vert \int_a^{2a} f(x) \right \vert} >af(a)=\dfrac{f(a)}{\dfrac{1}{a} } 
+\end{gathered}
+$$
+
+即证
+
+</div>
+
+
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+\int_1^\infty f(x)dx<\infty \\
+f(x)\in UC[1,\infty) \\ 
+\end{cases}
+\\
+\Rightarrow \lim_{x \to +\infty} f(x)=0
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+反证,假设存在$x_n>n,f(x_n)>\epsilon$
+
+那么因为一致连续,存在$\delta$使得所有$x\in [x_n-\delta,x_n+\delta]$都大于$\dfrac\epsilon2$.
+
+于是你只要柯西收敛定理取$x-\delta,x+\delta$就推出矛盾.
+
+</div>
+
+<div class='cbox'>
+
+已知$f\in C[0,+\infty),0<a<b$则
+
+(1)
+$$
+\begin{gathered}
+\lim_{x \to +\infty} f(x)=k \\
+\Rightarrow \int_0^\infty \dfrac{f(ax)-f(bx)}{x} dx=(f(0)-k)\ln(\dfrac{b}{a} )
+\end{gathered}
+$$
+
+(2)
+$$
+\begin{gathered}
+\int_0^\infty \dfrac{f(x)}{x} <\infty \\
+\Rightarrow \int_0^\infty \dfrac{f(ax)-f(bx)}{x}dx=f(0)\ln \dfrac{b}{a} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+最重要的是
+
+$$
+\begin{gathered}
+\int_L^R \dfrac{f(ax)}{x} dx \\
+= \int_{La}^{Ra}\dfrac{f(x)}{x} dx \\
+\Rightarrow \int_L^R \dfrac{f(ax)-f(bx)}{x} dx \\
+=\int_{aL}^{bL}\dfrac{f(x)}{x} dx-\int_{aR}^{bR}\dfrac{f(x)}{x} dx \\
+\end{gathered}
+$$
+
+然后对(1),两边分别用第一中值即证.对(2),左边用第一中值,右边用柯西收敛变成$0$即证.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_0^1 x^p(1-x)^qdx
+\end{gathered}
+$$
+
+的收敛性
+
+</div>
+
+<div class='pbox'>
+
+$0$处有$\dfrac{x^p(1-x)^q}{x^p}=1$然后用$x^p$的收敛性得到$p>-1$,同理$1$处$q>-1$.
+
 </div>
 
