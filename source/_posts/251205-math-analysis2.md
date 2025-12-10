@@ -505,3 +505,76 @@ $0$处有$\dfrac{x^p(1-x)^q}{x^p}=1$然后用$x^p$的收敛性得到$p>-1$,同�
 
 </div>
 
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_0^{+\infty} \dfrac{\sin x \ln(1+x)}{x^p}dx 
+\end{gathered}
+$$
+
+敛散性
+
+</div>
+
+<div class='pbox'>
+
+$0$处等价无穷小显然等价于$x^{2-p}$,$p<3$绝对收敛,$p>3$发散.
+
+正无穷处,显然$p\le 0$发散,$p>0$条件收敛(迪利克雷判别法).
+
+而我们知道$\dfrac{\sin x}{x}$条件收敛,所以$p\le 1$条件收敛.
+
+$p>1$时$\dfrac{\ln x}{x^\epsilon}$的极限是$0$,所以从$x^p$里分出一个$\epsilon$就能看出收敛.
+
+</div>
+
+## Class 28
+
+### 正项级数收敛性
+
+<div class='dbox'>
+
+- 柯西收敛(略)
+- 单调有界
+- 比较判别法
+- 比较法极限形式($\lim_{n \to \infty} \dfrac{a_n}{b_n}$)
+- 比值法($\lim_{n \to \infty} \dfrac{a_n}{a_{n-1}}$)
+- 根式法($\lim_{n \to \infty} \sqrt[ n ]{ a_n }$)
+- 广义比较($\dfrac{a_{n+1}}{a_n}\le \dfrac{b_{n+1}}{b_n}$).(证明是考虑把这一连串乘起来就是$a_n\le b_n \dfrac{a_1}{b_1}$)(哦其实你移动一下不就是$n+1$项两个数列的比比$n$项小吗这直观多了)
+- 积分法
+
+</div>
+
+<div class='cbox'>
+
+级数收敛,通项一定收敛到$0$.
+
+</div>
+
+<div class='pbox'>
+
+$S_n-S_{n-1}$收敛到$0$.
+
+</div>
+
+注意这里和积分的区别
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+
+n(\dfrac{a_n}{a_{n+1}} -1)\ge r>1 \Rightarrow \text{convergent}  \\
+n(\dfrac{a_n}{a_{n+1}} -1)\le 1 \Rightarrow \text{divergent} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+
+
+</div>
+

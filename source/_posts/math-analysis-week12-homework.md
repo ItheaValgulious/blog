@@ -288,3 +288,118 @@ $$
 
 </div>
 
+## Class 2
+
+### T1
+<div class="cbox">
+
+**1. 计算下列级数的和：**
+$$ (3) \quad \sum_{n=1}^{\infty} \arctan \frac{1}{1+n+n^2} $$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\dfrac{1}{1+n+n^2} =\dfrac{(n+1)-n}{1+(n+1)n} \\
+\Rightarrow \arctan \dfrac{1}{1+n+n^2} =\arctan (n+1) -\arctan(n) \\
+\Rightarrow \sum _{i = 1} ^{n} \frac{1}{1+n+n^2}=\arctan(n+1)-\arctan(1) \\
+\Rightarrow   ans=\dfrac{\pi}{4} 
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T2
+
+<div class="cbox">
+
+**1. 计算下列级数的和：**
+$$ (4) \quad \sum_{n=1}^{\infty} \frac{\sqrt{n+1}-\sqrt{n}}{\sqrt{n^2+n}} $$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=\sum _{i = 1} ^{\infty} \dfrac{1}{\sqrt n} - \dfrac{1}{\sqrt{n+1}}  \\
+=1
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T3
+<div class="cbox">
+
+**2. 证明下列级数发散：**
+$$ (2) \quad \sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}+1}{3 n^{2}-2} $$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\lim_{n \to \infty} \dfrac{n^2+1}{3n^2-2} =\dfrac{1}{3}  \\
+\Rightarrow \exists N,n>N \Rightarrow \dfrac{n^2+1}{3n^2-2} > \dfrac{1}{6}  \\
+\Rightarrow \exists \epsilon=\dfrac{1}{7} ,\forall n>N,\vert S_{n+1}-S_{n} \vert =\vert \dfrac{n^2+1}{3n^2-2}  \vert > \epsilon
+\end{gathered}
+$$
+
+</div>
+
+
+
+### T4
+<div class="cbox">
+
+**4.** 设数列 $\{na_n\}$ 与级数 $\sum_{n=1}^{\infty} n(a_n - a_{n+1})$ 都收敛. 证明: 级数 $\sum_{n=1}^{\infty} a_n$ 收敛.
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\sum _{i = 1} ^{n}  i(a_i-a_{i+1}) \\
+=-na_{n+1}+\sum _{i = 1} ^{n}  a_i \\
+=-(n+1)a_{n+1}+\sum _{i = 1} ^{n+1}  a_i \\
+\Rightarrow (\sum _{i = 1} ^{n}  a_n)=(\sum _{i = 1} ^{n-1}  n(a_n-a_{n+1}))+(na_n) \\
+\end{gathered}
+$$
+
+于是收敛.
+
+</div>
+
+
+
+### T5
+<div class="cbox">
+
+**6.** 设 $f(x)$ 在 $[a, +\infty)$ 上连续. 若无穷积分 $\int_0^{+\infty} f(x)dx$ 收敛, 证明: 存在数列 $\{x_n\} \subset [0, +\infty)$ 且 $\lim_{n\to\infty} x_n = +\infty$, 使得 $\lim_{n\to\infty} f(x_n) = 0$.
+
+</div>
+
+<div class='pbox'>
+
+反证,不存在这样的$x_n$等价于存在$X>a,\epsilon>0$,使得$x>X$时$\vert f(x_n) \vert >\epsilon$.否则只要令$X=x_n,\epsilon=\dfrac{f(x_n)}2$就可以找到$x_{n+1}$构造合法的 $\{ x_n \}$.
+
+而若这样的$X,\epsilon$存在,显然$x>X$时,$f(x)$不能变号,则
+
+$$
+\begin{gathered}
+\vert \int_a^{a+1} f(x)dx \vert > \epsilon
+\end{gathered}
+$$
+
+由柯西收敛准则$\int_0^{+\infty} f(x)dx$发散,矛盾.
+
+</div>
