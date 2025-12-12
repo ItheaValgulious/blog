@@ -562,11 +562,14 @@ $S_n-S_{n-1}$收敛到$0$.
 
 <div class='cbox'>
 
+拉贝判别法
+
 $$
 \begin{gathered}
 
-n(\dfrac{a_n}{a_{n+1}} -1)\ge r>1 \Rightarrow \text{convergent}  \\
-n(\dfrac{a_n}{a_{n+1}} -1)\le 1 \Rightarrow \text{divergent} 
+\lim_{n \to \infty}  n(\dfrac{a_n}{a_{n+1}} -1)=r \\
+r>1 \Rightarrow  \text{convergent}  \\
+r<1 \Rightarrow  \text{divergent} 
 \end{gathered}
 $$
 
@@ -574,7 +577,91 @@ $$
 
 <div class='pbox'>
 
+收敛这边:
 
+首先变形成 $\dfrac{a_{n+1}}{a_n}\le \dfrac{n}{n+r}$,那么我们其实是去和$b_n=\prod_i^n \dfrac{i}{i+r}$这个级数比较.
+
+取对数:
+
+$$
+\begin{gathered}
+\ln {\left( \prod_{i=1}^{n-1} \dfrac{i}{i+r}  \right)}  \\
+=\sum _{i = 1} ^{n-1} \ln(1-\dfrac{r}{i+r} ) \\
+\stackrel{ \ln (1-x)>-\frac x{1-x} } \ge\sum _{i = 1} ^{n}  - \dfrac{r}{i+r} \dfrac{i+r}{i}    \\
+=\sum _{i = 1} ^{n}  -\dfrac{r}{i}  \\
+\sim -r\ln n \\
+\Rightarrow b_n\sim \dfrac{1}{n^r} 
+\end{gathered}
+$$
+
+于是用$p$判别法就做完了.
 
 </div>
+
+你注意到这个就是把比值判别法是和$a^x$比较变成和$x^p$比较.
+
+<div class='cbox'>
+
+高斯判别法
+
+$$
+\begin{gathered}
+\dfrac{a_n}{a_{n+1}} =1+\dfrac{1}{n} +\dfrac{l}{n\ln n} +o(\dfrac{1}{n\ln n} )
+\end{gathered}
+$$
+
+然后$l>1$说明收敛,$l<1$发散.
+
+</div>
+
+<div class='pbox'>
+
+所以延续比值判别法和拉贝判别法,思路过来是和
+
+$$
+\begin{gathered}
+\dfrac{1}{n\ln^p n} \sim \int_A^{\infty} \dfrac{1}{x\ln^p x} dx = \int_{\ln A}^\infty \dfrac{1}{x^p} dx
+\end{gathered}
+$$
+
+比较是合理的.于是只要考虑
+
+$$
+\begin{gathered}
+\dfrac{(n+1)\ln^p(n+1)} {n\ln^p n} \\
+=(1+\dfrac{1}{n} )(1+\dfrac{\ln(1+\dfrac{1}{n} )}{\ln n} )^p \\
+\sim (1+\dfrac{1}{n} )(1+\dfrac{\dfrac{1}{n} }{\ln n} )^p \\
+\sim (1+\dfrac{1}{n} )(1+\dfrac{p}{n\ln n} +o(\dfrac{1}{n\ln n} )) \\
+\sim 1+\dfrac{1}{n} +\dfrac{p}{n\ln n} +o(\dfrac{1}{n\ln n})
+\end{gathered}
+$$
+
+这样就好了.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+a_n>0,S_n=\sum _{i = 1} ^{n}  a_i \\
+\Rightarrow \sum _{n = 1} ^{\infty}  \dfrac{a_n}{S_n^2} <\infty
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\sum _{n = 1} ^{\infty}  \dfrac{a_n}{S_n^2}  \\
+\le \sum _{n = 1} ^{\infty}  \dfrac{S_n-S_{n-1}}{S_nS_{n-1}} 
+\end{gathered}
+$$
+
+然后列项,显然.
+
+</div>
+
 
