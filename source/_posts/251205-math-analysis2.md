@@ -505,3 +505,163 @@ $0$处有$\dfrac{x^p(1-x)^q}{x^p}=1$然后用$x^p$的收敛性得到$p>-1$,同�
 
 </div>
 
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_0^{+\infty} \dfrac{\sin x \ln(1+x)}{x^p}dx 
+\end{gathered}
+$$
+
+敛散性
+
+</div>
+
+<div class='pbox'>
+
+$0$处等价无穷小显然等价于$x^{2-p}$,$p<3$绝对收敛,$p>3$发散.
+
+正无穷处,显然$p\le 0$发散,$p>0$条件收敛(迪利克雷判别法).
+
+而我们知道$\dfrac{\sin x}{x}$条件收敛,所以$p\le 1$条件收敛.
+
+$p>1$时$\dfrac{\ln x}{x^\epsilon}$的极限是$0$,所以从$x^p$里分出一个$\epsilon$就能看出收敛.
+
+</div>
+
+## Class 28
+
+### 正项级数收敛性
+
+<div class='dbox'>
+
+- 柯西收敛(略)
+- 单调有界
+- 比较判别法
+- 比较法极限形式($\lim_{n \to \infty} \dfrac{a_n}{b_n}$)
+- 比值法($\lim_{n \to \infty} \dfrac{a_n}{a_{n-1}}$)
+- 根式法($\lim_{n \to \infty} \sqrt[ n ]{ a_n }$)
+- 广义比较($\dfrac{a_{n+1}}{a_n}\le \dfrac{b_{n+1}}{b_n}$).(证明是考虑把这一连串乘起来就是$a_n\le b_n \dfrac{a_1}{b_1}$)(哦其实你移动一下不就是$n+1$项两个数列的比比$n$项小吗这直观多了)
+- 积分法
+
+</div>
+
+<div class='cbox'>
+
+级数收敛,通项一定收敛到$0$.
+
+</div>
+
+<div class='pbox'>
+
+$S_n-S_{n-1}$收敛到$0$.
+
+</div>
+
+注意这里和积分的区别
+
+<div class='cbox'>
+
+拉贝判别法
+
+$$
+\begin{gathered}
+
+\lim_{n \to \infty}  n(\dfrac{a_n}{a_{n+1}} -1)=r \\
+r>1 \Rightarrow  \text{convergent}  \\
+r<1 \Rightarrow  \text{divergent} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+收敛这边:
+
+首先变形成 $\dfrac{a_{n+1}}{a_n}\le \dfrac{n}{n+r}$,那么我们其实是去和$b_n=\prod_i^n \dfrac{i}{i+r}$这个级数比较.
+
+取对数:
+
+$$
+\begin{gathered}
+\ln {\left( \prod_{i=1}^{n-1} \dfrac{i}{i+r}  \right)}  \\
+=\sum _{i = 1} ^{n-1} \ln(1-\dfrac{r}{i+r} ) \\
+\stackrel{ \ln (1-x)>-\frac x{1-x} } \ge\sum _{i = 1} ^{n}  - \dfrac{r}{i+r} \dfrac{i+r}{i}    \\
+=\sum _{i = 1} ^{n}  -\dfrac{r}{i}  \\
+\sim -r\ln n \\
+\Rightarrow b_n\sim \dfrac{1}{n^r} 
+\end{gathered}
+$$
+
+于是用$p$判别法就做完了.
+
+</div>
+
+你注意到这个就是把比值判别法是和$a^x$比较变成和$x^p$比较.
+
+<div class='cbox'>
+
+高斯判别法
+
+$$
+\begin{gathered}
+\dfrac{a_n}{a_{n+1}} =1+\dfrac{1}{n} +\dfrac{l}{n\ln n} +o(\dfrac{1}{n\ln n} )
+\end{gathered}
+$$
+
+然后$l>1$说明收敛,$l<1$发散.
+
+</div>
+
+<div class='pbox'>
+
+所以延续比值判别法和拉贝判别法,思路过来是和
+
+$$
+\begin{gathered}
+\dfrac{1}{n\ln^p n} \sim \int_A^{\infty} \dfrac{1}{x\ln^p x} dx = \int_{\ln A}^\infty \dfrac{1}{x^p} dx
+\end{gathered}
+$$
+
+比较是合理的.于是只要考虑
+
+$$
+\begin{gathered}
+\dfrac{(n+1)\ln^p(n+1)} {n\ln^p n} \\
+=(1+\dfrac{1}{n} )(1+\dfrac{\ln(1+\dfrac{1}{n} )}{\ln n} )^p \\
+\sim (1+\dfrac{1}{n} )(1+\dfrac{\dfrac{1}{n} }{\ln n} )^p \\
+\sim (1+\dfrac{1}{n} )(1+\dfrac{p}{n\ln n} +o(\dfrac{1}{n\ln n} )) \\
+\sim 1+\dfrac{1}{n} +\dfrac{p}{n\ln n} +o(\dfrac{1}{n\ln n})
+\end{gathered}
+$$
+
+这样就好了.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+a_n>0,S_n=\sum _{i = 1} ^{n}  a_i \\
+\Rightarrow \sum _{n = 1} ^{\infty}  \dfrac{a_n}{S_n^2} <\infty
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\sum _{n = 1} ^{\infty}  \dfrac{a_n}{S_n^2}  \\
+\le \sum _{n = 1} ^{\infty}  \dfrac{S_n-S_{n-1}}{S_nS_{n-1}} 
+\end{gathered}
+$$
+
+然后列项,显然.
+
+</div>
+
+

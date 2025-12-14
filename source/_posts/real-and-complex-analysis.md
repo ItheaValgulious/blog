@@ -21,7 +21,7 @@ date: 2025-12-08 09:06:15
 <div class='dbox'>
 
 $X$上的一个拓扑就是$X$的幂集族的子集($X$的子集族)$\tau$满足
-- $\emptyset\in \tau,X\in \tau$
+- $\varnothing\in \tau,X\in \tau$
 - $X$中元素的任意有限交和无限并仍属于$X$
 
 定义了$\tau$的$X$是拓扑空间,$\tau$中元素为开集
@@ -259,7 +259,7 @@ $s$ 可测当且仅当每个 $A_i$ 可测。
 <div class='cbox'>
 
 设 $\mu$ 是 $\sigma$-代数 $\mathfrak{M}$ 上的正测度。则：
-- (a) $\mu(\emptyset) = 0$。
+- (a) $\mu(\varnothing) = 0$。
 - (b) $\mu(A_1 \cup \dots \cup A_n) = \mu(A_1) + \dots + \mu(A_n)$ 若 $A_i$ 互不相交（有限可加性）。
 - (c) $A \subset B \implies \mu(A) \le \mu(B)$（单调性）。
 - (d) 若 $A_n \in \mathfrak{M}, A_n \subset A_{n+1}$ 且 $A = \bigcup A_n$，则 $\mu(A_n) \to \mu(A)$。
@@ -768,3 +768,343 @@ $$
 
 </div>
 
+## Chapter 2 Borel Measure
+
+<div class='dbox'>
+
+复向量空间
+
+略
+
+</div>
+
+然后他说,$f(x)\to \int_X f(x)d\mu$是线性泛函,$f(x) \to \int_X g(x)f(x)d\mu$当$g$有界时是线性泛函.
+
+### 拓扑学基础
+
+<div class='dbox'>
+
+设 $X$ 是一个拓扑空间。
+- (a) 集合 $E \subset X$ 称为**闭集**，如果其补集 $E^c$ 是开集。
+- (b) 集合 $E \subset X$ 的**闭包** $\bar{E}$ 是包含 $E$ 的 $X$ 中最小的**闭集**。
+- (c) 集合 $K \subset X$ 称为**紧集**，如果 $K$ 的每一个开覆盖都包含一个有限子覆盖。特别地，如果 $X$ 本身是紧的，则称 $X$ 为紧空间。
+- (d) 点 $p \in X$ 的**邻域**是包含 $p$ 的 $X$ 的任意开子集。
+- (e) $X$ 称为 **Hausdorff 空间**，如果满足：若 $p \in X, q \in X$ 且 $p \neq q$，则存在 $p$ 的邻域 $U$ 和 $q$ 的邻域 $V$ 使得 $U \cap V = \varnothing$。
+- (f) $X$ 称为**局部紧**的，如果 $X$ 的每一点都有一个闭包为紧集的邻域。
+
+
+</div>
+
+<div class='cbox'>
+
+设 $K$ 是拓扑空间 $X$ 中的紧集，$F$ 是闭集。如果 $F \subset K$，则 $F$ 是紧集。
+
+</div>
+
+<div class='pbox'>
+
+考虑任意包含$F$的无限开覆盖,加入$F^C$后一定覆盖$K$,而它有有限子覆盖.此时如果$F^C$在里面你把它去掉,得到的就是$F$的有限覆盖.
+
+</div>
+
+<div class='cbox'>
+
+
+**Corollary**
+如果 $A \subset B$ 且 $B$ 具有紧闭包，则 $A$ 也具有紧闭包。
+
+
+</div>
+
+<div class='pbox'>
+
+显然
+
+</div>
+
+
+
+
+<div class='cbox'>
+
+设 $X$ 是 Hausdorff 空间，$K \subset X$，$K$ 是紧集，且 $p \in K^c$。
+
+则存在开集 $U$ 和 $W$ 使得 $p \in U$，$K \subset W$，且 $U \cap W = \varnothing$。
+
+</div>
+
+这个是想说你不仅可以分开两个点,也可以分开一个点和一个集合.
+
+<div class='pbox'>
+
+考虑对$K$内的每个点$k_i$取一个邻域$S_i$,与$p$的一个邻域$T_i$不交($S_i\cap T_i=\varnothing$),则$S_n$构成$K$的开覆盖,于是取它的有限覆盖是覆盖$K$的,则把它们并起来作为$W$,把对应的$T_i$的交作为$U$即可.
+
+</div>
+
+<div class='cbox'>
+
+**Corollary**
+
+(a) Hausdorff 空间的紧子集是闭集。
+
+(b) 如果 $F$ 是 Hausdorff 空间中的闭集，$K$ 是紧集，则 $F \cap K$ 是紧集。
+
+</div>
+
+<div class='pbox'>
+
+(a)考虑因为外面每个点都能找到一个邻域和这个子集无交,没有边界点是开集,所以子集是闭集.
+
+(b)考虑一个无限覆盖,然后补上对称差,然后得到有限覆盖,然后去掉对称差.
+
+</div>
+
+<div class='cbox'>
+
+
+如果 $\{K_\alpha\}$ 是 Hausdorff 空间中紧子集的集合，且 $\bigcap_\alpha K_\alpha = \varnothing$，则 $\{K_\alpha\}$ 的某个有限子集也有空交集。
+
+</div>
+
+<div class='pbox'>
+
+第一反应是考虑$K_\alpha^C$构成对全集的覆盖,但没有说整个空间是紧的.
+
+所以你任取一个紧集$K_0$,那么这些补集构成对它的覆盖,那么取有限覆盖,这有限个元素再交上$K_0$本身一定是空.
+
+</div>
+
+<div class='cbox'>
+
+设 $U$ 是局部紧 Hausdorff 空间 $X$ 中的开集，$K \subset U$，且 $K$ 是紧集。则存在一个闭包为紧集的开集 $V$，使得
+$$ K \subset V \subset \bar{V} \subset U. $$
+
+</div>
+
+<div class='pbox'>
+
+对$K$内每个点$k_i$先取一个闭包是紧的邻域$S_i$,那么这个邻域内一定有一个在$U$内的更小邻域且闭包是紧的(紧集内的闭集是紧的).这些邻域中有一个$K$的有限覆盖为 $\{ V_n \}$.令$G=\bigcup V_i$
+
+如果$U$是全集问题就解决了,但问题是$\overline G\subset U$不满足.
+
+此时考虑$U^C$,对$U^C$中的任何一个点$u_i$可以找一个邻域$U_i$和包含$K$的开集$W_i$不交,$U_i\cap W_i=\varnothing \Rightarrow u_i\notin \overline {W_i}$(这是因为$u_i$如果在边界上那么它的邻域$U_i$需要与$W_i$相交).
+
+**此时考虑 $\{ \overline{G}\cap \overline{W_i}\cap U^C \}$ 这组集合**,紧集交闭集是紧的于是它们是紧的,且它们交集为空,于是其中有限个交集为空,也就意味着$\overline{G}\cap \bigcap \overline{W_i}$与$U^C$交为空,于是取$V=G\cap \bigcap W_i$即可.
+
+</div>
+
+[think] 你先想到$G$是容易的,然后你考虑$U^C$得到$W$也是可以想到的,然后你会想把$W$交起来交$G$当构造,但直接交就不是开集了.你考虑你其实就是希望$((\bigcap \overline {W_i})\cap \overline G)\cap U^C=\varnothing$,所以取有限的就够用.
+
+要会用这个 紧集族的有限交 性质
+
+<div class='dbox'>
+
+设 $f$ 是拓扑空间上的实（或广义实）函数。
+
+如果对于每个实数 $\alpha$，集合 $\{x: f(x) > \alpha\}$ 是开集，则称 $f$ 是**下半连续**的。
+
+如果对于每个实数 $\alpha$，集合 $\{x: f(x) < \alpha\}$ 是开集，则称 $f$ 是**上半连续**的。
+
+</div>
+
+<div class='dbox'>
+
+拓扑空间 $X$ 上的复函数 $f$ 的**支集 (support)** 是集合 $\{x: f(x) \neq 0\}$ 的闭包。
+
+$X$ 上所有**支集为紧集**的**连续**复函数的集合记为 $C_c(X)$。
+
+</div>
+
+
+<div class='cbox'>
+
+设 $X$ 和 $Y$ 是拓扑空间，且 $f: X \to Y$ 是连续的。如果 $K$ 是 $X$ 的紧子集，则 $f(K)$ 是紧集。
+
+</div>
+
+连续函数把紧集映成紧集
+
+<div class='pbox'>
+
+考虑一个$f(K)$的开覆盖,其中每个开集的原像都是开集,且都要包含$f(K)$的原像$f^{-1}(f(K))\supset K$,于是它们的原像覆盖$K$,那么取$K$的有限覆盖再映射回来就有限覆盖$f(K)$.
+
+</div>
+
+<div class='cbox'>
+
+**Corollary**
+
+任意 $f \in C_c(X)$ 的值域是复平面的紧子集。
+
+</div>
+
+<div class='pbox'>
+
+紧子集并了一个单点$0$当然还是紧的.
+
+</div>
+
+
+<div class='dbox'>
+
+记号 $K \prec f$ 表示 $K$ 是 $X$ 的紧子集，$f \in C_c(X)$，对所有 $x \in X$ 有 $0 \le f(x) \le 1$，且对所有 $x \in K$ 有 $f(x)=1$。
+
+记号 $f \prec V$ 表示 $V$ 是开集，$f \in C_c(X)$，$0 \le f \le 1$，且 $f$ 的支集包含于 $V$。
+
+记号 $K \prec f \prec V$ 表示同时满足上述两个条件。
+
+</div>
+
+<div class='cbox'>
+
+Urysohn's Lemma
+
+设 $X$ 是局部紧 Hausdorff 空间，$V$ 是 $X$ 中的开集，$K \subset V$，且 $K$ 是紧集。则存在 $f \in C_c(X)$ 使得
+$$ K \prec f \prec V. $$
+
+</div>
+
+<div class='pbox'>
+
+所以你要怎么构造一个连续函数呢?这个定理说你把集合和有理数对应:
+
+现在你有$K\subset V$,我们知道可以找到$K\subset V_1\subset \overline{V_1}\subset V$.然后你又可以分成$K\subset V_1$和$\overline{V_1}\subset V$细分,可以得到一个无限延伸的二叉树.
+
+那么我们可以把它对应有理数的二进制小数表示吧,我们给第$i$层的集合对$(K,V)$赋值,如果它是左儿子赋值$2^{-i}$,是右儿子赋值$0$,对一个点$p$把所有满足$p\in V-K$的$(K,V)$对的权值加起来作为函数值.(自然还要单独赋值$K$和$V^C$上的值)
+
+因为每层至多有一个对的权值被加了,所以一定收敛.
+
+那么显然对每个实数对应了一个开集原像,所以是连续函数.
+
+紧集寄掉了,我们现在构造的东西支集是$\overline V$不保证是紧的.
+
+但是没有关系,把我们上面的构造改成从$(K,V')$作为根建二叉树即可,其中$K\subset V'\subset \overline{V'}\subset V$即可.
+
+</div>
+
+<div class='cbox'>
+
+设 $V_1, \dots, V_n$ 是局部紧 Hausdorff 空间 $X$ 的开子集，$K$ 是紧集，且
+$$ K \subset V_1 \cup \dots \cup V_n. $$
+则存在函数 $h_i \prec V_i$ ($i=1, \dots, n$) 使得
+$$ h_1(x) + \dots + h_n(x) = 1 \quad (x \in K). $$
+集合 $\{h_1, \dots, h_n\}$ 称为 $K$ 上从属于覆盖 $\{V_1, \dots, V_n\}$ 的单位分解。
+
+
+</div>
+
+<div class='pbox'>
+
+对$K$内每个点$p$存在$p\in N_p\subset \overline{N_p}\subset V_{i_p}$,然后它们之中有一个$K$的有限覆盖,我们令$H_k=\bigcup_{i_p=k} \overline{N_p}$.
+
+这样我们找到一些紧集被$V$包含且覆盖$K$.
+
+则可以找到$H_i\prec g_i\prec V_i$,然后令
+
+$$
+\begin{gathered}
+h_i=g_i\prod_{j=1}^{i-1} (1-g_j)
+\end{gathered}
+$$
+
+</div>
+
+<div class='cbox'>
+
+The Riesz Representation Theorem
+
+设 $X$ 是局部紧 Hausdorff 空间，$\Lambda$ 是 $C_c(X)$ 上的正线性泛函。则在 $X$ 中存在一个包含所有 Borel 集的 $\sigma$-代数 $\mathfrak{M}$，并且在 $\mathfrak{M}$ 上存在唯一的正测度 $\mu$，它在下述意义下表示 $\Lambda$：
+- (a) 对每一个 $f \in C_c(X)$，$\Lambda f = \int_X f d\mu$，
+- (b) 对每一个紧集 $K \subset X$，$\mu(K) < \infty$。
+- (c) 对每一个 $E \in \mathfrak{M}$，$\mu(E) = \inf\{\mu(V): E \subset V, V \text{ is open}\}$.
+- (d) 对每一个开集 $E$ 以及每一个满足 $\mu(E) < \infty$ 的 $E \in \mathfrak{M}$，关系 $\mu(E) = \sup\{\mu(K): K \subset E, K \text{ is compact}\}$
+成立。
+- (e) 如果 $E \in \mathfrak{M}$，$A \subset E$，且 $\mu(E)=0$，则 $A \in \mathfrak{M}$。
+
+</div>
+
+<div class='pbox'>
+
+首先,如果$\Lambda$可以对不连续函数那就直接用$\mu(S)=\Lambda \chi_S$就行了,所以你考虑逼近.同时因为$M$必须包含所有开集,定义$\mu(V)=\inf_{V\prec f} \Lambda f$或$\mu(V)=\sup_{f\prec V}$.
+
+但这两种里只有第二种是可以的,注意$f\prec V$是一定可行的而$\prec f$的定义其实是对紧集定义的,这个开集外面可能没有紧集.
+
+此时可以定义其他所有集合(后面会筛选出合适的$M$,剩余集合的值不要了)的值是$\mu(E)=\inf_{E\subset V} \mu(V)$.
+
+在此基础上,证明紧集测度有界,测度有界是因为$\Lambda$的值域是不包含无穷的.所以对一个紧集只要找到开集$V\supset K$且$\overline V$是紧的,则由刚才的Urysohn,$\exists f\prec V$,又一定$\exists \overline{V}\prec g$,则显然
+
+$$
+\begin{gathered}
+f\le g \\
+\Rightarrow \Lambda f\le \Lambda g \\
+\Rightarrow \sup \Lambda f\le \inf \Lambda g \\
+\Rightarrow \mu(K)\le \mu(V)\le \inf\Lambda g<\infty
+\end{gathered}
+$$
+
+然后是我们希望我们的集合有内正则性和外正则项
+
+
+
+
+
+</div>
+
+
+
+**2.15 Definition**
+定义在局部紧 Hausdorff 空间 $X$ 的所有 Borel 集构成的 $\sigma$-代数上的测度 $\mu$ 称为 $X$ 上的 **Borel 测度**。如果 $\mu$ 是正测度，Borel 集 $E \subset X$ 称为**外正则**的，如果它具有定理 2.14 中的性质 (c)；称为**内正则**的，如果它具有定理 2.14 中的性质 (d)。如果 $X$ 中的所有 Borel 集既是外正则又是内正则的，则称 $\mu$ 是**正则**的。
+
+**2.16 Definition**
+拓扑空间中的集合 $E$ 称为 **$\sigma$-紧**的，如果 $E$ 是可数个紧集的并。
+测度空间中的集合 $E$（带有测度 $\mu$）称为具有 **$\sigma$-有限测度**，如果 $E$ 是可数个满足 $\mu(E_i) < \infty$ 的集合 $E_i$ 的并。
+
+**2.17 Theorem**
+设 $X$ 是局部紧、$\sigma$-紧的 Hausdorff 空间。如果 $\mathfrak{M}$ 和 $\mu$ 如定理 2.14 中所述，则 $\mathfrak{M}$ 和 $\mu$ 具有以下性质：
+(a) 如果 $E \in \mathfrak{M}$ 且 $\epsilon > 0$，则存在闭集 $F$ 和开集 $V$ 使得 $F \subset E \subset V$ 且 $\mu(V-F) < \epsilon$。
+(b) $\mu$ 是 $X$ 上的正则 Borel 测度。
+(c) 如果 $E \in \mathfrak{M}$，则存在集合 $A$ 和 $B$ 使得 $A$ 是 $F_\sigma$ 集，$B$ 是 $G_\delta$ 集，$A \subset E \subset B$，且 $\mu(B-A)=0$。
+
+**2.18 Theorem**
+设 $X$ 是局部紧 Hausdorff 空间，且其中每个开集都是 $\sigma$-紧的。设 $\lambda$ 是 $X$ 上的任意正 Borel 测度，且对每个紧集 $K$ 都有 $\lambda(K) < \infty$。则 $\lambda$ 是正则的。
+
+**2.19 Euclidean Spaces**
+欧几里得 $k$ 维空间 $R^k$ 是所有坐标 $\xi_i$ 为实数的点 $x=(\xi_1, \dots, \xi_k)$ 的集合。
+定义 $x+y$ 和 $\alpha x$。定义内积 $x \cdot y = \sum \xi_i \eta_i$ 和范数 $|x|=(x \cdot x)^{1/2}$。度量定义为 $\rho(x,y)=|x-y|$。
+$R^k$ 中的开集是可数个不相交盒子的并。
+
+**2.20 Theorem**
+在 $R^k$ 的某个 $\sigma$-代数 $\mathfrak{M}$ 上存在唯一的正完备测度 $m$，具有以下性质：
+(a) 对每个 $k$-维胞腔 (box/cell) $W$，$m(W) = \text{vol}(W)$。
+(b) $\mathfrak{M}$ 包含 $R^k$ 中的所有 Borel 集；更确切地说，$E \in \mathfrak{M}$ 当且仅当存在 $A, B \subset R^k$ 使得 $A \subset E \subset B$，$A$ 是 $F_\sigma$，$B$ 是 $G_\delta$，且 $m(B-A)=0$。此外，$m$ 是正则的。
+(c) $m$ 是平移不变的，即对每个 $E \in \mathfrak{M}$ 和每个 $x \in R^k$，有 $m(E+x) = m(E)$。
+(d) 如果 $\mu$ 是 $R^k$ 上任意正的平移不变 Borel 测度，且对每个紧集 $K$ 都有 $\mu(K) < \infty$，则存在常数 $c$ 使得对所有 Borel 集 $E \subset R^k$ 有 $\mu(E) = c m(E)$。
+(e) 对每一个 $R^k$ 到 $R^k$ 的线性变换 $T$，对应一个实数 $\Delta(T)$，使得对每个 $E \in \mathfrak{M}$，有 $m(T(E)) = \Delta(T)m(E)$。
+
+**2.21 Remarks**
+如果 $m$ 是 $R^k$ 上的 Lebesgue 测度，习惯上将 $L^1(m)$ 写为 $L^1(R^k)$。
+如果 $k=1$，习惯上将 $\int f dm$ 写为 $\int_a^b f(x) dx$。
+并非每个 Lebesgue 可测集都是 Borel 集。并非 $R^k$ 的每个子集都是 Lebesgue 可测的。
+
+**2.22 Theorem**
+如果 $A \subset R^1$ 且 $A$ 的每个子集都是 Lebesgue 可测的，则 $m(A)=0$。
+
+**Corollary**
+每一个正测度集合都有不可测子集。
+
+**2.23 Determinants**
+定理 2.20(e) 中的比例因子 $\Delta(T)$ 可以通过行列式进行代数解释：
+$\Delta(T) = |\det T|$。
+
+**2.24 Lusin's Theorem**
+设 $f$ 是 $X$ 上的复可测函数，$\mu(A) < \infty$，若 $x \notin A$ 则 $f(x)=0$，且 $\epsilon > 0$。则存在 $g \in C_c(X)$ 使得
+$$ \mu(\{x: f(x) \neq g(x)\}) < \epsilon. $$
+此外，我们可以安排使得 $\sup_{x \in X} |g(x)| \le \sup_{x \in X} |f(x)|$。
+
+**Corollary**
+假设 Lusin 定理的条件满足且 $|f| \le 1$。则存在序列 $\{g_n\}$ 使得 $g_n \in C_c(X)$，$|g_n| \le 1$，且
+$$ f(x) = \lim_{n \to \infty} g_n(x) \quad \text{a.e.} $$
+
+**2.25 The Vitali-Caratheodory Theorem**
+设 $f \in L^1(\mu)$，$f$ 是实值函数，且 $\epsilon > 0$。则在 $X$ 上存在函数 $u$ 和 $v$ 使得 $u \le f \le v$，$u$ 是上半连续且上有界的，$v$ 是下半连续且下有界的，并且
+$$ \int_X (v-u) d\mu < \epsilon. $$
