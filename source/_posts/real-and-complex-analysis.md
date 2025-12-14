@@ -1029,7 +1029,28 @@ The Riesz Representation Theorem
 
 但这两种里只有第二种是可以的,注意$f\prec V$是一定可行的而$\prec f$的定义其实是对紧集定义的,这个开集外面可能没有紧集.
 
-此时可以定义其他所有集合(后面会筛选出合适的$M$,剩余集合的值不要了)的值是$\mu(E)=\inf_{E\subset V} \mu(V)$.
+此时可以定义其他所有集合(后面会筛选出合适的$M$,剩余集合的值不要了)的值是$\mu(E)=\inf_{V\subset E} \mu(V)$.
+
+然后为了构造Borel代数$M$,我们取所有满足内外正则性的有限集合,即满足$\mu(E)=\sup_{K\subset E} \mu(K)$且$\mu(E)<\infty$的构成$M_f$,所有满足,对任意$M_f$中的集合$A$,有$A\cap E\in M_f$中的集合$E$组成最终所求的代数$M$.
+
+[think] 这个构造还是很难想到.不过$M_f$到$M$的一个理解方式是要求无限集合的每个局部有想要的性质.
+
+现在要证明性质了:
+
+<div class='cbox'>
+
+$\mu(E)\le \sum_i \mu(E_i),\bigcup E_i=E,E_i\cap E_j=\emptyset$
+
+</div>
+
+<div class='pbox'>
+
+考虑任意一组$V_i\supset E_i$,
+
+</div>
+
+
+
 
 在此基础上,证明紧集测度有界,测度有界是因为$\Lambda$的值域是不包含无穷的.所以对一个紧集只要找到开集$V\supset K$且$\overline V$是紧的,则由刚才的Urysohn,$\exists f\prec V$,又一定$\exists \overline{V}\prec g$,则显然
 
@@ -1041,8 +1062,6 @@ f\le g \\
 \Rightarrow \mu(K)\le \mu(V)\le \inf\Lambda g<\infty
 \end{gathered}
 $$
-
-然后是我们希望我们的集合有内正则性和外正则项
 
 
 
