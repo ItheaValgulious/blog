@@ -421,7 +421,8 @@ $$
 
 $$
 \begin{gathered}
-a\le 1 \Rightarrow a^x<1,\dfrac{a^n}{1+a^{2n}} >\dfrac{1}{2}  \Rightarrow \text{divergent}  \\
+a< 1 \Rightarrow \dfrac{a_{n+1}}{a_n} =a<1 \Rightarrow  \text{ convergent}    \\
+a=1 \Rightarrow  \text{ divergent}  \\
 a>1 \Rightarrow \dfrac{a^n}{1+a^{2n}} <\dfrac{1}{a^n} \Rightarrow \text{convergent} 
 \end{gathered}
 $$
@@ -578,6 +579,8 @@ na_{2n}<\sum _{i = n} ^{2n} a_i<\epsilon   \\
 \Rightarrow \lim_{n \to \infty} na_n=0
 \end{gathered}
 $$
+
+注意这里只证了偶数的!不过你可以用一样的做法证明奇数项极限也是$0$.
 
 (2)
 

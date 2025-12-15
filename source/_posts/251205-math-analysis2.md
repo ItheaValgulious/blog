@@ -640,6 +640,16 @@ $$
 
 </div>
 
+这个形式不是很好用,应该改成
+
+$$
+\begin{gathered}
+((\dfrac{a_n}{a_{n+1}} -1)n-1)\ln n
+\end{gathered}
+$$
+
+的极限实际上就是那个$l$.
+
 <div class='cbox'>
 
 $$
@@ -664,4 +674,137 @@ $$
 
 </div>
 
+
+## Class 29
+
+### Egs
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+S_n=\sum _{i = 1} ^{n}  a_i,\sum a_i \text{ is divergent}  \\
+\Rightarrow \begin{cases}
+\sum \dfrac{a_n}{1+a_n} \text{ is divergent}  \\
+\sum \dfrac{a_n}{S_n} \text{ is divergent} 
+\end{cases}
+
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+(1):
+
+如果无界是显然的,会有一个子列趋向于$1$.
+
+如果有界把分母放成$M+1$即可.
+
+(2):
+
+这种抽象的东西柯西用的多啊感觉
+
+反正就是柯西,考虑
+
+$$
+\begin{gathered}
+\sum _{i = l} ^{r} \dfrac{a_i}{S_i} \ge \sum _{i = l} ^{r}  \dfrac{a_i}{S_r} =\dfrac{S_r-S_{l-1}}{S_r} =1-\dfrac{S_{l-1}}{S_r} 
+\end{gathered}
+$$
+
+那么固定$l$让$r$增大这个东西是趋近于$1$的,就做完了.
+
+</div>
+
+### 非正项级数
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+a_n \text{ is decreasing}  \\
+a_n (-1)^n >0
+\end{cases} \\
+\Rightarrow \sum a_i \text{ is convergent} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+注意到,$a_n$后面任意长度求和的绝对值都不可能大于$a_n$(可以从后往前归纳),并且$a_n \to 0$,于是柯西.
+
+</div>
+
+注意到柯西出生的时候莱布尼茨已经死了
+
+<div class='cbox'>
+
+Abel 引理
+
+$$
+\begin{gathered}
+\begin{cases}
+\vert S_k \vert =\vert \sum _{i = 1} ^{k}  a_i \vert \le M  \\
+b_n \text{ is monotonic} 
+\end{cases}
+\\
+\Rightarrow \vert \sum _{i = 1} ^{n}  a_ib_i \vert \le M(\vert b_1 \vert +2 \vert b_n \vert )
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\vert \sum _{i = 1} ^{n}  a_ib_i \vert \\
+={\left \vert \sum _{k = 1} ^{n-1}  S_k(b_k-b_{k-1})+s_nb_n \right \vert}  \\
+\end{gathered}
+$$
+
+左边那个放成 $M (\vert b_1 \vert +\vert b_n \vert)$,右边那个方成$M\vert b_n\vert$.
+
+</div>
+
+
+
+<div class='cbox'>
+
+迪利克雷判别法
+
+$a_n$单调下降收敛到$0$,$b_n$的部分和数列有界,则$\sum a_nb_n$收敛
+
+</div>
+
+<div class='pbox'>
+
+柯西判别法,对中间那一段用上面的阿贝尔引理,就变成了$2M(b_l+2b_r)$.然后显然收敛.
+
+</div>
+
+### Egs
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\sum \dfrac{\cos nx}{n} 
+\end{gathered}
+$$
+
+收敛
+
+</div>
+
+<div class='pbox'>
+
+迪利克雷判别法,你要用到$\sum \cos nx$有界,然后这个是有通项得到所以显然.
+
+</div>
 

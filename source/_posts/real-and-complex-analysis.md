@@ -1016,9 +1016,9 @@ The Riesz Representation Theorem
 设 $X$ 是局部紧 Hausdorff 空间，$\Lambda$ 是 $C_c(X)$ 上的正线性泛函。则在 $X$ 中存在一个包含所有 Borel 集的 $\sigma$-代数 $\mathfrak{M}$，并且在 $\mathfrak{M}$ 上存在唯一的正测度 $\mu$，它在下述意义下表示 $\Lambda$：
 - (a) 对每一个 $f \in C_c(X)$，$\Lambda f = \int_X f d\mu$，
 - (b) 对每一个紧集 $K \subset X$，$\mu(K) < \infty$。
-- (c) 对每一个 $E \in \mathfrak{M}$，$\mu(E) = \inf\{\mu(V): E \subset V, V \text{ is open}\}$.
+- (c) 对每一个 $E \in \mathfrak{M}$，$\mu(E) = \inf\{\mu(V): E \subset V, V \text{ is open}\}$.(外正则)
 - (d) 对每一个开集 $E$ 以及每一个满足 $\mu(E) < \infty$ 的 $E \in \mathfrak{M}$，关系 $\mu(E) = \sup\{\mu(K): K \subset E, K \text{ is compact}\}$
-成立。
+成立。(内正则)
 - (e) 如果 $E \in \mathfrak{M}$，$A \subset E$，且 $\mu(E)=0$，则 $A \in \mathfrak{M}$。
 
 </div>
@@ -1045,14 +1045,29 @@ $\mu(E)\le \sum_i \mu(E_i),\bigcup E_i=E,E_i\cap E_j=\emptyset$
 
 <div class='pbox'>
 
-考虑任意一组$V_i\supset E_i$,
+先证明$\mu(V_1\cup V_2)\le \mu(V_1)+\mu(V_2)$,对任意$g\prec V_1\cup V_2$,存在$f_1\prec V_1,f_2\prec V_2$,且对 $\operatorname{supp} g$有$f_1+f_2=1$.那么$g=gf_1+gf_2$,于是$\Lambda g=\Lambda (gf_1+gf_2)\le \Lambda f_1+\Lambda f_2=\mu(V_1)+\mu(V_2)$对任意$g$成立,取上确界后成立.
+
+考虑一组$V_i\supset E_i,V\supset E,f\prec V$,那么$f$的支集一定可以被有限集$C$中的$V_i,i\in C$覆盖,于是
+
+$$
+\begin{gathered}
+\Lambda f\le \mu(\bigcup_{i\in C} V_i)\le \sum_{i\in C}\mu(V_i)\le \sum_{i=1}^\infty\mu(E_i)+\epsilon \\
+\Rightarrow \mu(E)\le \sum_{i=1}^\infty \mu(E_i)+\epsilon \\
+\Rightarrow \mu(E)\le \sum_{i=1}^\infty \mu(E_i)
+\end{gathered}
+$$
 
 </div>
 
+<div class='cbox'>
 
+紧集$K\in M_f$,且$\mu(K)=\sup_{K\prec f} \Lambda f$
 
+</div>
 
-在此基础上,证明紧集测度有界,测度有界是因为$\Lambda$的值域是不包含无穷的.所以对一个紧集只要找到开集$V\supset K$且$\overline V$是紧的,则由刚才的Urysohn,$\exists f\prec V$,又一定$\exists \overline{V}\prec g$,则显然
+<div class='pbox'>
+
+测度有界是因为$\Lambda$的值域是不包含无穷的.所以对一个紧集只要找到开集$V\supset K$且$\overline V$是紧的,则由刚才的Urysohn,$\exists f\prec V$,又一定$\exists \overline{V}\prec g$,则显然
 
 $$
 \begin{gathered}
@@ -1062,6 +1077,22 @@ f\le g \\
 \Rightarrow \mu(K)\le \mu(V)\le \inf\Lambda g<\infty
 \end{gathered}
 $$
+
+然后是考虑一个开集,$V\supset K$满足$\mu(V)\le \mu(K)+\epsilon$(根据$K$的测度的定义),那么我们一定可以找到$K\prec f\prec V$,于是$\mu(K)\le \Lambda f\le \mu(V)<\mu(K)+\epsilon$,对$\epsilon$取极限得证.
+
+</div>
+
+<div class='cbox'>
+
+测度有限的开集都在$M_f$中(满足内正则)
+
+</div>
+
+<div class='pbox'>
+
+考虑取一个$f\prec V,\Lambda f>\mu(V)-\epsilon$
+
+</div>
 
 
 
