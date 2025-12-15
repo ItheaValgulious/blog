@@ -1009,6 +1009,8 @@ $$
 
 </div>
 
+### Reize Representation Theorem
+
 <div class='cbox'>
 
 The Riesz Representation Theorem
@@ -1090,7 +1092,156 @@ $$
 
 <div class='pbox'>
 
-考虑取一个$f\prec V,\Lambda f>\mu(V)-\epsilon$
+考虑取一个$f\prec V,\Lambda f>\mu(V)-\epsilon$,考虑$f$的支集$K$,那么$\mu(K)=\inf_{W\supset K} \mu(W)$,而对任意这样的$W$有$f\prec W$,所以$\Lambda f\le \mu(W)$,所以$\Lambda f\le \mu(K)$,$\mu(K)>\mu(V)-\epsilon$.于是得证
+
+</div>
+
+这样我们证明了$M_f$包含了有限开集和所有紧集.
+
+<div class='cbox'>
+
+$M_f$中的元素满足测度的可数可加性:
+
+$$
+\begin{gathered}
+E=\bigcup E_i,E_i\cap E_j=\emptyset \\
+\Rightarrow 
+\mu(E)=\sum _{i = 1} ^{\infty}  \mu(E_i)
+\end{gathered}
+$$
+
+以及若$\mu(E)<\infty,E\in M_f$(内正则性).
+
+</div>
+
+<div class='pbox'>
+
+首先我们已经知道了$\mu(E)\le \sum_i \mu(E_i)$,只需要证明另一边.
+
+因为$M_f$中的集合有内外正则性,我们可以找$K_i\subset E_i,\mu(K_i)>\mu(E_i)-\epsilon_i$和$V_i\supset E_i,\mu(V_i)<\mu(E_i)+\epsilon_i$.
+
+额你仔细想一下,发现开集那边第一条引理用过了,这里应该走紧集:考虑$K_1,K_2$.
+
+那么因为两个紧集不交,我们可以找到$V_1\cap V_2=\emptyset,V_1\supset K_1,V_2\supset V_2$(Hausdorff性质,两点可分推出一个点和一个集合可分,因为那个集合和这边每个点都可分所以和并也可分),然后$K_1\prec f_1\prec V_1,K_2\prec f_2\prec V_2$.因为外正则性和正测度的单调性,我们能推出一定能取$V_i$使得$\mu(V_i)<\mu(K_i)+\epsilon$,那么$\Lambda f_i\le \mu(V_i)<\mu(K_i)+\epsilon$
+
+$$
+\begin{gathered}
+\mu(K_1)+\mu(K_2)+2\epsilon \\
+>\Lambda f_1+\Lambda f_2 \\
+=\Lambda (f_1+f_2) \\
+>\mu(K_1\cup K_2)
+\end{gathered}
+$$
+
+对$\epsilon$取极限就是$\mu(K_1)+\mu(K_2)\ge \mu(K_1\cup K_2)$.因为我们之前证过反过来的所以$\mu(K_1)+\mu(K_2)=\mu(K_1\cup K_2)$.
+
+现在证明原问题,如果$\mu(E)=\infty$结合之前不等式另一边是显然的,否则设$H_n=\bigcup_{i=1}^n K_i$,则:
+
+$$
+\begin{gathered}
+\mu(E)\ge \mu(H_n)=\sum _{i = 1} ^{n}  \mu(K_i)>\sum _{i = 1} ^{n}  \mu(E_i)-\epsilon
+\end{gathered}
+$$
+
+取极限(对$n$和$\epsilon$)即证不等式的另一边,和前面结论一起就是可数可加性.
+
+</div>
+
+[think] 直接从有限可加到可数要用到测度的连续性,因为你在处理集合的测度($\mu(\bigcup A)$),而这种不等号的方式固定了$\mu(E)$,所以一直在处理实数.
+
+<div class='cbox'>
+
+若$A_1\in M_f,A_2\in M_f$,则$A_1-A_2,A_1\cup A_2,A_1\cap A_2$都属于$M_f$
+
+</div>
+
+<div class='pbox'>
+
+我们取$K_i\subset A_i\subset V_i$且$\mu(K_i)>\mu(A_i)-\epsilon,\mu(V_i)<\mu(A_i)+\epsilon$,那么$K_1-V_2$是闭集交紧集是紧集且在$A_1-A_2$里面.
+
+那么要算这玩意的大小,你发现没法直接算,但是$(K_1-V_2)\cup (V_2-K_2)\cup (V_1-K_1)=V_1-K_2\supset A_1-A_2$,而多的两项都小于$\epsilon$,所以$\mu(K_1-V_2)$和$\mu(A_1-A_2)$差不到$2\epsilon$,内正则性满足.
+
+然后剩下两个只要接着用$A_1-A_2$和前面加法的结论就好了.
+
+</div>
+
+<div class='cbox'>
+
+$M$是一个sigma-algebra
+
+</div>
+
+<div class='pbox'>
+
+只要验证补集和可数并集.注意这里$M$是那个局部是$M_f$的集合构成的集合.
+
+对任意紧集$K$和$M$中的集合$A$,首先有$K\in M_f$,又因为$A\cap K\in M_f$,而$A^C\cap K=K-(A\cap K)\in M_f$.
+
+对可数并,我们需要想办法转化成加法,于是若$A=\bigcup A_i$让$B_n=(A_n\cap K)-(\bigcup_{i=1}^{n-1} B_i)$,就得到$B_i\in M_f$,从而$\sum B_n=A\cap K\in M_f$,
+
+</div>
+
+<div class='cbox'>
+
+$M_f$恰好是所有$M$中的有限测度集合.
+
+</div>
+
+也就是性质(d)
+
+<div class='pbox'>
+
+首先前面证了$M_f$对交封闭,所以$M\supset M_f$.
+
+而$M$中的一个有限集合$E$,因为它有限所以可以有$V\supset E,\mu(V)<\mu(E)+\epsilon$,然后取$K\subset V,\mu(K)>\mu(V)-\epsilon$,则$E\cap K\in M_f$,从而$\exists H\subset E\cap K,\mu(E\cap K)<\mu(H)+\epsilon$.
+
+这样$\mu(E)\le \mu(E\cap K)+\mu(V-K)<\mu(H)+2\epsilon$,内正则性得证.
+
+</div>
+
+由这些我们可以推出$\mu$是Borel测度了.
+
+最后:
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\forall f\in C_c(X),\Lambda f=\int_X fd\mu
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+复的可以拆成两个实的证,只要考虑实的.
+
+这里的思路是切割$f$的值域,每段用特征函数逼近.
+
+考虑 $\operatorname{range} f\subset [a,b]$,对$\epsilon$,设$y_0=a<y_1<y_2<\ldots<b<y_n$.考虑一段$[y_i,y_{i+1})$
+
+那么定义$\operatorname{supp}f=K$,考虑$E_i=f^{-1}([y_i,y_{i+1}))\cap K$(连续映射把borel集拉回到borel集),于是$E_i$是borel集.
+
+于是可以找$V_i\supset E_i,\mu(V_i)<\mu(E_i)+\epsilon_i$,然后我们可以找$f_i\prec V_i$满足$K$上$\sum_i f_i=1$.
+
+于是:
+
+$$
+\begin{gathered}
+\Lambda f=\sum _{i = 1} ^{n}  \Lambda(h_if) \\
+\le \sum _{i = 1} ^{n}  (y_i+\epsilon)\Lambda h_i \\
+= \sum _{i = 1} ^{n}  (y_i+\epsilon+\vert a \vert)\Lambda h_i-\vert a \vert \sum _{i = 1} ^{n}  \Lambda h_i \\
+\le \sum _{i = 1} ^{n}  (y_i+\epsilon+\vert a \vert )\mu(V_i)-\vert a \vert \mu(K)\\
+\le \sum _{i = 1} ^{n}  (y_i+\epsilon+\vert a \vert )(\mu(E_i)+\epsilon_i)-\vert a \vert \sum _{i = 1} ^{n}  \mu(E_i) \\
+=\sum _{i = 1} ^{n}  (y_i-\epsilon)\mu(E_i)+2\epsilon\mu(K)+(\epsilon+\vert a \vert +\sum_{i=1}^n y_i)(\sum_i \epsilon_i) \\
+\xRightarrow{ \epsilon_i=\frac{\epsilon}{n} } \le \int_X fd\mu+\epsilon(2\mu(K)+\vert a \vert +b+\epsilon)
+\end{gathered}
+$$
+
+取$\epsilon$极限,就是$\Lambda f\le \int_X fd\mu$.
+
+然后注意到你只要代入$-f$就是反向的不等式.于是得证.
 
 </div>
 
