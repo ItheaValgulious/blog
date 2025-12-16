@@ -944,6 +944,8 @@ $X$ 上所有**支集为紧集**的**连续**复函数的集合记为 $C_c(X)$�
 
 </div>
 
+[think] 注意这个实际上实际还告诉你$C_c$中的函数都是有界的.
+
 
 <div class='dbox'>
 
@@ -1245,67 +1247,260 @@ $$
 
 </div>
 
+</div>
 
+<div class='dbox'>
 
+定义在局部紧 Hausdorff 空间 $X$ 的所有 Borel 集构成的 $\sigma$-代数上的测度 $\mu$ 称为 $X$ 上的 **Borel 测度**。
 
+如果 $\mu$ 是正测度，Borel 集 $E \subset X$ 称为**外正则**的，如果它具有定理 2.14 中的性质 (c)；称为**内正则**的，如果它具有定理 2.14 中的性质 (d)。如果 $X$ 中的所有 Borel 集既是外正则又是内正则的，则称 $\mu$ 是**正则**的。
+
+</div>
+
+### sigma-compact
+
+<div class='dbox'>
+
+拓扑空间中的集合 $E$ 称为 **$\sigma$-紧**的，如果 $E$ 是可数个紧集的并。
+
+测度空间中的集合 $E$（带有测度 $\mu$）称为具有 **$\sigma$-有限测度**，如果 $E$ 是可数个满足 $\mu(E_i) < \infty$ 的集合 $E_i$ 的并。
+
+</div>
+
+<div class='cbox'>
+
+设 $X$ 是局部紧、$\sigma$-紧的 Hausdorff 空间。如果 $\mathfrak{M}$ 和 $\mu$ 如定理 2.14 中所述，则 $\mathfrak{M}$ 和 $\mu$ 具有以下性质：
+
+- (a) 如果 $E \in \mathfrak{M}$ 且 $\epsilon > 0$，则存在闭集 $F$ 和开集 $V$ 使得 $F \subset E \subset V$ 且 $\mu(V-F) < \epsilon$。
+- (b) $\mu$ 是 $X$ 上的正则 Borel 测度。
+- (c) 如果 $E \in \mathfrak{M}$，则存在集合 $A$ 和 $B$ 使得 $A$ 是 $F_\sigma$ 集，$B$ 是 $G_\delta$ 集，$A \subset E \subset B$，且 $\mu(B-A)=0$。
+
+</div>
+
+<div class='pbox'>
+
+(a):
+
+$E$有限的时候结论显然成立,无限的时候问题在于内正则只对开集和有限可测集成立.而现在多了个sigma-compact
+
+考虑整个空间被$\bigcup_i K_i$覆盖,那么$E\cap K_i$都是有内外正则性的,于是可以对每个$E\cap K_i$找到$V_i,F_i$满足$\mu(V_i-F_i)<\epsilon_i,F_i\subset E\cap K_i\subset V_i$.
+
+对开集取可数并还是开集,所以这里外侧是好做的:你取$\epsilon_i=2^{-i}$然后把$V_i$并起来就能得到所求的$V$.但是$F$不能直接把$K_i$并起来做.
+
+于是它的做法是用开集从外部逼近$E^C$,然后把得到的$V'$做$F=V'^C$,问题就解决了.
+
+(a)成立就直接推出(b)成立
+
+对(c),考虑对(a)取极限,让$\epsilon=\dfrac{1}{n}$得到一串$V_n$和$F_n$,然后取极限$B=\bigcap V_i,A=\bigcup F_j$,即证
+
+</div>
+
+<div class='cbox'>
+
+设 $X$ 是局部紧 Hausdorff 空间，且其中每个开集都是 $\sigma$-紧的。设 $\lambda$ 是 $X$ 上的任意正 Borel 测度，且对每个紧集 $K$ 都有 $\lambda(K) < \infty$。则 $\lambda$ 是正则的。
+
+</div>
+
+<div class='pbox'>
+
+紧集测度有界所以对任何$C_c(X)$函数积分$\int_X fd\lambda$都是有限的,可以定义
+
+$$
+\begin{gathered}
+f\to \int_X fd\lambda
+\end{gathered}
+$$
+
+是一个线性泛函,那么应用前面的Riesz就有存在$\mu$构成Borel测度,且
+
+$$
+\begin{gathered}
+\int_X fd\lambda=\int_X fd\mu
+\end{gathered}
+$$
+
+只要说明$\mu=\lambda$.
+
+因为有所有开集都是sigma紧的条件,考虑一个开集$V$和可数个紧集$K_i$,我们可以找到$K_i\prec f_i\prec V$,设$g_n=\max_{i=1}^n f_i$,则它单调递增且逐点收敛到$\chi_V$,可以用单调收敛,有
+
+$$
+\begin{gathered}
+\lambda(V)=\int_X \lim_{n \to \infty} g_nd\lambda \\
+=\lim_{n \to \infty} \int_X g_nd\lambda \\
+=\lim_{n \to \infty} \int_X g_nd\mu \\
+=\int_X\lim_{n \to \infty}  g_nd\mu \\
+=\mu(V)
+\end{gathered}
+$$
+
+于是所有开集相等.
+
+然后对剩下的集合,考虑对任意集合$E$找到$K$和$V$以$\mu(V-K)<\epsilon$夹住它,那么因为$V-K$是开集所以$\lambda(V-K)=\mu(V-K)<\epsilon$,同时$\mu(V)=\lambda(V)$,所以$\lambda(E)\in (\lambda(K),\lambda(V))=(\lambda(V)-\epsilon,\lambda(V))=(\mu(V)-\epsilon,\mu(V))$然后这个区间里有$\mu(E)$,所以$\lambda(E)=\mu(E)$
+
+</div>
+
+[think] 其实$g$就是对$\chi$的连续逼近啊.构造这样的逼近然后用单调收敛解决问题.
+
+### Lesbeige Measure
+
+<div class='cbox'>
+
+Euclidean Spaces
+
+欧几里得 $k$ 维空间 $R^k$ 是所有坐标 $\xi_i$ 为实数的点 $x=(\xi_1, \dots, \xi_k)$ 的集合。
+
+定义 $x+y$ 和 $\alpha x$。定义内积 $x \cdot y = \sum \xi_i \eta_i$ 和范数 $|x|=(x \cdot x)^{1/2}$。度量定义为 $\rho(x,y)=|x-y|$。
+
+$R^k$ 中的开集是可数个不相交盒子的并。
+
+</div>
+
+<div class='pbox'>
+
+首先前面这些是好说的,重点看这最后一条:我们定义$P_p$为所有坐标是$2^{-p}$整数倍的点的集合,为格点,$\Omega_p$为所有坐标是$2^{-p}$的整数倍的点为一个顶点,边长为$2^{-p}$的立方体的集合,而$\Omega$为$\bigcup_i \Omega_i$,其中的元素就是所有的格子.
+
+那么可以定义一个格子的体积就是$2^{-pk}$.
+
+对于一个开集,每个点可以取开球邻域,那么在对应的球内一定可以取一个格子.然后你发现两个格子只有不交和包含两种关系,所以把包含去掉就是不交并了.从而可以定义开集的体积.
+
+</div>
+
+<div class='cbox'>
+
+在 $R^k$ 的某个 $\sigma$-代数 $\mathfrak{M}$ 上存在唯一的正完备测度 $m$，具有以下性质：
+- (a) 对每个 $k$-维胞腔 (box/cell) $W$，$m(W) = \text{vol}(W)$。
+- (b) $\mathfrak{M}$ 包含 $R^k$ 中的所有 Borel 集；更确切地说，$E \in \mathfrak{M}$ 当且仅当存在 $A, B \subset R^k$ 使得 $A \subset E \subset B$，$A$ 是 $F_\sigma$，$B$ 是 $G_\delta$，且 $m(B-A)=0$。此外，$m$ 是正则的。
+- (c) $m$ 是平移不变的，即对每个 $E \in \mathfrak{M}$ 和每个 $x \in R^k$，有 $m(E+x) = m(E)$。
+- (d) 如果 $\mu$ 是 $R^k$ 上任意正的平移不变 Borel 测度，且对每个紧集 $K$ 都有 $\mu(K) < \infty$，则存在常数 $c$ 使得对所有 Borel 集 $E \subset R^k$ 有 $\mu(E) = c m(E)$。
+- (e) 对每一个 $R^k$ 到 $R^k$ 的线性变换 $T$，对应一个实数 $\Delta(T)$，使得对每个 $E \in \mathfrak{M}$，有 $m(T(E)) = \Delta(T)m(E)$。
+
+</div>
+
+<div class='pbox'>
+
+我们要定义一个测度和一个代数,但你发现直接做是很麻烦的.
+
+考虑$\Lambda_n f=2^{-kp} \sum_{x\in P_p} f(x)$
+
+你看这个就是黎曼积分啊,然后它走了一遍连续函数推黎曼可积的路,说明了 $\lim_{n \to \infty} \Lambda_n f$存在,定义为$\Lambda f$.
+
+然后Riesz说明存在一个测度$m$.且自然的推出(b).
+
+为了证明(a),你可以用和上个定理一样的办法逼近$\chi$,只不过构造的时候改成用邻域的紧闭包.
+
+证明(c)用的方法是构造$\lambda(E)=m(E+x)$,从而会有$\lambda=m$对所有格子成立(由(a)),从而对所有开集成立,从而对任意集合成立(也和上一个定理很像).
+
+证明(d),只要考虑那个新测度对某个格子的值,然后发现等式对所有格子成立再推到任意集合成立.
+
+证明(e):如果$\Delta\ne 0$则$T$是可逆且线性的,于是你可以定义$\mu(E)=m(T(e))$,然后用(d).
+
+</div>
+
+并非每个 Lebesgue 可测集都是 Borel 集。并非 $R^k$ 的每个子集都是 Lebesgue 可测的。
+
+第一条只要考虑Borel集的拓扑基是所有的开球,开球的数量是$R^k\times R$仍然是连续统,但考虑一个测度为$0$的可测集康托尔集且不可数,所以它的势有$2^\text{cardinality of the continuum}$.
+
+对于第二条:
+
+<div class='cbox'>
+
+如果 $A \subset R^1$ 且 $A$ 的每个子集都是 Lebesgue 可测的，则 $m(A)=0$。
+
+</div>
+
+<div class='pbox'>
+
+考虑一个等价关系 $x\sim y \Leftrightarrow x-y\in Q$,则令$E=R/\sim$,你发现$E$有$E+p\cap E+q=\emptyset,p,q\in Q$,且任意$r\in R,\exists p,r\in (E+p)$
+
+然后令$A_p=A\cap (E+p)$,显然$A_p$不交且$\bigcup_{p\in Q} A_p=A$.
+
+对任意一个$A_p$,因为它可测并且$R^k$sigma紧,所以有内正则性,于是你取一个紧集$K$,再取$H=\bigcup_{p\in (Q\cap [0,1])} (K+p)$,那么$H$是有限测度的,但是$\mu(H)=\sum \mu(K+p)=\sum\mu(K)$,所以$\mu(K)=0$.任意紧集测度都是$0$所以$A_p$是$0$,所以$A$是$0$.
 
 </div>
 
 
 
-**2.15 Definition**
-定义在局部紧 Hausdorff 空间 $X$ 的所有 Borel 集构成的 $\sigma$-代数上的测度 $\mu$ 称为 $X$ 上的 **Borel 测度**。如果 $\mu$ 是正测度，Borel 集 $E \subset X$ 称为**外正则**的，如果它具有定理 2.14 中的性质 (c)；称为**内正则**的，如果它具有定理 2.14 中的性质 (d)。如果 $X$ 中的所有 Borel 集既是外正则又是内正则的，则称 $\mu$ 是**正则**的。
-
-**2.16 Definition**
-拓扑空间中的集合 $E$ 称为 **$\sigma$-紧**的，如果 $E$ 是可数个紧集的并。
-测度空间中的集合 $E$（带有测度 $\mu$）称为具有 **$\sigma$-有限测度**，如果 $E$ 是可数个满足 $\mu(E_i) < \infty$ 的集合 $E_i$ 的并。
-
-**2.17 Theorem**
-设 $X$ 是局部紧、$\sigma$-紧的 Hausdorff 空间。如果 $\mathfrak{M}$ 和 $\mu$ 如定理 2.14 中所述，则 $\mathfrak{M}$ 和 $\mu$ 具有以下性质：
-(a) 如果 $E \in \mathfrak{M}$ 且 $\epsilon > 0$，则存在闭集 $F$ 和开集 $V$ 使得 $F \subset E \subset V$ 且 $\mu(V-F) < \epsilon$。
-(b) $\mu$ 是 $X$ 上的正则 Borel 测度。
-(c) 如果 $E \in \mathfrak{M}$，则存在集合 $A$ 和 $B$ 使得 $A$ 是 $F_\sigma$ 集，$B$ 是 $G_\delta$ 集，$A \subset E \subset B$，且 $\mu(B-A)=0$。
-
-**2.18 Theorem**
-设 $X$ 是局部紧 Hausdorff 空间，且其中每个开集都是 $\sigma$-紧的。设 $\lambda$ 是 $X$ 上的任意正 Borel 测度，且对每个紧集 $K$ 都有 $\lambda(K) < \infty$。则 $\lambda$ 是正则的。
-
-**2.19 Euclidean Spaces**
-欧几里得 $k$ 维空间 $R^k$ 是所有坐标 $\xi_i$ 为实数的点 $x=(\xi_1, \dots, \xi_k)$ 的集合。
-定义 $x+y$ 和 $\alpha x$。定义内积 $x \cdot y = \sum \xi_i \eta_i$ 和范数 $|x|=(x \cdot x)^{1/2}$。度量定义为 $\rho(x,y)=|x-y|$。
-$R^k$ 中的开集是可数个不相交盒子的并。
-
-**2.20 Theorem**
-在 $R^k$ 的某个 $\sigma$-代数 $\mathfrak{M}$ 上存在唯一的正完备测度 $m$，具有以下性质：
-(a) 对每个 $k$-维胞腔 (box/cell) $W$，$m(W) = \text{vol}(W)$。
-(b) $\mathfrak{M}$ 包含 $R^k$ 中的所有 Borel 集；更确切地说，$E \in \mathfrak{M}$ 当且仅当存在 $A, B \subset R^k$ 使得 $A \subset E \subset B$，$A$ 是 $F_\sigma$，$B$ 是 $G_\delta$，且 $m(B-A)=0$。此外，$m$ 是正则的。
-(c) $m$ 是平移不变的，即对每个 $E \in \mathfrak{M}$ 和每个 $x \in R^k$，有 $m(E+x) = m(E)$。
-(d) 如果 $\mu$ 是 $R^k$ 上任意正的平移不变 Borel 测度，且对每个紧集 $K$ 都有 $\mu(K) < \infty$，则存在常数 $c$ 使得对所有 Borel 集 $E \subset R^k$ 有 $\mu(E) = c m(E)$。
-(e) 对每一个 $R^k$ 到 $R^k$ 的线性变换 $T$，对应一个实数 $\Delta(T)$，使得对每个 $E \in \mathfrak{M}$，有 $m(T(E)) = \Delta(T)m(E)$。
-
-**2.21 Remarks**
-如果 $m$ 是 $R^k$ 上的 Lebesgue 测度，习惯上将 $L^1(m)$ 写为 $L^1(R^k)$。
-如果 $k=1$，习惯上将 $\int f dm$ 写为 $\int_a^b f(x) dx$。
-并非每个 Lebesgue 可测集都是 Borel 集。并非 $R^k$ 的每个子集都是 Lebesgue 可测的。
-
-**2.22 Theorem**
-如果 $A \subset R^1$ 且 $A$ 的每个子集都是 Lebesgue 可测的，则 $m(A)=0$。
-
 **Corollary**
 每一个正测度集合都有不可测子集。
 
-**2.23 Determinants**
-定理 2.20(e) 中的比例因子 $\Delta(T)$ 可以通过行列式进行代数解释：
-$\Delta(T) = |\det T|$。
+### Countinuity Properties of Measurable Functions
 
-**2.24 Lusin's Theorem**
+注意这两个定理是局部紧hausdorff空间的
+
+<div class='cbox'>
+
+Lusin's Theorem
+
 设 $f$ 是 $X$ 上的复可测函数，$\mu(A) < \infty$，若 $x \notin A$ 则 $f(x)=0$，且 $\epsilon > 0$。则存在 $g \in C_c(X)$ 使得
 $$ \mu(\{x: f(x) \neq g(x)\}) < \epsilon. $$
 此外，我们可以安排使得 $\sup_{x \in X} |g(x)| \le \sup_{x \in X} |f(x)|$。
+
+</div>
+
+<div class='pbox'>
+
+如果$A$是紧的,$f\in [0,1)$
+
+首先你可以找到简单函数列单调逼近$f$:$\lim_{n \to \infty} s_n=f$,且你使用第一章把函数值域按$2^{-k}$切割取整的方式,那么$t_n=(s_n-s_{n-1})$,则$t_n$的值要么是$0$要么是$2^{-n}$,所以$t_n=\chi_{T_n}2^{-n}$.而$f=\sum_{i=1}^\infty t_n$.
+
+那么去逼近$t_n$只要逼近$\chi_{T_n}$,显然对每个$T_n$是可测集可以用正则性,于是可以找到$K_n\subset T_n\subset V_n$且$\mu(V_n-T_n)<\epsilon2^{-n}$,于是Urysohn有$K_n\prec h_n\prec V_n$.
+
+然后让$g=\sum_{i=1}^\infty h_i$,我们看到每个 $\mu(\{ h_n\ne \chi_n \} )\le 2^{-n}\epsilon$,于是加起来和$f$至多在$\epsilon$大小的地方不相等.
+
+注意要求$g\in C_c(X)$所以它的支集是紧,所以你可以先找$A\subset V$满足$\overline{V}$是紧的,之后找$V_n$的时候要求$V_n\subset V$.
+
+然后如果$A$不是紧的,那么$A$可测且有限有内正则,所以你可以用一个逼近$A$的紧集代替$A$.
+
+如果$f\notin [0,1)$,首先只要拆实部和虚部再乘个值域就对有界复函数成立,只要考虑无界的问题:
+
+设 $B_n=\{ x \vert f(x)>n \}$,则$\bigcap B_n=\emptyset$且$\mu(B_1)<\mu(A)<\infty$,所以$\mu(B_n)\to 0$,所以可以找一个足够大的$B_n$转化成有界函数,忽略掉外面的小测度.(有界集合上的函数无穷大的测度总是很小的)
+
+最后那个额外条件只要把多的值抹平就好了,设
+
+$$
+\begin{gathered}
+\phi(x)=\begin{cases}
+x,\vert x \vert \le R \\
+\dfrac{x}{\vert x \vert } R,x>R
+\end{cases}, \\
+R=\sup \vert f(x) \vert 
+\end{gathered}
+$$
+
+然后用$\phi(g)$代替$g$即可.因为你这些值本来也不等于$f$了.
+
+</div>
+
+
 
 **Corollary**
 假设 Lusin 定理的条件满足且 $|f| \le 1$。则存在序列 $\{g_n\}$ 使得 $g_n \in C_c(X)$，$|g_n| \le 1$，且
 $$ f(x) = \lim_{n \to \infty} g_n(x) \quad \text{a.e.} $$
 
-**2.25 The Vitali-Caratheodory Theorem**
+
+<div class='cbox'>
+
+Vitali-Carathéodory Theorem
+
 设 $f \in L^1(\mu)$，$f$ 是实值函数，且 $\epsilon > 0$。则在 $X$ 上存在函数 $u$ 和 $v$ 使得 $u \le f \le v$，$u$ 是上半连续且上有界的，$v$ 是下半连续且下有界的，并且
 $$ \int_X (v-u) d\mu < \epsilon. $$
+
+</div>
+
+<div class='pbox'>
+
+我们知道开集的特征函数是下半连续,闭集对应上半连续.所以还是像着特征函数逼近.
+
+那么仍然用前面定理那种构造的简单函数逼近 $\lim_{n \to \infty} s_n=f$,它保证了 $\exists T_n,t_n=s_n-s_{n-1}=c_n \chi_{T_n}$.
+
+那么我们只要改造$T_n$,对每个$T_n$可以找到$K_n\prec T_n\prec V_n$且$\mu(T_n-K_n)<\epsilon_n$.
+
+那么直接$\sum_n c_n\chi_{V_n}$就可以是$v$,但直接$\sum_n c_n\chi_{K_n}$不能是$u$,因为上半连续的级数不一定上半连续.
+
+那怎么办呢?考虑因为$f\in L^1$可积,所以$\int_X f=\int_X \sum c_n\chi_{T_n}=\int_X c_n\mu(T_n)$收敛,所以存在$N$使得后面的求和小于$\epsilon'$,
+
+所以我们如果把级数只截断到$N$,最后的积分误差就是$\sum \epsilon_n+\epsilon'$.然后你$\epsilon_n=2^{-n+1}\epsilon,\epsilon'=2^{-1}\epsilon$即可.
+
+哦最后,上面是正函数,但对任意实值函数只要正部负部分开然后把uv对应拼起来即可.
+
+</div>
