@@ -798,13 +798,133 @@ $$
 \end{gathered}
 $$
 
-收敛
+条件收敛
 
 </div>
 
 <div class='pbox'>
 
 迪利克雷判别法,你要用到$\sum \cos nx$有界,然后这个是有通项得到所以显然.
+
+然后怎么说明绝对值发散呢?
+
+$$
+\dfrac{\cos nx}{n} >\dfrac{\cos^2 nx}{n} =\dfrac{1}{2n} -\dfrac{\sin(2nx)}{2n}
+$$
+
+然后第一个的级数发散第二个收敛所以整体发散.
+
+</div>
+
+[think] 似乎带$\sin$的都可以这么做?通过上面一样的做法你至少可以说明如果$a_n>0$递减,那么$\sum a_n\vert \sin n\vert$收敛等价于$\sum a_n$收敛.
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\lim_{n \to \infty} n(\dfrac{a_n}{a_{n+1}} -1)=\lambda>0 \\
+\Rightarrow \sum _n  (-1)^n a_n < \infty
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$n>N$时可以让 $n(\dfrac{a_n}{a_{n+1}} -1)\in (\lambda-\epsilon,\lambda+\epsilon),\epsilon<\lambda$
+
+于是
+
+$$
+\begin{gathered}
+\dfrac{a_{n+1}}{a_n} \in (\dfrac{n}{n+\lambda+\epsilon} ,\dfrac{n}{n+\lambda-\epsilon} )
+\end{gathered}
+$$
+
+于是
+
+$$
+\begin{gathered}
+\ln a_n=\ln a_1+\sum _{i = 2} ^{n}  \ln \dfrac{a_{n+1}}{a_n}  \\
+<C+\sum _{i = 2} ^{n}  \ln(\dfrac{n}{n+\lambda-\epsilon} ) \\
+<C+\sum _{i = 2} ^{n}  -\dfrac{\lambda-\epsilon}{n+\lambda-\epsilon} 
+\end{gathered}
+$$
+
+于是取极限这个发散到负无穷,$a_n$收敛到$0$.
+
+</div>
+
+## Class 30
+
+### 级数的乘积
+
+<div class='dbox'>
+
+柯西乘积
+
+$$
+\begin{gathered}
+c_n=\sum_{i} a_ib_{n+1-i}
+\end{gathered}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$\sum a,\sum b$收敛不能推出$\sum c$收敛
+
+</div>
+
+<div class='pbox'>
+
+因为你重排顺序了.你需要构造某些正负级数.
+
+比如$a_n=b_n=(-1)^n \dfrac1{\sqrt n}$有
+
+$$
+\begin{gathered}
+c_n=(-1)^{n+1} \sum _{i = 1} ^{n} \dfrac{1}{\sqrt{i(n-i+1)}}  \\
+\ge (-1)^{n+1}\sum _{i = 1} ^{n} \dfrac{2}{n+1}  \\
+=2\times (-1)^{n+1}  
+\end{gathered}
+$$
+
+</div>
+
+<div class='cbox'>
+
+若$\sum a,\sum b$其中有一个绝对收敛那么$\sum c$收敛
+
+</div>
+
+<div class='pbox'>
+
+不妨设$\sum a$绝对收敛,$A_n,B_n,C_n$分别为对应部分和,$A,B,C$为对应极限,则
+
+$$
+\begin{gathered}
+ C_n  =\sum _{i = 1} ^{n}  c_i  \\
+=\sum _{i = 1} ^{n}  a_iB_{n+1-i}  \\
+=\sum_{i=1}^n a_i(B_{n+1-i}-B)+\sum _{i = 1} ^{n}  a_iB
+\end{gathered}
+$$
+
+第二个明显趋向$AB$,看第一个,设$d_n=B_{n+1-i}-B$,存在$N$使得这之后的$d_n<\epsilon_1$,$\sum _{i = N} ^{\infty}  a_i<\epsilon_2$.因为你要用到对一项的放缩所以你要取绝对值:
+
+$$
+\begin{gathered}
+{\left \vert \sum _{i = 1} ^{n}  a_id_{n+1-i} \right \vert}  \\
+\le \sum _{i = 1} ^{n}  \vert a_id_{n+1-i} \vert  \\
+=\sum _{i = 1} ^{N}  \vert a_id_{n+1-i} \vert  +\sum _{i = N+1} ^{n}  \vert a_id_{n+1-i} \vert  \\
+\le A\epsilon_1+\epsilon_2D
+\end{gathered}
+$$
+
+其中$D$是$d$的界.
+
+于是对$\epsilon_1,\epsilon_2$取极限就是$0$了.
 
 </div>
 

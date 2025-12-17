@@ -1,7 +1,12 @@
 ---
 title: Math Analysis Homework - Week 13
-tags: [math-analysis,homework,math]
+tags:
+  - math-analysis
+  - homework
+  - math
+date: 2025-12-17 08:25:48
 ---
+
 
 # Math Analysis Homework - Week 13
 
@@ -193,18 +198,18 @@ $$
 \end{gathered}
 $$
 
-对第二项,$B_n,a_n$分别收敛,故收敛.
+对第二项,$B_n,a_n$分别收敛($a_n$收敛用柯西),故收敛.
 
 对第一项:
 
 $$
 \begin{gathered}
-\vert \sum_i^{n-1} B_i(a_i-a_{i+1}) \vert  \\
-\le \sum _{i = 1} ^{n-1}  \vert B_i \vert \vert a_i-a_{i-1} \vert  \\
+\sum _{i = 1} ^{n-1}  \vert B_i \vert \vert a_i-a_{i-1} \vert  \\
+\le M\sum _{i = 1} ^{n-1} \vert a_i-a_{i-1} \vert  
 \end{gathered}
 $$
 
-其中$\vert B_i\vert$有界,后面的绝对收敛,故收敛.
+绝对收敛,所以第一项收敛.
 
 于是原式收敛.
 

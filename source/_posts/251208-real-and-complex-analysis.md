@@ -1504,3 +1504,192 @@ $$ \int_X (v-u) d\mu < \epsilon. $$
 哦最后,上面是正函数,但对任意实值函数只要正部负部分开然后把uv对应拼起来即可.
 
 </div>
+
+## Chapter 3
+
+<div class='dbox'>
+
+凸函数
+
+略,和分析一样定义在$R$上的
+
+</div>
+
+<div class='cbox'>
+
+若 $\varphi$ 在 $(a, b)$ 上是凸的，则 $\varphi$ 在 $(a, b)$ 上连续。
+
+</div>
+
+<div class='pbox'>
+
+直接用单调有界证明割线斜率极限存在
+
+</div>
+
+<div class='cbox'>
+
+Jensen's Inequality
+
+设 $\mu$ 是集合 $\Omega$ 上 $\sigma$-代数 $\mathfrak{M}$ 上的正测度，且 $\mu(\Omega) = 1$。如果 $f$ 是 $L^1(\mu)$ 中的实函数，满足 $a < f(x) < b$ 对所有 $x \in \Omega$ 成立，且 $\varphi$ 在 $(a, b)$ 上是下凸的，则
+$$ \varphi\left( \int_{\Omega} f \, d\mu \right) \le \int_{\Omega} (\varphi \circ f) \, d\mu $$
+
+</div>
+
+<div class='pbox'>
+
+这种$\varphi$里面的积分是绝对消不掉的,你设它是$t$.
+
+那么因为$\varphi$是下凸,所以$x=t$处有一条支撑线满足:
+
+$$
+\begin{gathered}
+\varphi(x)\ge \varphi(t)+k(x-t) \\
+\Rightarrow \varphi(f(x))\ge \varphi(t)+k(f(x)-t)
+\end{gathered}
+$$
+
+然后同时积分就结束了.
+
+</div>
+
+[think] 为什么利用凸函数只要利用一条支撑线?观察琴声的图发现真的是这样!
+
+<div class='dbox'>
+
+共轭指数
+
+指满足 $\dfrac{1}{p} +\dfrac{1}{q} =1$的$(p,q)$对.包括无穷.
+
+</div>
+
+<div class='cbox'>
+
+Hölder Inequality and Minkowski Inequality
+
+设 $p$ 和 $q$ 是共轭指数，$1 < p < \infty$。设 $X$ 是测度空间，测度为 $\mu$。设 $f$ 和 $g$ 是 $X$ 上的可测函数，取值在 $[0, \infty]$。则
+$$ \int_X fg \, d\mu \le \left\{ \int_X f^p \, d\mu \right\}^{1/p} \left\{ \int_X g^q \, d\mu \right\}^{1/q} $$
+以及
+$$ \left\{ \int_X (f + g)^p \, d\mu \right\}^{1/p} \le \left\{ \int_X f^p \, d\mu \right\}^{1/p} + \left\{ \int_X g^p \, d\mu \right\}^{1/p} $$
+
+</div>
+
+<div class='pbox'>
+
+第一个翻数分笔记就好了是证过的,用Young's Inequality.
+
+第二个:
+
+$$
+\begin{gathered}
+(f+g)^p=f(f+p)^{p-1}+g(f+p)^{p-1} \\
+\int f(f+g)^{p-1}\le (\int f^p)^\frac1p (\int (f+g)^{(p-1)q})^\frac1q \\
+=(\int f^p)^\frac1p (\int (f+g)^p )^\frac1q \\
+\int (f+g)^p =\int f(f+g)^{p-1}+\int g(f+g)^{p-1} \\
+\le ((\int f^p)^\frac1p+(\int g^p)^\frac1p) (\int (f+g)^p )^\frac1q \\
+\Rightarrow (\int (f+g)^p )^{\frac1p}=(\int (f+g)^p )^{1-\frac1q}\le (\int f^p)^\frac1p+(\int g^p)^\frac1p
+\end{gathered}
+$$
+
+然后要处理$\int (f+g)^p$是$0$或无穷的情况.$0$的情况元原不等式显然成立,而因为$x^p$是下凸的,所以
+
+$$
+\begin{gathered}
+(\dfrac{f+g}{2} )^p\le \dfrac{f^p+g^p }{2} 
+\end{gathered}
+$$
+
+从而不会是无穷.
+
+于是得证.
+
+</div>
+
+[think] 这个证明拆$(f+g)(f+g)^{\frac1p-1}$是难以想到的,但Gemini说你考虑$L^p$的对偶空间,有个定理说 $\Vert f \Vert_p = \sup_{\Vert g\Vert_q =1} \int fg$.然后这里用Holder,然后去对偶空间找$g$使得Holder取等整出来的.所以最后他说处理$L^p$的时候构造一个含$L^q$的乘积是场景trick.
+
+<div class='dbox'>
+
+$L^p$空间与$L^p$范数
+
+若 $0 < p < \infty$ 且 $f$ 是 $X$ 上的复可测函数，定义
+$$ \|f\|_p = \left\{ \int_X |f|^p \, d\mu \right\}^{1/p} $$
+并令 $L^p(\mu)$ 由所有满足
+$$ \|f\|_p < \infty $$
+的 $f$ 组成。我们称 $\|f\|_p$ 为 $f$ 的 **$L^p$-范数**。
+
+</div>
+
+<div class='dbox'>
+
+$L^\infty$空间
+
+设 $g: X \to [0, \infty]$ 可测。令 $S$ 为所有满足
+$$ \mu(g^{-1}((\alpha, \infty])) = 0 $$
+的实数 $\alpha$ 的集合。若 $S = \varnothing$，令 $\beta = \infty$。若 $S \neq \varnothing$，令 $\beta = \inf S$。
+我们称 $\beta$ 为 $g$ 的**本性上确界**（**essential supremum**）。
+如果 $f$ 是 $X$ 上的复可测函数，我们定义 $\|f\|_\infty$ 为 $|f|$ 的本性上确界，并令 $L^\infty(\mu)$ 由所有满足 $\|f\|_\infty < \infty$ 的 $f$ 组成。$L^\infty(\mu)$ 的成员有时被称为 $X$ 上的**本性有界**可测函数。
+根据定义，不等式 $|f(x)| \le \lambda$ 几乎处处成立当且仅当 $\lambda \ge \|f\|_\infty$。
+
+</div>
+
+(几乎处处有界)
+
+<div class='cbox'>
+
+若 $p$ 和 $q$ 是共轭指数，$1 \le p \le \infty$，且若 $f \in L^p(\mu)$ 且 $g \in L^q(\mu)$，则 $fg \in L^1(\mu)$，且
+$$ \|fg\|_1 \le \|f\|_p \|g\|_q $$
+
+设 $1 \le p \le \infty$，且 $f \in L^p(\mu)$，$g \in L^p(\mu)$。则 $f + g \in L^p(\mu)$，且
+$$ \|f + g\|_p \le \|f\|_p + \|g\|_p $$
+
+
+</div>
+
+<div class='pbox'>
+
+
+
+</div>
+
+
+
+**3.10 注记**
+固定 $p, 1 \le p \le \infty$。若 $f \in L^p(\mu)$ 且 $\alpha$ 是复数，显然 $\alpha f \in L^p(\mu)$。事实上，
+$$ \|\alpha f\|_p = |\alpha| \|f\|_p $$
+结合定理 3.9，这表明 $L^p(\mu)$ 是一个复向量空间。
+假设 $f, g, h \in L^p(\mu)$。在定理 3.9 中用 $f-g$ 代替 $f$，用 $g-h$ 代替 $g$，我们得到
+$$ \|f - h\|_p \le \|f - g\|_p + \|g - h\|_p $$
+这表明可以通过定义 $f$ 和 $g$ 之间的距离为 $\|f - g\|_p$ 来在 $L^p(\mu)$ 中引入度量。
+（此处省略关于等价类的讨论，即 $L^p$ 空间中的元素实际上是函数的等价类，其中几乎处处相等的函数被视为同一元素）。
+
+**3.11 定理**
+对于 $1 \le p \le \infty$ 和任意正测度 $\mu$，$L^p(\mu)$ 是完备度量空间。
+
+**3.12 定理**
+若 $1 \le p \le \infty$ 且 $\{f_n\}$ 是 $L^p(\mu)$ 中的柯西序列，其极限为 $f$，则 $\{f_n\}$ 有一个子序列几乎处处逐点收敛于 $f(x)$。
+
+**3.13 定理**
+设 $S$ 为 $X$ 上所有满足
+$$ \mu(\{x: s(x) \neq 0\}) < \infty $$
+的复可测简单函数的集合。
+若 $1 \le p < \infty$，则 $S$ 在 $L^p(\mu)$ 中稠密。
+
+**3.14 定理**
+对于 $1 \le p < \infty$，$C_c(X)$ 在 $L^p(\mu)$ 中稠密。
+（注：此处 $X$ 为局部紧 Hausdorff 空间，$\mu$ 为 Borel 测度，满足定理 2.14 中的性质）。
+
+**3.15 注记**
+让我们详细讨论一下 $L^p(R^k)$（即基础测度为 $R^k$ 上的 Lebesgue 测度的 $L^p$ 空间）和空间 $C_c(R^k)$ 之间的关系。我们考虑固定的维数 $k$。
+对于每个 $p \in [1, \infty]$，我们在 $C_c(R^k)$ 上有一个度量；$f$ 和 $g$ 之间的距离为 $\|f - g\|_p$。注意这是一个真正的度量，我们不需要过渡到等价类。
+如果 $1 \le p < \infty$，定理 3.14 表明 $C_c(R^k)$ 在 $L^p(R^k)$ 中稠密，且定理 3.11 表明 $L^p(R^k)$ 是完备的。因此 $L^p(R^k)$ 是通过赋予 $C_c(R^k)$ $L^p$-度量而获得的度量空间的完备化。
+$p = \infty$ 的情况与 $p < \infty$ 的情况不同。$C_c(R^k)$ 的 $L^\infty$-完备化不是 $L^\infty(R^k)$，而是 $C_0(R^k)$，即 $R^k$ 上所有“在无穷远处消失”的连续函数空间。
+
+**3.16 定义**
+局部紧 Hausdorff 空间 $X$ 上的复函数 $f$ 称为**在无穷远处消失**（vanish at infinity），如果对于任意 $\epsilon > 0$，存在紧集 $K \subset X$ 使得对所有 $x \notin K$ 有 $|f(x)| < \epsilon$。
+$X$ 上所有在无穷远处消失的连续函数 $f$ 的类称为 $C_0(X)$。
+显然 $C_c(X) \subset C_0(X)$，且若 $X$ 是紧的，则这两个类重合。在这种情况下我们写作 $C(X)$。
+
+**3.17 定理**
+若 $X$ 是局部紧 Hausdorff 空间，则 $C_0(X)$ 是 $C_c(X)$ 相对于由上确界范数
+$$ \|f\| = \sup_{x \in X} |f(x)| $$
+定义的度量的完备化。
