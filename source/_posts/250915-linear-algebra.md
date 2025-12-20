@@ -1101,7 +1101,9 @@ $$
 
 ## Jordan Standard Form
 
-### 证法1:初等变换
+### Proof1:初等变换
+
+<div class='pbox'>
 
 记$E(i,j,a)$表示$I$的基础上$(i,j)$位置为$a$的初等变换矩阵.而容易注意到$E(i,j,a)^{-1}=E(i,j,-a)$.
 
@@ -1114,3 +1116,140 @@ $$
 那么每个块都可以表示成$\lambda I+N$,$N$是幂零的.而当你对这个子空间进行换基的时候$\lambda I$不变所以只要找$N$的变换.
 
 你发现对于$N$,你仍然进行过上面这种操作就可以简单的用某一行的$1$把同行后面的所有数消掉,所以你从第一行开始从上往下消.如果遇到一行它的$1$不在副对角线你可以做交换把它换到前面来,这样都弄完了就得到标准的约旦标准型了.
+
+</div>
+
+### Proof2
+
+
+
+## 多项式
+
+### 有理域可约多项式
+
+<div class='dbox'>
+
+$$
+\begin{gathered}
+f(x)= \sum _{i = 0} ^{n}  a_ix^i \text{ is primitive }  \\
+\Leftrightarrow \gcd(a_0,\ldots ,a_n)=1
+\end{gathered}
+$$
+
+</div>
+
+
+
+<div class='cbox'>
+
+Gauss's Lemma
+
+$$
+\begin{gathered}
+f,g \text{ are primitive } \Rightarrow fg \text{ are primitive} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑反证,如果$fg$有公质因数$p$,且$p\not\vert g$,证明$p\vert f$.
+
+令$f,g,fg$对应的系数列分别是$a_n,b_n,c_n$.
+
+那么直接递推就好了,我们假设$p \vert \gcd(f_0,\ldots ,f_A,g_0,\ldots,g_B)$(没有取$-1$)
+
+那么考虑$c_{A+B+2}$,它一定有一项是$f_{A+1}g_{B+1}$,且其他的项一定都被$p$整除,于是你一定可以让$A$或$B$加$1$.
+
+这样走$n+m+1$步一定可以把$A$或$B$弄满.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f(x)\in Z[x],f \text{ is primitive}  \\
+\Rightarrow
+(f(x) \text{ is inreducible in Z[x]}  \Leftrightarrow f(x) \text{ is inreducible in Q[x]} )
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+考虑如果$f(x)=f_1(x)f_2(x),f_1,f_2\in Q[x]$.
+
+那么你显然可以有$f_i(x)=g_i(x)\dfrac {p_i}{q_i}$.且$g_1,g_2 \text{ is primitive}$.
+
+那么$f(x)=\dfrac{p_1p_2}{q_1q_2}g_1(x)g_2(x)$,其中$g_1g_2$还是$\text{primitive}$的,$q_1q_2f(x)=p_1p_2g_1(x)g_2(x)$.
+
+考虑两侧的系数的最大公因数相等,那只能是$q_1q_2=p_1p_2$了.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+f(x)=x_n+\sum _{i = 0} ^{n-1}  a_ix^i,a_i\in Z \\
+\exists p \ s.t.\\ 
+\forall 0\le i\le n-1 ,p | a_i \\
+p^2 \not| a_0
+\end{cases} \\
+\Rightarrow f(x) \text{ is irreducible in Q[x]} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+反证,考虑$f=f_1f_2$设它们的系数分别是$b_n,c_n$,根据上面高斯引理的证明归纳过程,$p|a_0$,那么$p|b_0c_0$,那么因为$p$只能整除其中的一个,由上面那个由$(A,B)$推到$(A+1,B)$或$(A,B+1)$的过程,你有一边走不了,最终就直接得到$p\vert b_n$或$p\vert c_n$了.
+
+但是显然$p\not| f$,它是有系数是$1$的!矛盾.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+p\in P,f(x)=\sum _{i = 0} ^{p-1}  x^i \\
+\Rightarrow  f(x) \text{ is irreducible}
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+f(x)=\dfrac{x^p-1}{x-1}  \\
+\xlongequal{ y=x-1 } \dfrac{(y+1)^p-1}{y}  \\
+=\sum _{i = 0} ^{p-1} y^i \binom{p}{i+1}
+\end{gathered}
+$$
+
+此时用上面定理.
+
+</div>
+
+<div class='cbox'>
+
+若首一多项式$f$在$Z[x]$上可约则$f$在$F_p[x]$上可约
+
+</div>
+
+<div class='pbox'>
+
+显然,因为你把$Z[x]$上那两个因子分别模$p$就好了.首一主要是防止你模$p$的时候$f$模成常数.
+
+</div>
+
+
+

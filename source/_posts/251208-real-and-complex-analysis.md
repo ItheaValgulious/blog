@@ -1647,23 +1647,43 @@ $$ \|f + g\|_p \le \|f\|_p + \|g\|_p $$
 
 <div class='pbox'>
 
+首先$p\in (1,\infty)$的情况就是前面那两个不等式,只需证$p=1,q=\infty$的情况.
 
+设$\beta=\|g\|_\infty$,则对任意$\epsilon$,存在$x<\beta+\epsilon$使得$\mu(g^{-1}((x,\infty]))=0$,于是忽略这些地方的积分就是 $\Vert fg \Vert_1=\int_X fg=\int_{X-g^{-1}((x,\infty])}fg\le x\int_X f<(\beta+\epsilon)\int_X f$,然后对$\epsilon$取极限.
+
+第二个道理一样吧.
+
+</div>
+
+固定 $p, 1 \le p \le \infty$。若 $f \in L^p(\mu)$ 且 $\alpha$ 是复数，显然 $\alpha f \in L^p(\mu)$。事实上，
+$$ \|\alpha f\|_p = |\alpha| \|f\|_p $$
+结合定理 3.9，这表明 $L^p(\mu)$ 是一个复向量空间。
+
+
+而如果你把 $\Vert f-g \Vert_p$定义为距离,就得到度量空间.但注意度量空间要求距离是$0$当前仅当$f=g$,所以你应该把几乎处处相等的函数看成一个等价类,而$L^p$空间是关于这个等价类的空间.
+
+<div class='cbox'>
+
+对于 $1 \le p \le \infty$ 和任意正测度 $\mu$，$L^p(\mu)$ 是完备度量空间。
+
+</div>
+
+完备度量空间说的是柯西列的极限在空间里.
+
+<div class='pbox'>
+
+怎么又是我想不到的东西
+
+首先你可以在柯西列中取一个子列$a_i$使得 $\Vert f_{a_i}-f_{a_{i-1}} \Vert_p<\dfrac{1}{2^i}$
+
+那么令$g_n=\sum _{i = 2} ^{n}  \vert f_{a_i}-f_{a_{i-1}} \vert$,那么对每一项来说,都有 $\Vert f_{a_i}-f_{a_{i-1}} \Vert_p<\dfrac1{2^i}$,于是能推出 $\Vert g_n \Vert \le 1$,显然$g_n$是单增的,设$g_n$的极限是$g$,由单调收敛知 $\Vert g \Vert_p \le 1$.所以$g$几乎处处有界,也就是说$g_n$几乎处处收敛.
+
+这样的好处是说明了 $f_{a_i}-f_{a_{i-1}}$ 几乎处处绝对收敛,所以$f$
 
 </div>
 
 
 
-**3.10 注记**
-固定 $p, 1 \le p \le \infty$。若 $f \in L^p(\mu)$ 且 $\alpha$ 是复数，显然 $\alpha f \in L^p(\mu)$。事实上，
-$$ \|\alpha f\|_p = |\alpha| \|f\|_p $$
-结合定理 3.9，这表明 $L^p(\mu)$ 是一个复向量空间。
-假设 $f, g, h \in L^p(\mu)$。在定理 3.9 中用 $f-g$ 代替 $f$，用 $g-h$ 代替 $g$，我们得到
-$$ \|f - h\|_p \le \|f - g\|_p + \|g - h\|_p $$
-这表明可以通过定义 $f$ 和 $g$ 之间的距离为 $\|f - g\|_p$ 来在 $L^p(\mu)$ 中引入度量。
-（此处省略关于等价类的讨论，即 $L^p$ 空间中的元素实际上是函数的等价类，其中几乎处处相等的函数被视为同一元素）。
-
-**3.11 定理**
-对于 $1 \le p \le \infty$ 和任意正测度 $\mu$，$L^p(\mu)$ 是完备度量空间。
 
 **3.12 定理**
 若 $1 \le p \le \infty$ 且 $\{f_n\}$ 是 $L^p(\mu)$ 中的柯西序列，其极限为 $f$，则 $\{f_n\}$ 有一个子序列几乎处处逐点收敛于 $f(x)$。

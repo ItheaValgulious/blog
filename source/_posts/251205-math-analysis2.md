@@ -895,7 +895,7 @@ $$
 
 <div class='cbox'>
 
-若$\sum a,\sum b$其中有一个绝对收敛那么$\sum c$收敛
+若$\sum a,\sum b$其中有一个绝对收敛那么$\sum c$收敛且$(\sum c)=(\sum a)(\sum b)$
 
 </div>
 
@@ -928,3 +928,39 @@ $$
 
 </div>
 
+[think] 利用收敛级数的性质当然一定要区间和
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\sum a<\infty,\sum b<\infty,\sum c<\infty \\
+\Rightarrow (\sum a)(\sum b)=(\sum c)
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+仍然用$A_n,B_n,C_n$表示部分和,$A,B,C$表示极限.
+
+我们要证明我们用方形,三角形覆盖全平面的极限是相同的.难以想到的是转化成计算平均值:
+
+考虑
+
+$$
+\begin{gathered}
+C=\dfrac{1}{n+1} \sum _{i = 0} ^{n}  C_n \\
+=\dfrac{1}{n+1} \sum _{i = 0} ^{n} \sum _{j = 0} ^{i} a_{i-j}B_j \\
+=\dfrac{1}{n+1} \sum _{j = 0} ^{n} \sum _{i = j} ^{n} a_{i-j}B_j \\
+=\dfrac{1}{n+1} \sum _{j = 0} ^{n}  B_jA_{n-j} \\
+=AB
+\end{gathered}
+$$
+
+第一个等号是Stolz,最后一个等号是经典结论(在math-analysis1里面有)
+
+但就是很难想到吧.
+
+</div>
