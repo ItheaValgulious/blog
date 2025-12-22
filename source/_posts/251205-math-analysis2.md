@@ -964,3 +964,137 @@ $$
 但就是很难想到吧.
 
 </div>
+
+[think] 我们发现从$a*b=c\Rightarrow A*B=C$其实是自然的(求和是卷$1$)是容易的.另外取平均值是提取频率为$0$的分量.
+
+## Class 31
+
+### 无穷乘积
+
+<div class='dbox'>
+
+乘积收敛到非$0$的正数.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\prod(1+a_i)<\infty \Leftrightarrow \sum \ln(1+a_i)<\infty
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+显然
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+a_n>0 \Rightarrow  \\
+\sum \ln(1+a_n) <\infty \Leftrightarrow \sum a_n<\infty
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+这不是
+
+$$
+\begin{gathered}
+\lim_{n \to \infty} \dfrac{\ln(1+a_n)}{a_n} =1
+\end{gathered}
+$$
+
+吗
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+-1<a_n<0,a_n\to 0 \Rightarrow  \\
+\sum \ln(1+a_n)>-\infty \Leftrightarrow \sum a_n>-\infty
+\end{gathered}
+$$
+
+</div>
+<div class='pbox'>
+
+都取负仍然比值判别法结束
+
+</div>
+
+<div class='cbox'>
+
+若$\sum a_n$收敛,则
+
+$$
+\begin{gathered}
+\sum \ln(1+a_n) \text{ is convergent}  \\
+\Leftrightarrow \sum a_n^2 \text{ is convergent} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+右推左:
+$$
+\begin{gathered}
+\ln(1+a_n)=a_n-\dfrac{a_n^2}{2} +o(a_n^2)
+\end{gathered}
+$$
+
+第一项收敛是条件,第二项收敛则第三项一定收敛.
+
+左推右:$\ln(1+a_n)-a_n=-\dfrac{a_n^2}{2}+o(a_n^2)\in (-\dfrac{3}{4} a_n^2,-\dfrac{1}{4} a_n^2)$.
+
+其实就是如果一次的不保号就比较恒正的二次.
+
+</div>
+
+### 上极限
+
+<div class='dbox'>
+
+极限点集:
+
+$$
+\begin{gathered}
+E=\{ a \vert \exists k_n,\lim_{n \to \infty} a_{k_n}=a \} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+E=\{ a \} \Leftrightarrow \lim_{n \to \infty} a_n=a
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+首先一个数列的极限点一定不为空:有界则必有收敛子列,无界就是无穷.
+
+于是任意子列如果极限不为$a$代表$a$的某个邻域外有无限个点,那么它们有一个聚点,于是矛盾.
+
+就证完了.
+
+</div>
+
