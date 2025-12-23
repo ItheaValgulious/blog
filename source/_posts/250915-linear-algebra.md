@@ -1305,7 +1305,34 @@ $$
 
 再看另一边:
 
+考虑现在$V(A-\lambda I)=(B-\lambda I)W$,$V,W$是可逆的$\lambda$矩阵.
 
+直接设 $V=\sum _{i = 0} ^{m} V_i\lambda^i,W=\sum _{i = 0} ^{m}  W_i\lambda^i$.
+
+那么
+
+$$
+\begin{gathered}
+\begin{cases}
+-V_m=-W_m \\
+V_kA-V_{k-1}=BW_k-W_{k-1} \\
+V_0A=W_0B
+\end{cases}
+\end{gathered}
+$$
+
+然后你发现可以盯着一边看去做一个相消,就是给$V_iA$的那个等式右乘$A^i$,则左边是$0$,右边是?
+
+$$
+\begin{gathered}
+\sum BW_iA^i-W_{i-1}A^i \\
+=B(\sum W_iA^i)-\sum (W_iA^i)A \\
+=0
+\end{gathered}
+$$
+
+于是设$P=\sum W_iA^i$就有$BP=PA$.
+
+同时,注意到$P$就是把$\lambda=A$代入$W(\lambda)$,我们知道行列式是可以代入的,而你可逆的$W(\lambda)$带进去任何数都不能是$0$,从而$P$可逆.
 
 </div>
-
