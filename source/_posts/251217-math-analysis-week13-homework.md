@@ -236,3 +236,65 @@ $$
 然后第一项和上面一样处理是收敛,第二项因为$a_n$极限是$0$,$B_n$有界所以收敛到$0$.于是原式收敛.
 
 </div>
+
+## Class 2
+
+### T1
+
+<div class="cbox">
+
+**1.** 求下列数列的上、下极限:
+(1) $\frac{n+1}{n}(1 + (-1)^{n+1})$;
+
+</div>
+
+<div class="pbox">
+
+偶数列到$0$,奇数列到$2$,且覆盖了所有元素.
+
+$$
+\begin{gathered}
+\limsup a_n=2,\liminf a_n=0
+\end{gathered}
+$$
+
+</div>
+
+### T2
+
+<div class="cbox">
+
+**1.** 求下列数列的上、下极限:
+(2) $\sin \frac{n\pi}{2} + n \cos \frac{n\pi}{2}$.
+
+</div>
+
+<div class="pbox">
+
+取$n=4k$得到$\limsup a_n=+\infty$.
+
+取$n=-4k$得$\liminf a_n=-\infty$.
+
+</div>
+
+### T3
+
+<div class="cbox">
+
+**3.** 设 $x_n > 0, y_n > 0$, 证明: $\displaystyle \liminf_{n\to\infty} x_n \cdot \liminf_{n\to\infty} y_n \leqslant \liminf_{n\to\infty} x_ny_n \leqslant \limsup_{n\to\infty} x_n \cdot \liminf_{n\to\infty} y_n$.
+
+</div>
+
+<div class="pbox">
+
+$a_n=\inf_{k>n} x_k,b_n=\inf_{k>n} y_k$.
+
+则$\liminf x_n \liminf y_n=\lim a_n \lim b_n=\lim a_nb_n$.
+
+而$c_n=\inf_{k>n} x_ky_k\ge a_nb_n$:假设$c_n<a_nb_n$,取$\epsilon<\dfrac{a_nb_n-c_n}2$,则能取到$x_ky_k<c_n+\epsilon$,但显然$a_n\le x_k,b_n\le y_k$,于是$c_n+\epsilon>a_nb_n,c_n<a_nb_n$,与$\epsilon<a_nb_n-c_n$矛盾.
+
+于是 $c_n=\inf_{k>n} x_ky_k,\lim_{n \to \infty} c_n<\lim_{n \to \infty} a_nb_n$,左边得证.
+
+右边,设$d_n=\sup_{k>n} x_k$.则$\forall \epsilon,\exists k,b_n>y_k-\epsilon$同时$c_n<x_ky_k$,$d_n>x_k$,则$c_n<x_ky_k<d_n(b_n+\epsilon)$对任意$\epsilon$,于是$c_n\le d_nb_n$,于是右边得证.
+
+</div>

@@ -1507,6 +1507,8 @@ $$ \int_X (v-u) d\mu < \epsilon. $$
 
 ## Chapter 3
 
+### Inequality Preparation
+
 <div class='dbox'>
 
 凸函数
@@ -1691,31 +1693,105 @@ $$ \|\alpha f\|_p = |\alpha| \|f\|_p $$
 </div>
 
 
-**3.12 定理**
+<div class='cbox'>
+
 若 $1 \le p \le \infty$ 且 $\{f_n\}$ 是 $L^p(\mu)$ 中的柯西序列，其极限为 $f$，则 $\{f_n\}$ 有一个子序列几乎处处逐点收敛于 $f(x)$。
 
-**3.13 定理**
+</div>
+
+<div class='pbox'>
+
+这就是上一条证明里构造的$f_{a_n}$.我们已经证明了这件事.
+
+</div>
+
+<div class='cbox'>
+
 设 $S$ 为 $X$ 上所有满足
 $$ \mu(\{x: s(x) \neq 0\}) < \infty $$
 的复可测简单函数的集合。
 若 $1 \le p < \infty$，则 $S$ 在 $L^p(\mu)$ 中稠密。
 
-**3.14 定理**
+
+</div>
+
+<div class='pbox'>
+
+复可测函数就先拆成实部虚部再拆成正负.现在考虑正函数.
+
+如果我们就取那个用二进制构造逐点收敛到$f$,同时非$0$区域越来越大(二进制构造的$s_n$在$f<\dfrac1{2^n}$时为$0$,所以越来越大).
+
+因为处处$s_n<f$,所以$s_n\in L^p(\mu)$.
+
+要证明
+
+$$
+\begin{gathered}
+\lim_{n \to \infty} \int_X \vert f-s_n \vert^p=0
+\end{gathered}
+$$
+
+因为 $\vert f-s_n \vert^p<(\vert f \vert +\vert s_n \vert)^p<2^p \vert f \vert^p$,有控制函数,且 $\lim_{n \to \infty} f-s_n=0$,于是控制收敛定理,交换积分和极限即证.
+
+</div>
+
+<div class='cbox'>
+
 对于 $1 \le p < \infty$，$C_c(X)$ 在 $L^p(\mu)$ 中稠密。
 （注：此处 $X$ 为局部紧 Hausdorff 空间，$\mu$ 为 Borel 测度，满足定理 2.14 中的性质）。
 
-**3.15 注记**
-让我们详细讨论一下 $L^p(R^k)$（即基础测度为 $R^k$ 上的 Lebesgue 测度的 $L^p$ 空间）和空间 $C_c(R^k)$ 之间的关系。我们考虑固定的维数 $k$。
-对于每个 $p \in [1, \infty]$，我们在 $C_c(R^k)$ 上有一个度量；$f$ 和 $g$ 之间的距离为 $\|f - g\|_p$。注意这是一个真正的度量，我们不需要过渡到等价类。
-如果 $1 \le p < \infty$，定理 3.14 表明 $C_c(R^k)$ 在 $L^p(R^k)$ 中稠密，且定理 3.11 表明 $L^p(R^k)$ 是完备的。因此 $L^p(R^k)$ 是通过赋予 $C_c(R^k)$ $L^p$-度量而获得的度量空间的完备化。
-$p = \infty$ 的情况与 $p < \infty$ 的情况不同。$C_c(R^k)$ 的 $L^\infty$-完备化不是 $L^\infty(R^k)$，而是 $C_0(R^k)$，即 $R^k$ 上所有“在无穷远处消失”的连续函数空间。
+</div>
 
-**3.16 定义**
+<div class='pbox'>
+
+考虑首先可以用简单函数逼近$f\in L^p$得到列$s_n$.
+
+对$s_n$用Lusin得到$g_n$满足 $\mu(\{ g_n\ne s_n \})<\epsilon_n$且$\sup |g_n|\le \sup |f_n|$,于是 $\int_X \vert f-g_n \vert^p<\epsilon_n2^p|f|^p$.
+
+于是 $|f-g_n|^p<(2|f|)^p$,有控制函数,控制收敛即证.
+
+</div>
+
+<div class='cbox'>
+
+在$C_c(R^k)$上$\|f-g\|_p$是度量(不需要等价类)
+
+</div>
+
+<div class='pbox'>
+
+因为勒贝格空间下非空开集测度不为$0$.(至少包含一个小格子).所以如果一点处不为$0$积分一定不为$0$.
+
+</div>
+
+于是$L^p(R^k)$是$C_c(R^k)$赋予$L^p$范数的完备化.
+
+<div class='dbox'>
+
 局部紧 Hausdorff 空间 $X$ 上的复函数 $f$ 称为**在无穷远处消失**（vanish at infinity），如果对于任意 $\epsilon > 0$，存在紧集 $K \subset X$ 使得对所有 $x \notin K$ 有 $|f(x)| < \epsilon$。
 $X$ 上所有在无穷远处消失的连续函数 $f$ 的类称为 $C_0(X)$。
 显然 $C_c(X) \subset C_0(X)$，且若 $X$ 是紧的，则这两个类重合。在这种情况下我们写作 $C(X)$。
 
-**3.17 定理**
+</div>
+
+<div class='cbox'>
+
 若 $X$ 是局部紧 Hausdorff 空间，则 $C_0(X)$ 是 $C_c(X)$ 相对于由上确界范数
 $$ \|f\| = \sup_{x \in X} |f(x)| $$
 定义的度量的完备化。
+
+</div>
+
+<div class='pbox'>
+
+首先要证明$C_0(X)$是完备的.
+
+你发现这个范数下的柯西列$f_n$一定一致收敛到某个函数$f$.那么从一致收敛可以推连续性.
+
+显然如果你取一个$\epsilon$,柯西列条件存在一个$N$,于是能得到$n>N \Rightarrow |f_n-f|<\epsilon$,于是,$\forall 2\epsilon$,因为$f_n$在一个紧集外小于$\epsilon$,于是这外面$|f|<2\epsilon$.
+
+于是$f\in C_0$,且从一致收敛容易知道$\|f-f_n\| \to 0$
+
+再证明$C_c$稠密.显然任何一个$f\in C_0$,找一个$\epsilon_n\to 0$取出一个紧集$K$,再找一个$K\subset V$满足$\overline{V}$紧,可以找到$K\prec g\prec V$,则$fg$是$C_c$中的函数,这样就能构造出收敛到$f$的列.
+
+</div>
