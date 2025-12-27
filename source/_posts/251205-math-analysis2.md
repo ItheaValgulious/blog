@@ -1134,6 +1134,150 @@ $$
 
 </div>
 
+<div class='cbox'>
 
+$$
+\begin{gathered}
+\limsup a_n=\lim \sup_{k\ge n} a_k
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+设$b_n=\sup_{k\ge n} a_k$.
+
+那么设$\epsilon_n=\dfrac1n$,显然对$b_n$存在$a_k>b_n-\epsilon_n$,然后在从$b_{k+1}$往后找,则你找出一个$a$的子列对应一个$b$的子列,显然他俩的极限相同,所以$b$的极限一定是$a$的极限点,于是$\limsup a_n\ge \lim \sup_{k\ge n} a_k$
+
+反过来,考虑如果上极限由一个$a$的子列$a_{p_n}$取到,那么$b_{p_n}\ge a_{p_n}$,所以$b$的极限比$a$的上极限大.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\forall m,n\in N^+,0\le a_{m+n}\le a_m+a_n \\
+\Rightarrow \lim_{n \to \infty} \dfrac{a_n}{n} <\infty
+\end{gathered}
+$$
+
+</div>
+
+
+<div class='pbox'>
+
+取$n=kp+r$,则:
+
+$$
+\begin{gathered}
+a_n=a_{kp+r}\le ka_p+a_r \\
+\dfrac{a_n}{n} \le \dfrac{k}{kp+r} a_p+\dfrac{a_r}{kp+r}  \\
+\end{gathered}
+$$
+
+看到右侧收敛到$\dfrac{a_p}p$.且因为$r$不重要,所以你可以把$r$遍历$0\ldots p-1$使得$n$不仅是一个子列而是整个数列.
+
+这里你如果尝试取极限你会发现最终极限小于等于数列的任何一项,不好用.
+
+但你发现取上极限: $\limsup a_n\le \dfrac{a_p}{p}$,再同时取下极限,则左边不变,右边变成原数列的下极限,于是上极限小于等于下极限,只能是都等于极限.
+
+[think] 就是你的直觉支持你弄成$\dfrac{a_p}{p}$的,之后你想把极限和数列内某项大小的关系说清楚.而$n=kp+r$是你看出的一个加法结构.
+
+</div>
+
+<div class='cbox'>
+
+上极限的另一种等价刻画
+
+$$
+\begin{gathered}
+A=\limsup x_n \Leftrightarrow \begin{cases}
+\forall \epsilon>0,\exists N,\forall n>N,x_n<A+\epsilon \\
+\exists \text{ infinite }x_n \ s.t.\ x_n>x-\epsilon 
+\end{cases}
+
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+很直观吧!
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+x_n \text{ is bounded} \\
+\lim_{n \to \infty} 2x_n+x_{2n}<\infty
+\end{cases}
+\Rightarrow \lim_{n \to \infty} x_n<\infty 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+Sol1:
+
+你观察这个题,$2x_n+x_{2n}$其实应该考虑它$p2^k$的位置组成的子列,其中$2\not|p$.这样若$n>N$时$n=p2^k$,则设  $\lim_{n \to \infty} 2x_n+x_{2n}=A$,有:
+
+$$
+\begin{gathered}
+2x_n+x_{2n}\in (A-\epsilon,A+\epsilon) \\
+\text{let } y_n=x_n-\dfrac A3 \\
+\therefore -\epsilon<2y_n+y_{2n}< \epsilon \\
+|y_{2n}|>2|y_n|-\epsilon
+\end{gathered}
+$$
+
+于是若$|y_n|>\epsilon$,则存在$p>1$使得$|y_n|>p\epsilon$,就有$|y_{2n}|>(1-p)|y_n|$对以后的都成立,于是$|y_{2n}|$无界,$y_{2n}$无界,与$x_n$有界矛盾.
+
+从而$|y_n|<\epsilon$对所有$n>N$成立,即$|x_n-\dfrac{A}3|<\epsilon$对$n>N$成立,得证.
+
+Sol2:
+
+考虑上下极限:
+
+$$
+\begin{gathered}
+2x_n=2x_n+x_{2n}-2x_n \\
+\limsup_{n \to \infty} 2x_n=A-2\liminf_{n\to \infty} x_{2n}\le A-2 \liminf_{n \to \infty} x_n \\
+\liminf_{n \to \infty} 2x_n=A-2\limsup_{n\to \infty} x_{2n}\ge A-2 \limsup_{n \to \infty} x_n \\
+\end{gathered}
+$$
+
+整理一下得到 $\limsup_{n \to \infty} x_n=\liminf_{n \to \infty} x_n$.
+
+[think] 这是怎么回事呢?做法一里面有界我们是从后往前推的,是从无限远处的有界推的前面的位置,而上下极限看起来就在考虑无限远处的行为.我们看到实际上它在说$x_{2n}=A-2x_n$的式子的时候就发现误差好像被放大了,那就应该立刻想到考察无限远.这个式子还说你的$x_n$和$x_{2n}$必然交替当上下极限,从而把$A$含进去.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+x_n>0 \Rightarrow \limsup_{n \to \infty} \sqrt[ n ]{ x_n } \le \limsup_{n \to \infty} \dfrac{x_n}{x_{n-1}} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+首先都取$\ln$,你发现你其实证一个数列的上极限大于它的前缀均值的上极限.
+
+然后你发现对于均值序列的一个聚点,在相邻两个均值项之间一定有原数列的一项大于这两个均值中小的一个.就能构造出原数列的子列.
+
+于是得证.
+
+</div>
 
 
