@@ -1,7 +1,12 @@
 ---
 title: Math Analysis Homework - Week 14
-tags: [math,math-analysis,homework]
+tags:
+  - math
+  - math-analysis
+  - homework
+date: 2025-12-28 17:17:38
 ---
+
 
 # Math Analysis Homework - Week 14
 
