@@ -1333,11 +1333,32 @@ $$
 
 于是设$P=\sum W_iA^i$就有$BP=PA$.
 
-同时,注意到$P$就是把$\lambda=A$代入$W(\lambda)$,我们知道行列式是可以代入的,而你可逆的$W(\lambda)$带进去任何数都不能是$0$,从而$P$可逆.
+那么你把$V,W$取逆分别移到另一边是$(A-\lambda I)W^{-1}=V^{-1}(B-\lambda I)$.再走一遍能得到$AQ=QB$.
+
+然后能看出$A^kQ=QB^k$,$Q=W^{-1}(B)$,$PA^k=B^kP$.
+
+那么
+
+$$
+\begin{gathered}
+PQ \\
+=W(A)Q \\
+=\sum_i W_iA^iQ \\
+=\sum_i W_iQB^i \\
+=\sum_i W_i(\sum_j W^{-1}_jB^j)B^i \\
+=\sum_i \sum_j W_iW^{-1}_jB^{i+j} \\
+=WW^{-1}(B) \\
+=I
+\end{gathered}
+$$
 
 </div>
 
 [think] 你看那个神秘的求和是不自然的,你注意到如果我们对一开始的$V(A-\lambda I)=(B-\lambda I)W$去代入$\lambda =A$会很妙,然后所谓的代入实际上对应了取模,所以算$(B-\lambda I)W \bmod (A-\lambda I)$,算这个的时候拆开$W$乘上$B$算,因为没有交换律不保证余数可乘.
+
+[think] 好吧上面那个think说的你直接代入就可以的,这种时候你要规定代入方向,然后$(B-\lambda I)W=BW(\lambda)-\lambda W(\lambda)$,此时你代入$\lambda=A$因为是右代入所以你要先把$\lambda W$变成$W\lambda$.
+
+[think] 后面这个$=I$也可以直接通过代入看出来,或者再逐项系数展开.
 
 <div class='cbox'>
 
@@ -1395,9 +1416,103 @@ $$
 
 于是这种证法说你考虑一个Jordan块正好对应了一个不变因子$(x - \lambda_i)^n$
 
-## 循环分解定理
+## 准素分解
 
-todo
+<div class='cbox'>
 
+$T$的极小多项式是$m(x)=\prod_i p_i(x)^{c_i}$,$p_i$是互不相同的不可约多项式,则$V=\oplus_i W_i$,且 $W_i=\operatorname{null} p_i^{c_i}(T)$.
 
+</div>
 
+<div class='pbox'>
+
+不变性是显然的,我们发现对一个$W_i$,其极小多项式是$p_i^{c_i}$,考虑其中一个$v$,$p_i^{c_i}(T)v=0$,那么显然$p_i^{c_i}(T)Tv=Tp_i^{c_i}(T)v=0$.
+
+$$
+\begin{gathered}
+\text{let } f_i=\dfrac{m(x)}{p_i^{c_i}(x)}  \\
+\text{if } u\in W_1\cap W_2\oplus \ldots\oplus W_n\ne \emptyset \\
+u\in W_1 \Rightarrow p_1^{c_1}(T)u=0 \\
+u\in W_2\oplus \ldots\oplus W_n \Rightarrow f_i(T)u=0 \\
+\because f_i \perp p_1^{c_1} \\
+\therefore \exists s(x),t(x),s(x)p_1^{c_1}(x)+t(x)f_i(x)=1 \\
+s(T)p_1^{c_1}(T)u+t(T)f_i(T)u=Iu=u \\
+\Rightarrow u=0
+\end{gathered}
+$$
+
+这说明是直和,再说明直和是整个空间:
+
+$$
+\begin{gathered}
+\gcd(f_1,\ldots,f_n)=1 \\
+\Rightarrow \exists a_i,\sum_i a_i(x)f_i(x)=1 \\
+\Rightarrow \sum_i a_i(T)f_i(T)=I \\
+\text{let } E_i=a_i(T)f_i(T) \\
+\end{gathered}
+$$
+
+显然$E_iE_j(T)=0$,又因为
+
+$$
+\begin{gathered}
+\text{let } E_i(v)=w \\
+p_i^{c_i}(T)w=p_i^{c_i}(T)a_i(T)f_i(T)v \\
+=a_i(T)m(T)=0 \\
+\Rightarrow \operatorname{range} E_i \subset W_i \\
+(\sum_j E_j)E_i=E_i \Rightarrow E_i^2=E_i \\
+\forall w\in W_i,
+\sum_j E_j(T)w=w \\
+\end{gathered}
+$$
+而你$E_j,j\ne i$的像空间的直和与$W_i$无交,所以一定只能是$E_i(w)=w$
+
+这样实际证明了$E_i$就是像每个空间的投影,且和为$I$,于是得证.
+
+</div>
+
+<div class='cbox'>
+
+对任意线性变换$T$,$\exists v$使得任意满足$p(T)v=0$的$p$是极小多项式的倍式.
+
+</div>
+
+<div class='pbox'>
+
+首先如果$p=p_i^{c_i}$,那么是显然的,否则$p$就不是这个了.
+
+否则用准素分解,则你得到若干个$p_i^{c_i}$,每个对应一个向量$v_i$,考虑直接把它们加起来$v=\sum_i v_i$,那么:
+
+$0=g(T)\sum_i v_i=\sum_i g(T)v_i$,因为后面每一项分别在$W_i$中,所以一定有$g(T)v_i=0$,所以在每个子空间中的极小多项式$p_i^{c_i}$都是$g(T)$的因子,于是$m|g$,又因为$g$是整个的零化多项式所以$g|m$.得证.
+
+</div>
+
+## 循环分解
+
+<div class='cbox'>
+
+对线性变换$T$,找到$v$使得 $g(T)v=0 \Rightarrow p|g$,其中$p$为极小多项式.然后找到最大的$k$使得$v,Tv,\ldots T^kv$线性无关,设 $W_1=\operatorname{span}( v,Tv,\ldots T^kv )$,设$W_1\oplus W=V$,则继续对$W$重复就得到一串不变子空间,且极小多项式构成整除链.
+
+</div>
+
+<div class='pbox'>
+
+前面我们已经证明了一定有这样的$v$,同时容易看出$T|_{W_1}$的极小多项式是$p$,现在就是证明我们这么找出$W_1$后一定存在满足条件的不变子空间$W$.
+
+考虑构造线性泛函$f$满足$fT^kv=1$,其他的基全设$0$.
+
+则 $W=\bigcap_{i=0}^k \operatorname{null} fT^i$.
+
+设$\varphi:F^n\to F^k,\varphi(v)=[fv,fTv,\ldots fT^kv]$,$W=\operatorname{null} \varphi$.显然是线性变换.
+
+显然$W$是不变子空间.我们要证明$W_1\oplus W=V$.
+
+考虑$\varphi|_{W_1}:F^k\to F^k$,且显然是双射(直接把$T^kv$带进去就是线性无关的),于是零空间只有$0$,于是$W_1\cap W=\{0\}$.
+
+接下来证$W_1+W=V$,你再考虑$\varphi$的值域既然是$k$,零空间自然是$n-k$维,于是$\dim W+\dim W_1=n$,得证.
+
+这就结束了.
+
+</div>
+
+[think] 显然$f$就是提取那一维系数,那$\varphi$是什么玩意呢?它是一个用零空间区分$W_1$和$W$的映射,
