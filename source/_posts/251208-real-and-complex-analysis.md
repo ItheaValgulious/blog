@@ -1795,3 +1795,309 @@ $$ \|f\| = \sup_{x \in X} |f(x)| $$
 再证明$C_c$稠密.显然任何一个$f\in C_0$,找一个$\epsilon_n\to 0$取出一个紧集$K$,再找一个$K\subset V$满足$\overline{V}$紧,可以找到$K\prec g\prec V$,则$fg$是$C_c$中的函数,这样就能构造出收敛到$f$的列.
 
 </div>
+
+## Chapter 4
+
+<div class='dbox'>
+
+复向量空间 $H$ 被称为**内积空间**（inner product space）或**酉空间**（unitary space），如果在 $H$ 中每一对有序向量 $x$ 和 $y$ 都对应一个复数 $(x, y)$，称为 $x$ 和 $y$ 的**内积**（或**标量积**），且满足以下规则：
+- (a) $(y, x) = \overline{(x, y)}$。（横线表示复共轭）
+- (b) $(x + y, z) = (x, z) + (y, z)$ 对所有 $x, y, z \in H$ 成立。
+- (c) $(\alpha x, y) = \alpha(x, y)$ 对所有 $x, y \in H$ 和标量 $\alpha$ 成立。
+- (d) $(x, x) \ge 0$ 对所有 $x \in H$ 成立。
+- (e) $(x, x) = 0$ 当且仅当 $x = 0$。
+
+</div>
+
+<div class='cbox'>
+
+
+施瓦茨不等式 (The Schwarz Inequality)
+对于 $H$ 中的所有 $x$ 和 $y$，有
+$$|(x, y)| \le \|x\| \|y\|$$
+其中 $\|x\| = (x, x)^{1/2}$。
+
+</div>
+
+<div class='pbox'>
+
+我以前居然不知道这是能证的啊
+
+$$
+\begin{gathered}
+\Leftrightarrow (x,y)(y,x)\le (x,x)(y,y) \\
+\text{let } z=(x-ray),a\in R,|a|=1,r\in R,r>0 \\
+\forall a,r,(z,z)>0 \\
+\Rightarrow  (x,x)+ra(y,x)+\overline{r}a(x,y)+r^2(y,y)\ge 0\\
+\Rightarrow  (y,y)r^2+2r(x,y)+(x,x)\ge r^2(y,y)+ra(y,x)+\overline ra(x,y)+(x,x)\ge 0 \\
+\Rightarrow 4(x,y)^2<4(x,x)(y,y) \\
+\end{gathered}
+$$
+
+</div>
+
+[think] 我们要用$(x,y)$构造一个负向量触发矛盾,看起来也只能是线性组合?也许这是动机.
+
+Corollary: 对于 $H$ 中的 $x$ 和 $y$，有
+$$\|x + y\| \le \|x\| + \|y\|$$
+
+两边用内积展开用上面的定理即可.
+
+<div class='dbox'>
+
+由三角不等式可得 $\|x - z\| \le \|x - y\| + \|y - z\|$。如果我们定义 $x$ 和 $y$ 之间的距离为 $\|x - y\|$，则满足度量空间的所有公理。
+如果这个度量空间是完备的（即每个柯西序列都在 $H$ 中收敛），则称 $H$ 为**希尔伯特空间**（Hilbert space）。
+
+</div>
+
+<div class='cbox'>
+
+对于 $H$ 中任意固定的 $y$，映射 $x \to (x, y)$，$x \to (y, x)$，$x \to \|x\|$ 在 $H$ 上是连续函数。
+
+</div>
+
+<div class='pbox'>
+
+这里用对点定义的连续显然更好证:
+
+$$
+\begin{gathered}
+|(x_1,y)-(x_2,y)|=|(x_1-x_2,y)|<\|x_1-x_2\|\|y\|
+\end{gathered}
+$$
+
+所以一致连续,显然也连续.$x\to (y,x)$同理.
+
+$$
+\begin{gathered}
+|\|x_1\|-\|x_2\||<\|x_1-x_2\|
+\end{gathered}
+$$
+
+是三角不等式啊.所以也一致连续.
+
+</div>
+
+<div class='dbox'>
+
+**子空间 (Subspaces)**
+向量空间 $V$ 的子集 $M$ 称为 $V$ 的**子空间**，如果 $M$ 本身相对于 $V$ 中定义的加法和标量乘法构成一个向量空间。$V$ 的子集 $M$ 成为子空间的充要条件是：只要 $x, y \in M$ 且 $\alpha$ 是标量，就有 $x + y \in M$ 和 $\alpha x \in M$。
+$H$ 的**闭子空间**是指相对于 $H$ 的度量诱导的拓扑而言是闭集的子空间。
+
+</div>
+
+<div class='dbox'>
+
+**凸集 (Convex Sets)**
+向量空间 $V$ 中的集合 $E$ 称为**凸集**，如果它具有以下几何性质：只要 $x \in E, y \in E$，且 $0 < t < 1$，则点 $z_t = (1 - t)x + ty$ 也属于 $E$。
+
+
+</div>
+
+注：每个子空间都是凸集；如果 $E$ 是凸集，其平移也是凸集。
+
+就是包含任意两点连线.
+
+<div class='dbox'>
+
+如果对于 $H$ 中的 $x$ 和 $y$ 有 $(x, y) = 0$，我们称 $x$ 与 $y$ **正交**（orthogonal），记为 $x \perp y$。
+
+令 $x^\perp$ 表示 $H$ 中所有与 $x$ 正交的 $y$ 的集合；如果 $M$ 是 $H$ 的子空间，令 $M^\perp$ 表示 $H$ 中所有与 $M$ 中每个 $x$ 都正交的 $y$ 的集合。
+
+
+</div>
+
+注：$x^\perp$ 和 $M^\perp$ 都是 $H$ 的闭子空间。
+
+<div class='cbox'>
+
+**4.10 定理 (Theorem)**
+希尔伯特空间 $H$ 中的每个非空闭凸集 $E$ 都包含唯一的范数最小的元素。
+
+</div>
+
+<div class='pbox'>
+
+首先显然唯一,因为如果$x,y$都是范数最小的元素且$x\ne y$,则$x,y$不共线,那么:
+
+$$
+\begin{gathered}
+\text{let } m=\dfrac{x+y}{2}  \\
+\|x\|=\|y\| \Rightarrow 
+(m,m)=\dfrac{1}{4} ((x,x)+(y,y)+(x,y)+(y,x)) \\
+\le \dfrac{1}{4} ((x,x)+(y,y)+2(x,x)) \\
+\Rightarrow \|m\|<\|x\|
+\end{gathered}
+$$
+
+那有没有可能不存在呢?那只能是取不到下确界,但是因为范数是连续函数,所以取范数收敛到下确界的点列一定有子列收敛到某个点$x$使得$\|x\|$为最小范数.一定能取到.
+
+</div>
+
+<div class='cbox'>
+
+设 $M$ 是希尔伯特空间 $H$ 的闭子空间。
+- (a) 每个 $x \in H$ 都有唯一的分解 $x = Px + Qx$,其中 $Px \in M$ 且 $Qx \in M^\perp$.
+- (b) $Px$ 和 $Qx$ 分别是 $M$ 和 $M^\perp$ 中距离 $x$ 最近的点.
+- (c) 映射 $P: H \to M$ 和 $Q: H \to M^\perp$ 是线性的.
+- (d) $\|x\|^2 = \|Px\|^2 + \|Qx\|^2$.
+
+</div>
+
+<div class='pbox'>
+
+分解是唯一的:若$x=P_1x+Q_1x=P_2x+Q_2x$,则$P_1x-P_2x=Q_2x-Q_1x$,左边是$M$的右边是$M^\perp$的,只能分别为$0$.
+
+定义$Px=\argmin_{y\in M} \|x-y\|,Qx=x-Px$.
+
+$\forall m\in M,\|m\|=1$,必然有$\|Px+rm-x\|\le \|Px-x\|$,则
+
+$$
+\begin{gathered}
+(Px+rm-x,Px+rm-x) \\
+=(Px-x,Px-x)+r(m,Px-x)+\overline{r(m,Px-x)}+r^2 \\
+\ge (Px-x,Px-x) \\
+\Rightarrow r(r+(m,Px-x)+\overline{(m,Px-x)})>0
+\end{gathered}
+$$
+
+但显然如哦$(m,Px-x)=A\ne 0$,则$r(r+2A)$可以为负,矛盾.所以一定有$(m,Px-x)=0$,于是$Q\in M^\perp$,(a)得证.
+
+我们已经证明了$Px$是$M$中最近的,那么只要把$P$和$Q$反过来就得到一个新的分解其中$Qx$是最近的,而因为唯一性两个分解相同.于是(b)得证.
+
+(c):考虑$x=Px+Qx,y=Py+Qy$,则$ax+by$显然就是$aPx+bPy+aQx+bQy$,于是线性是显然的.
+
+(d)是显然的.
+
+
+</div>
+
+**推论 (Corollary)**
+如果 $M \neq H$，则存在 $y \in H, y \neq 0$ 使得 $y \perp M$。
+($P$ 和 $Q$ 称为 $H$ 到 $M$ 和 $M^\perp$ 上的**正交投影**)。
+
+<div class='cbox'>
+
+如果 $L$ 是 $H$ 上的连续线性泛函，则存在唯一的 $y \in H$ 使得
+$$Lx = (x, y) \quad (x \in H)$$
+
+</div>
+
+<div class='pbox'>
+
+如果$L=0$令$y=0$.
+
+考虑 $N=\{ x|Lx=0 \}$,你发现只需要证$\dim V/N=1$.但这里不能用维数因为可能是无穷维.因为连续,所以$N$是闭集,外面是开集一定
+
+那么考虑任取$z\in N^\perp,\forall x,\text{let }u=(Lx)z-(Lz)x$,则显然$Lu=0$,于是$(u,z)=0$,于是$Lx=(Lx)(z,z)=(Lz)(x,z)$.所以只要取$y=\overline{Lz}z$即可.
+
+</div>
+
+[think] 为什么有这么神秘的$u$?需要你换一个视角,考虑$x-\dfrac{Lx}{Lz}z$,如果我们把$L$看成某种方向的分量,那么$\dfrac{Lx}{Lz}z$就是一个投影,从而$u$是另一边的投影.
+
+<div class='dbox'>
+
+*   **线性组合**：形如 $c_1 x_1 + \dots + c_k x_k$ 的向量。
+*   **独立集**：集合 $S$ 是独立的，如果 $S$ 的每个有限子集都是线性无关的。
+*   **张成空间** $[S]$：$S$ 的所有有限线性组合的集合（即包含 $S$ 的最小子空间）。
+*   **正交归一集**：希尔伯特空间 $H$ 中的一组向量 $u_\alpha$（其中 $\alpha$ 属于索引集 $A$）称为**正交归一集**（orthonormal set），如果对于所有 $\alpha \neq \beta$ 有 $(u_\alpha, u_\beta) = 0$，且对于每个 $\alpha$ 有 $\|u_\alpha\| = 1$。
+*   **傅里叶系数**：如果 $\{u_\alpha: \alpha \in A\}$ 是正交归一集，我们将每个 $x \in H$ 与定义在索引集 $A$ 上的复函数 $\hat{x}$ 关联起来，定义为
+    $$\hat{x}(\alpha) = (x, u_\alpha) \quad (\alpha \in A)$$
+
+
+</div>
+
+<div class='cbox'>
+
+假设 $\{u_\alpha: \alpha \in A\}$ 是 $H$ 中的正交归一集，且 $F$ 是 $A$ 的有限子集。设 $M_F$ 为 $\{u_\alpha: \alpha \in F\}$ 张成的空间。
+
+(a)如果 $\varphi$ 是 $A$ 上的复函数且在 $F$ 之外为 0，则存在向量 $y = \sum_{\alpha \in F} \varphi(\alpha)u_\alpha \in M_F$，使得 $\hat{y}(\alpha) = \varphi(\alpha)$ 对所有 $\alpha \in A$ 成立。此外，
+
+$$\|y\|^2 = \sum_{\alpha \in F} |\varphi(\alpha)|^2$$
+
+(b)如果 $x \in H$ 且 $s_F(x) = \sum_{\alpha \in F} \hat{x}(\alpha)u_\alpha$，则
+$$\|x - s_F(x)\| < \|x - s\|$$
+对于 $M_F$ 中除 $s = s_F(x)$ 以外的所有 $s$ 成立，并且
+$$\sum_{\alpha \in F} |\hat{x}(\alpha)|^2 \le \|x\|^2$$
+
+</div>
+
+<div class='pbox'>
+
+
+
+</div>
+
+
+
+
+**4.15 符号说明 (Notation)**
+假设对每个 $\alpha \in A$ 有 $0 \le \varphi(\alpha) \le \infty$。符号 $\sum_{\alpha \in A} \varphi(\alpha)$ 表示集合中所有有限和 $\varphi(\alpha_1) + \dots + \varphi(\alpha_n)$ 的最小上界（即 $\varphi$ 关于 $A$ 上计数测度的勒贝格积分）。$L^2(\mu)$ 在此语境下通常写作 $\ell^2(A)$。
+
+**4.16 引理 (Lemma)**
+假设
+(a) $X$ and $Y$ 是度量空间，$X$ 是完备的，
+(b) $f: X \to Y$ 是连续的，
+(c) $X$ 有一个稠密子集 $X_0$，且 $f$ 在其上是等距映射，
+(d) $f(X_0)$ 在 $Y$ 中稠密。
+那么 $f$ 是 $X$ 到 $Y$ 上的等距映射。
+
+**4.17 定理 (Theorem)**
+设 $\{u_\alpha: \alpha \in A\}$ 是 $H$ 中的正交归一集，$P$ 是向量 $u_\alpha$ 的所有有限线性组合构成的空间。
+不等式
+$$\sum_{\alpha \in A} |\hat{x}(\alpha)|^2 \le \|x\|^2$$
+对所有 $x \in H$ 成立（**贝塞尔不等式** Bessel inequality），并且映射 $x \to \hat{x}$ 是 $H$ 到 $\ell^2(A)$ 上的连续线性映射，其在 $P$ 的闭包 $\bar{P}$ 上的限制是 $\bar{P}$ 到 $\ell^2(A)$ 上的等距映射。（此即 **里斯-费舍尔定理** Riesz-Fischer theorem）。
+
+**4.18 定理 (Theorem)**
+设 $\{u_\alpha: \alpha \in A\}$ 是 $H$ 中的正交归一集。关于 $\{u_\alpha\}$ 的以下四个条件中，每一个都蕴含其他三个：
+(i) $\{u_\alpha\}$ 是 $H$ 中的**极大**正交归一集。
+(ii) 集合 $P$（所有有限线性组合）在 $H$ 中稠密。
+(iii) 对每个 $x \in H$，有
+    $$\sum_{\alpha \in A} |\hat{x}(\alpha)|^2 = \|x\|^2$$
+(iv) 对所有 $x, y \in H$，有
+    $$\sum_{\alpha \in A} \hat{x}(\alpha)\overline{\hat{y}(\alpha)} = (x, y)$$
+(最后这个公式称为 **帕塞瓦尔恒等式** Parseval's identity。极大正交归一集常被称为**完备正交归一集**或**正交归一基**)。
+
+**4.19 同构 (Isomorphisms)**
+两个希尔伯特空间 $H_1$ 和 $H_2$ 称为**同构的**（isomorphic），如果存在一个 $H_1$ 到 $H_2$ 上的双射线性映射 $\Lambda$，且保持内积不变：$(\Lambda x, \Lambda y) = (x, y)$。
+如果 $\{u_\alpha: \alpha \in A\}$ 是希尔伯特空间 $H$ 中的极大正交归一集，且定义 $\hat{x}(\alpha) = (x, u_\alpha)$，则映射 $x \to \hat{x}$ 是 $H$ 到 $\ell^2(A)$ 上的希尔伯特空间同构。
+
+**4.20 偏序集 (Partially Ordered Sets)**
+集合 $\mathscr{P}$ 称为由二元关系 $\le$ 构成的**偏序集**，如果满足：
+(a) $a \le b$ 且 $b \le c$ 蕴含 $a \le c$。
+(b) 对所有 $\alpha \in \mathscr{P}$，$\alpha \le \alpha$。
+(c) $a \le b$ 且 $b \le a$ 蕴含 $a = b$。
+子集 $\mathscr{2}$ 称为**全序集**（或线性序集），如果 $\mathscr{2}$ 中任意一对元素 $a, b$ 都满足 $a \le b$ 或 $b \le a$。
+
+**4.21 豪斯多夫极大性定理 (The Hausdorff Maximality Theorem)**
+每个非空偏序集都包含一个极大的全序子集。
+
+**4.22 定理 (Theorem)**
+希尔伯特空间 $H$ 中的每个正交归一集 $B$ 都包含在 $H$ 的某个极大正交归一集中。
+
+**4.23 定义 (Definitions)**
+设 $T$ 为复平面上的单位圆。如果 $f$ 是 $T$ 上的函数，且在 $R^1$ 上定义为 $f(t) = F(e^{it})$，则 $f$ 是周期为 $2\pi$ 的周期函数。
+$L^p(T)$ ($1 \le p < \infty$) 是 $R^1$ 上所有复值、勒贝格可测、周期为 $2\pi$ 的函数的类，其范数定义为
+$$\|f\|_p = \left\{ \frac{1}{2\pi} \int_{-\pi}^\pi |f(t)|^p dt \right\}^{1/p}$$
+$L^\infty(T)$ 是 $L^\infty(R^1)$ 中所有 $2\pi$ 周期函数的类，$C(T)$ 是 $T$ 上所有连续复函数的类。
+**三角多项式**是形如 $f(t) = \sum_{n=-N}^N c_n e^{int}$ 的有限和。
+
+**4.24 三角系统的完备性 (The Completeness of the Trigonometric System)**
+令 $\mathbb{Z}$ 为所有整数的集合，且令 $u_n(t) = e^{int} (n \in \mathbb{Z})$。
+如果在 $L^2(T)$ 中定义内积为 $(f, g) = \frac{1}{2\pi} \int_{-\pi}^\pi f(t)\overline{g(t)} dt$，则 $\{u_n : n \in \mathbb{Z}\}$ 是 $L^2(T)$ 中的正交归一集，通常称为**三角系统**。该系统是极大的。
+
+**4.25 定理 (Theorem)**
+如果 $f \in C(T)$ 且 $\epsilon > 0$，则存在一个三角多项式 $P$ 使得
+$$|f(t) - P(t)| < \epsilon$$
+对于所有实数 $t$ 成立。
+
+**4.26 傅里叶级数 (Fourier Series)**
+对于任意 $f \in L^1(T)$，我们通过以下公式定义 $f$ 的**傅里叶系数**：
+$$\hat{f}(n) = \frac{1}{2\pi} \int_{-\pi}^\pi f(t)e^{-int} dt \quad (n \in \mathbb{Z})$$
+$f$ 的**傅里叶级数**为 $\sum_{-\infty}^\infty \hat{f}(n)e^{int}$，其部分和为 $s_N(t) = \sum_{-N}^N \hat{f}(n)e^{int}$。
+
+在此具体背景下重述定理 4.17 和 4.18：
+*   **里斯-费舍尔定理** (Riesz-Fischer theorem)：如果 $\{c_n\}$ 是复数序列且 $\sum_{n=-\infty}^\infty |c_n|^2 < \infty$，则存在 $f \in L^2(T)$ 使得 $c_n = \frac{1}{2\pi} \int_{-\pi}^\pi f(t)e^{-int} dt$。
+*   **帕塞瓦尔定理** (Parseval theorem)：
+    $$\sum_{n=-\infty}^\infty \hat{f}(n)\overline{\hat{g}(n)} = \frac{1}{2\pi} \int_{-\pi}^\pi f(t)\overline{g(t)} dt$$
+    只要 $f \in L^2(T)$ 且 $g \in L^2(T)$；(6) 左边的级数绝对收敛；且如果 $s_N$ 如上定义，则 $\lim_{N \to \infty} \|f - s_N\|_2 = 0$。

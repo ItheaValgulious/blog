@@ -683,7 +683,7 @@ $$
 
 $$
 \begin{gathered}
-S_n=\sum _{i = 1} ^{n}  a_i,\sum a_i \text{ is divergent}  \\
+S_n=\sum _{i = 1} ^{n}  a_i,\sum a_i \text{ is divergent},a_n>0  \\
 \Rightarrow \begin{cases}
 \sum \dfrac{a_n}{1+a_n} \text{ is divergent}  \\
 \sum \dfrac{a_n}{S_n} \text{ is divergent} 
@@ -1280,4 +1280,118 @@ $$
 
 </div>
 
+
+## 复习课
+
+<div class='cbox'>
+
+有限覆盖推$f\in C[a,b] \Rightarrow f\in UC[a,b]$
+
+</div>
+
+<div class='pbox'>
+
+容易想到说对$\epsilon$,你对每个点$x$取它一个邻域$(x-\delta_x,x+\delta_x)$,满足其中任意两点的差小于$\epsilon$.那么这些邻域构成覆盖,取其中有限覆盖,则可以对$\delta_x$取其中最小值得$\delta$.
+
+但你发现如果$|x-y|<\delta$不能直接推出他俩在一个区间,不妨设$x<y$,但注意到,如果包含$x$的区间的最大右端点$A$小于包含$y$的最大左端点$B$,代表一定有一个区间在$(x,y)$中,但$(x,y)$的长度已经比最小的区间短了,矛盾,所以一定A>B$,那么只要用交集中的一个点就能证明了.
+
+另一个做法是用半径为$\dfrac{\delta_x}2$的半径覆盖它,那么你注意到这样虽然他俩不在一个覆盖区间里但会在同一个半径为$\delta_x$的区间,就结束了.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+x^{\frac13}\in UC[0,\infty)
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+x^{\frac13}+y^{\frac13}\ge (x+y)^{\frac13} \\
+\Rightarrow (x-y)^{\frac13}\ge x^{\frac13}-y^{\frac13} \\
+\end{gathered}
+$$
+
+所以对$\delta=\epsilon^3$即可.
+
+范数不等式,对任意$p\in(0,1)$,$x^p+y^p\ge (x+y)^p$
+
+</div>
+
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\int_0^{\infty} f(\dfrac{a}{x} +\dfrac{x}{a} )\dfrac{\ln x}{x} dx=\int_0^\infty f(\dfrac{a}{x} +\dfrac{x}{a} )\dfrac{\ln a}{x} dx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+先移项(相当于限制两边进行相同的换元啊)
+
+然后换元,你要进行相消,我的做法是$e^t=\dfrac ax$
+
+然后还可以换$t=\dfrac{a^2}x$.
+
+todo
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\sum _{n = 1} ^{n}  \dfrac{a_n}{r_n}  \\
+\sum _{n = 1} ^{n}  \dfrac{a_n}{\sqrt{r_n}} 
+
+\end{gathered}
+$$
+
+</div>
+
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\dfrac{u_r(r)}{r} \le \dfrac{r_{rr}+\dfrac{u_r}{r}}{2} 
+\end{gathered}
+$$
+
+</div>
+todo
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+T\in (0,\infty),g\ge 0,g\in C(-\infty,+\infty) \\
+\exists \tau>0,b>0 \ s.t.\ 
+\forall t\in (0,T),\dfrac{1}{\tau} \int_t^{t+\tau}g(s)ds\le b \\
+\Rightarrow \forall a>0,t\in (0,T) \\
+\int_0^t e^{-a(t-s)}g(s)ds\le \dfrac{b\tau}{1-e^{-a\tau}} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+你先别管题目是啥,考虑左边这个东西什么时候最大.
+
+那肯定是对某个$t$,左边这个是$e^{-at}\int_0^t e^{as}g(s)ds$,我们知道在每个长为$\tau$的区间上$g$的积分一定,那么因为$e^{as}$增,所以一定是把值分配在最后面,也就是说最优的$g$大概是若干个脉冲函数在$t-k\tau$位置的叠加.
+
+这能提示你分段之后把$e^{as}$直接放掉.然后就做完了.每段的值发现就都是$e^{-ak\tau}b\tau$.等比数列加起来就是原式$\dfrac{b\tau}{1-e^{-a\tau}}$
+
+</div>
 

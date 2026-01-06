@@ -881,11 +881,10 @@ $$
 $$
 
 这个可以直接考虑$uv^T$特征值是$n-1$个$0$和一个$v^Tu$(对应特征向量$u$).
-$A^{-1}v^T$
 
 然后$\det (A+Auv^T)=\det A(1+u^Tv)$
 
-所以让$u'=A^{-1}u$,那么式子就成了$\det (A+u'v^T)=\det A(1+v^TA^{-1}u')$.即我们所证的.
+所以让$u'=A^{-1}u$代入,那么式子就成了$\det (A+uv^T)=\det A(1+v^TA^{-1}u)$.即我们所证的.
 
 </div>
 
@@ -1414,7 +1413,19 @@ $$
 
 </div>
 
-于是这种证法说你考虑一个Jordan块正好对应了一个不变因子$(x - \lambda_i)^n$
+于是这种证法说你考虑一个Jordan块正好对应了一个不变因子$(x - \lambda_i)^n$.
+
+<div class='cbox'>
+
+两个实矩阵在复数域上相似则也在实矩阵上相似
+
+</div>
+
+<div class='pbox'>
+
+首先这说明复数域上,他俩不变因子相同,所以行列式因子相同.又因为行列式因子一定是实的,所以结束.
+
+</div>
 
 ## 准素分解
 
@@ -1425,6 +1436,8 @@ $T$的极小多项式是$m(x)=\prod_i p_i(x)^{c_i}$,$p_i$是互不相同的不�
 </div>
 
 <div class='pbox'>
+
+Sol1:(from Gemini and me )
 
 不变性是显然的,我们发现对一个$W_i$,其极小多项式是$p_i^{c_i}$,考虑其中一个$v$,$p_i^{c_i}(T)v=0$,那么显然$p_i^{c_i}(T)Tv=Tp_i^{c_i}(T)v=0$.
 
@@ -1469,7 +1482,33 @@ $$
 
 这样实际证明了$E_i$就是像每个空间的投影,且和为$I$,于是得证.
 
+Sol2: from teacher
+
+<div class='cbox'>
+
+Lemma
+
+$$
+\begin{gathered}
+(f(x),g(x))=1 \Rightarrow \operatorname{null} fg(T)=\operatorname{null} f(T) \oplus \operatorname{null} g(T)
+\end{gathered}
+$$
+
 </div>
+
+<div class='pbox'>
+
+首先,裴蜀定理,$a(x)f(x)+b(x)y(x)=1$,于是如果 $u\in \operatorname{null} f(T)\cap \operatorname{null} g(T)$,则$a(T)f(T)u+b(T)y(T)u=Iu=0$,得$u=0$.
+
+然后考虑,左边显然包含右边,只要证明右边包含左边,注意到 $f(T)u\in \operatorname{null} g(T),g(T)u\in \operatorname{null} f(T)$,又有$a(T)f(T)u+b(T)g(T)u=u$,于是拆成$u=a(T)f(T)u+b(T)g(T)u$即证.
+
+</div>
+
+于是直接证完了.
+
+</div>
+
+[think] 观察证明复杂度可知,你还是先考虑两个比较好()另外是要看出本质条件是互素.
 
 <div class='cbox'>
 
