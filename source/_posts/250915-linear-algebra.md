@@ -1516,3 +1516,167 @@ $0=g(T)\sum_i v_i=\sum_i g(T)v_i$,因为后面每一项分别在$W_i$中,所以�
 </div>
 
 [think] 显然$f$就是提取那一维系数,那$\varphi$是什么玩意呢?它是一个用零空间区分$W_1$和$W$的映射,
+
+## 复习时,以及考试后看到的题
+
+<div class='cbox'>
+
+实对称矩阵的秩等于最高阶非零主子式的阶数.
+
+</div>
+
+<div class='pbox'>
+
+显然阶数高于秩的子式一定都是$0$,所以只要找到一个等于秩的非零主子式.
+
+注意到我们把实对称矩阵分解到合同规范性后得到$PDP^T$,其中$P$是正交阵,$D$是前$r$个对角线元素非$0$,其余元素全为$0$的矩阵.
+
+**注意到最终矩阵的某个子式$A(S,T)$,行集合为$S$,列集合为$T$,实际上就是由$P$只保留$S$集合这些行得到$X$和$P^T$只保留$T$集合这些列得到$Y$后的$XDY$**.这是矩阵乘法的规则决定的.
+
+那么$P$的前$r$列中我们一定可以取出$r$个线性无关行组成集合$S$,这$r\times r$的子式非$0$,同时在$P^T$中取对应的$S$中的列,那么最后乘出来矩阵的行列式就是这三个矩阵行列式相乘非$0$.且恰好对应了最终矩阵中$S$中行列组成的主子式.
+
+</div>
+
+[think] 关键是矩阵乘法中,$AB$的某个子式就是$A$保留对应行$B$保留对应列组成的这个性质.
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\forall D,N\in C^{n\times n},D \text{ is diagonalizable, }N \text{ is nilpotent}, \\
+\ s.t.\  ND=DN \\
+
+\exists f,g\in C[x],f(D+N)=D,g(D+N)=N
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+设$A=D+N$.
+
+考虑可对角化意味着可同时上三角化,此时$A=D+N$,$N$的对角线上全$0$,于是$A$和$D$特征值相同.
+
+注意到对$D$的特征空间 $V_1=\operatorname{null} (D-\lambda I)$上$(D-\lambda I)|_{V_1}$是幂零的,于是$V_1$中$(D-\lambda I+N)|_{v_1}$也是幂零的.他是$A$的广义本征空间$G_\lambda$的一部分.而$A$的不同广义本征是不交的,所以这些$V$是不交的.又因为这些$V$的直和是全空间,所以只能是$D$的特征空间就是$A$的广义特征空间.这很奇妙啊!
+
+那么每个$A$的广义特征空间$G_\lambda$中有$Dv=\lambda v$,就是$f(A)|_{G_\lambda}=\lambda$.
+
+广义本征空间是 $\operatorname{null} (A-\lambda I)^k$ ,所以实际在说 $f\equiv \lambda \pmod {(x-\lambda)^k}$.
+
+而你可以拿中国剩余定理构造.
+
+最后$g=x-f$是显然的.
+
+</div>
+
+
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+A,B,C,D\in R^{n \times n}, \\
+AB^T,CD^T \text{ is symmetric}  \\
+AD^T-BC^T=I_n \\
+\end{cases} \\
+\Rightarrow A^TD-C^TB=I_n
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$AB^T$对称这种看起来就很诡异啊,你应该想到把条件写开放在这里:
+
+$$
+\begin{gathered}
+\begin{cases}
+AB^T-BA^T=0 \\
+CD^T-DC^T=0 \\
+AD^T-BC^T=I_n
+\end{cases}
+\end{gathered}
+$$
+
+然后集中注意力注意到
+
+$$
+\begin{gathered}
+\begin{bmatrix} A&B\\C&D \end{bmatrix}
+\begin{bmatrix} D^T&-B^T\\-C^T&A^T \end{bmatrix} 
+=\begin{bmatrix} I_n&0\\0&I_n \end{bmatrix} 
+\end{gathered}
+$$
+
+于是由于左逆也是右逆,就有
+
+$$
+\begin{gathered}
+\begin{bmatrix} D^T&-B^T\\-C^T&A^T \end{bmatrix} 
+\begin{bmatrix} A&B\\C&D \end{bmatrix}
+=\begin{bmatrix} I_n&0\\0&I_n \end{bmatrix} 
+\end{gathered}
+$$
+
+这样就能提取出$A^TD-C^TB=I_n$.
+
+</div>
+
+[think] 观察形式想到分块矩阵.
+
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+A^2+B^2=2AB \\
+\Rightarrow \det A=\det B
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+我觉得第一步就很困难啊!注意到
+
+$$
+\begin{gathered}
+A(A-B)=(A-B)B
+\end{gathered}
+$$
+
+设$X=A-B$,如果$X$可逆则$A,B$相似,显然.现在考虑$X$不可逆.
+
+则存在$v\ne 0,Xv=0$.$XBv=AXv=0$则 $U=\operatorname{null} X$在$B$下不变.且这个空间中$A=B$啊,所以$X$在$A$下也不变.且其中$\det A|_U=\det B|_U$.
+
+而 $V-U$中,$X$可逆,$A,B$相似?这不对!这其中$X$单而不一定满.正确的做法是归纳,$A|_{V-U},B|_{V-U}$仍然满足题目中那个式子,于是就归纳下去做完了.
+
+</div>
+
+[think] 知乎答案说对给定某个等式的题这是套路.
+
+<div class='cbox'>
+
+$Z^{2\times 2}$的可逆矩阵(行列式为$1$)可由下面两个生成元生成:
+
+$$
+\begin{gathered}
+A=\begin{bmatrix} 1&1\\0&1 \end{bmatrix}  \\
+B=\begin{bmatrix} 0&-1\\1&0 \end{bmatrix} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+思路是对 $M=\begin{bmatrix} a&b\\c&d \end{bmatrix}$,你发现可以对$a,c$进行辗转相减,让$c$变成$0$.然后就$a=d=1$,最后$M=A^b$了.
+
+</div>
+
+
+
