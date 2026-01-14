@@ -64,6 +64,8 @@ $$
 
 <div class='pbox'>
 
+Sol1:
+
 $$
 \begin{gathered}
 \int_{-a}^0x^2f(x)dx\le \int_{-a}^0 f(x)(-x)adx=\int_{0}^b f(x)xadx\le \int_0^b f(x)abdx \\
@@ -74,9 +76,20 @@ $$
 \end{gathered}
 $$
 
+Sol2:
+
+$$
+\begin{gathered}
+\int_{-a}^b (x+a)(b-x)f(x)dx\ge 0 \\
+\Rightarrow  \int_{-a}^b (-x^2+(b-a)x+ab)f(x)dx\ge 0
+\end{gathered}
+$$
+
+中间是$0$,就弄完了.
+
 </div>
 
-
+[think] 后面这个做法看起来已经称为一种套路了.就是对于$\int x^kf(x)$的形式能凑出来的最优情形.
 
 ### T3
 

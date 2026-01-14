@@ -1113,7 +1113,7 @@ $$
 - $(\lambda T)^*=\lambda T^*$
 - $(ST)^*=T^*S^*$
 - $(T^*)^*=T$
-- $\operatorname{null} T*=\operatorname{range} T)^{\perp}$
+- $\operatorname{null} T^*=(\operatorname{range} T)^{\perp}$
 
 </div>
 
@@ -1121,9 +1121,9 @@ $$
 
 前三个用定义带进去即可.
 
-第四个,$<u,T*v>=<Tu,v>=\overline{ <T*v,u> } = \overline{ <v,Tu> } =<Tu,v>$
+第四个,$<u,(T^*)^*v>=<T^*u,v>=\overline{<v,T^*u>}=\overline{<Tv,u>}=<u,Tv>$
 
-第五个,考虑是右边对任意$u$,$<Tu,w>=0$的所有$w$,$<Tu,w>=<u,T*w>$,故 $w\in \operatorname{null} T*$
+第五个,考虑是右边对任意$u$,$<Tu,w>=0$的所有$w$,$<Tu,w>=<u,T^*w>$,故 $w\in \operatorname{null} T^*$
 
 </div>
 
@@ -1197,7 +1197,7 @@ $$
 $$
 \begin{gathered}
 \forall v,0 \\
-=<v,Tv>-\overline{ v,Tv } \\
+=<v,Tv>-\overline{ <v,Tv> } \\
 =<v,Tv>-<v,T^*v> \\
 =<v,(T-T^*)v>=0
 \end{gathered}

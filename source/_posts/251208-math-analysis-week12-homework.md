@@ -608,7 +608,7 @@ b_n=\dfrac{1}{\ln(L-S_n)} -\dfrac{1}{\ln(L-S_{n-1})}
 \end{gathered}
 $$
 
-显然$b_n$单调有界.设$f(x)=\dfrac1{\ln(x)},c_n=L-S_n$
+显然$\sum b_n$单调有界.设$f(x)=\dfrac1{\ln(x)},c_n=L-S_n$
 
 $$
 \begin{gathered}

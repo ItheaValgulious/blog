@@ -1141,13 +1141,11 @@ $$
 \begin{gathered}
 \text{let } S=\{ f(x)\vert x\in[a,x_0) \}  \\
 A=\sup S \\
-\text{if }A<f(x_0),\text{by limit's local sign-preserving property}  \\
-\exists x_1\in N^*(x_0),x_1>x_0,f(x_1)<A,\text{Contradiction!} \\
-\text{same for } A>f(x_0) \\
-\therefore A=f(x_0)  \\
-\stackrel{\text{Heine Theorem}}{\Longrightarrow}
-\lim_{x \to x_0^-}f(x)=A \\
-\text{same for } B=\lim_{x \to x_0^+}f(x)=B  \\
+\text{if }A<f(x_0^-),\text{by limit's local sign-preserving property}  \\
+\exists x_1\in N^-(x_0),x_1<x_0,f(x_1)>A,\text{Contradiction!} \\
+\text{if } A>f(x_0^-),\exists x_n,f(x_n)>A-\epsilon>f(x_0^-)\text{Contradiction!}  \\
+\therefore A=f(x_0^-)  \\
+\text{same for } B=f(x_0^+)  \\
 \forall x_1<x_0,x_2>x_0,f(x_1)<f(x_2) \\
 f(x_1)<f(x_0) \stackrel{\lim_{x_1 \to x_0} }{\Longrightarrow}A\le f(x_0) \\
 f(x_2)>f(x_0)\stackrel{\lim_{x_2\to x_0}}{\Longrightarrow}B\ge f(x_0) \\
@@ -2320,7 +2318,7 @@ Solution 2
 $$
 \begin{gathered}
 \dfrac{f(x)-f(c)}{g(x)-g(c)} =\dfrac{f'(\xi)}{g'(\xi)}  \\
-\Rightarrow \dfrac{f(x)}{g(x)} =\dfrac{f'(\xi)}{g'(\xi)} -\dfrac{g(c)}{g(x)} (x-c)+\dfrac{f(c)}{g(x)} 
+\Rightarrow \dfrac{f(x)}{g(x)} =\dfrac{f'(\xi)}{g'(\xi)} -\dfrac{g(c)}{g(x)} \dfrac{f'(\xi)}{g'(\xi)} +\dfrac{f(c)}{g(x)} 
 \end{gathered}
 $$
 
@@ -2442,10 +2440,10 @@ f(x)-T_n(x) \\
 =F(x,x)-F(x_0,x) \\
 =(x-x_0)\dfrac{\delta F}{\delta t}(\xi) \\
 =\dfrac{f^{(n+1)}}{n!} (x-x_0)(x-\xi)^n  \\
-\dfrac{f(x)-T_n(x)}{(x-x_0)^n} \\
-=\dfrac{F(x,x)-F(x_0,x)}{(x-x_0)^n-(x_0-x_0)^n} \\
-=\dfrac{\dfrac{\delta F}{\delta x} (\xi)}{n(\xi-x_0)^{n-1}}  \\
-\Rightarrow f(x)-T_n(x)= \dfrac{f^{(n+1)}(\xi)}{n!} (x-x_0)(x-\xi)^n
+\dfrac{f(x)-T_n(x)}{(x-x_0)^{n+1}} \\
+=\dfrac{F(x,x)-F(x_0,x)}{(x-x_0)^{n+1}-(x_0-x_0)^{n+1}} \\
+=\dfrac{\dfrac{\delta F}{\delta t} (\xi)}{(n+1)(\xi-x_0)^n}  \\
+\Rightarrow f(x)-T_n(x)= \dfrac{f^{(n+1)}(\xi)}{(n+1)!} (x-x_0)^{n+1}
 \end{gathered}
 $$
 
@@ -2504,7 +2502,7 @@ $$
 
 然后随便取几个固定$d=1,-1,2$,让$x$到无穷,解方程就能解出来.
 
-这里有个点是因为你不保证导数存在你得先趋近无穷再解方程.
+因为你导数条件在无穷所以你要先趋近无穷.
 
 </div>
 
@@ -2887,7 +2885,7 @@ $$
 
 $$
 \begin{gathered}
-\dfrac{f(x)g(x)}{(\int_a^b f(x)^pdx)^{\frac1p}\int_a^b g(x)^qdx)^{\frac1q}}\le \dfrac{1}{p} \dfrac{f^p(x)}{(\int_a^b f(x)^pdx)^{\frac1p}}+\dfrac{1}{q} \dfrac{f^q(x)}{(\int_a^b g(x)^qdx)^{\frac1q}} 
+\dfrac{f(x)g(x)}{(\int_a^b f(x)^pdx)^{\frac1p}\int_a^b g(x)^qdx)^{\frac1q}}\le \dfrac{1}{p} \dfrac{f^p(x)}{(\int_a^b f(x)^pdx)}+\dfrac{1}{q} \dfrac{f^q(x)}{(\int_a^b g(x)^qdx)} 
 \end{gathered}
 $$
 
