@@ -1,0 +1,46 @@
+---
+title: Tips
+tags: [tips]
+---
+
+# 随便记录些小技巧
+
+## How to use clash in linux
+
+配置tun模式:
+
+```yaml
+
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - 198.18.0.2:1053 
+  auto-route: true 
+  auto-detect-interface: true 
+dns:
+  enable: true
+  listen: :1053
+  default-nameserver:
+      - 8.8.8.8
+  nameserver:
+      - 8.8.8.8
+  fallback:
+      - https://8888.google/dns-query
+      - https://1.0.0.1/dns-query
+      - https://dns.twnic.tw/dns-query
+      - https://doh.opendns.com/dns-query
+      - https://dns-nyc.aaflalo.me/dns-query
+      - https://dns.aa.net.uk/dns-query
+      - https://sg.adhole.org/dns-query
+      - https://kaitain.restena.lu/dns-query
+      - https://hydra.plan9-ns1.com/dns-query
+      - https://jp.tiar.app/dns-query
+      - https://doh.asia.dnswarden.com/adblock
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+```
+
+不sudo的话需要给权限:
+sudo setcap cap_net_admin+ep /usr/local/bin/clash
