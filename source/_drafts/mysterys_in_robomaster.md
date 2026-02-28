@@ -1,11 +1,21 @@
 ---
-title: Mysterys in Robomaster
-tags: [program,robomaster,fun]
+title: Robomaster Log
+tags: [program,robomaster]
 ---
 
-# Mysterys in Robomaster
+# Robomaster Log
 
-记录一些神秘bug
+## 何意味
 
-1. 什么叫用微信传输会改变ONNX文件内容
-2. 
+### 预测器
+
+- tf树跨进程通信显然有延迟,消息轮询也有延迟.而运动过程中来自不同来源的机体姿态数据会让最终的机体姿态出现偏移.
+
+### 神经网络
+
+当尝试使用伪造数据训练模型时,如果对一个识别模型来说,识别数据是否是伪造的难度低于其任务的难度,且可以通过伪造的部分得到答案,那么模型显然可以把自己训练成识别伪造而不是完成本来的任务.可能的解决方案比如GAN类的架构.但这太麻烦了被放弃.
+
+用微信传输会改变ONNX文件内容
+
+openvino编译onnx文件时,是否存在topk层会影响中间层被编译后的类型,topk层导致推理速度变慢
+ 

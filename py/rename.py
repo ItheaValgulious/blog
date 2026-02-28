@@ -88,6 +88,6 @@ def rename_md_files(folder_path):
     print(f"\n处理完成: 成功 {count_success} 个, 跳过 {count_skip} 个。")
 
 if __name__ == '__main__':
-    target_directory = os.path.dirname(__file__)
+    target_directory = os.path.join(os.path.dirname(os.path.dirname(__file__)),'source/_posts')
     
     rename_md_files(target_directory)

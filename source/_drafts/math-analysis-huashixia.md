@@ -117,17 +117,25 @@ f_{x,y}(x,y)=\lim_{\Delta y \to 0} \lim_{\Delta x\to 0} \dfrac{1}{\Delta y} (\df
 \end{gathered}
 $$
 
+</div>
 
+### 隐函数定理
 
+<div class='cbox'>
 
+隐函数存在
+
+</div>
+
+<div class='cbox'>
+
+隐函数存在且可导
 
 </div>
 
 
 
 
-
-隐函数定理
 
 ## 重积分
 

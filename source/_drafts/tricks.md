@@ -44,3 +44,11 @@ dns:
 
 不sudo的话需要给权限:
 sudo setcap cap_net_admin+ep /usr/local/bin/clash
+
+## How to use clash in windows for UWP apps
+
+管理员权限在powershell运行:
+
+```powershell
+foreach ($n in (Get-AppxPackage).PackageFamilyName) {CheckNetIsolation.exe LoopbackExempt -a -n="$n"}
+```
