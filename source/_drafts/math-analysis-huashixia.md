@@ -7,7 +7,120 @@ tags: [math-analysis,math,self-study]
 
 只挑了几点
 
-## 一致收敛这一块
+## 函数项级数
+
+### 不能乱交换
+
+<div class='cbox'>
+
+构造:求极限不保证连续性
+
+</div>
+
+<div class='pbox'>
+
+$f_n=x^n$
+
+</div>
+
+<div class='cbox'>
+
+求导和求极限不交换
+
+</div>
+
+<div class='pbox'>
+
+第一种是我们直接让导函数发散:
+
+$$
+\begin{gathered}
+f_n(x)=\dfrac{\sin nx}{\sqrt n} 
+\end{gathered}
+$$
+
+第二种是构造一个不可导点,用极限把很小的弯曲区域变没:
+
+$$
+\begin{gathered}
+f_n=|x|^{1+\dfrac{1}{n} }
+\end{gathered}
+$$
+
+</div>
+
+<div class='cbox'>
+
+积分也不行
+
+</div>
+
+<div class='pbox'>
+
+首先可以考虑构造不可积,比如我们选定极限是迪利克雷函数$d(x)$.于是随便取一个比如
+
+$$
+\begin{gathered}
+f_n(x)=\begin{cases}
+1,x=\dfrac pq,q<n \\
+0,\text{otherwise}
+\end{cases},x\in [0,1]
+\end{gathered}
+$$
+
+然后它的间断点显然有限所以可积.
+
+那么你自然会想如果补个可积的条件呢?
+
+一个比较容易想到的是一个向右移动的面积为$1$的矩形:
+
+$$
+\begin{gathered}
+f_n(x)=\begin{cases}
+1,x\in [n,n+1] \\
+0,\text{otherwise}
+\end{cases}
+\end{gathered}
+$$
+
+现在我们在有限区域内考虑呢?
+
+考虑一个恒定面积,但向一侧不断移动的矩形,使得函数列能逐点收敛到$0$:
+
+$$
+\begin{gathered}
+f_n(x)=\begin{cases}
+2^n,x\in [2^{-n},2^{-n+1}] \\
+0,\text{otherwise}
+\end{cases},x\in (0,1]
+\end{gathered}
+$$
+
+你分析发现此时不对是因为$0$处发散了,$\lim_{n \to \infty} \lim_{x\to 0} f_n(x)=+\infty$.
+
+于是我们再加条件,如果极限函数可积且函数列一致有界:
+
+</div>
+
+<div class='cbox'>
+
+函数列$f_n\rightrightarrows f$,$f_n,f\in R[a,b],\forall x\in [a,b],n\in Z,|f_n(x)|\le M$
+
+则 $\lim_{n \to \infty} \int_a^b f_n(x) dx = \int_a^b f(x) dx$
+
+</div>
+
+<div class='pbox'>
+
+
+
+</div>
+
+
+
+
+
+
 
 ### Dini定理
 
