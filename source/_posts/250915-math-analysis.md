@@ -2153,6 +2153,8 @@ $$
 
 <div class='cbox'>
 
+Banach不动点定理
+
 $$
 \begin{gathered}
 f(x) \text{ is contraction},\{ x_n \} \ s.t.\ 
