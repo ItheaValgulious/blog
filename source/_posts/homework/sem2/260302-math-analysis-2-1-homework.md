@@ -209,9 +209,9 @@ $$
 \lim_{n \to \infty} (1-\dfrac1{\ln n})\varphi(\xi^n(n)) \\
 =\lim_{n \to \infty} (1-\dfrac1{\ln n}) \cdot \lim_{n \to \infty}  \varphi(\xi^n(n)) \\
 =\varphi(0) \\
-\\
-\text{Q.E.D}
 \end{gathered}
 $$
+
+然后用课上的结论,$f_n$导数有界,所以收敛变成一致收敛,做完了.
 
 </div>
