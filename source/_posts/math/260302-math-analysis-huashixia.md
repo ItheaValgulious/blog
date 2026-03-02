@@ -467,7 +467,7 @@ $$
 
 <div class='cbox'>
 
-若$g$是本原映射,则一个小区域$D_1$有:
+若$g$是本原映射,则一个小超立方体区域$D_1$有:
 
 $$
 \begin{gathered}
@@ -483,11 +483,13 @@ $$
 
 考虑$g$的$J$是什么,假设它只改变第$k$维,那么$J$删掉第$k$行/列一定是$I_{n-1}$,而第$k$行是$\dfrac{dg_n}{dx_i}$,第$k$列其他地方都是$0$,而行列式就直接是$\dfrac{dg_n}{dx_n}$.所以它也不为$0$,函数关于第$k$维单调.
 
-那么考虑
+设第$k$维的范围为$[l,r]$,不妨设$g$在这一维是单调增,设$D_1$去掉第$k$维的$n-1$维区域是 $D_1'$.考虑:
 
 $$
 \begin{gathered}
-m(g(D_1))
+mg(D_1)=\iint_{g(D_1)}1d\Sigma \\
+=\iint_{p\in D_1'} (\int_{g(l,p)}^{g(r,p)} 1dx)d\Sigma  \\
+=\iint_{p\in D_1'} (\int_l^r 1dx)\dfrac{dg}{dx_1}(\xi,p)d\Sigma \\
 \end{gathered}
 $$
 
