@@ -1,7 +1,12 @@
 ---
 title: Math Analysis Homework - Sem 2 Week 1
-tags: [math,homework,math-analysis]
+tags:
+  - math
+  - homework
+  - math-analysis
+date: 2026-03-02 14:20:07
 ---
+
 
 # Math Analysis Homework - Sem 2 Week 1
 

@@ -1,7 +1,12 @@
 ---
 title: Math Analysis Huashi Xia
-tags: [math-analysis,math,self-study]
+tags:
+  - math-analysis
+  - math
+  - self-study
+date: 2026-03-02 14:20:17
 ---
+
 
 # Math Analysis Huashi Xia
 
