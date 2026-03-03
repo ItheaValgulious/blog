@@ -459,15 +459,16 @@ $$
 
 <div class='dbox'>
 
-本原映射
+本源映射
 
-若$f(x)$与$x$最多只有一维分量不同,则$f(x)$是本原映射.
+若$f(x)$与$x$最多只有一维分量不同,则$f(x)$是本源映射.
 
 </div>
 
 <div class='cbox'>
 
-若$g$是本原映射,则一个小超立方体区域$D_1$有:
+若$g$是本源映射,则一个小超立方体区域$D_1=\times_{i=1}^n [a_i,b_i]$有
+
 
 $$
 \begin{gathered}
@@ -483,43 +484,107 @@ $$
 
 考虑$g$的$J$是什么,假设它只改变第$k$维,那么$J$删掉第$k$行/列一定是$I_{n-1}$,而第$k$行是$\dfrac{dg_n}{dx_i}$,第$k$列其他地方都是$0$,而行列式就直接是$\dfrac{dg_n}{dx_n}$.所以它也不为$0$,函数关于第$k$维单调.
 
-设第$k$维的范围为$[l,r]$,不妨设$g$在这一维是单调增,设$D_1$去掉第$k$维的$n-1$维区域是 $D_1'$.考虑:
+不妨设$g$在这一维是单调增,设$D_1$去掉第$k$维的$n-1$维区域是 $D_1'$.考虑:
 
 $$
 \begin{gathered}
-mg(D_1)=\iint_{g(D_1)}1d\Sigma \\
-=\iint_{p\in D_1'} (\int_{g(l,p)}^{g(r,p)} 1dx)d\Sigma  \\
-=\iint_{p\in D_1'} (\int_l^r 1dx)\dfrac{dg}{dx_1}(\xi,p)d\Sigma \\
+mg(D_1)=\int_{a_n}^{b_n}\ldots\int_{a_1}^{b_1} (1dx_1\ldots dx_n) \\
+=\int\ldots \int(\int_{g(x_1,\ldots,x_{k-1},a_k,x_{k+1},\ldots,x_n)}^{x_1,\ldots,x_{k-1},b_k,x_{k+1},\ldots,x_n}1dx_k)(dx_1\ldots dx_{k-1}dx_{k+1}\ldots dx_n) \\
+=(\prod_{i\ne k}(b_i-a_i))(g(x_1,\ldots ,x_{k-1},b_k,x_{k+1},\ldots,x_n)-g(x_1,\ldots,x_{k-1},a_k,x_{k+1},\ldots,x_n)) \\
+=\prod_i (b_i-a_i) \dfrac {dg}{dx_k} (x_1,\ldots ,x_{k-1},\xi,x_{k+1},\ldots,x_n),\xi \in [a_k,b_k] \\
+=\dfrac {dg}{dx_k} (x_1,\ldots ,x_{k-1},\xi,x_{k+1},\ldots,x_n) mg(D_1) \\
 \end{gathered}
 $$
 
 </div>
 
+<div class='cbox'>
 
+若$g$是本源映射,则原命题成立
+
+</div>
+
+<div class='pbox'>
+
+我们证明的是小立方体,所以自然要考虑重积分的定义把区域切成小立方体和一些边界的不规则图形,记这些小区域的集合为$\{D_n\}$.
+
+假设现在所有小区域中,那些是小立方体的标号集合是$A$(对应了内部),剩下的小区域的标号集合是$B$.
+
+用定义拆开:
+
+$$
+\begin{gathered}
+\left(\int\ldots\int\right)_{D}f(g(\vec x))d\Sigma \\
+=\lim_{\|T\| \to 0} \sum_{i\in A} f(\xi_i)mg(D_i) + \sum_{i\in B} f(\xi_i)mg(D_i),\xi_i\in g(D_i) \\
+\end{gathered}
+$$
+
+对第一部分可以直接刚刚证明的结论,因为我们可以保证结论中$x_0$在原来的格子里.但第二部分可能会有$x_0$落在$D$区域外面,但边界很小,所以可以特殊处理:
+
+$$
+\begin{gathered}
+=\lim_{\|T\| \to 0} \sum_A f(\xi_i) mg(D_i) + \sum_C f(\xi_i) mg(D_i)  \\
++ (\sum_{C} f(\xi_i) mD_i-\sum_{C}f(\xi_i)mg(D_i)) \\
+=\lim_{\|T\| \to 0} \sum_A f(\xi_i) m(D_i)|J_{g,x}(\xi_i')| + \sum_C f(\xi_i) m(D_i)|J_{g,x}(\xi_i')|  \\
++ (\sum_{C} f(\xi_i) mD_i-\sum_{C}f(\xi_i)mg(D_i)) \\
+\end{gathered}
+$$
+
+注意$\xi_i$是$g(D_i)$中的点,而我们可以选取$\xi_i=g(\xi_i')$,则就会变成
+
+$$
+\begin{gathered}
+=\left(\int\ldots\int\right)_{g(D)}f\cdot J_{g,x} d\Sigma+ \lim_{\|T\| \to 0} (\sum_{C} f(\xi_i) mD_i-\sum_{C}f(\xi_i)mg(D_i))
+\end{gathered}
+$$
+
+注意到因为$f$有界,$g$的雅可比矩阵因为连续所以有界,设有共同的界$M$,所以后面这个括号的东西有:
+
+$$
+\begin{gathered}
+|\sum_{C} f(\xi_i) mD_i-\sum_{C}f(\xi_i)mg(D_i)| \\
+\le M\sum_C m(D_i)+M^2\sum_C m(D_i)
+\end{gathered}
+$$
+
+而显然$\sum_C m(D_i)$是趋近于$0$的,所以这部分最后极限是$0$.
+
+于是证毕.
+
+</div>
+
+还可以容易的用Fubini说明对分量置换(仅改变$x_i$分量顺序的变换)是成立的.
 
 <div class='cbox'>
 
-若$g$是本原映射,则原命题成立
-
-</div>
-
-<div class='cbox'>
-
-$g\in C^1(D)$在$x$的邻域上可以被分解为有限个本原映射的复合
-
-</div>
-
-
-
-
-
+$g\in C^1(D)$在$x$的邻域上可以被分解为有限个本源映射和分量置换映射的复
 
 
 </div>
 
+<div class='pbox'>
 
+考虑因为雅可比矩阵可逆,可以进行置换使得$\dfrac{dg_n}{dx_n}\ne 0$,于是在小邻域内构造
 
+$$
+\begin{gathered}
+h(x_1,\ldots,x_n)=(x_1,\ldots,x_{n-1},g_n(x_1,\ldots,x_n))
+\end{gathered}
+$$
 
+则由反函数定理,这个家伙的雅可比矩阵行列式是$\dfrac{dg_n}{dx_n}\ne 0$,存在反函数$h^{-1}$.而且$h^{-1}$也是只改变$x_n$的本源映射).
+
+显然$g\circ h^{-1}\circ h=g$,但$h$过后$x_n$的分量就已经是$g(x_n)$的值了,所以$g\circ h^{-1}$是不改变$x_n$的变换.
+
+考虑这意味着你可以对$g$再进行置换,考虑如果$g_i$是不改变其中$i$个分量的变换,那么把一个会改变的扔到$x_n$,得到$h_i$,然后因为$x_n\circ h_i^{-1}\circ h_i$,一定是不改变$i+1$个元素的,这样你不断重复就能拆完了.
+
+</div>
+
+现在的问题是对本源映射的分解也都是小区域,所以考虑进行切分:对$U$中的每个点可以找一个开集邻域,再找到一个$D$的有限覆盖.设有限覆盖中开集的最小半径是$\delta$.
+
+那么再去划分网格,当网格中区域的直径最大值小于$\dfrac\delta 2$时,一定每个格都完全被一个邻域完全包含,可以用这个邻域对应的分解套用刚才的证明.最后就证明完了.
+
+</div>
 
 ### 可积与绝对可积
 
