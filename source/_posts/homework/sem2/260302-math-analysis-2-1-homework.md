@@ -325,12 +325,44 @@ $(-1)^n$部分和有界,$\dfrac1{n+\sin x}$单调递减且一致收敛到$0$,由
 $$
 \begin{gathered}
 =\sum_{k=1}^\infty (-1)^k\sum_{n=k^2}^{(k+1)^2-1} \dfrac{1}{\sqrt{n(n+x)}} \\
-\le \sum_{k=1} (-1)^k \dfrac{2k}{\sqrt{k^2(k^2+x)}} \\
-=\sum_k (-1)^k \dfrac{k}{k^2+x} 
 \end{gathered}
 $$
 
-$(-1)^k$部分和有界,$\dfrac{k}{k^2+x}$单调递减且一致收敛到$0$,由迪利克雷判别法知一致收敛.
+经过巨量的计算我们发现后面那一坨是单调的.但我觉得我们还是写个正常的东西吧.
+
+直接弄成
+
+$$
+\begin{gathered}
+\sum _{n = 1} ^{\infty}  \dfrac{(-1)^{[\sqrt{n}]}}n\dfrac1{\sqrt{1(1+\dfrac xn)}}
+\end{gathered}
+$$
+
+第二项单调且有界,只需证第一项部分和收敛.
+
+考虑
+
+$$
+\begin{gathered}
+\sum _{k=1}^\infty (-1)^k \sum _{n = k^2} ^{k^2+2k}\dfrac{1}{n}  \\
+\dfrac1n\in [\ln(n+1)-\ln(n),\ln(n)-\ln(n-1)] \\
+\sum _{n = k^2} ^{k^2+2k}\dfrac{1}{n}\in [\ln((k+1)^2)-\ln(k^2),\ln(k^2+2k)-\ln(k^2-1)] \\
+\end{gathered}
+$$
+
+因为
+
+$$
+\begin{gathered}
+\ln(k^2+2k)-\ln(k^2-1)\le \ln(k^2)-\ln((k-1)^2) \\
+\Leftrightarrow (k^2+2k)(k-1)^2\le k^2(k^2-1)
+\end{gathered}
+$$
+
+比较系数得成立,于是单调.
+
+于是由阿贝尔判别法知一致收敛.
+
 
 </div>
 
