@@ -215,3 +215,214 @@ $$
 然后用课上的结论,$f_n$导数有界,所以收敛变成一致收敛,做完了.
 
 </div>
+
+## Class 2
+
+### T1
+
+<div class="cbox">
+
+**10.** 判别下列级数的一致收敛性:
+(3) $\sum_{n=1}^{\infty} \frac{nx}{(1+x)(1+2x)\cdots(1+nx)}$, 其中 (i) $0 < x \leqslant l$, (ii) $0 < l \leqslant x < +\infty$.
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+u_n(x)=\dfrac{nx}{\prod_{i=1}^n (1+ix)}
+\end{gathered}
+$$
+
+(i):
+
+令$x_{n}=\dfrac4{n^2}$,则:
+
+$$
+\begin{gathered}
+\prod_{i=1}^{n} (1+ix_n)\le (1+\dfrac4{n})^n\le e^4 \\
+\Rightarrow u_{n}(x_n)\ge \dfrac4{e^4n}
+\end{gathered}
+$$
+
+因为$\dfrac{u_n}{u_{n-1}}=\dfrac n{(n-1)(1+nx)}$,得到$x<\dfrac1{n(n-1)}$时$u_n(x)$增加,反之减小.
+
+于是可得$u_n(x_n)<u_{n-1}(x_n)<\ldots<u_{\lfloor n/2\rfloor}(x_{n})$.
+
+于是$\sum_{i=1}^n u_i(x)>\sum_{i=\lfloor n/2\rfloor}^n u_i(x)\ge \dfrac2{e^4}$.
+
+于是由柯西条件,不一致收敛.
+
+(ii):
+
+$$
+\begin{gathered}
+\text{when } x\ge l: \\
+u_n(x)=\dfrac{nx}{1+nx} \cdot \dfrac1{\prod_{i=1}^n (1+ix)}
+\end{gathered}
+$$
+
+其中第一项一致有界$1$,第二项显然有优级数$(1+l)^{-n}$一致收敛,由阿贝尔判别法知一致收敛.
+
+
+</div>
+
+### T2
+
+<div class="cbox">
+
+**11.** 设 $\{a_n\}$ 为单调递减正数列, 且 $\sum_{n=1}^{\infty} a_n \sin nx$ 在 $[0, \pi]$ 上一致收敛. 证明: $\lim_{n\to\infty} na_n = 0$.
+
+</div>
+
+<div class='pbox'>
+
+因为一致收敛,由柯西条件,可知
+
+$$
+\begin{gathered}
+\forall n,\{x_n\},|\sum_{i=n}^{2n} a_i\sin(ix_i)|\to 0 \\
+\text{let } x_n=\dfrac1{2n},n>1000 \\
+\Rightarrow \sin(nx_n) \text{ is increasing with } n,\sin(nx_n)>0 \\
+|\sum_{i=n}^{2n} a_i\sin(ix_i)| \\
+=\sum_{i=n}^{2n} a_i\sin(ix_i) \\
+\ge \sum_{i=n}^{2n} a_{2n}\sin(\dfrac12) \\
+=2na_{2n} \dfrac{\sin\frac12}{2}\to 0
+\end{gathered}
+$$
+
+偶数项收敛到$0$,奇数项小于其前一项也收敛到$0$,得证.
+
+</div>
+
+### T3
+
+<div class="cbox">
+
+**13.** 判断下列函数项级数的一致收敛性:
+(2) $\sum_{n=2}^{\infty} \frac{(-1)^n}{n+\sin x}$, $-\infty < x < +\infty$;
+
+</div>
+
+<div class='pbox'>
+
+$(-1)^n$部分和有界,$\dfrac1{n+\sin x}$单调递减且一致收敛到$0$,由迪利克雷判别法知一致收敛.
+
+</div>
+
+### T4
+
+<div class="cbox">
+
+**13.** 判断下列函数项级数的一致收敛性:
+(5) $\sum_{n=1}^{\infty} \frac{(-1)^{[\sqrt{n}]}}{\sqrt{n(n+x)}}$, $0 < x < +\infty$;
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+=\sum_{k=1}^\infty (-1)^k\sum_{n=k^2}^{(k+1)^2-1} \dfrac{1}{\sqrt{n(n+x)}} \\
+\le \sum_{k=1} (-1)^k \dfrac{2k}{\sqrt{k^2(k^2+x)}} \\
+=\sum_k (-1)^k \dfrac{k}{k^2+x} 
+\end{gathered}
+$$
+
+$(-1)^k$部分和有界,$\dfrac{k}{k^2+x}$单调递减且一致收敛到$0$,由迪利克雷判别法知一致收敛.
+
+</div>
+
+### T5
+
+<div class="cbox">
+
+**14.** 在区间 $[0, 1]$ 上, 定义
+$u_n(x) = \begin{cases} \dfrac1n, & x = \frac{1}{n}, \\ 0, & x \neq \frac{1}{n}. \end{cases}$
+
+证明:
+- $\sum_{n=1}^\infty u_n(\dfrac1n)$发散.
+- $\sum_{n=1}^\infty u_n(x)$在$[0,1]$一致收敛,且没有优级数.
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+\sum _{n = 1} ^{+\infty} u_n(\dfrac1n)=\sum_{n=1}^\infty \dfrac1n=+\infty \\
+|\sum_{n=N}^\infty u_n(x)|= \begin{cases}
+\dfrac1k,\exists k\ge N,x=\dfrac1k \\
+0,\text{otherwise}
+\end{cases} \\
+\le \dfrac1N\to 0
+\end{gathered}
+$$
+
+一致收敛.
+
+设$a_n$为$u_n(x)$的优级数,则$a_n\ge u_n(\dfrac1n)=\dfrac1n$,则$a_n$发散,故不存在优级数.
+
+</div>
+
+### T6
+
+<div class="cbox">
+
+**15.** 设级数 $\sum_{n=1}^{\infty} a_n$ 收敛, 证明: 函数项级数 $\sum_{n=1}^{\infty} a_n e^{-nx}$ 在 $[0, +\infty)$ 内一致收敛.
+
+</div>
+
+<div class='pbox'>
+
+$\sum_{n=1}^\infty a_n$(常函数)一致收敛,$e^{-nx}$单调下降且一致有界$1$,由阿贝尔判别法知一致收敛.
+
+</div>
+
+### T7
+
+<div class="cbox">
+
+**16.** 设级数 $\sum_{n=1}^{\infty} \frac{1}{|a_n|}$ 收敛. 证明: 函数项级数 $\sum_{n=1}^{\infty} \frac{1}{x-a_n}$ 在不包含点 $a_n (n=1, 2, \cdots)$ 的任何有界闭集上绝对一致收敛.
+
+</div>
+
+<div class='pbox'>
+
+显然$a_n\to \infty$.因为有界,设有界闭集$D$满足$M=\sup D$,则$\exists N,n>N\Rightarrow |a_n|>2M$.
+
+于是
+
+$$
+\begin{gathered}
+\forall n\ge N,|a_n-x|\ge \dfrac{a_n}2 \\
+\sum _{n = N} ^{\infty}  |\dfrac{1}{x-a_n}|\le \dfrac1{2|a_n|}
+\end{gathered}
+$$
+
+则$\sum_n \dfrac1{2|a_n|}$为优级数,由优级数判别法知一致收敛.
+
+</div>
+
+### T8
+
+<div class="cbox">
+
+**17.** 讨论下列函数项级数的一致收敛性:
+(1) $\sum_{n=2}^{\infty} \ln \left( 1 + \frac{x}{n\ln^2 n} \right)$, $x \in [a, b]$, $a > 0$;
+
+</div>
+
+<div class='pbox'>
+
+$$
+\begin{gathered}
+|\ln(1+\dfrac{x}{n\ln^2 n})|\le \ln(1+\dfrac{b}{n\ln^2 n} )\le \dfrac{b}{n\ln^2 n}=c_n \\
+\sum_{n=2}^\infty c_n,\int_2^\infty \dfrac1{x\ln^2 x}dx=\int_{\ln 2}^\infty \dfrac1{x^2}dx<\infty \text{同敛散}  
+\end{gathered}
+$$
+
+所以$c_n$收敛,由优级数判别法知一致收敛
+
+</div>

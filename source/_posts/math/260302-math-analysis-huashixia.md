@@ -409,6 +409,61 @@ $$
 
 区别在于 黎曼测度只允许你用有限个格子逼近,而勒贝格测度允许你用可数个格子逼近
 
+### Fubini
+
+<div class='cbox'>
+
+闭超立方区域$D=\times_i [a_i,b_i]$上的$f$是重积分可积的,且某个次序的累次积分存在,则它们相等.
+
+</div>
+
+定义$\int^n=(\int \ldots \int)$.
+
+<div class='pbox'>
+
+不妨设关于$x_1$是可积的.
+
+$$
+\begin{gathered}
+\int^n f(dx_1\wedge\ldots\wedge dx_n)=\int^{n-1} \int fdx_1 (dx_2\wedge\ldots\wedge dx_n)
+\end{gathered}
+$$
+
+寻找一个分割组合的列$(T^1_n,T^2_n)$分别是作用再第一维的和剩下其他维空间的分割,满足 $\lim_{n \to \infty} \|T^i_n\|=0$.
+
+则只需证
+
+$$
+\begin{gathered}
+\lim_{n \to \infty} \sum_{T^1_n,T^2_n} f(x)\prod_i \Delta x_i \\
+=\lim_{n \to \infty} \sum_{T^2_n}\sum_{T^1_n}f(x)\prod_i\Delta x_i \\
+=\lim_{n \to \infty} \sum_{T^2_n}\int_{a_1}^{b_1}f(x)dx_1\prod_{i\ne 1}\Delta x_i
+\end{gathered}
+$$
+
+因为我们有
+
+$$
+\begin{gathered}
+\lim_{n \to \infty} \sum_{T^2_n}\int_{a_1}^{b_1}f(x)dx_1\prod_{i\ne 1}\Delta x_i \\
+=\lim_{n \to \infty} \sum_{T^2_n} \sum_{i} \int_{T_n^{1,i}}^{T_n^{1,i+1}} f(x)\prod_{i\ne 1}\Delta x_i \\
+\in [
+  \lim_{n \to \infty} \sum_{T^2_n} \sum_{i} M\Delta x_1\prod_{i\ne 1}\Delta x_i ,\\
+  \lim_{n \to \infty} \sum_{T^2_n} \sum_{i} m\Delta x_1\prod_{i\ne 1}\Delta x_i
+]
+\end{gathered}
+$$
+
+其中$m$和$M$分别是区域内的最大值和最小值.
+
+然后你因为后面这两个都是收敛的直接就证明完了.
+
+我真是糖丸了. 
+
+</div>
+
+
+
 ### Peano曲线
 
 <div class='cbox'>
@@ -588,43 +643,33 @@ $$
 
 ### 可积与绝对可积
 
+<div class='dbox'>
 
-## 场论相关
-
-<div class='cbox'>
-
-Green Formula
+对定义在无限区域$U$上的函数$f$,若可以用简单且面积为$0$的轨迹$l$在$U$内画出有限区域$D_l$,定义其直径为$d(D_l)$,则积分的值定义为
 
 $$
 \begin{gathered}
-\begin{cases}
-F: R^2 \to R^2 \\
-D \text{ is 光滑或分段光滑的简单闭曲线所围的单连通闭区域} \\ 
-F\in C^1(D) \\
-\end{cases} \\
-\Rightarrow \iint_D \nabla \times \vec F =\oint F\cdot dl
+\lim_{d(D_l) \to +\infty} \int_{D_l} f(x)dx 
 \end{gathered}
 $$
 
-Gauss Formula
-
-$$
-\begin{gathered}
-\begin{cases}
-F: R^3 \to R \\
-
-\end{cases}
-
-\end{gathered}
-$$
+注意这要求它对任意划分$l$都成立.
 
 </div>
 
+<div class='cbox'>
 
-## 微分形式
+在$R^n(n\ge 2)$空间以上,如果一个无限区域上的函数可积则它绝对可积.
+
+</div>
+
+<div class='pbox'>
 
 
-## 两类欧拉积分
 
+</div>
 
-## 傅里叶级数
+## 含参积分
+
+### 两类欧拉积分
+
