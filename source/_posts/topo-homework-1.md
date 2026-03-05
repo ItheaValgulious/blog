@@ -1,7 +1,12 @@
 ---
 title: Topo Homework - Week 1
-tags: [topo,math,homework]
+tags:
+  - topo
+  - math
+  - homework
+date: 2026-03-05 23:13:45
 ---
+
 # Topo Homework - Week 1
 
 ### T1
