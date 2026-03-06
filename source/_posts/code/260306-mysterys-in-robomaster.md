@@ -1,7 +1,11 @@
 ---
 title: Robomaster Log
-tags: [program,robomaster]
+tags:
+  - program
+  - robomaster
+date: 2026-03-06 11:02:17
 ---
+
 
 # Robomaster Log
 
