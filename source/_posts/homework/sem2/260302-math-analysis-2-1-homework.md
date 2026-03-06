@@ -429,11 +429,11 @@ $\sum_{n=1}^\infty a_n$(常函数)一致收敛,$e^{-nx}$单调下降且一致有
 $$
 \begin{gathered}
 \forall n\ge N,|a_n-x|\ge \dfrac{a_n}2 \\
-\sum _{n = N} ^{\infty}  |\dfrac{1}{x-a_n}|\le \dfrac1{2|a_n|}
+|\dfrac{1}{x-a_n}|\le \dfrac2{|a_n|}
 \end{gathered}
 $$
 
-则$\sum_n \dfrac1{2|a_n|}$为优级数,由优级数判别法知一致收敛.
+则$\sum_n \dfrac2{2|a_n|}$为优级数,由优级数判别法知一致收敛.
 
 </div>
 
