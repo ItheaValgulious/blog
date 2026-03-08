@@ -1,0 +1,58 @@
+:root {
+    --primary-color: rgb(120 170 255);
+    --secondary-color: rgb(25 35 55);
+    --bg-color: #0f1218;
+    --title-color: #cfe0ff;
+
+    --body-bg-color: #0f1218;
+    --content-bg-color: #141a24;
+    --card-bg-color: #1c2330;
+    --text-color: #c9d4e5;
+    --selection-bg: rgb(120 170 255);
+    --selection-color: #0f1218;
+    --blockquote-color: #b7c4da;
+    --link-color: #c9d4e5;
+    --link-hover-color: rgb(120 170 255);
+    --brand-color: #f3f6ff;
+    --brand-hover-color: #f3f6ff;
+    --table-row-odd-bg-color: #171f2b;
+    --table-row-hover-bg-color: #1f2838;
+    --menu-item-bg-color: #1c2330;
+    --theme-color: rgb(120 170 255);
+    --btn-default-bg: rgb(120 170 255);
+    --btn-default-color: #0f1218;
+    --btn-default-border-color: rgb(120 170 255);
+    --btn-default-hover-bg: #0f1218;
+    --btn-default-hover-color: rgb(120 170 255);
+    --btn-default-hover-border-color: rgb(120 170 255);
+    --highlight-background: #1b2330;
+    --highlight-foreground: #d6deee;
+    --highlight-gutter-background: #161d28;
+    --highlight-gutter-foreground: #9aa8bf;
+    color-scheme: dark;
+}
+
+body {
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+}
+
+.cbox,.pbox,.bbox,.dbox{
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+.nav-link,.sidebar-toc-active .sidebar-nav-toc, .sidebar-overview-active .sidebar-nav-overview{
+    color: var(--secondary-color) !important;
+    border-bottom-color: var(--secondary-color) !important;
+}
+
+.nav-link:hover,.sidebar-toc-active .sidebar-nav-toc:hover, .sidebar-overview-active .sidebar-nav-overview:hover{
+    color: var(--primary-color) !important;
+    border-bottom-color: var(--primary-color) !important;
+}
+
+.tag-cloud-tags>a {
+    color: white;
+    border-bottom-color: white;
+}
