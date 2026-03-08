@@ -1,0 +1,53 @@
+% tags:[others]
+
+\documentclass[UTF8]{ctexart} % 使用 ctexart 文档类，自动处理中文
+
+\usepackage{fireinice}
+
+\title{Hello Latex}
+\author{Ithea}
+\date{\today}
+
+\begin{document}
+
+\section{General}
+
+{\huge
+Hello Latex!}
+
+\section{符号测试}
+\(\A, \B, \D, \E, \ph, \R, \C, \Null, \Range, \Ker,\im\) \\
+箭头：\(\To \quad \To[\T{something over arrow}] \quad \Eq[some other over arrow]\quad \From\)
+
+
+\section{环境测试}
+
+\begin{define}{定义}
+这是一个四边实线（2pt）的定义环境。
+\end{define}
+
+\begin{proof}
+这个证明继承浅黄色，右侧和下方边框颜色与定义相同，厚度为2pt。
+\end{proof}
+
+\begin{theorem}{定理}
+定理内容
+\end{theorem}
+
+\begin{proof}
+这个证明继承浅橙色。
+\end{proof}
+
+\begin{lemma}{主要引理}
+引理内容在第一行，标题也在第一行。
+\end{lemma}
+
+\begin{question}{思考题}
+这里是浅红色背景。
+\end{question}
+
+\begin{proof}[Proof of the question]
+强制英文标题，且自定义了内容。
+\end{proof}
+
+\end{document}
