@@ -9,7 +9,11 @@ for any {path}/{name}.tex file, you should:
     - {tags}:read the comment by search "% tags:(.*)". use the first matching result.
     - {title}: search "\\title{.*}"
     - {date}: search "\\date{.*}". and if the date is \\today, set it to the current time with format like "2025-09-02 13:01:00".
-3. create {path}/{name}.html with the template "./template_for_pdf.html". replace {{path}} by workspace/pdf/{path}/{name}.pdf and replace {{yaml}} by "{{title:{title}\ntags:{tags}\ndate:{date}}}"
+3. create {path}/{name}.md with the content:
+    {{yaml}}
+
+    # {title}
+    [spirit of fire,please show me a pdf {the path of the pdf}]
 
 4. output what you had done
 5. remove folder {path}/latexbuild
@@ -17,7 +21,7 @@ for any {path}/{name}.tex file, you should:
 if clean:
 you should recursively scan _posts and its sub directories:
 for any {path}/{name}.tex file, you should:
-remove {path}/{name}.html
+remove {path}/{name}.md
 remove {path}/latexbuild
 """
 
@@ -28,32 +32,13 @@ import re
 import shutil
 import sys
 from datetime import datetime
-from typing import Iterable, Optional
+from typing import Iterable
 
 from config import target_directory
 
 
 def _posts_root() -> str:
     return os.path.join(target_directory, "_posts")
-
-
-def _template_path() -> Optional[str]:
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    candidate = os.path.join(base_dir, "template_for_pdf.html")
-    if os.path.exists(candidate):
-        return candidate
-    fallback = os.path.join(base_dir, "pdftemplate.html")
-    if os.path.exists(fallback):
-        return fallback
-    return None
-
-
-def _load_template() -> str:
-    template_path = _template_path()
-    if not template_path:
-        raise FileNotFoundError("template_for_pdf.html or pdftemplate.html not found")
-    with open(template_path, "r", encoding="utf-8") as handle:
-        return handle.read()
 
 
 def _iter_tex_files(root: str) -> Iterable[str]:
@@ -87,7 +72,7 @@ def _make_pdf_web_path(rel_dir: str, name: str) -> str:
     return f"/pdf/{rel_dir}/{name}.pdf"
 
 
-def _deploy_tex(tex_path: str, template: str) -> None:
+def _deploy_tex(tex_path: str) -> None:
     posts_root = _posts_root()
     tex_dir = os.path.dirname(tex_path)
     name = os.path.splitext(os.path.basename(tex_path))[0]
@@ -112,11 +97,15 @@ def _deploy_tex(tex_path: str, template: str) -> None:
     yaml_block = f"title: {title}\ntags: {tags}\ndate: {date_value}"
     pdf_web_path = _make_pdf_web_path(rel_dir, name)
 
-    html_content = template.replace("{{path}}", pdf_web_path).replace("{{yaml}}", yaml_block)
-    html_path = os.path.join(tex_dir, f"{name}.html")
-    with open(html_path, "w", encoding="utf-8") as handle:
-        handle.write(html_content)
-    print(f"[deal_latex] wrote {html_path}")
+    md_content = (
+        f"---\n{yaml_block}\n---\n\n"
+        f"# {title}\n"
+        f"[spirit of fire,please show me a pdf {pdf_web_path}]\n"
+    )
+    md_path = os.path.join(tex_dir, f"{name}.md")
+    with open(md_path, "w", encoding="utf-8") as handle:
+        handle.write(md_content)
+    print(f"[deal_latex] wrote {md_path}")
 
     build_dir = os.path.join(tex_dir, "latexbuild")
     shutil.rmtree(build_dir, ignore_errors=True)
@@ -129,9 +118,8 @@ def deploy() -> None:
         print(f"[deal_latex] _posts not found: {posts_root}")
         return
 
-    template = _load_template()
     for tex_path in _iter_tex_files(posts_root):
-        _deploy_tex(tex_path, template)
+        _deploy_tex(tex_path)
 
 
 def clean() -> None:
@@ -143,10 +131,10 @@ def clean() -> None:
     for tex_path in _iter_tex_files(posts_root):
         tex_dir = os.path.dirname(tex_path)
         name = os.path.splitext(os.path.basename(tex_path))[0]
-        html_path = os.path.join(tex_dir, f"{name}.html")
-        if os.path.exists(html_path):
-            os.remove(html_path)
-            print(f"[deal_latex] removed {html_path}")
+        md_path = os.path.join(tex_dir, f"{name}.md")
+        if os.path.exists(md_path):
+            os.remove(md_path)
+            print(f"[deal_latex] removed {md_path}")
         build_dir = os.path.join(tex_dir, "latexbuild")
         if os.path.isdir(build_dir):
             shutil.rmtree(build_dir, ignore_errors=True)

@@ -43,8 +43,8 @@ body {
 }
 
 .nav-link,.sidebar-toc-active .sidebar-nav-toc, .sidebar-overview-active .sidebar-nav-overview{
-    color: var(--secondary-color) !important;
-    border-bottom-color: var(--secondary-color) !important;
+    color: var(--text-color) !important;
+    border-bottom-color: var(--text-color) !important;
 }
 
 .nav-link:hover,.sidebar-toc-active .sidebar-nav-toc:hover, .sidebar-overview-active .sidebar-nav-overview:hover{
@@ -55,4 +55,8 @@ body {
 .tag-cloud-tags>a {
     color: white;
     border-bottom-color: white;
+}
+
+.pdf-wrapper{
+    filter: invert(100%);
 }

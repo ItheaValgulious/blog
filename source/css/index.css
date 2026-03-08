@@ -76,3 +76,31 @@ h1,h2,h3,h4,h5,h6,.post-title>a{
     color:var(--primary-color) !important;
     border-bottom-color:var(--primary-color) !important;
 }
+
+
+.pdf-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+.pdf-page-container {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.pdf-wrapper canvas {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.pdf-wrapper .loading {
+    text-align: center;
+    padding: 50px;
+    color: #666;
+}
