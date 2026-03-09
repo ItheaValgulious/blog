@@ -1,7 +1,12 @@
 ---
 title: Maybe Higher Linear Algebra
-tags: [math,Linear-algebra,note]
+tags:
+  - math
+  - Linear-algebra
+  - note
+date: 2026-03-09 20:12:21
 ---
+
 
 # Maybe Higher Linear Algebra
 
