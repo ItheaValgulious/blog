@@ -671,5 +671,47 @@ $$
 
 ## 含参积分
 
+### 含参正常积分
+
+<div class='dbox'>
+
+对形如
+
+$$
+\begin{gathered}
+F(x)=\int_{c(x)}^{d(x)} f(x,y)dy,x\in [a,b]
+\end{gathered}
+$$
+
+的函数,若对任意$x$都可积有定义,则$F$是关于$x$的函数,是含参量的正常积分.
+
+</div>
+
+<div class='cbox'>
+
+若$f$连续,$c(x),d(x)$连续,则$F$连续.
+
+</div>
+
+<div class='pbox'>
+
+先考虑$c(x),d(x)$为常数的情况.
+
+则对任意$x\in [a,b]$,对任意$\epsilon>0$,考虑
+
+$$
+\begin{gathered}
+|F(x)-F(x+\delta)|=\int_c^d (f(x,y)-f(x+\delta,y))dx
+\end{gathered}
+$$
+
+因为$f$连续,而闭区间上连续推一致连续,所以存在$\delta$使得$f(x,y)-f(x+\delta,y)<\epsilon$
+
+</div>
+
+
+
+### 含参反常积分
+
 ### 两类欧拉积分
 

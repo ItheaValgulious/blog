@@ -15,9 +15,9 @@
         "db.json": true,
         "node_modules": true
     },
-    "hide-files.files": [],
     "markdown.styles": [
-        "./source/css/index.css"
+        "./source/css/index.css",
+        "./source/css/dark.css"
     ],
     "markdown.copyFiles.destination": {
         "**/*.md": "${documentDirName}/../imgs/${documentBaseName}/img-${unixTime}.png"

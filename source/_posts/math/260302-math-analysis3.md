@@ -120,3 +120,70 @@ $$
 
 </div>
 
+讲了$f_n$连续且内闭一致收敛则 $\lim_{n \to \infty} f_n$连续
+
+## 20260309
+
+<div class='cbox'>
+
+证明 $\sum _{n = 1} ^{\infty}  ne^{-nx}=S(x)\in C(0,+\infty)$
+
+</div>
+
+<div class='pbox'>
+
+考虑对任意区间$[a,b]\subset (0,\infty)$,因为 $ne^{-nx}\le ne^{-na}$,而显然对任意$a$有$\sum ne^{-na}<\infty$,所以优级数判别法知内闭一致收敛,于是可以从$S_n$连续推$S$连续.
+
+</div>
+
+又讲了个 $\sum _{n = 2} ^{\infty}  (\dfrac{x}{\ln n} )^n\in C(-\infty,\infty)$的题,也是直接证内闭一致收敛,用优级数判别法,就做完了.
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f(x)=\sum _{n = 0} ^{\infty}  \dfrac{x^n}{3^n} \cos (n\pi x^2) \\
+\text{calculate } \lim_{x \to 1} f(x)
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+显然是让你证一致收敛然后把$1$带进去.证一致收敛只要证$1$的小邻域,用优级数判别法放缩到等比数列就做完了.
+
+</div>
+
+<div class='cbox'>
+
+讨论
+
+$$
+\begin{gathered}
+S_n(x)=\sum _{n = 1} ^{\infty}  u_n=\sum _{n = 1} ^{\infty}  \dfrac{x^2}{(1+x^2)^n} 
+\end{gathered}
+$$
+
+在$R$上一致收敛性.
+
+</div>
+
+<div class='pbox'>
+
+考虑因为
+
+$$
+\begin{gathered}
+S_n(x)=\begin{cases}
+0,x=0 \\
+1+x^2,x\ne 0
+\end{cases}\notin C(R) \\
+u_n\in C(R) \\
+\Rightarrow \text{not uniformly continuous} 
+\end{gathered}
+$$
+
+</div>
+
+
