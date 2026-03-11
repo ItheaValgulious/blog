@@ -3,6 +3,7 @@ read the first arg as command:
 
 if command is deploy:
 call the following commands:
+python rename.py
 python deal_img.py
 python deal_latex.py deploy
 hexo clean
@@ -12,6 +13,7 @@ python deal_latex.py clean
 
 if the command is server:
 call the following commands:
+python rename.py
 python deal_img.py
 python deal_latex.py deploy
 hexo clean
@@ -62,6 +64,7 @@ def main() -> None:
 	hexo_cwd = os.path.dirname(os.path.dirname(__file__))
 
 	if command == "deploy":
+		_run(_python_cmd("rename.py",'deploy'),cwd)
 		_run(_python_cmd("deal_img.py"), cwd)
 		_run(_python_cmd("deal_latex.py", "deploy"), cwd)
 		_run_hexo(["clean"], hexo_cwd)
@@ -71,6 +74,7 @@ def main() -> None:
 		return
 
 	if command == "server":
+		_run(_python_cmd("rename.py",'deploy'),cwd)
 		_run(_python_cmd("deal_img.py"), cwd)
 		_run(_python_cmd("deal_latex.py", "deploy"), cwd)
 		_run_hexo(["clean"], hexo_cwd)

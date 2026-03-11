@@ -187,3 +187,63 @@ $$
 </div>
 
 
+## 20260311
+
+讲了一下一致收敛时可以交换极限和求导/积分的条件.
+
+注意交换求导感觉不是很用记,和积分差不多,因为它的条件居然是关于导数一致收敛推原函数.
+
+<div class='cbox'>
+
+$x\in (-1,1)$时证明:
+
+$$
+\begin{gathered}
+\sum _{n = 1} ^{\infty}  \dfrac{(-1)^{n-1}}{2n-1} x^{2n-1} = \arctan x
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+$\arctan$是求导变成简单函数,所以只需证左边的导数一致收敛到右边,即证
+
+$$
+\begin{gathered}
+\sum _{n = 1} ^{\infty}  (-1)^{n-1}x^{2n-2}\rightrightarrows \dfrac1{1+x^2}
+\end{gathered}
+$$
+
+但这玩意不一致收敛,但你再想想发现刚才一致收敛的三个性质都只需要内闭,而内闭用优级数显然的.于是做完了.
+
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f(x)=\sum _{n = 1} ^{\infty}  \dfrac{\cos(nx)}{n^2+1}  \\
+\Rightarrow f\in C^1[0,\pi]
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+这个题思路很显然就证$f(x)$和$f'(x)$一致连续.然后这些地方也很显然,但要注意的是
+
+证明$f'$一致连续的时候,**$\sin nx$并非一致有界**,它会被放缩到
+
+$$
+\begin{gathered}
+\dfrac{\cos(\dfrac x2)-\cos(\dfrac {(n+1)x}2)}{\sin \dfrac x2} \le \dfrac{1}{\sin \dfrac x2} 
+\end{gathered}
+$$
+
+所以只能证出来内闭一致收敛,但是是够用的,就结束了.
+
+</div>
+

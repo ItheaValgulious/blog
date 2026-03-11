@@ -173,6 +173,45 @@ $$
 
 </div>
 
+一致连续推连续和积分的两个性质证起来都很显然吧.注意积分要证明可积,用不连续点是零测集可以秒.
+
+### 交换极限和求导
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+f_n(x)\in C^1[a,b] \\
+f_n'(x)\rightrightarrows g(x) \\
+\exists c\in [a,b],\lim_{n \to \infty} f_n(c)\exists
+\end{cases} \\
+\Rightarrow \begin{cases}
+f_n(x)\rightrightarrows f(x)\in C^1[a,b] \\
+f'(x)=g(x)
+\end{cases}
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+看书的时候一开始觉得这不就把积分写成导数抄一遍吗.但是课上讲的怎么这么复杂.
+
+第一反应是因为导数连续所以可以$f_n(x)=f_n(c)+\int_c^x f'_n(t)dt$,然后对任意$x$,由刚才的定理可以得到$f_n(x)\to f(x)$,所以这里得到的是$f_n\to f$.但没一致.
+
+你再思考一下,一致收敛的积分性质中,是对$\epsilon$,存在$N$使得$\forall n>N,\int_a^b |f_n(x)-f(x)|dx<\epsilon(b-a)$.所以写出来你发现这玩意真的是一致的.
+
+因为点态收敛的结论就已经是$f(x)=f(c)+\int_c^x g(t)$了求个导就做完了.
+
+所以和把积分抄一遍的区别就在于中间那个证一致收敛啊.
+
+</div>
+
+
+
+
 ### Weierstrass 第一逼近定理
 
 <div class='cbox'>
@@ -701,13 +740,95 @@ $$
 
 $$
 \begin{gathered}
-|F(x)-F(x+\delta)|=\int_c^d (f(x,y)-f(x+\delta,y))dx
+|F(x)-F(x+\delta)|=\int_c^d (f(x,y)-f(x+\delta,y))dy
 \end{gathered}
 $$
 
-因为$f$连续,而闭区间上连续推一致连续,所以存在$\delta$使得$f(x,y)-f(x+\delta,y)<\epsilon$
+因为$f$连续,而闭区间上连续推一致连续,所以存在$\delta$使得$f(x,y)-f(x+\delta,y)<\epsilon_0$.于是就成了
+
+$$
+\begin{gathered}
+|F(x)-F(x+\delta)|\le \epsilon_0(d-c)
+\end{gathered}
+$$
+
+那么取$\epsilon_0=\dfrac{\epsilon}{d-c}$即可.
+
+现在考虑$c(x),d(x)$不为常数,对$F(x)=\int_{c(x)}^{d(x)}f(x,y)dy$,换元$y=c(x)+(d(x)-c(x))t$:
+
+$$
+\begin{gathered}
+\int_{c(x)}^{d(x)}f(x,y)dy  \\
+=\int_0^1 f(x,c(x)+(d(x)-c(x))t)(d(x)-c(x))dt \\
+\end{gathered}
+$$
+
+此时对这个$x,t$的含参积分用刚才的结论即知连续.
 
 </div>
+
+<div class='cbox'>
+
+若闭区域上$f(x,y),\dfrac{df}{dx},c(x),d(x)$连续,则$F(x)=\int_{c(x)}^{d(x)}f(x,y)dy$可微,且
+
+$$
+\begin{gathered}
+\dfrac{dF}{dx}=\int_{c(x)}^{d(x)}\dfrac{df}{dx}dy+f(x,d(x))\cdot \dfrac{dd}{dx}-f(x,c(x))\cdot \dfrac{dc}{dx}
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+仍然先考虑$c(x),d(x)$为常数的情况.
+
+$$
+\begin{gathered}
+\lim_{\delta \to 0} \dfrac{F(x+\delta)-F(x)}{\delta} \\
+=\lim_{\delta \to 0} \dfrac{1}{\delta}\int_c^d(f(x+\delta,y)-f(x,y))dy \\
+=\lim_{\delta \to 0} \dfrac1\delta \int_c^d \delta \dfrac{df}{dx}(\xi(y),y)dy \\
+\end{gathered}
+$$
+
+于是
+
+$$
+\begin{gathered}
+\lim_{\delta \to 0} \dfrac{F(x+\delta)-F(x)}{\delta} - \int_c^d \dfrac{df}{dx}dy \\
+=\lim_{\delta \to 0} \dfrac1\delta \int_c^d \delta \dfrac{df}{dx}(\xi(y),y)dy-\int_c^d \dfrac{df}{dx}(x,y)dy \\ \\
+=\lim_{\delta \to 0} \int_c^d (\dfrac{df}{dx}(\xi(y),y)-\dfrac{df}{dx}(x,y))dy
+\end{gathered}
+$$
+
+因为$\dfrac{df}{dx}$连续所以闭区域上一致连续,所以当$\delta$足够小的时候,一定有$|\dfrac{df}{dx}(\xi)-\dfrac{df}{dx}(y)|<\epsilon$,于是可以证明这个极限为$0$.
+
+对非常数的情况,设$H(x,c,d)=\int_c^d f(x,y)dy,F=H(x,c(x),d(x))$,用上面的可以得到$H$对$x$的导数,所以对$H$全微分就做完了.
+
+**gemini补充:应该先使用$H$偏导连续说明它全微分存在**
+
+</div>
+
+闭区域上$f$连续的话$F$连续所以$F$可积,此时会考虑能否交换积分号:
+
+<div class='cbox'>
+
+若$f(x,y)\in C([a,b]\times [c,d])$,则:
+
+$$
+\begin{gathered}
+\int_a^b \int_c^d f(x,y)dxdy=\int_c^d \int_a^b f(x,y)dydx
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+这也是显然的,连续说明这些累次积分都存在+Fubini.
+
+</div>
+
 
 
 
