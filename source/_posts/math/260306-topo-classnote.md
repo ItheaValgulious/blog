@@ -161,6 +161,18 @@ $$
 
 容易验证它确实是个拓扑.且若$A$是开/闭的,则子集的开/闭集在外面也是开/闭集.
 
+<div class='cbox'>
+
+原空间$(X,T)$的一组基$B$,对子空间$A$交后得到的也是子空间的一组基
+
+</div>
+
+<div class='pbox'>
+
+我们用上面那个判定拓扑基的条件,对于子空间的每个开集$V\cap A,\forall x\in V$,存在$x\in B_i\subset V$,于是$\forall x\in V\cap A\forall x x\exists B_i\in (B_i\cap A)\subset (V\cap A)$,即证.
+
+</div>`
+
 ### 连续,同胚
 
 <div class='dbox'>
@@ -229,4 +241,116 @@ $$
 几乎是显然的:$h$把$Y$中的闭集拉回$A,B$中的闭集,而**因为$A,B$是闭子空间,$A,B$中的闭集也是$X$中的闭集**,然后再并起来也是闭集,于是得证.
 
 </div>
+
+
+todo:同胚保持边界 
+
+### 乘积拓扑
+
+<div class='dbox'>
+
+乘积空间
+
+对拓扑空间$(X,T)$和$(Y,S)$,其乘积空间$X\times Y$上的拓扑是由所有形如$U\times V$的集合生成的,其中$U\in T,V\in S$.
+
+</div>
+
+那么这个定义合法需要:
+
+<div class='cbox'>
+
+$B=\{U\times V| U\in T,V\in S\}$构成一组拓扑基
+
+</div>
+
+<div class='pbox'>
+
+首先因为$X\times Y\in B$,所以显然全覆盖了.
+
+只要验证$B$中任意两个集合的交,容易发现$(U_1\times V_1)\cap (U_2\times V_2)=(U_1\cap U_2)\times (V_1\cap V_2)$,于是任意两个的交也在$B$中,得证.
+
+</div>
+
+<div class='cbox'>
+
+拓扑基的乘积是乘积空集的拓扑基
+
+</div>
+
+<div class='pbox'>
+
+设$(X,T)$的拓扑基为$B_X$,$(Y,S)$的拓扑基为$B_Y$,令$B=\{U\times V| U\in B_X,V\in B_Y\}$.仍然验证两条拓扑基判定:你发现第一条显然,第二条和上个定理一样显然,得证.
+
+</div>
+
+<div class='cbox'>
+
+对$X,Y$各自相同的子空间$A\subset X,B\subset Y$,$A\times B$的乘积拓扑与$A\times B$作为$X\times Y$的子空间诱导的拓扑相同
+
+</div>
+
+<div class='pbox'>
+
+子空间的拓扑基是拓扑基中的集合直接对应到子空间,所以由子空间诱导的拓扑的基是
+
+$$
+\begin{gathered}
+\{(U\times V)\cap (A\times B)| U\in T,V\in S\}
+\end{gathered}
+$$
+
+而乘积拓扑的基是
+
+$$
+\begin{gathered}
+\{(U\cap A)\times (V\cap B)| U\in T,V\in S\}
+\end{gathered}
+$$
+
+于是直接相等.
+
+</div>
+
+### 可分性
+
+<div class='dbox'>
+
+$T_1$可分:对任意两个不同的点$x,y$,存在邻域$x\in U,y\in V$满足$y\notin U,y\notin V$.
+
+$T_2$可分:对任意两个不同的点$x,y$,存在邻域$x\in U,y\in V$满足$U\cap V=\varnothing$.
+
+$T_3$可分:对任意点$x$和闭集$F$满足$x\notin F$,存在邻域$x\in U,F\subset V$满足$U\cap V=\varnothing$.
+
+$T_4$可分:对任意两个不交的闭集$F_1,F_2$,存在邻域$F_1\subset U_1,F_2\subset U_2$满足$U_1\cap U_2=\varnothing$.
+
+</div>
+
+<div class='cbox'>
+
+$T_2$可分对子空间
+
+若$(X,T)$是$T_2$,则$X$的任意子空间也是$T_2$.
+
+</div>
+
+<div class='pbox'>
+
+显然.把你用$X$的$T_2$找到的和子空间交一下就好了.
+
+</div>
+
+<div class='cbox'>
+
+$T_2$可分的两个空间乘积也是$T_2$可分的.
+
+</div>
+
+<div class='pbox'>
+
+同样显然.把你用$X,Y$的$T_2$找到的对应相乘即可.
+
+</div>
+
+
+
 
