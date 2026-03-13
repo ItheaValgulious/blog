@@ -72,6 +72,16 @@ def _make_pdf_web_path(rel_dir: str, name: str) -> str:
     return f"/pdf/{rel_dir}/{name}.pdf"
 
 
+def _replace_today_in_tex(tex_content: str, resolved_date: str) -> tuple[str, bool]:
+    updated_content, replacements = re.subn(
+        r"\\date\{\\today\}",
+        lambda _: rf"\date{{{resolved_date}}}",
+        tex_content,
+        count=1,
+    )
+    return updated_content, replacements > 0
+
+
 def _deploy_tex(tex_path: str) -> None:
     posts_root = _posts_root()
     tex_dir = os.path.dirname(tex_path)
@@ -94,6 +104,13 @@ def _deploy_tex(tex_path: str) -> None:
         tex_content = handle.read()
 
     title, tags, date_value = _parse_tex_metadata(tex_content, name)
+    updated_tex_content, replaced_today = _replace_today_in_tex(tex_content, date_value)
+    if replaced_today:
+        with open(tex_path, "w", encoding="utf-8") as handle:
+            handle.write(updated_tex_content)
+        tex_content = updated_tex_content
+        print(f"[deal_latex] updated date in {tex_path}")
+
     yaml_block = f"title: {title}\ntags: {tags}\ndate: {date_value}"
     pdf_web_path = _make_pdf_web_path(rel_dir, name)
 
