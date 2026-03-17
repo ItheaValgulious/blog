@@ -1,5 +1,5 @@
 ---
-title: Math Analysis3(Class Note)
+title: Math Analysis (Class Note 3)
 tags:
   - math-analysis
   - note
@@ -8,7 +8,7 @@ date: 2026-03-02 14:20:41
 ---
 
 
-# Math Analysis3(Class Note)
+# Math Analysis (Class Note 3)
 
 ## 20260302
 

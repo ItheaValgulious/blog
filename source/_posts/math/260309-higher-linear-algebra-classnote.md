@@ -2,7 +2,7 @@
 title: Maybe Higher Linear Algebra
 tags:
   - math
-  - Linear-algebra
+  - linear-algebra
   - note
 date: 2026-03-09 20:12:21
 ---
