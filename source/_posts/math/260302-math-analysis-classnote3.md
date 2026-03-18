@@ -304,3 +304,122 @@ $f_n$单调,$|f_n(x)|\le \phi(x),\forall x$,则存在 $\{ n_k \}$, $f_{n_k}$收�
 那么对于$g$的不连续点,因为个数可数,我们直接再把它们也扔到$E$里,因为你$f_i$是收敛的所以你得到的一定是相同的函数,于是得证.
 
 </div>
+
+## 20260315
+
+<div class='cbox'>
+
+设 $f(x)=\sum _{n = 0} ^\infty  a_nx^n$
+
+若$f(x)$在$x_0$处收敛,则任意$|x|<|x_0|$也收敛,且绝对收敛,一致收敛.
+
+若$f(x)$在$x_0$处发散,则任意$|x|>|x_0|$也发散
+
+</div>
+
+<div class='pbox'>
+
+(1):
+
+若$f(x_0)$收敛,则显然有$a_nx^n\to 0$,对$|x|<|x_0|$有:
+
+$$
+\begin{gathered}
+f(x)=\sum _{n = 0} ^{\infty}  a_nx^n \\
+= \sum _{n = 0} ^{\infty} a_nx_0^n \dfrac{x^n}{x_0^n}    \\
+\le \sum _{n = 0} ^{\infty}  |a_nx_0^n| |\dfrac{x^n}{x_0^n} |
+\end{gathered}
+$$
+
+而第一项$a_nx_0^n$因为收敛所以有界,所以整体用优级数判别法知收敛,顺便就推出一致收敛和绝对收敛.
+
+(2):
+
+直接反证+用(1)即可.
+
+</div>
+
+
+
+由这个结论你可以得到收敛半径的存在性,于是有:
+
+<div class='cbox'>
+
+收敛半径$r$满足:
+
+$$
+\begin{gathered}
+\dfrac{1}{r} =\limsup_{n\to \infty} \sqrt[ n ]{ a_n } 
+\end{gathered}
+$$
+
+然后一个常用形式是若
+
+$$
+\begin{gathered}
+\exists \lim_{n \to \infty} \dfrac{a_n}{a_{n-1}}  \\
+\Rightarrow \dfrac{1}{r} = \dfrac{a_n}{a_{n-1}}  
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+只需要证第一个形式,第二个形式可以直接推到第一个形式.
+
+其实就是你用根式法去证逐点的收敛就好了:
+
+$$
+\begin{gathered}
+|x|<\dfrac{1}{\limsup_{n\to \infty} \sqrt[ n ]{ a_n }}   \\
+\Rightarrow \limsup_{n \to \infty} \sqrt[ n ]{ a_nx^n } =x\limsup_{n \to \infty} \sqrt[n]{a_n}<1
+\end{gathered}
+$$
+
+大于方向一样.
+
+</div>
+
+<div class='cbox'>
+
+收敛域内一定内闭一致收敛.
+
+</div>
+
+<div class='pbox'>
+
+在开区间内内闭一致收敛是显然的.
+
+如果端点是收敛的情况,只考虑右侧.此时还是写成 $\sum _{n = 1} ^{\infty}  a_nr^n(\dfrac{x}{r})^n$,然后$a_nr^n$一致收敛,$(\dfrac xr)^n$单调递减一致有界,由Abel判别法知一致收敛
+
+</div>
+
+<div class='cbox'>
+
+幂级数求导/积分 收敛半径不变
+
+</div>
+
+<div class='pbox'>
+
+$\lim_{n \to \infty} \sqrt[ n ]{ n }$ =1,所以求导积分完的式子用$\limsup$看一眼就知道了.
+
+</div>
+
+端点处呢?
+
+<div class='cbox'>
+
+若级数在端点处收敛则积分完了也收敛.
+
+</div>
+
+<div class='pbox'>
+
+可以先用abel说明一致收敛然后逐项积分
+
+可以直接用abel判别法拆成$\sum_{n=0}^\infty a_nx^n \dfrac{x}{n+1}$然后右边有界左边收敛做.
+
+</div>
+
