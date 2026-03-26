@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 0 1300 1150" style="background-color: #1a1a1a; font-family: 'Times New Roman', Times, serif;">
+    <defs>
+        <!-- 箭头标记（终点） -->
+        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 L 3 5 z" fill="#ff9800" />
+        </marker>
+        <!-- 箭头标记（起点，用于双向箭头） -->
+        <marker id="arrowstart" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 L 3 5 z" fill="#ff9800" />
+        </marker>
+        <style>
+            .var { font-size: 36px; fill: #56b6c2; font-style: italic; }
+            .bracket { font-size: 36px; fill: #abb2bf; font-style: normal; }
+            .sub { font-size: 20px; baseline-shift: sub; }
+            .sup { font-size: 20px; baseline-shift: super; }
+            .label { font-size: 28px; fill: #ffffff; font-style: italic; }
+            .f-label { font-size: 32px; fill: #ff9800; font-style: italic; font-weight: bold; }
+            .dash { stroke: #61afef; stroke-width: 2.5; stroke-dasharray: 10, 10; opacity: 0.6; }
+            .arrow { stroke: #ff9800; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+            .bi-arrow { stroke: #ff9800; stroke-width: 3; fill: none; marker-end: url(#arrowhead); marker-start: url(#arrowstart); }
+            .partial-arrow { stroke: #ff9800; stroke-width: 3; fill: none; opacity: 0.4; }
+            .interval { stroke: #e0e0e0; stroke-width: 2.5; fill: none; }
+            .dot { fill: #abb2bf; }
+        </style>
+    </defs>
+
+    <!-- 中心对称轴参考：X=600 -->
+    <!-- 左侧虚线 L_left: X=400 -->
+    <!-- 右侧虚线 L_right: X=800 -->
+
+    <!-- ================== 垂直虚线结构 ================== -->
+    <!-- 顶段 -->
+    <line x1="400" y1="50" x2="400" y2="180" class="dash" />
+    <line x1="800" y1="50" x2="800" y2="180" class="dash" />
+    <!-- 中上段 -->
+    <line x1="400" y1="280" x2="400" y2="430" class="dash" />
+    <line x1="800" y1="280" x2="800" y2="430" class="dash" />
+    <!-- 底段 (长) -->
+    <line x1="400" y1="570" x2="400" y2="1100" class="dash" />
+    <line x1="800" y1="570" x2="800" y2="1100" class="dash" />
+
+    <!-- ================== 垂直省略号 ================== -->
+    <!-- 第一行与第二行之间 -->
+    <circle cx="400" cy="215" r="3.5" class="dot"/>
+    <circle cx="400" cy="235" r="3.5" class="dot"/>
+    <circle cx="400" cy="255" r="3.5" class="dot"/>
+
+    <circle cx="600" cy="215" r="3.5" class="dot"/>
+    <circle cx="600" cy="235" r="3.5" class="dot"/>
+    <circle cx="600" cy="255" r="3.5" class="dot"/>
+
+    <circle cx="800" cy="215" r="3.5" class="dot"/>
+    <circle cx="800" cy="235" r="3.5" class="dot"/>
+    <circle cx="800" cy="255" r="3.5" class="dot"/>
+
+    <!-- 第二行与第三行之间 -->
+    <circle cx="400" cy="485" r="3.5" class="dot"/>
+    <circle cx="400" cy="505" r="3.5" class="dot"/>
+    <circle cx="400" cy="525" r="3.5" class="dot"/>
+
+    <circle cx="600" cy="485" r="3.5" class="dot"/>
+    <circle cx="600" cy="505" r="3.5" class="dot"/>
+    <circle cx="600" cy="525" r="3.5" class="dot"/>
+
+    <circle cx="800" cy="485" r="3.5" class="dot"/>
+    <circle cx="800" cy="505" r="3.5" class="dot"/>
+    <circle cx="800" cy="525" r="3.5" class="dot"/>
+
+
+    <!-- ================== 元素与中括号 ================== -->
+    <!-- 第一行 (Top): Y=120 -->
+    <text x="480" y="120" class="var"><tspan class="bracket" dx="-10">[</tspan>b<tspan class="sup">*</tspan></text>
+    <text x="720" y="120" class="var">c<tspan class="sup">*</tspan><tspan class="bracket" dx="10">]</tspan></text>
+
+    <!-- 第二行 (Level 2n): Y=350 -->
+    <text x="300" y="350" class="var"><tspan class="bracket" dx="-10">[</tspan>b<tspan class="sub">2n</tspan></text>
+    <text x="900" y="350" class="var">c<tspan class="sub">2n</tspan><tspan class="bracket" dx="10">]</tspan></text>
+
+    <!-- 第三行 (Level 3): Y=650 -->
+    <text x="200" y="650" class="var"><tspan class="bracket" dx="-10">[</tspan>b<tspan class="sub">3</tspan></text>
+    <text x="1000" y="650" class="var">c<tspan class="sub">3</tspan><tspan class="bracket" dx="10">]</tspan></text>
+
+    <!-- 第四行 (Level 2): Y=850 -->
+    <text x="100" y="850" class="var"><tspan class="bracket" dx="-10">[</tspan>b<tspan class="sub">2</tspan></text>
+    <text x="1100" y="850" class="var">c<tspan class="sub">2</tspan><tspan class="bracket" dx="10">]</tspan></text>
+
+    <!-- 第五行 (Level 1): Y=1050 -->
+    <text x="0" y="1050" class="var" transform="translate(20,0)"><tspan class="bracket" dx="-10">[</tspan>b<tspan class="sub">1</tspan></text>
+    <text x="1200" y="1050" class="var" transform="translate(-20,0)">c<tspan class="sub">1</tspan><tspan class="bracket" dx="10">]</tspan></text>
+
+
+    <!-- ================== 顶部标注区间 (M_...) ================== -->
+    <!-- M_{n^2+1} : 覆盖 b_2n, 从 x=285 到 x=400 (L_left) -->
+    <path d="M 285 308 L 285 300 L 400 300 L 400 308" class="interval" />
+    <text x="342" y="285" class="label" text-anchor="middle">M<tspan dy="8" font-size="20">n</tspan><tspan dy="-12" font-size="14">2</tspan><tspan dy="12" font-size="20">+1</tspan></text>
+
+    <!-- M_{(n+1)^2-3} : 覆盖 c_3, 从 x=800 (L_right) 到 x=1030 -->
+    <path d="M 800 608 L 800 600 L 1030 600 L 1030 608" class="interval" />
+    <text x="915" y="585" class="label" text-anchor="middle">M<tspan dy="8" font-size="20">(n+1)</tspan><tspan dy="-12" font-size="14">2</tspan><tspan dy="12" font-size="20">-3</tspan></text>
+
+    <!-- M_{(n+1)^2-2} : 覆盖 b_2, 从 x=85 到 x=400 (L_left) -->
+    <path d="M 85 808 L 85 800 L 400 800 L 400 808" class="interval" />
+    <text x="242" y="785" class="label" text-anchor="middle">M<tspan dy="8" font-size="20">(n+1)</tspan><tspan dy="-12" font-size="14">2</tspan><tspan dy="12" font-size="20">-2</tspan></text>
+
+    <!-- M_{(n+1)^2-1} : 覆盖 c_1, 从 x=800 (L_right) 到 x=1230 -->
+    <path d="M 800 1008 L 800 1000 L 1230 1000 L 1230 1008" class="interval" />
+    <text x="1015" y="985" class="label" text-anchor="middle">M<tspan dy="8" font-size="20">(n+1)</tspan><tspan dy="-12" font-size="14">2</tspan><tspan dy="12" font-size="20">-1</tspan></text>
+
+
+    <!-- ================== 橙色映射箭头与 f 标签 ================== -->
+    <!-- 顶部拱形双向箭头 c* <-> b* -->
+    <path d="M 730 80 Q 600 20 470 80" class="bi-arrow" />
+    <text x="600" y="45" class="f-label" text-anchor="middle">f</text>
+
+    <!-- 进入 Level 2n 的短箭头 -->
+    <path d="M 520 280 L 330 335" class="arrow" />
+    <text x="430" y="295" class="f-label">f</text>
+    
+    <path d="M 680 280 L 870 335" class="arrow" />
+    <text x="750" y="295" class="f-label">f</text>
+
+    <!-- 离开 Level 2n 的褪色淡出箭头 -->
+    <path d="M 330 365 L 450 420" class="partial-arrow" />
+    <path d="M 870 365 L 750 420" class="partial-arrow" />
+
+    <!-- 进入 Level 3 的箭头 -->
+    <path d="M 450 580 L 230 635" class="arrow" />
+    <path d="M 750 580 L 970 635" class="arrow" />
+
+    <!-- ==== 核心长交叉映射箭头 ==== -->
+    <!-- 从 c_3 指向 b_2 -->
+    <path d="M 980 660 L 140 835" class="arrow" />
+    <text x="860" y="675" class="f-label">f</text>
+
+    <!-- 从 b_3 指向 c_2 -->
+    <path d="M 230 660 L 1060 835" class="arrow" />
+    <text x="320" y="675" class="f-label">f</text>
+
+    <!-- 从 c_2 指向 b_1 -->
+    <path d="M 1070 860 L 60 1035" class="arrow" />
+    <text x="950" y="875" class="f-label">f</text>
+
+    <!-- 从 b_2 指向 c_1 -->
+    <path d="M 140 860 L 1150 1035" class="arrow" />
+    <text x="240" y="875" class="f-label">f</text>
+
+</svg>

@@ -423,3 +423,95 @@ $\lim_{n \to \infty} \sqrt[ n ]{ n }$ =1,所以求导积分完的式子用$\lims
 
 </div>
 
+## 20260323
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+f(x)=1+\sum _{n = 1} ^{\infty} \dfrac{(2n-1)!!}{(2n)!!} x^n   
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+你要先判断一下收敛性,比值法容易得到半径是$1$,然后端点处你可以:神秘不等式放缩或直接套斯特林公式得到应该是左边收敛右边发散.
+
+注意力比较好的做法是观察$f'$,发现它和$\dfrac12 f$比较像,然后用$f'-\dfrac12f$建微分方程.
+
+注意力不那么好的做法是直接考虑$f(x^2)$,那么你求个导给底下消掉一项,然后平移一下用积分给顶上消掉一项,也建立微分方程.
+
+注意力非常好的注意到
+
+$$
+\begin{gathered}
+f(x)=\sum _{n = 0} ^{\infty}  \binom{2n}n (\dfrac{x}{4} )^n
+\end{gathered}
+$$
+
+于是
+
+$$
+\begin{gathered}
+\dfrac1x \int f(4x)
+\end{gathered}
+$$
+
+是卡特兰数,直接套结论(
+
+</div>
+
+## 20260325
+
+<div class='cbox'>
+
+求$(1+x)^\alpha$的泰勒级数何时收敛到自身
+
+</div>
+
+<div class='pbox'>
+
+考虑只需证泰勒公式的余项趋近于$0$,一个方法是用柯西余项:
+
+$$
+\begin{gathered}
+R_n(x)=\dfrac{f^{(n+1)(\xi)}}{n!} (x-\xi)^n (x-a) \\
+=\alpha\binom{\alpha-1}{n} (1+\xi)^{\alpha-n-1}(x-\xi)^n x
+\end{gathered}
+$$
+
+就,这个时候$\xi$范围跟着变是讨厌的,不如$\theta\in (0,1)$:
+
+$$
+\begin{gathered}
+\alpha\binom{\alpha-1}{n} (1+\theta x)^{\alpha-n-1}(1-\theta)^nx^{n+1} \\
+=\alpha\binom{\alpha-1}{n}x^n (\dfrac{1-\theta}{1+\theta x} )^n (1+\theta x)^{\alpha -1} x
+\end{gathered}
+$$
+
+其中 $(\dfrac{1-\theta}{1+\theta x} )^n$有界,$(1+\theta x)^{\alpha-1}$也有界,其中$\binom{\alpha-1}n x^n$由比值法知$x\in (-1,1)$时到$0$,于是就完事了.
+
+---
+
+另一个做法是,注意到只证明$(-1,1)$收敛是容易的,也就是上个做法中趋近到$0$的那部分,于是直接逐项求导凑一凑你会得到:
+
+$$
+\begin{gathered}
+(1+x)S'(x)=\alpha S(x)
+\end{gathered}
+$$
+
+直接解出来即可.
+
+---
+
+再考虑端点处,$\alpha\le -1$时$|\binom \alpha n|=|\binom{n-\alpha+1} {-\alpha+1}|$极限不为$0$,肯定发散.
+
+若$\alpha>-1$,则$\dfrac{\binom \alpha n}{\binom \alpha {n-1}}=\dfrac{\alpha+1}n-1$,则$x=1$处$n$充分大时为递减的交错级数,收敛.
+
+$x=-1$时,相邻两项比变成$1-\dfrac{\alpha+1}n$,拉贝判别法得 $\lim_{n \to \infty} (n-1)(1-\dfrac{a_n}{a_{n-1}})=\alpha+1$,于是$\alpha>0$收敛,$\alpha<0$发散.
+
+</div>
+
