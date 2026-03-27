@@ -351,6 +351,42 @@ $T_2$可分的两个空间乘积也是$T_2$可分的.
 
 </div>
 
+<div class='cbox'>
+
+度量空间是T4可分的
+
+</div>
+
+<div class='pbox'>
+
+todo
+
+</div>
 
 
 
+### 开映射,闭映射
+
+<div class='dbox'>
+
+把开/闭集映到开/闭集的映射称为开/闭映射
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+p:X\times Y\to X,(x,y)\mapsto x
+\end{gathered}
+$$
+
+是开映射
+
+</div>
+
+<div class='pbox'>
+
+显然,考虑$U\subset X\times Y$是开集,那么拆分到拓扑基知$U=\bigcup_a (U_a\times V_a)$,于是$p(U)=\bigcup_a U_a$是开的.
+
+</div>

@@ -181,3 +181,38 @@ $(U^0)^0\not \cong U$ 当且仅当$U$是无限维
 </div>
 
 利用了商空间的泛性质:把$U$映成$0$的都可以拆成$V\to V/U$和后面的.
+
+## 20260326
+
+<div class='cbox'>
+
+定义单纯形是一组仿射无关的向量$v_1\ldots v_k$的凸包,仿射无关即$v_i-v_1$线性无关,凸包即$\{\sum_{i=1}^k c_iv_i|c_i\ge 0,\sum_i c_i=1\}$
+
+多面体是若干个不等式和等式的解集,即
+
+$$
+\begin{gathered}
+\{ x|Ax=b,Cx\ge d \} 
+\end{gathered}
+$$
+
+证明单纯形是多面体
+
+</div>
+
+<div class='pbox'>
+
+考虑先把凸包平移$-v_1$,即:
+
+$$
+\begin{gathered}
+S-v_1=\{ \sum_{i=2}^k c_i(v_i-v_1) | c_i\ge 0,\sum c_i\le 1 \} 
+\end{gathered}
+$$
+
+此时存在矩阵$M$满足$\forall v\in S,M(v-v_1)=[c_2,\ldots c_k]$.所以你直接用$M$,然后再乘一个暴露出来这些$c$的就能构造不等式限制.
+
+这个$M$是$S-v_1$这个子空间到$F^k$的映射,为了你规定$v-v_1$在这个子空间里,你取这个子空间的零化空间的一组基,把它们等于$0$这件事用$A,b$等式限制即可.
+
+</div>
+

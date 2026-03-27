@@ -28,7 +28,7 @@ $$
 
 $$
 \begin{gathered}
-p \text{ is a k-peirod point}\\
+p \text{ is a k-period point}\\
 \Leftrightarrow f^{(k)}(p)=p \text{ and } \forall k'\in (0,k),f^{(k')}\ne p
 \end{gathered}
 $$
@@ -50,7 +50,7 @@ $$
 
 <div class='pbox'>
 
-简单的介值定理,设$I=[a,b]$,考虑$f(x)-x$,则取$f(x)$最大值时一定为负,取$f(x)$最小值位置一定为正,故存在零点.
+简单的介值定理,设$I=[a,b]$,考虑$f(x)-x$,则取$f(x)$最大值时一定为正,取$f(x)$最小值位置一定为负,故存在零点.
 
 </div>
 
@@ -193,7 +193,7 @@ $S$中的任意两点无限次接近,无限次分离,且始终不趋近于一个
 
 可以构造区间列 $\{ M_i \}_{i=1}^\infty$,满足:
 - $M_i=K$ 或 $M_i\subset L,f(M_i)\supset M_{i+1}$.
-- $M_i=K \Rightarrow i \text{ is a squre number}$.
+- $M_i=K \Rightarrow i \text{ is a square number}$.
 
 (显然$f(M_i)\supset M_{i+1}$对$M_i=K$也是成立的.)
 
