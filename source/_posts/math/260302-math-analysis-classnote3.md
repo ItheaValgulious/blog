@@ -515,3 +515,19 @@ $x=-1$时,相邻两项比变成$1-\dfrac{\alpha+1}n$,拉贝判别法得 $\lim_{n
 
 </div>
 
+## 20260327
+
+<div class='cbox'>
+
+若级数 $f(x)=\sum _{i = 1} ^{n}  a_nx^n$收敛半径为$1$,且 $\lim_{n \to \infty} na_n=0$,且 $\lim_{x \to 1^-} f(x)=S$存在,则 $\sum _{n = 1} ^{\infty}  a_n=S$
+
+</div>
+
+<div class='pbox'>
+
+
+
+</div>
+
+
+
