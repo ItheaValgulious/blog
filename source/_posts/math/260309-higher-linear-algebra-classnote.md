@@ -216,3 +216,87 @@ $$
 
 </div>
 
+## 20260330
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+T:V\to W \\
+T \text{ is injective} \Leftrightarrow T' \text{ is surjective} \\
+T \text{ is surjective } \Leftrightarrow T' \text{ is injective} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+感觉最简单的方法是考虑单射等价于左逆存在,满射等价于右逆存在,而你惊喜的发现:
+
+$$
+\begin{gathered}
+(T')^{-1}_{L/R} =(T^{-1}_{R/L})'
+\end{gathered}
+$$
+
+于是就证完了.
+
+</div>
+
+<div class='cbox'>
+
+在$F^{2\times 2}$中,$\det (A+B)-\det A-\det B$是双线性型
+
+</div>
+
+<div class='pbox'>
+
+你可以直接设8个未知数算一下.
+
+那么这是为什么呢?因为发现恰好在$F^{2\times 2}$上$\det$是一个二次型,而任意二次型$Q$可以通过极化诱导一个双线性型:$B(X,Y)=Q(X+Y)-Q(X)-Q(Y)$
+
+</div>
+
+<div class='cbox'>
+
+双线性型$B(V_1,V_2,F)\cong \mathcal{L}(V_1,V_2')\cong \mathcal{L}(V_1,\mathcal{L}(V_2,F))$.
+
+</div>
+
+<div class='pbox'>
+
+看最右边那个形式你就悟了:就是经典的多变量函数都可以通过构造固定某个参数的方法同构到低维变量,什么多叉树转二叉树之类的内容.
+
+就是你直接把$B(x,y)$映射到$x\mapsto (y\mapsto B(x,y))$就是同构.
+
+</div>
+
+<div class='dbox'>
+
+- alternating:$\varphi(v,v)=0,\forall v\in V$
+- symmetric:$\varphi(u,v)=\varphi(v,u)$
+- reflexive:$\varphi(u,v)=0 \Leftrightarrow \varphi(v,u)=0$
+
+</div>
+
+AI似乎认为reflexive还有其他意思,但我们先按这个来. 
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\varphi\in B(V,V,F) \\
+\varphi \text{ is reflexive} \Rightarrow \varphi \text{ is alternating or symmetric} 
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+
+
+</div>
+
+

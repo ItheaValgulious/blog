@@ -519,13 +519,195 @@ $x=-1$时,相邻两项比变成$1-\dfrac{\alpha+1}n$,拉贝判别法得 $\lim_{n
 
 <div class='cbox'>
 
+Tauber's Theorem
+
 若级数 $f(x)=\sum _{i = 1} ^{n}  a_nx^n$收敛半径为$1$,且 $\lim_{n \to \infty} na_n=0$,且 $\lim_{x \to 1^-} f(x)=S$存在,则 $\sum _{n = 1} ^{\infty}  a_n=S$
 
 </div>
 
 <div class='pbox'>
 
+考虑
 
+$$
+\begin{gathered}
+\lim_{x\to 1^-} |f(x)-\sum _{i = 1} ^{\infty}  a_i |\\
+\le \lim_{x\to 1^-}  [|\sum _{i = 1} ^{n}  a_n(x^n-1)| \\
++|\sum _{i = n} ^{\infty}  a_nx^n|] \\
+=\lim_{x\to 1^-} A_n(x)+\lim_{x \to 1^-} B_n(x)
+\end{gathered}
+$$
+
+我们要证的是
+
+取$x=1-\dfrac1n$(这么取写起来比较奇怪,实际上我们是取$n=\dfrac1{1-x}$,因为$x$这边是外层极限,$n$是你自己取的一个划分点可以随便变),则:
+
+$$
+\begin{gathered}
+\lim_{n \to \infty}  A_n(1-\dfrac1n) \\
+\le\lim_{n \to \infty}  \sum _{i = 1} ^{n}  |a_i(x-1)|i \\
+=\lim_{n \to \infty} \dfrac1n \sum _{i = 1} ^{n}  ia_i \\
+=\lim_{n \to \infty} na_n \\
+=0
+\end{gathered}
+$$
+
+这部分用Stolz是经典的.
+
+对$B_n$用神秘放缩
+
+$$
+\begin{gathered}
+B_n(1-\dfrac1n) \\
+=|\sum _{i = n} ^{\infty}  (ia_i)\dfrac 1i(1-\dfrac1n)^i |\\
+\le \dfrac{\delta_n} n \sum _{i = n}^\infty (1-\dfrac{1}{n} )^i \\
+\le \dfrac{\delta_n}{n} n \\
+=\delta_n
+\end{gathered}
+$$
+
+其中$\delta_n$表示$ia_i$对$i>n$的绝对值最大值,显然趋近于$0$,就做完了.
+
+</div>
+
+[think] AI发话了:
+
+他说你考虑:
+
+$$
+\begin{gathered}
+S_n=\sum _{i = 1} ^{\infty} a_i[i\le n] \\
+f(e^{-\frac1N})=\sum _{i = 1} ^{\infty} a_ie^{-\frac iN}  
+\end{gathered}
+$$
+
+他俩共同点是给前面一个很接近$1$的系数,给后面一个接近$0$的系数去做一个前缀和.
+
+然后好像还是很魔怔.不懂.
+
+## 20260330
+
+Wallis公式:
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\lim_{n \to \infty} \dfrac{1}{2n+1} (\dfrac{(2n)!!}{(2n-1)!!} )^2=\dfrac\pi 2
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+通过经典的$I_n=\int_0^{\frac\pi2}\sin^n xdx$分部积分,我们知道:
+
+$$
+\begin{gathered}
+I_n=\begin{cases}
+\dfrac{(n-1)!!}{(n)!!},n=2k-1 \\
+\dfrac{(n-1)!!}{(n)!!}\dfrac\pi 2,n=2k
+\end{cases}
+\end{gathered}
+$$
+
+从而考虑$n=2k-1,2k,2k+1$,显然$I_n$是递减的:
+
+$$
+\begin{gathered}
+\dfrac{(2k-2)!!}{(2k-1)!!} >\dfrac{(2k-1)!!}{(2k)!!} \dfrac\pi2 >\dfrac{(2k)!!}{(2k+1)!!}  \\
+\Rightarrow \begin{cases}
+\dfrac{1}{2n+1} (\dfrac{(2n)!!}{(2n-1)!!})^2=\dfrac{((2k)!!)^2}{(2k+1)!!(2k-1)!!}<\dfrac\pi2 \\
+\dfrac{2k+1}{2k} \dfrac{1}{2k+1} \dfrac{((2k)!!)^2}{((2k-1)!!)^2} =\dfrac{(2k-2)!!(2k)!!}{(2k-1)!!} > \dfrac\pi 2
+\end{cases}
+\end{gathered}
+$$
+
+从而夹逼知极限为$\dfrac\pi2$.
+
+</div>
+
+
+
+斯特林公式
+
+感觉书上的做法好魔怔,它会有一步直接的用到
+
+$$
+\begin{gathered}
+\dfrac{1}{x} \ln(\dfrac{1+x}{1-x} )
+\end{gathered}
+$$
+
+且这个形式还是通过换元$x=\dfrac1{2n+1}$得到的,十分非人,而我们发现其实可以人类一些:
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+n!=\sqrt{ 2\pi n } (\dfrac{n}{e} )^n e^{\frac {\theta_n}{12n}},\theta_n\in (0,1)
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+上来先取$\ln$做差,得到:
+
+$$
+\begin{gathered}
+a_n=\sum _{i = 1} ^{n}  \ln i-(n+\dfrac12)\ln n-n
+\end{gathered}
+$$
+
+只需证 $a_n=C\dfrac{\theta_n}{12n}$,然后套Wallis公式待定系数确定$C$.
+
+那么仍然做差,然后直接展成级数:
+
+$$
+\begin{gathered}
+a_n-a_{n-1}=(n-\dfrac12)\ln(1-\dfrac1n)+1 \\
+=(n-\dfrac{1}{2} )\sum _{i = 1} ^{\infty}  \dfrac{1}{i n^i}  \\
+=-\sum _{i = 2} ^{\infty}  \dfrac{1}{n^i} \dfrac{i-1}{2i(i+1)}  \\
+<0
+\end{gathered}
+$$
+
+所以$a_n$单调递减,还需说明有界才能确定它有极限,发现:
+
+$$
+\begin{gathered}
+\dfrac{\dfrac{i-1}{2i(i+1)}}{\dfrac{i}{2(i+1)(i+2)}}  \\
+=\dfrac{(i-1)(i+2)}{i^2} \\
+=1+\dfrac{i-2}{i^2} \ge 1 
+\end{gathered}
+$$
+
+所以系数是递减的,从而可以放缩:
+
+$$
+\begin{gathered}
+a_n-a_{n-1} \\
+=-\sum _{i = 2} ^{\infty}  \dfrac{1}{n^i} \dfrac{i-1}{2i(i+1)}  \\ \\
+\ge -\sum _{i = 2} ^{\infty}  \dfrac{1}{12} \dfrac{1}{n^i}  \\
+=-\dfrac{1}{12} \dfrac{1}{n(n-1)}  \\
+\end{gathered}
+$$
+
+从而得到
+
+$$
+\begin{gathered}
+a_n=\sum _{i = 2} ^{n}  a_i-a_{i-1} \\
+\ge a_1-\dfrac{1}{12} +\dfrac{1}{12n}  
+\end{gathered}
+$$
+
+同时$a_n<a_1$,,于是$a_n\in [a_1-\dfrac1{12}+\dfrac1{12n},a_1]$,给出了误差项.
+
+最后用极限形式去待定系数一下常数就好了,那部分比较显然不写了.
 
 </div>
 
