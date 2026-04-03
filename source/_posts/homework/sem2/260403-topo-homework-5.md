@@ -108,7 +108,7 @@ $\forall x\in B,g^{-1}(x)=\bigcap_{i=1}^n (g^{(i)})^{-1}([a_i,b_i])$,是有限�
 
 <div class='pbox'>
 
-(1):假设其可度量化,因为 $d(a,b)=0 \Leftrightarrow a=b$,则$\forall b\ne a,d(a,b)>0$,设$d_a=\dfrac12 \min_{b\ne a} \{d(a,b)\}$,则取开球$B(a,d_a)=a$,故单点集是开集,是离散拓扑.
+(1):假设其可度量化,因为 $d(a,b)=0 \Leftrightarrow a=b$,则$\forall b\ne a,d(a,b)>0$,设$d_a=\dfrac12 \min_{b\ne a} \{d(a,b)\}$,则取开球$B(a,d_a)=a$,故单点集是开集,是离散拓扑.而离散拓扑都可以用离散度量$d(x,y)=1-[x=y]$度量化.
 
 (2):$Z$上赋予所有等差数列为开集的拓扑.
 
