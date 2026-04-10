@@ -295,8 +295,32 @@ $$
 
 <div class='pbox'>
 
-
+我有一坨大粪.大粪思路是你先拿任意两个$u,v$,考虑$(au+bv)\otimes (cu+dv)$的值,然后分析一通得到只看这两个向量的子空间是交替或对称的.然后你再考虑两个三项的乘去证明如果$u$对$v$是交替,对$w$是对称,且都不是$0$,就会出问题.
 
 </div>
 
+## 20260409
+
+<div class='cbox'>
+
+设:
+
+$$
+\begin{gathered}
+t=\begin{bmatrix} 1&0\\0&-1 \end{bmatrix} \otimes e_1 +\begin{bmatrix} 0&1\\1&0 \end{bmatrix} \otimes e_2 \\
+=M_1\otimes e_1+M_2\otimes e_2
+\end{gathered}
+$$
+
+证明 $\operatorname{rank}_R t>2$
+
+</div>
+
+<div class='pbox'>
+
+假设$t=a\otimes A+b\otimes B$,其中$a,b\in R,A,B\in R^{2\times 2}$,则因为$a,b$可以分解:$a=\sum x_ie_i,b=\sum y_ie_i$,于是我们看到$M_1,M_2$是$A,B$的线性组合.
+
+而因为$M_1,M_2$线性无关,所以它张成空间是二维的包含$A,B$,所以反过来$A,B$也是$M_1,M_2$的线性组合.且$A,B$的秩是$1$:你解$|mA+nB|=0$发现没有实数非$0$解,得证.
+
+</div>
 

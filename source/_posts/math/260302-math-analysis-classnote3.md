@@ -711,5 +711,126 @@ $$
 
 </div>
 
+## 20260410
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+S=\sum _{m = 1} ^{\infty} \sum _{n = 1} ^{\infty}  \dfrac{m^2n}{3^m(n3^m+m3^n)}   
+\end{gathered}
+$$
+
+</div>
 
 
+<div class='pbox'>
+
+有定理说只要这玩意按某种顺序求和绝对收敛就都绝对收敛.容易发现按对角线求和绝对收敛.
+
+$$
+\begin{gathered}
+S=\sum _{m = 1} ^{\infty}  \sum _{n = 1} ^{\infty}  \dfrac{1}{a_m(a_m+a_n)}  \\
+\Rightarrow 2S=\sum _{m = 1} ^{\infty}  \sum _{n = 1} ^{\infty}  \dfrac{1}{a_m(a_m+a_n)} +\dfrac{1}{a_n(a_m+a_n)}  \\
+=\sum _{m = 1} ^{\infty}  \sum _{n = 1} ^{\infty}  \dfrac{1}{a_na_m}  \\
+=(\sum _{i = 1} ^{\infty}  a_i )^2=\dfrac{9}{16}
+\Rightarrow S=\dfrac{9}{32}  
+\end{gathered}
+$$
+
+其中$a_i=\dfrac{i}{3^i}$.
+
+</div>
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+a_n,b_n\ge 0 \\
+\sum _{n = 1} ^{\infty}  a_n=+\infty \\
+\lim_{n \to \infty} \dfrac{b_n}{a_n} =\infty \\
+\sum _{n = 1} ^{\infty}  a_nx^n \text{ has convergent radius } 1
+\end{cases}
+\Rightarrow \lim_{x \to 1^-} \dfrac{\sum _{n = 1} ^{\infty} b_nx^n}{\sum _{n = 1} ^{\infty}   a_nx^n} =A
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+如果不是那个级数的话这是显然的:显然前面有限项比后面微不足道.但现在因为有幂级数他收敛了导致后面的反而成小的了.
+
+但你再想想发现$x\to 1$的时候还是后面的占主导.你要说明这一点.于是你取$N$,原式变为:
+
+$$
+\begin{gathered}
+Ans=\lim_{x \to 1^-} \dfrac{\sum _{n = N+1} ^{\infty} b_nx^n +\sum _{n = 1} ^{N}  b_nx^n }{\sum _{n = N+1} ^{\infty} a_nx^n +\sum _{n = 1} ^{N}  a_nx^n} =\dfrac{S_1(N)+L_1(N)}{S_2(N)+L_2(N)} 
+\end{gathered}
+$$
+
+前面这部分直接等于 $L_1(N)=\sum _{n = 1} ^{N} a_n,L_2(N)=\sum _{n = 1} ^{N}  b_n$.
+
+然后再让$x\to 1^-$,$S_i$趋近于无穷.所以存在$\delta$使得$x>1-\delta$时$\dfrac{L_i}{S_i}<\epsilon$.
+
+于是
+
+$$
+\begin{gathered}
+Ans\in (\dfrac{S_1}{S_2}\dfrac{1}{1+\epsilon} ,\dfrac{S_1}{S_2} (1+\epsilon)) 
+\end{gathered}
+$$
+
+又因为容易取$N$使得$n>N$时$\dfrac {b_n}{a_n}\in (A-\epsilon,A+\epsilon)$,于是$\dfrac{S_1}{S_2}\in (A-\epsilon,A+\epsilon)$.
+
+然后让$\epsilon\to 0$即可.
+
+
+</div>
+
+
+
+<div class='cbox'>
+
+$$
+\begin{gathered}
+\begin{cases}
+f(x)\in C^\infty[0,R] \\
+\forall x\in [0,R],\forall n,f^{(n)}(x)\ge 0
+\end{cases} \\
+\Rightarrow f\text{ 's taylor series at } x=0 \text{ is convergent to } f
+\end{gathered}
+$$
+
+</div>
+
+<div class='pbox'>
+
+首先你感觉拉格朗日余项在这里比较废物,你应该使用积分余项:
+
+$$
+\begin{gathered}
+R_n(x)=\dfrac{1}{n!} \int_0^x f^{(n+1)}(t)(x-t)^ndt
+\end{gathered}
+$$
+
+然后你要需要不管通过什么方法拿到一个上界.你发现因为泰勒展开级数每项都是正的,所以余项一定有$R_n(x)\in (0,f(x))$.
+
+所以
+
+$$
+\begin{gathered}
+R_n(x)=\dfrac{1}{n!} \int_0^x f^{(n+1)}(t)(x-t)^ndt \\
+=\dfrac{1}{n!} \int_0^x f^{(n+1)}(t)(R-t)^n \dfrac{(x-t)^n}{(R-t)^n}  dt \\
+\le \dfrac{x^n}{R^n} \dfrac{1}{n!} \int_0^x f^{(n+1)}(t)(R-t)^n  dt \\
+=(\dfrac{x}{R} )^n R_n(R) \\
+\le (\dfrac{x}{R})^n f(R)
+\end{gathered}
+$$
+
+于是就收敛到$0$了.
+
+</div>
+
+感觉这个放缩还是太难想到了啊!我炸了.
