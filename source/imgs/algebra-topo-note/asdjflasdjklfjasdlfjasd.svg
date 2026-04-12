@@ -1,0 +1,56 @@
+<svg width="500" height="550" viewBox="0 0 500 550" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景层 -->
+  <rect width="500" height="550" fill="#1e1e1e" />
+  <style>
+    .math-text { font-family: "Times New Roman", Times, serif; font-style: italic; fill: white; font-size: 26px; text-anchor: middle; }
+    .label-blue { fill: #64B5F6; }
+    .label-orange { fill: #FF8A65; }
+    .line-blue { stroke: #64B5F6; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    /* 橙色线稍微加粗以覆盖在蓝线上方 */
+    .line-orange { stroke: #FF8A65; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .arrow-head-blue { fill: #64B5F6; }
+    .arrow-head-orange { fill: #FF8A65; }
+  </style>
+  <!-- 坐标参考：正方形顶点 (100,100) 到 (400,400) -->
+  <!-- 1. 蓝色正方形框架 -->
+  <g>
+    <!-- 顶边 p (小写) -->
+    <line x1="100" y1="100" x2="400" y2="100" class="line-blue" />
+    <path d="M385,93 L400,100 L385,107 Z" class="arrow-head-blue" />
+    <!-- 底边 g o f o p -->
+    <line x1="100" y1="400" x2="400" y2="400" class="line-blue" />
+    <path d="M385,393 L400,400 L385,407 Z" class="arrow-head-blue" />
+    <!-- 左侧主边 u (向下) -->
+    <line x1="100" y1="100" x2="100" y2="400" class="line-blue" />
+    <path d="M93,385 L100,400 L107,385 Z" class="arrow-head-blue" />
+    <!-- 右侧主边 u^-1 (向上) -->
+    <line x1="400" y1="400" x2="400" y2="100" class="line-blue" />
+    <path d="M393,115 L400,100 L407,115 Z" class="arrow-head-blue" />
+  </g>
+  <!-- 2. 内部橙色结构 (L 映射区域) -->
+  <g>
+    <!-- 左侧橙竖线 (向下，重合) -->
+    <line x1="100" y1="100" x2="100" y2="220" class="line-orange" />
+    <path d="M94,208 L100,220 L106,208 Z" class="arrow-head-orange" />
+    <!-- 右侧橙竖线 (向上，重合) -->
+    <line x1="400" y1="220" x2="400" y2="100" class="line-orange" />
+    <path d="M394,112 L400,100 L406,112 Z" class="arrow-head-orange" />
+    <!-- 横向橙水平线 (向右) -->
+    <line x1="100" y1="220" x2="400" y2="220" class="line-orange" />
+    <path d="M385,213 L400,220 L385,227 Z" class="arrow-head-orange" />
+    <!-- 左侧花括号 t -->
+    <path d="M80,100 C70,100 65,105 65,115 L65,150 C65,160 60,160 55,160 C60,160 65,160 65,170 L65,205 C65,215 70,220 80,220" 
+          stroke="#FF8A65" stroke-width="2.5" fill="none" />
+  </g>
+  <!-- 3. 文字标签 -->
+  <!-- 蓝色标签 -->
+  <text x="250" y="75" class="math-text label-blue" font-size="28">p</text>
+  <text x="75" y="270" class="math-text label-blue">u</text>
+  <text x="440" y="270" class="math-text label-blue">u<tspan baseline-shift="super" font-size="16">-1</tspan></text>
+  <text x="250" y="450" class="math-text label-blue">g ∘ f ∘ p</text>
+  <!-- H 标签：蓝色, 巨大, 精确居中 (在 250, 320 处) -->
+  <text x="250" y="330" class="math-text label-blue" font-size="60" font-weight="bold">H</text>
+  <!-- 橙色标签 -->
+  <text x="250" y="190" class="math-text label-orange" font-size="30">L(x, t)</text>
+  <text x="35" y="165" class="math-text label-orange">t</text>
+</svg>
