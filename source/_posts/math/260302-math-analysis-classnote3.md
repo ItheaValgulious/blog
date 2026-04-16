@@ -834,3 +834,24 @@ $$
 </div>
 
 感觉这个放缩还是太难想到了啊!我炸了.
+
+## 20260415
+
+<div class='cbox'>
+
+多元连续函数在紧集上一致连续
+
+</div>
+
+<div class='pbox'>
+
+有限覆盖:
+
+对每个点$x$,取其邻域$B(x,\dfrac\epsilon 2)$,令$U_x=B(x,\dfrac {\delta_x}2)\subset B(x,\delta_x)\subset f^{-1}(B(x,\dfrac\epsilon 2))$.
+
+$U_x$构成开覆盖,存在有限覆盖,令$\delta=\min_x \delta_x$.那么任意$|x-y|<\delta$,它必然落在同一个$B(z,\delta_z)$内,于是$f(x),f(y)$都在$B(x,\dfrac \delta 2)$中,就证完了.
+
+另一个方法是当列紧集做,直接反证,存在不满足条件的点对列,然后取收敛子列,就完事了.
+
+</div>
+

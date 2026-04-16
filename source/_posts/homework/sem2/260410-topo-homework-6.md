@@ -1,5 +1,5 @@
 ---
-title: Topo Homework - Week 5
+title: Topo Homework - Week 6
 tags:
   - math
   - topo
@@ -7,7 +7,7 @@ tags:
 date: 2026-04-10 23:05:47
 ---
 
-# Topo Homework - Week 5
+# Topo Homework - Week 6
 
 ### T1
 

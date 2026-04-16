@@ -1,5 +1,5 @@
 ---
-title: Algebra Topology Note
+title: Algebraic Topology Note
 tags:
   - math
   - topo
@@ -7,7 +7,7 @@ tags:
 date: 2026-04-12 23:11:48
 ---
 
-# Algebra Topology Note
+# Algebraic Topology Note
 
 看的是 https://dec41.user.srcf.net/notes/.
 
@@ -314,7 +314,7 @@ $X\simeq Y$所以 $\exists f:X\to Y,g:Y\to X,f\circ g\simeq \mathrm{Id}_Y,g\circ
 
 覆叠空间
 
-若存在$p:\tilde X\to X$,满足 $\forall x\in X,U\text{ is a neighborood of } x,p^{-1}(U)=\bigsqcup_\lambda V_\lambda$($\sqcup$表示不交并),且$\forall \lambda,V_\lambda\cong U$,则称$\tilde X$是$X$的覆叠空间
+若存在$p:\tilde X\to X$,满足 $\forall x\in X,\exists U\text{ is a neighborood of } x,p^{-1}(U)=\bigsqcup_\lambda V_\lambda$($\sqcup$表示不交并),且$\forall \lambda,p|_{V_\lambda}=(V_\lambda\cong U)$,则称$\tilde X$是$X$的覆叠空间
 
 </div>
 
@@ -334,7 +334,7 @@ $X\simeq Y$所以 $\exists f:X\to Y,g:Y\to X,f\circ g\simeq \mathrm{Id}_Y,g\circ
 
 <div class='pbox'>
 
-若$\tilde f(x)=\tilde f'(x)$,考虑$f(x)$的邻域$U$,有$p^{-1}(U)=\bigsqcup V_\lambda$,且$\exists ! \lambda,\tilde f(x)=\tilde f'(x)\in V_\lambda$.,所以$\forall x'\in f^{-1}(U),\tilde f(x')\in V_\lambda,\tilde f'(x')\in V_\lambda$.即它俩在同一片空间.但这个空间是同胚,$p^{-1}f(x')$唯一,只能$\tilde f'(x')=\tilde f(x')=p^{-1}f(x')$.
+若$\tilde f(x)=\tilde f'(x)$,考虑$f(x)$存在邻域$U$,有$p^{-1}(U)=\bigsqcup V_\lambda$,且$\exists ! \lambda,\tilde f(x)=\tilde f'(x)\in V_\lambda$.所以$B=\tilde f^{-1}(V_\lambda)\cap \tilde f'^{-1}(V_\lambda)$中是$x$的邻域满足$\forall x'\in B,\tilde f(x')\in V_\lambda,\tilde f'(x')\in V_\lambda$.即它俩在同一片空间.但这个空间是同胚,只能$\tilde f'(x')=\tilde f(x')=p|_{V_\lambda}^{-1}f(x')$.
 
 所以 $x\in S \Rightarrow f^{-1}(U) \subset S$,是开集.
 
@@ -342,28 +342,109 @@ $X\simeq Y$所以 $\exists f:X\to Y,g:Y\to X,f\circ g\simeq \mathrm{Id}_Y,g\circ
 
 </div>
 
-从而,如果空间是连通的,那么$S$一定是全集或空集,于是只要确定提升在一个点上的取值就能知道整个空间的取值.
+从而,如果空间是连通的,那么$S$一定是全集或空集,于是只要确定提升在一个点上的取值就能知道整个空间的取值.ai叫他提升的唯一性之类的名字.
 
 <div class='cbox'>
 
 路径的提升一定存在
 
+对任意路径$f:I\to X$,存在$\tilde f:I\to \tilde X$使得$f=p\circ \tilde f$
+
 </div>
 
 <div class='pbox'>
 
-考虑一个路径$f$
+考虑一个路径$f:I\to X$,若$f|_S,S\subset I$存在一个提升$\tilde f$.
+
+考虑若$t\in S$,那么和上面提升的唯一性一样的方法:$f(t)$存在邻域$U$,$p^{-1}(U)=\bigsqcup_\lambda V_\lambda$,设$\tilde f(t)\in V_i$,则我们对$\forall t'\in f^{-1}(U)$,令$\tilde f(t')=(p|_{V_i})^{-1}(f(t'))$.然后它在每个小邻域上都是连续的可以说明$\tilde f$是连续的复合条件.
+
+而若$t\notin S$,那么$t$也有一个小邻域$U$,使得如果$\exists t'\in U,t'\in S$,那么你可以把$t$映射到$t'$所在的那片覆盖上,所以如果$t\notin S$则$\exists t\in U,U\cap S=\varnothing$,$S$是闭集.
+
+又因为你随便把$0$映到一个$p^{-1}(f(0))$中的东西就有$0\in S,S\ne \varnothing$,所以$S=I$,提升$\tilde f$存在.
 
 </div>
 
-
+由上面的唯一性定理,只要确定了路径的起点,那么这个提升是唯一的.
 
 <div class='cbox'>
 
 同伦的提升一定存在
 
+对任意同伦$H:Y\times I\to X,H=f_0\simeq f_1,\exists \tilde f_0$,则$\exists \tilde H:Y\times I\to \tilde X \ s.t.\ H=p\circ \tilde H$.
+
 </div>
 
+<div class='pbox'>
+
+上面路径的情况相当于$Y$是一个单点空间.
+
+那么对每个点$y\in Y$,都可以定义$g_y(t)=H(y,t)$,存在$\tilde g_y$.我们希望证明$\tilde H(y,t)=\tilde g_y(t)$.
+
+先考虑对一个$y$和$g_y$,那么对任意一个$t$,存在$g_y(t)$的邻域$U$满足$p^{-1}(U)=\bigsqcup_\lambda V_\lambda$且$\exists \lambda,\tilde g_y(t)\in V_\lambda$.则$H^{-1}(U)$是$(y,t)$的一个邻域,在这个邻域内可以定义$\tilde H_y(y,t)=(p|_{V_\lambda})^{-1}H(y,t)$.由于$y$的紧性,可以用有限个这样定义的邻域覆盖住$t$的范围$I$,使得对任意$y$,可以定义$\tilde H_y(y,t),y\in U_y$.
+
+然后由于提升的唯一性,所以对两个$H_{y_1},H_{y_2},\forall y\in U_{y_1}\cap U_{y_2},H_{y_1}(y,0)=H_{y_2}(y,0)=f_0(y)$,所以它们在交集处一定都是相等的.可以定义整个$\tilde H(y,t)=\tilde H_{y_i}(y,t),y\in U_{y_i}$.
+
+最后焊接引理可以说明它是连续函数.
+
+</div>
+
+我们定义覆叠空间是为了给基本群一个作用的对象.
+
+<div class='dbox'>
+
+考虑基本群$\pi_1(X,x_0)$,如果$x_0$有一个覆叠空间$\tilde X$,设$S=p^{-1}(x_0)$,那么对任意一个基本群中的元素$[p]$,定义$p$起点为$x$的提升为$\tilde p_x$(即$\tilde p_x(0)=x$),$\varphi:S\to S,\varphi=x\mapsto \tilde p_x(1)$
+
+</div>
+
+要验证它是良定义,我们需要证明同伦的$p,p'$导出的变换是相同的,那么这时候我们直到这个同伦也可以提升:$\tilde H=\tilde p\simeq_P \tilde p'$,这足以说明$\tilde p$和$\tilde p'$在有相同的起点的时候也有相同的终点.
+
+我们并没有否认,可能存在不同的路径等价类对应了相同的变换.
+
+那么我们想仔细理解这个群的结构,考虑轨道稳定子定理:
+
+$$
+\begin{gathered}
+\operatorname{Orb}(x)\cong G/\operatorname{Stab}(x)
+\end{gathered}
+$$
+
+那么现在$G=\pi_1(X,x_0)$,而$\operatorname{Stab}(x)$是其中作用了没用的,那么容易发现这个群是$p(\pi_1(\tilde X,\tilde x_0))$,而$\operatorname{Orb}(x)$就是$x$走一条路能去的地方.当$X$路径联通时:
+
+<div class='bbox'>
+
+$$
+\begin{gathered}
+p^{-1}(X)\cong \pi_1(X,x_0)/(\pi_1(p)\pi_1(\tilde X,\tilde x_0))
+\end{gathered}
+$$
+
+这里不是商群而是集合意义上的等价类.
+
+</div>
+
+<div class='dbox'>
+
+Universal Covering Space
+
+如果$\tilde X$中任意两条路径同伦,或者说$\pi_1(\tilde X)\cong \{1\}$,则称$\tilde X$是$X$的 普遍覆叠空间.
+
+</div>
+
+则此时$p^{-1}(X)\cong \pi_1(X,x_0)$.
+
+<div class='cbox'>
+
+$\pi_1(X,x_0)$的子群与覆叠空间一一对应.
+
+</div>
+
+<div class='pbox'>
+
+首先,对任意$\tilde X$,定义$\varphi:\pi_1(\tilde X,\tilde x_0)\to \pi_1(X,x_0),\varphi=a\mapsto p\circ a$,它是同态是显然的,是单的也是显然的.于是令子群 $H=\operatorname{im} \varphi$.
+
+那么反过来,对任意子群,如何生成其覆叠空间呢?
 
 
+
+</div>
 
