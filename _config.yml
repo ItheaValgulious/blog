@@ -103,7 +103,7 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/ItheaValgulious/ItheaValgulious.github.io
+  repo: git@github.com:ItheaValgulious/ItheaValgulious.github.io.git
   branch: main
   message: Blog Updated!
 
