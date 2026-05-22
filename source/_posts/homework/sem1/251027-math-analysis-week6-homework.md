@@ -552,7 +552,7 @@ $$
 
 ### T1
 
-![alt text](../imgs/math-analysis-week6-homework/img-1761888263357.png)
+![alt text](/imgs/math-analysis-week6-homework/img-1761888263357.png)
 
 ### T2
 
